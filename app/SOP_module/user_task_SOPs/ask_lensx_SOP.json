@@ -1,0 +1,196 @@
+{
+    "task_description": "提供協助使用者評估自己是否適合使用飛秒雷射輔助白內障手術(Lensx)",
+    "subtask_descriptions": [
+
+        {
+
+            "ask_understand_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者對飛秒雷射（Lensx）輔助白內障手術的了解意願，欄位名稱\"了解意願\"",
+                    "require_infos": {
+                        "了解意願": "請問您是否想要了解飛秒雷射(需要自費)？，欄位名稱\"了解意願\"\n注意:飛秒雷射（Lensx）可輔助白內障手術\n適應症：水晶體過硬、過熟、韌帶鬆弛、膜內皮細胞不足"
+                    },
+                    "options": {
+                        "了解意願": [
+                            "是的我想了解",
+                            "否我不需要"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "了解意願": [
+                            "是的我想了解",
+                            "否我不需要"
+                        ]
+                    },
+                    "input_info": {
+                        "": [ "了解意願" ]
+                    },
+                    "next_subtask": {
+                        "": {
+                            "是的我想了解": "opt_judge_consider_part",
+                            "否我不需要": "finish_lensx_judge1"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_lensx_judge1": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者說明如果還需要其他協助可以再次詢問我",
+                    "output_msg_info": "好的，若您有其他眼睛疾病或人工水晶體相關的問題，歡迎再次詢問我\n",
+                    "next_subtask": {},
+                    "next_tasks": [] 
+                }
+            },
+
+            "opt_judge_consider_part": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對飛秒雷射想要了解的部分，欄位名稱\"了解部分\"",
+                    "require_infos": {
+                        "了解部分": "您想要了解關於飛秒雷射（Lensx）的哪一個部分？，欄位名稱\"了解部分\""
+                    },
+                    "options": {
+                        "了解部分": [
+                            "飛秒雷射的簡介與價錢",
+                            "自己是否適合使用飛秒雷射"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "了解部分": [
+                            "飛秒雷射的簡介與價錢",
+                            "自己是否適合使用飛秒雷射"
+                        ]
+                    },
+                    "input_info": {
+                        "ask_understand_or_not": [ "了解部分" ]
+                    },
+                    "next_subtask": {
+
+                        "ask_understand_or_not": {
+                            "飛秒雷射的簡介與價錢": "opt_lensx_introduction",
+                            "自己是否適合使用飛秒雷射": "opt_check_cataract_maturity"
+                        }
+                    },
+                    "next_tasks": []               
+                }
+            },
+
+            
+            "opt_lensx_introduction": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者進行飛秒雷射輔助白內障手術簡介說明",
+                    "output_msg_info": "飛秒雷射輔助白內障手術（Lensx）是一項全自動精準雷射處置，透過術前的眼球前房電腦斷層掃描，得到精準定位雷射切割位置，減少人工操作步驟，增加手術成功機率以及降低降低手術中併發症。\n此技術為\"全自費\"，每隻手術眼費用為72,000元（無論是否為榮民身份）\n",
+                    "input_info": {
+                        "opt_judge_consider_part": [ "了解部分" ]
+                    },
+                    "next_subtask": {
+                        "opt_judge_consider_part": "opt_suitable_or_not"
+                    },
+                    "next_tasks": []
+                }
+            },
+
+            "opt_suitable_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者是否想知道自己是否適合進行飛秒雷射（Lensx）輔助白內障手術，欄位名稱\"了解適合意願\"",
+                    "require_infos": {
+                        "了解適合意願": "您想了解自己適合使用飛秒雷射嗎？，欄位名稱\"了解適合意願\""
+                    },
+                    "options": {
+                        "了解適合意願": [
+                            "是的我想了解自己是否適合",
+                            "不用謝謝"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "了解適合意願": [
+                            "是的我想了解自己是否適合",
+                            "不用謝謝"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_lensx_introduction": [ "了解適合意願" ]
+                    },
+                    "next_subtask": {
+
+                        "opt_lensx_introduction": {
+                            "是的我想了解自己是否適合": "opt_check_cataract_maturity",
+                            "不用謝謝": "finish_lensx_judge1"
+                        }
+                    },
+                    "next_tasks": []               
+                }
+            },
+
+
+            "opt_check_cataract_maturity": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者的水晶體狀態，是否有過熟過硬、老化或眼睛受傷導致的水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或是狀態不佳，欄位名稱\"水晶體狀態\"",
+                    "require_infos": {
+                        "水晶體狀態": "您的是否有滿足以下任一狀態，欄位名稱\"水晶體狀態\"\n注意:1.水晶體過熟過硬、老化\n2.眼睛受傷導致水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或狀態不佳"
+                    },
+                    "options": {
+                        "水晶體狀態": [
+                            "是，我有以上任一狀態",
+                            "否/我不知道"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "水晶體狀態": [
+                            "是，我有以上任一狀態",
+                            "否/我不知道"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_suitable_or_not": [ "水晶體狀態" ],
+                        "opt_judge_consider_part": [ "水晶體狀態" ]
+                    },
+                    "next_subtask": {
+                        "opt_suitable_or_not": {
+                            "是，我有以上任一狀態": "finish_lensx_judge2",
+                            "否/我不知道": "finish_lensx_judge3"
+                        },
+
+                        "opt_judge_consider_part": {
+                            "是，我有以上任一狀態": "finish_lensx_judge2",
+                            "否/我不知道": "finish_lensx_judge3"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_lensx_judge2": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者因為他有水晶體過熟過硬、老化或眼睛受傷導致的水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或是狀態不佳的情況，請使用者詢問專業醫生進行評估是否適合使用非秒雷射輔助白內障手術(Lensx)",
+                    "output_msg_info": "飛秒雷射可以減少手術過程中對周圍組織的影響、更精準地切開眼睛內的組織，但由於您的水晶體過熟過硬、老化或眼睛受傷導致的水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或是狀態不佳的情況，建議您將這個狀況告訴專業醫師，讓專業醫師評估您是否適合進行飛秒雷射(Lensx)輔助的白內障手術。\n醫師會根據您的眼睛狀況給出最適合的建議。\n\n以上回答是基於模型思考，不保證正確性僅供參考，若有醫療專業問題仍需向醫生諮詢\n",
+                    "next_subtask": {},
+                    "next_tasks": [] 
+                }
+            },
+
+            "finish_lensx_judge3": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "使用者沒有或不確定是否有水晶體過熟過硬、老化或眼睛受傷導致的水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或是狀態不佳的情況，請使用者詢問專業醫生進行評估是否適合使用非秒雷射輔助白內障手術(Lensx)",
+                    "output_msg_info": "即使您沒有或不確定是否有水晶體過熟過硬、老化或眼睛受傷導致的水晶體懸韌帶鬆弛、角膜內皮細胞數量太少或是狀態不佳的情況，飛秒雷射仍可以降低水晶體囊袋破裂，或是人工水晶體植入不正位等手術併發症，進而提升白內障手術的最佳效果。\n建議您諮詢醫師，由專業醫師評估您的眼睛狀況，看看是否適合使用飛秒雷射技術。\n以上回答是基於模型思考，不保證正確性僅供參考，若有醫療專業問題仍需向醫生諮詢\n",
+                    "next_subtask": {},
+                    "next_tasks": []
+                }
+            }
+
+        }
+    ]
+}

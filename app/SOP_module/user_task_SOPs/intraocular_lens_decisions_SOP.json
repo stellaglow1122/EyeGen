@@ -1,0 +1,1709 @@
+{
+    "task_description": "只包含使用者想主動推薦、查詢、選擇或詢問適合他的人工水晶體(水晶體種類)或適合的廠商，不包含推薦人工水晶體手術和回答廠商人工水晶體相關的問題",
+    "subtask_descriptions": [
+
+        {
+
+            
+
+            
+            "check_cataract_case": {
+                "import_subtask_module": "condition_judge_module",
+                "user_define_info": {
+                    "subtask_intention": "從與使用者對話過程，與給定的判斷規則，判斷使用者屬於以下哪種情況。\n情況一：使用者提到了眼睛不舒服的症狀（如看不清楚、模糊、疼痛等等），而根據判斷規則，很可能是白內障\n情況二：使用者提到了眼睛不舒服的症狀，但根據判斷規則，看起來不太像白內障\n情況三：使用者沒有提到任何眼睛不舒服的症狀\n輸出為哪種情境同時，也給出你是怎麼做推論判斷的理由，判斷理由請以對病人的語氣解釋說明(不用太多內容)，若有可能為白內障，可能會需要使用人工水晶體 建議您進一步就醫檢查，必要時可能會需要手術移除老化的水晶體並植入新的人工水晶體，不是白內障則簡單說明原因和說明不須使用人工水晶體",
+                    "condition_judge_info": "/workspace/app/SOP_module/judge_docs/cataract_judge_rule.txt",
+                    "judge_result_format": "請依找以下json格式輸出:\n{\n\"情況\": \"一/二/三\",\n\"判斷理由\": \"...\" }",
+
+
+                    "require_infos": {
+                        "情況": "判斷使用者為三種情況中的哪種？，欄位名稱\"情況\""
+                    },
+                    "options": {
+                        "情況": [
+                            "一",
+                            "二",
+                            "三"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "情況": [
+                            "一",
+                            "二",
+                            "三"
+                        ]
+                    },
+
+                    "input_info": {
+                        "": [ "情況" ]
+                    },
+
+                    "next_subtask": {
+                        "": {
+                            "一": "ask_decision_or_not",
+                            "二": "do_rag_answer",
+                            "三": "opt_ask_cataract_judge_or_iol_recommend"
+                        }
+                    },
+                    "next_tasks": []                    
+                }
+            },
+
+
+            "do_rag_answer": {
+                "import_subtask_module": "rag_module",
+                "user_define_info":{
+                    "subtask_intention": "回答使用者關於眼睛症狀疾病和人工水晶體相關問題，並在最後說明症狀不像白內障，無需使用人工水晶體，但若需要仍可協助推薦適合的人工水晶體(不用詳細列出人工水晶體種類)。若出現疾病或專業術語請也附上英文，如老花眼（Presbyopia）、眼睛疲勞（Asthenopia）等",
+                    "input_info": {
+                        "check_cataract_case": [ "情況" ]
+                    },
+                    "next_subtask": {
+                        "check_cataract_case": {
+                            "二": "again_ask_decision_or_not"
+                        }
+                    },
+                    "next_tasks": [] 
+                }
+                
+            },
+
+
+            "again_ask_decision_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者對適合他的人工水晶體種類的推薦意願，欄位名稱\"推薦意願\"",
+                    "require_infos": {
+                        "推薦意願": "請問您是否仍想了解適合您的人工水晶體種類？，欄位名稱\"推薦意願\"\n注意:若您選擇是，會進入推薦水晶體流程，您接下來需要連續回答4-12個問題，過程中將無法詢問其他問題"
+                    },
+                    "options": {
+                        "推薦意願": [
+                            "是的，我想了解",
+                            "否，我不需要"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "推薦意願": [
+                            "是的，我想了解",
+                            "否，我不需要"
+                        ]
+                    },
+                    "input_info": {
+                        "do_rag_answer": [ "推薦意願" ],
+                        "check_has_cataract_or_not": [ "推薦意願" ],
+                        "maybe_has_no_cataract_symptom": [ "推薦意願" ]
+                    },
+                    "next_subtask": {
+                        "do_rag_answer": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_no_need_judge"
+                        },
+
+                        "check_has_cataract_or_not": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_no_need_judge"
+                        },
+
+                        "maybe_has_no_cataract_symptom": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_no_need_judge"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+
+            "finish_decision_no_need_judge": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者說明如果還需要其他協助可以再次詢問我",
+                    "output_msg_info": "好的，若您有其他眼睛疾病或人工水晶體相關的問題，歡迎再次詢問我\n",
+                    "next_subtask": {} 
+                }
+            },
+
+            "ask_decision_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者對適合他的人工水晶體種類的推薦意願，欄位名稱\"推薦意願\"",
+                    "require_infos": {
+                        "推薦意願": "請問您想要了解適合您的人工水晶體種類？，欄位名稱\"推薦意願\"\n注意:若您選擇是，會進入推薦水晶體流程，您接下來需要連續回答4-12個問題，過程中將無法詢問其他問題"
+                    },
+                    "options": {
+                        "推薦意願": [
+                            "是的，我想了解",
+                            "否，我不需要"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "推薦意願": [
+                            "是的，我想了解",
+                            "否，我不需要"
+                        ]
+                    },
+                    "input_info": {
+                        "": [ "推薦意願" ],
+                        "check_cataract_case":  [ "推薦意願" ],
+                        "check_has_cataract_or_not":  [ "推薦意願" ],
+                        "maybe_has_cataract_symptom": [ "推薦意願" ]
+                    },
+                    "next_subtask": {
+                        "": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_judge0"
+                        },
+                        
+
+                        "check_cataract_case": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_judge0"
+                        },
+
+                        "check_has_cataract_or_not": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_judge0"
+                        },
+
+                        "maybe_has_cataract_symptom": {
+                            "是的，我想了解": "explain_decision_policy",
+                            "否，我不需要": "finish_decision_judge0"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_decision_judge0": {
+                "import_subtask_module": "rag_module",
+                "user_define_info":{
+                    "subtask_intention": "詢問眼科、眼科手術、眼角膜與眼睛疾病(如老花眼、閃光、青光眼、黃斑部病變、飛蚊症、視網膜病變等等)、人工水晶體、回答不同家廠商人工水晶體相關的問題(如價位等)相關問題",
+                    "next_tasks": []
+                }
+            },
+
+            "opt_ask_cataract_judge_or_iol_recommend": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者需要直接進行水晶體推薦還是需要為其簡易判斷是否有白內障，欄位名稱\"要求選擇\"",
+                    "require_infos": {
+                        "要求選擇": "是否需要協助判斷您有無白內障，欄位名稱\"要求選擇\"\n注意: 1.白內障影響生活→建議更換水晶體\n2.視力尚可→可先觀察\n3.進入推薦→需連續回答4-12題"
+                    },
+                    "options": {
+                        "要求選擇": [
+                            "直接推薦水晶體",
+                            "先判斷有無白內障"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "要求選擇": [
+                            "直接推薦水晶體",
+                            "先判斷有無白內障"
+                        ]
+                    },
+                    "input_info": {
+                        "check_cataract_case":  [ "要求選擇" ]
+                    },
+                    "next_subtask": {
+
+                        "check_cataract_case": {
+                            "直接推薦水晶體": "explain_decision_policy",
+                            "先判斷有無白內障": "opt_ask_cataract_symptom_judge_or_not"
+                        }
+
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_ask_cataract_symptom_judge_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "詢問使用者是否有出現類似白內障的症狀，欄位名稱\"出現白內障症狀\"",
+                    "require_infos": {
+                        "出現白內障症狀": "請問您的眼睛是否出現以下症狀，欄位名稱\"出現白內障症狀\"\n注意: 1.視線模糊像有霧\n2.夜視變差\n3.畏光怕燈\n4.看遠近困難\n5.視力變差換鏡無效"
+                    },
+                    "options": {
+                        "出現白內障症狀": [
+                            "是，我有類似症狀",
+                            "否，我沒有這些症狀"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "出現白內障症狀": [
+                            "是",
+                            "否",
+                            "是，我有類似症狀",
+                            "否，我沒有這些症狀"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_ask_cataract_judge_or_iol_recommend":  [ "出現白內障症狀" ]
+                    },
+                    "next_subtask": {
+
+                        "opt_ask_cataract_judge_or_iol_recommend": {
+                            "是": "maybe_has_cataract_symptom",
+                            "否": "maybe_has_no_cataract_symptom",
+                            "是，我有類似症狀": "maybe_has_cataract_symptom",
+                            "否，我沒有這些症狀": "maybe_has_no_cataract_symptom"
+                        }
+
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "maybe_has_cataract_symptom": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者說明其有可能患有白內障，可能需要置換人工水晶體",
+                    "output_msg_info": "根據您的情況，若您出現視線模糊、夜間視力變差、畏光、閱讀或看遠困難、視力持續下降的症狀，這些都是白內障的典型症狀，代表您及有可能患有白內障。\n而白內障是指眼睛的水晶體變得混濁，導致視力模糊、對光線敏感，並且無法透過眼鏡矯正。當白內障影響日常生活時，最有效的解決方式是 置換人工水晶體 (白內障手術)，能幫助恢復清晰視力\n",
+                    "input_info": {
+                        "opt_ask_cataract_symptom_judge_or_not": [ "出現白內障症狀" ]
+                    },
+                    "next_subtask": {
+                        "opt_ask_cataract_symptom_judge_or_not": {
+                            "是": "ask_decision_or_not",
+                            "是，我有類似症狀": "ask_decision_or_not"
+                        }
+                    } 
+                }
+            },
+
+            "maybe_has_no_cataract_symptom": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者說明其有患有白內障機率較低，不太需要置換人工水晶體",
+                    "output_msg_info": "根據您的情況，若若沒有出現視線模糊、夜間視力變差、畏光、閱讀或看遠困難、以及視力無法透過眼鏡矯正等症狀，這表示年患有白內障的可能性較低。\n但仍建議您諮詢專業眼科醫生，並定期接受眼科檢查，以獲得更專業的評估和護理建議！\n",
+                    "input_info": {
+                        "opt_ask_cataract_symptom_judge_or_not": [ "出現白內障症狀" ]
+                    },
+                    "next_subtask": {
+                        "opt_ask_cataract_symptom_judge_or_not": {
+                            "否": "again_ask_decision_or_not",
+                            "否，我沒有這些症狀": "again_ask_decision_or_not"
+                        }
+                    } 
+                }
+            },
+
+            "check_has_cataract_or_not": {
+                "import_subtask_module": "condition_judge_module",
+                "user_define_info": {
+                    "subtask_intention": "從與使用者對話過程，與給定的判斷規則，判斷使用者是否患有白內障，輸出是或否的同時，也給出你是怎麼做推論判斷的理由，判斷理由請以對病人的語氣解釋說明(不用太多內容)，若有可能為白內障，可能會需要使用人工晶體，不是則簡單說明原因",
+                    "condition_judge_info": "/workspace/app/SOP_module/judge_docs/cataract_judge_rule.txt",
+                    "judge_result_format": "請依找以下json格式輸出:\n{\n\"有無患有白內障\": \"是/否\",\n\"推論判斷理由\": \"...\" }",
+
+
+                    "require_infos": {
+                        "有無患有白內障": "判斷使用者是否患有白內障？，欄位名稱\"有無患有白內障\""
+                    },
+                    "options": {
+                        "有無患有白內障": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "有無患有白內障": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_ask_cataract_judge_or_iol_recommend": [ "有無患有白內障" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_ask_cataract_judge_or_iol_recommend": {
+                            "是": "ask_decision_or_not",
+                            "否": "again_ask_decision_or_not"
+                        }
+
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "explain_decision_policy": {
+                "import_subtask_module": "output_msg_module",
+                "user_define_info": {
+                    "subtask_intention": "向使用者進行人工水晶體選擇說明",
+                    "output_msg_info": "注意須知:\n1. **最適合自己的人工水晶體才是最佳選擇**：各種類型的水晶體都有其優點與限制，沒有所謂絕對完美或最好的水晶體，只有最適合自己的水晶體。請根據自己的日常生活需求謹慎選擇，開完刀後人工水晶體基本上無法再更換\n2. **視力的需求與活動**：請回想您的日常活動，記住您需要的視力距離（近/中/遠）：\n - **遠距離視力**：如駕車、看遠處風景。\n - **中距離視力**：如看電腦螢幕、與人交談。\n - **近距離視力**：如閱讀書報、使用手機。\n  3. **視力品質與方便性**：\n  - 在選擇時要了解，視力品質與視力方便性往往無法兼得。需要根據個人的實際需求做出平衡與選擇。\n4. **品質把關與選擇**：\n - 接下來的提供的人工水晶體均經由台北榮總的嚴格品質把關，您可以放心選擇。\n\n以上是人工水晶體選擇的重要說明，希望對您有所幫助，建議最終決策前仍需與專業醫生進行深入討論。\n",
+                    "input_info": {
+                        "ask_decision_or_not": [ "推薦意願" ],
+                        "check_cataract_case": [ "情況" ],
+                        "again_ask_decision_or_not": [ "推薦意願" ],
+                        "opt_ask_cataract_judge_or_iol_recommend": [ "要求選擇" ]
+                    },
+
+                    "next_subtask": {
+                        "ask_decision_or_not": {
+                            "是的，我想了解": "decide_require_priority"
+                        },
+
+                        "check_cataract_case": {
+                            "一": "decide_require_priority"
+                        },
+
+                        "again_ask_decision_or_not": {
+                            "是的，我想了解": "decide_require_priority"
+                        },
+
+                        "opt_ask_cataract_judge_or_iol_recommend": {
+                            "直接推薦水晶體": "decide_require_priority"
+                        }
+                    },
+                    "next_tasks": []   
+                }
+            },
+
+            "decide_require_priority": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對選擇人工水晶體優先考量的需求，欄位名稱\"優先考量需求\"",
+                    "require_infos": {
+                        "優先考量需求": "哪個是你優先考量的需求，欄位名稱\"優先考量需求\""
+                    },
+                    "options": {
+                        "優先考量需求": [
+                            "價位",
+                            "視力品質(看特定距離清楚細節明顯)",
+                            "視力便利性(少戴眼鏡，看東西更方便)"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "優先考量需求": [
+                            "價位",
+                            "視力品質",
+                            "視力便利性"
+                        ]
+                    },
+                    "input_info": {
+                        "explain_decision_policy": [ "優先考量需求" ]
+                    },
+                    "next_subtask": {
+                        "explain_decision_policy": {
+                            "價位": "opt_get_accept_price_range",
+                            "視力品質": "opt_quality_decide_mono_or_short_or_none",
+                            "視力便利性": "opt_conv_decide_long_or_multi_or_none"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_get_accept_price_range": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者可以接受的單眼人工水晶體價位，欄位名稱\"價位\"",
+                    "require_infos": {
+                        "價位": "可以接受\"單眼\"人工水晶體價位，欄位名稱\"價位\""
+                    },
+                    "options": {
+                        "價位": [
+                            "0元(健保)",
+                            "0-5.5萬",
+                            "0-11萬"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "價位": [
+                            "0元(健保)",
+                            "0-5.5萬",
+                            "0-11萬"
+                        ]
+                    },
+                    "input_info": {
+                        "decide_require_priority": [ "價位" ]
+                    },
+                    "next_subtask": {
+
+                        "decide_require_priority": {
+                            "0元(健保)": "opt_price_single_spheric_or_not",
+                            "0元": "opt_price_single_spheric_or_not",
+                            "0-5.5萬": "opt_price_mid_decide_mono_or_short_or_none",
+                            "0-11萬": "opt_price_glare_or_not"
+                        }
+                    },
+                    "next_tasks": []              
+                }
+            },
+
+            "opt_quality_decide_mono_or_short_or_none": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質需求，判斷適合使用單焦點、短延焦、皆非不屬於單焦點和短延焦人工水晶體，欄位名稱\"視力品質要求\"",
+
+                    "require_infos": {
+                        "視力品質要求": "您從以下選項中，挑選您可以接受的視力品質:\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n3.選擇以外的距離皆須配戴眼鏡"                        
+                    },
+
+                    "options": {
+                        "視力品質要求": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見", 
+                            "皆非：皆不符合，我不想戴眼鏡"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦",
+                            "皆非"
+                        ]
+                    },
+                    "input_info": {
+                        "decide_require_priority": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "decide_require_priority": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light",
+                            "皆非": "opt_quality_decide_none_contradiction"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_quality_decide_none_contradiction": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "出現使用者選擇視力品質與視力便利性矛盾情況，向使用者再次請求確認是否選擇矛盾選項，欄位名稱\"品質與便利性矛盾確認\"",
+
+                    "require_infos": {
+                        "品質與便利性矛盾確認": "❗請確認您的優先考量需求為「視力便利性」?\n注意: 1.視力品質：特定距離清晰，其他距離需戴眼鏡。\n2.視力便利性：大多時間不用戴眼鏡（較貴，可能有夜間眩光）"                        
+                    },
+
+                    "options": {
+                        "品質與便利性矛盾確認": [
+                            "是：不戴眼鏡較重要",
+                            "否：特定距離清晰較重要"
+                        ]
+                    },
+                    "output_infos": {
+                        "品質與便利性矛盾確認": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_quality_decide_mono_or_short_or_none": [ "品質與便利性矛盾確認" ]
+                    },
+                    "next_subtask": {
+                        "opt_quality_decide_mono_or_short_or_none": {
+                            "是": "opt_quality_decide_long_or_multi",
+                            "否": "opt_quality_decide_mono_or_short"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_quality_decide_mono_or_short": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質需求，判斷適合使用單焦點、短延焦，欄位名稱\"視力品質\"",
+
+                    "require_infos": {
+                        "視力品質": "您從以下選項中，挑選您可以接受的視力品質:\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n"                        
+                    },
+
+                    "options": {
+                        "視力品質": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_quality_decide_none_contradiction": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "opt_quality_decide_none_contradiction": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+
+            "opt_decide_long_or_multi": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力便利性需求，判斷適合使用長延焦、多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光(晚上開車可能會被燈光刺眼)，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：遠近切換自然，不用常換眼鏡",
+                            "多焦點：看近、中、遠距都清楚"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_decide_long_or_multi": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_quality_decide_mono_or_short_or_none": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+
+
+
+            "opt_conv_decide_long_or_multi_or_none": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力便利性需求，判斷適合使用長延焦、多焦點、皆非不屬於長延焦和多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：近到遠看起來更順暢",
+                            "多焦點：近、中、遠距都能看清楚",
+                            "皆非：皆不符合，可接受有時戴眼鏡"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點",
+                            "皆非"
+                        ]
+                    },
+                    "input_info": {
+                        "decide_require_priority": [ "焦點" ]
+                    },
+
+                    "next_subtask": {
+                        
+                        "decide_require_priority": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light",
+                            "皆非": "opt_conv_decide_none_contradiction"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+
+            "opt_conv_decide_none_contradiction": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "出現使用者選擇視力便利性與視力品質矛盾情況，向使用者再次請求確認是否選擇矛盾選項，欄位名稱\"便利性與品質矛盾確認\"",
+
+                    "require_infos": {
+                        "便利性與品質矛盾確認": "❗請確認您的優先考量需求為「視力品質」?\n注意: 1.視力品質：特定距離清晰，其他距離需戴眼鏡。\n2.視力便利性：大多時間不用戴眼鏡（較貴，可能有夜間眩光）"                        
+                    },
+
+                    "options": {
+                        "便利性與品質矛盾確認": [
+                            "是：特定距離清晰較重要",
+                            "否：不戴眼鏡較重要"
+                        ]
+                    },
+                    "output_infos": {
+                        "便利性與品質矛盾確認": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_conv_decide_long_or_multi_or_none": [ "便利性與品質矛盾確認" ]
+                    },
+                    "next_subtask": {
+                        "opt_conv_decide_long_or_multi_or_none": {
+                            "是": "opt_conv_decide_mono_or_short",
+                            "否": "opt_conv_decide_long_or_multi"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+
+            "opt_conv_decide_long_or_multi": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力便利性需求，判斷適合使用長延焦、多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：近到遠看起來更順暢",
+                            "多焦點：近、中、遠距都能看清楚"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_conv_decide_none_contradiction": [ "焦點" ]
+                    },
+
+                    "next_subtask": {
+                        
+                        "opt_conv_decide_none_contradiction": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_get_blue_light": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "判斷使用者是否需要需要抗藍光功能，欄位名稱\"藍光\"",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能，欄位名稱\"藍光\"\n注意: 抗藍光不需加價，色調偏暖但夜間對比度稍低"                        
+                    },
+
+                    "options": {
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ]
+                    },
+                    "output_infos": {
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ]
+                    },
+                    "input_info": {
+                        
+                        "opt_get_blue_light": [ "藍光" ],
+                        "opt_conv_decide_long_or_multi_or_none": [ "藍光" ],
+                        
+                        "opt_conv_decide_mono_or_short": [ "藍光" ],
+
+                        "opt_quality_decide_mono_or_short_or_none": [ "藍光" ],
+
+                        "opt_quality_decide_long_or_multi": [ "藍光" ],
+
+                        "opt_price_decide_long_or_multi": [ "藍光" ],
+
+                        "opt_price_mid_decide_mono_or_short_or_none": [ "藍光" ],
+
+                        "opt_price_mid_decide_long_or_multi": [ "藍光" ],
+
+                        "opt_price_high_decide_mono_or_short": [ "藍光" ],
+
+                        "opt_quality_decide_none_contradiction": [ "藍光" ],
+
+                        "opt_quality_decide_mono_or_short": [ "藍光" ],
+
+                        "opt_conv_decide_none_contradiction": [ "藍光" ],
+
+                        "opt_conv_decide_long_or_multi": [ "藍光" ],
+
+                        "opt_price_mid_decide_mono_or_short": [ "藍光" ]
+
+                    },
+                    "next_subtask": {
+                        "opt_conv_decide_long_or_multi_or_none": {
+                            "抗藍光": "finish_visual_conv_judge1",
+                            "不用抗藍光": "finish_visual_conv_judge1"
+                        },
+                        
+                        "opt_conv_decide_mono_or_short": {
+                            "抗藍光": "finish_visual_conv_judge2",
+                            "不用抗藍光": "finish_visual_conv_judge2"
+                        },
+
+                        "opt_quality_decide_mono_or_short_or_none": {
+                            "抗藍光": "finish_visual_quality_judge1",
+                            "不用抗藍光": "finish_visual_quality_judge1"
+                        },
+
+                        "opt_quality_decide_long_or_multi": {
+                            "抗藍光": "finish_visual_quality_judge2",
+                            "不用抗藍光": "finish_visual_quality_judge2"
+                        },
+
+                        "opt_price_decide_long_or_multi": {
+                            "抗藍光": "finish_price_judge2",
+                            "不用抗藍光": "finish_price_judge2"
+                        },
+
+                        "opt_price_mid_decide_mono_or_short_or_none": {
+                            "抗藍光": "finish_price_judge3",
+                            "不用抗藍光": "finish_price_judge3"
+                        },
+
+                        "opt_price_mid_decide_long_or_multi": {
+                            "抗藍光": "finish_price_judge4",
+                            "不用抗藍光": "finish_price_judge4"
+                        },
+
+                        "opt_price_high_decide_mono_or_short": {
+                            "抗藍光": "finish_price_judge5",
+                            "不用抗藍光": "finish_price_judge5"
+                        },
+
+
+                        "opt_quality_decide_none_contradiction": {
+                            "抗藍光": "finish_visual_quality_judge1",
+                            "不用抗藍光": "finish_visual_quality_judge1"
+                        },
+
+                        "opt_quality_decide_mono_or_short": {
+                            "抗藍光": "finish_visual_quality_judge1",
+                            "不用抗藍光": "finish_visual_quality_judge1"
+                        },
+
+                        "opt_conv_decide_none_contradiction":  {
+                            "抗藍光": "finish_visual_conv_judge1",
+                            "不用抗藍光": "finish_visual_conv_judge1"
+                        },
+
+                        "opt_conv_decide_long_or_multi": {
+                            "抗藍光": "finish_visual_conv_judge1",
+                            "不用抗藍光": "finish_visual_conv_judge1"
+                        },
+
+                        "opt_price_mid_decide_mono_or_short": {
+                            "抗藍光": "finish_price_judge3",
+                            "不用抗藍光": "finish_price_judge3"
+                        }
+
+                    },
+                    "next_tasks": []           
+                }
+            },
+            
+            "finish_visual_conv_judge1": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對焦點、藍光需求，判斷說明適合使用下列哪一種人工水晶體:\n(1)「長延焦」「非球面」「抗藍光黃片」(2) 「長延焦」「非球面」 (3) 「多焦點」「非球面」「抗藍光」 (4)「多焦點」「非球面」，每個特徵按照選項都用「」包住\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同，除了表格外須說明為何選擇此水晶體種類不用對廠牌有其他的描述，每個特徵按照選項都用「」包住",
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "next_tasks": [ "ask_lensx" ] 
+                }
+            },
+            
+
+
+            "opt_conv_decide_mono_or_short": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質需求，判斷適合使用單焦點、短延焦人工水晶體，欄位名稱\"視力品質要求\"",
+
+                    "require_infos": {
+                        "視力品質要求": "您從以下選項中，挑選您可以接受的視力品質:，欄位名稱\"視力品質要求\"\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n3.選擇以外的距離皆須配戴眼鏡"                        
+                    },
+
+                    "options": {
+                        "視力品質要求": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_conv_decide_long_or_multi_or_none": [ "焦點" ],
+                        "opt_conv_decide_none_contradiction": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "opt_conv_decide_long_or_multi_or_none": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        },
+
+                        "opt_conv_decide_none_contradiction": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_visual_conv_judge2": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力便利性、藍光需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個):\n(1) 「單焦點」「非球面」「抗藍光黃片」(2) 「單焦點」「非球面」 (3) 「短延焦」「非球面」「抗藍光黃片」 (4) 「短延焦」「非球面」，每個特徵按照選項都用「」包住\n\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同，除了表格外須說明為何選擇此水晶體種類不用對廠牌有其他的描述，每個特徵按照選項都用「」包住",
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「單焦點」「非球面」「抗藍光黃片」",
+                            "「單焦點」「非球面」",
+                            "「短延焦」「非球面」「抗藍光黃片」",
+                            "「短延焦」「非球面」"
+                        ]
+                    },
+                    
+                    "input_info": {
+                        "opt_conv_decide_mono_or_short": [ "焦點" ],
+                        "opt_get_blue_light":  [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]    
+                    
+                }
+            },
+
+
+            "finish_visual_quality_judge1": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力品質、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1) 「單焦點」「非球面」「抗藍光黃片」 (2) 「單焦點」「非球面」 (3) 「短延焦」「非球面」「抗藍光黃片」 (4) 「短延焦」「非球面」，每個特徵按照選項都用「」包住\n\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同，除了markdown表格外須說明為何選擇此水晶體種類不用對廠牌有其他的描述，每個特徵按照選項都用「」包住",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「單焦點」「非球面」「抗藍光黃片」",
+                            "「單焦點」「非球面」",
+                            "「短延焦」「非球面」「抗藍光黃片」",
+                            "「短延焦」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_quality_decide_mono_or_short_or_none": [ "焦點" ],
+                        "opt_get_blue_light":  [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+            },
+
+            "opt_quality_decide_long_or_multi": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力便利性需求，判斷適合使用長延焦、多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：遠近切換自然，不用常換眼鏡",
+                            "多焦點：近、中、遠距都能看清楚"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_quality_decide_mono_or_short_or_none": [ "焦點" ],
+                        "opt_quality_decide_none_contradiction": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_quality_decide_mono_or_short_or_none": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        },
+
+                        "opt_quality_decide_none_contradiction": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_visual_quality_judge2": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力方便性、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1)「長延焦」「非球面」「抗藍光黃片」 (2) 「長延焦」「非球面」 (3) 「多焦點」「非球面」「抗藍光」 (4) 「多焦點」「非球面」，每個特徵按照選項都用「」包住\n",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「長延焦」「非球面」「抗藍光黃片」",
+                            "「長延焦」「非球面」",
+                            "「多焦點」「非球面」「抗藍光」",
+                            "「多焦點」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_quality_decide_long_or_multi": [ "焦點" ],
+                        "opt_get_blue_light": [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+            },
+
+
+            "opt_price_single_spheric_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "健保能夠提供「單焦點」且「球面」的人工水晶體，判斷使用者是否能夠接受，欄位名稱\"單焦點球面\"",
+
+                    "require_infos": {
+                        "單焦點球面": "可否接受「單焦點」「球面」?，欄位名稱\"單焦點球面\"\n注意:1.單焦點：特定距離看得清楚（近/中/遠擇一），其他需戴眼鏡\n2.球面：晚上看東西較不清楚（非球面需自費）"                        
+                    },
+
+                    "options": {
+                        "單焦點球面": [
+                            "是",
+                            "否，不想戴眼鏡",
+                            "否，希望夜間視力品質好一點"
+                        ]
+                    },
+                    "output_infos": {
+                        "單焦點球面": [
+                            "是",
+                            "否，不想戴眼鏡",
+                            "否，希望晚上看東西清楚一點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_get_accept_price_range": [ "單焦點球面" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_get_accept_price_range": {
+                            "是": "finish_price_judge1",
+                            "否，不想戴眼鏡": "opt_price_single_spheric_no_contradiction_1",
+                            "否，希望夜間視力品質好一點": "opt_price_single_spheric_no_contradiction_2"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_price_single_spheric_no_contradiction_1": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "出現使用者選擇0元(健保)與須付費矛盾情況，向使用者再次請求確認是否選擇矛盾選項，欄位名稱\"0元與自費矛盾確認\"",
+
+                    "require_infos": {
+                        "0元與自費矛盾確認": "❗請確認您是否可以接受自費人工水晶體?\n注意:❗不戴眼鏡需自負額外費用，健保無法全額給付"                        
+                    },
+
+                    "options": {
+                        "0元與自費矛盾確認": [
+                            "是：我可以接受自費",
+                            "否：我不想負擔任何費用"
+                        ]
+                    },
+                    "output_infos": {
+                        "0元與自費矛盾確認": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_single_spheric_or_not": [ "0元與自費矛盾確認" ]
+                    },
+                    "next_subtask": {
+                        "opt_price_single_spheric_or_not": {
+                            "是": "opt_price_decide_long_or_multi",
+                            "否": "finish_price_judge1"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_price_single_spheric_no_contradiction_2": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "出現使用者選擇0元(健保)與須付費矛盾情況，向使用者再次請求確認是否選擇矛盾選項，欄位名稱\"0元與自費矛盾確認\"",
+
+                    "require_infos": {
+                        "0元與自費矛盾確認": "❗請確認您是否可以接受自費人工水晶體?\n注意:❗要求夜間視力更佳需自付額外費用，健保無法全額給付"                        
+                    },
+
+                    "options": {
+                        "0元與自費矛盾確認": [
+                            "是：我可以接受自費",
+                            "否：我不想負擔任何費用"
+                        ]
+                    },
+                    "output_infos": {
+                        "0元與自費矛盾確認": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_single_spheric_or_not": [ "0元與自費矛盾確認" ]
+                    },
+                    "next_subtask": {
+                        "opt_price_single_spheric_or_not": {
+                            "是": "opt_get_accept_price_range_2",
+                            "否": "finish_price_judge1"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_price_judge1": { 
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "請原封不動一模一樣的輸出\"「單焦點」「球面」\"這兩個括號以及括號內的內容，並說明單焦點搭配球面的人工水晶體特質，注意「」也要輸出\n",
+
+                    "require_infos": {},
+
+                    "options": {},
+                    "output_infos": {},
+
+                    "input_info": {
+                        "opt_price_single_spheric_or_not": [ "單焦點球面" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+            },
+
+            "opt_price_decide_long_or_multi": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力便利性需求，判斷適合使用長延焦、多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：近到遠看起來更順暢",
+                            "多焦點：近、中、遠距都能看清楚"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_single_spheric_or_not": [ "焦點" ],
+                        "opt_price_high_quality_or_conv":  [ "焦點" ],
+                        "opt_price_single_spheric_no_contradiction_1": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_price_single_spheric_or_not": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        },
+
+                        "opt_price_high_quality_or_conv": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        },
+
+                        "opt_price_single_spheric_no_contradiction_1": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_price_judge2": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力方便性、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1)「長延焦」「非球面」「抗藍光黃片」 (2) 長延焦」「非球面」 (3) 「多焦點」「非球面」「抗藍光」 (4) 「多焦點」「非球面」，每個特徵按照選項都用「」包住\n\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「長延焦」「非球面」「抗藍光黃片」",
+                            "「長延焦」「非球面」",
+                            "「多焦點」「非球面」「抗藍光」",
+                            "「多焦點」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_decide_long_or_multi": [ "焦點" ],
+                        "opt_get_blue_light": [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+            },
+
+            "opt_get_accept_price_range_2": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "請重新再次取得使用者可以接受的單眼人工水晶體價位，欄位名稱\"重新取得價位\"，不包含0元(健保)",
+                    "require_infos": {
+                        "重新取得價位": "重新選擇可以接受\"單眼\"人工水晶體價位，欄位名稱\"重新取得價位\""
+                    },
+                    "options": {
+                        "重新取得價位": [
+                            "0-5.5萬",
+                            "0-11萬"
+                        ]
+                    },
+                
+                    "output_infos": {
+                        "重新取得價位": [
+                            "0-5.5萬",
+                            "0-11萬"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_single_spheric_or_not": [ "重新取得價位" ],
+                        "opt_price_single_spheric_no_contradiction_2": [ "重新取得價位" ]
+                    },
+                    "next_subtask": {
+
+                        "opt_price_single_spheric_or_not": {
+                            "0-5.5萬": "opt_price_mid_decide_mono_or_short_or_none",
+                            "0-11萬": "opt_price_glare_or_not"
+                        },
+
+                        "opt_price_single_spheric_no_contradiction_2": {
+                            "0-5.5萬": "opt_price_mid_decide_mono_or_short_or_none",
+                            "0-11萬": "opt_price_glare_or_not"
+                        }
+
+                    },
+                    "next_tasks": []               
+                }
+            },
+
+            "opt_price_mid_decide_mono_or_short_or_none": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質需求，判斷適合使用單焦點、短延焦、皆非不屬於單焦點和短延焦人工水晶體，欄位名稱\"視力品質要求\"",
+
+                    "require_infos": {
+                        "視力品質要求": "您從以下選項中，挑選您可以接受的視力品質:，欄位名稱\"視力品質要求\"\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n3.選擇以外的距離皆須配戴眼鏡"                        
+                    },
+
+                    "options": {
+                        "視力品質要求": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見",
+                            "皆非：皆不符合，不想戴眼鏡（較貴）"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦",
+                            "皆非"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_get_accept_price_range": [ "焦點" ],
+                        "opt_get_accept_price_range_2":  [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "opt_get_accept_price_range": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light",
+                            "皆非": "opt_price_mid_decide_none_contradiction"
+                        },
+
+                        "opt_get_accept_price_range_2": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light",
+                            "皆非": "opt_price_mid_decide_none_contradiction"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_price_mid_decide_none_contradiction": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "出現使用者選擇超出選擇預算矛盾情況，向使用者再次請求確認是否選擇矛盾選項，欄位名稱\"預算矛盾確認\"",
+
+                    "require_infos": {
+                        "預算矛盾確認": "❗請確認您的是否可以接受預算超出5.5萬?"                        
+                    },
+
+                    "options": {
+                        "預算矛盾確認": [
+                            "是：可以接受超出5.5萬",
+                            "否：不行，預算最高5.5萬"
+                        ]
+                    },
+                    "output_infos": {
+                        "預算矛盾確認": [
+                            "是",
+                            "否"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_mid_decide_mono_or_short_or_none": [ "預算矛盾確認" ]
+                    },
+                    "next_subtask": {
+                        "opt_price_mid_decide_mono_or_short_or_none": {
+                            "是": "opt_price_mid_decide_long_or_multi",
+                            "否": "opt_price_mid_decide_mono_or_short"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_price_mid_decide_mono_or_short": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質需求，判斷適合使用單焦點、短延焦人工水晶體，欄位名稱\"視力品質要求\"",
+
+                    "require_infos": {
+                        "視力品質要求": "您從以下選項中，挑選您可以接受的視力品質:，欄位名稱\"視力品質要求\"\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠"                        
+                    },
+
+                    "options": {
+                        "視力品質要求": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_get_accept_price_range": [ "焦點" ],
+                        "opt_get_accept_price_range_2":  [ "焦點" ],
+                        "opt_price_mid_decide_none_contradiction":  [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "opt_get_accept_price_range": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        },
+
+                        "opt_get_accept_price_range_2": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        },
+
+                        "opt_price_mid_decide_none_contradiction": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            
+
+            "finish_price_judge3": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力品質、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1) 「單焦點」「非球面」「抗藍光黃片」 (2) 「單焦點」「非球面」 (3) 「短延焦」「非球面」「抗藍光黃片」 (4) 「短延焦」「非球面」，每個特徵按照選項都用「」包住\n\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同，除了markdown表格外須說明為何選擇此水晶體種類不用對廠牌有其他的描述，每個特徵按照選項都用「」包住",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「單焦點」「非球面」「抗藍光黃片」",
+                            "「單焦點」「非球面」",
+                            "「短延焦」「非球面」「抗藍光黃片」",
+                            "「短延焦」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_mid_decide_mono_or_short_or_none": [ "焦點" ],
+                        "opt_get_blue_light":  [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+            },
+
+
+            "opt_price_mid_decide_long_or_multi": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者在對話中視力的需求，判斷適合使用長延焦、多焦點人工水晶體，欄位名稱\"視力便利性\"",
+
+                    "require_infos": {
+                        "視力便利性": "您從以下選項中，挑選您可以接受的視力便利性:，欄位名稱\"視力便利性\"\n注意:1. 長延焦和多焦點夜間可能有眩光，視覺品質稍受影響\n2. 多焦點切換視線距離有點卡"                        
+                    },
+
+                    "options": {
+                        "視力便利性": [
+                            "長延焦：近到遠看起來更順暢",
+                            "多焦點：近、中、遠距都能看清楚"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_mid_decide_mono_or_short_or_none": [ "焦點" ],
+                        "opt_price_mid_decide_none_contradiction":  [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_price_mid_decide_mono_or_short_or_none": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        },
+
+                        "opt_price_mid_decide_none_contradiction": {
+                            "長延焦": "opt_get_blue_light",
+                            "多焦點": "opt_get_blue_light"
+                        }
+
+                    },
+                    "next_tasks": []                
+                }
+            },
+    
+            "finish_price_judge4": {
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力方便性、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1)「長延焦」「非球面」「抗藍光黃片」 (2) 「長延焦」「非球面」 (3) 「多焦點」「非球面」「抗藍光」 (4) 「多焦點」「非球面」，每個特徵按照選項都用「」包住\n",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "長延焦",
+                            "多焦點"
+                        ]
+                    },
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「長延焦」「非球面」「抗藍光黃片」",
+                            "「長延焦」「非球面」",
+                            "「多焦點」「非球面」「抗藍光」",
+                            "「多焦點」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_mid_decide_long_or_multi": [ "焦點" ],
+                        "opt_get_blue_light":  [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]    
+                }
+
+                
+            },
+
+            "opt_price_glare_or_not": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "判斷使用者是否能夠接受夜間眩光，欄位名稱\"夜間眩光\"",
+
+                    "require_infos": {
+                        "夜間眩光": "是否可以接受夜間/暗環境眩光?，欄位名稱\"夜間眩光\"\n注意: 夜晚環境通常昏暗，當有明亮光源（如車燈、路燈）突然進入視野時，眼睛無法快速調節，若需開車不建議"                        
+                    },
+
+                    "options": {
+                        "夜間眩光": [
+                            "是，可以接受夜間眩光",
+                            "否，不能接受夜間眩光"
+                        ]
+                    },
+                    "output_infos": {
+                        "夜間眩光": [
+                            "是，可以接受夜間眩光",
+                            "否，不能接受夜間眩光"
+                        ]
+                    },
+
+                    "input_info": {
+                        "opt_get_accept_price_range": [ "夜間眩光" ],
+                        "opt_get_accept_price_range_2":  [ "夜間眩光" ]
+                    },
+                    "next_subtask": {
+                        
+                        "opt_get_accept_price_range": {
+                            "是，可以接受夜間眩光": "opt_price_high_quality_or_conv",
+                            "否，不能接受夜間眩光": "opt_price_high_decide_mono_or_short",
+                            "是": "opt_price_high_quality_or_conv",
+                            "否": "opt_price_high_decide_mono_or_short",
+                            "可以接受夜間眩光": "opt_price_high_quality_or_conv",
+                            "不能接受夜間眩光": "opt_price_high_decide_mono_or_short"
+                        },
+
+                        "opt_get_accept_price_range_2": {
+                            "是，可以接受夜間眩光": "opt_price_high_quality_or_conv",
+                            "否，不能接受夜間眩光": "opt_price_high_decide_mono_or_short",
+                            "是": "opt_price_high_quality_or_conv",
+                            "否": "opt_price_high_decide_mono_or_short",
+                            "可以接受夜間眩光": "opt_price_high_quality_or_conv",
+                            "不能接受夜間眩光": "opt_price_high_decide_mono_or_short"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "opt_price_high_decide_mono_or_short": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對視力品質要求，讓使用者挑選適合單焦點或短延焦，判斷適合使用單焦點、短延焦人工水晶體，欄位名稱\"視力品質要求\"",
+
+                    "require_infos": {
+                        "視力品質要求": "您從以下選項中，挑選您可以接受的視力品質:，欄位名稱\"視力品質要求\"\n注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n3.選擇以外的距離皆須配戴眼鏡"                        
+                    },
+
+                    "options": {
+                        "視力品質要求": [
+                            "單焦點：單一距離看得清楚",
+                            "短延焦：近中或中遠距離清楚可見"
+                        ]
+                    },
+                    "output_infos": {
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_glare_or_not": [ "焦點" ],
+                        "opt_price_high_quality_or_conv": [ "焦點" ]
+                    },
+                    "next_subtask": {
+                        "opt_price_glare_or_not": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        },
+
+                        "opt_price_high_quality_or_conv": {
+                            "單焦點": "opt_get_blue_light",
+                            "短延焦": "opt_get_blue_light"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            },
+
+            "finish_price_judge5": {
+
+                "import_subtask_module": "rag_module",
+                "user_define_info": {
+                    "subtask_intention": "根據使用者對視力品質、藍光需求需求，判斷並說明適合使用下列哪一種人工水晶體(只能挑一個)\n(1) 「單焦點」「非球面」「抗藍光黃片」 (2) 「單焦點」「非球面」 (3) 「短延焦」「非球面」「抗藍光黃片」 (4) 「短延焦」「非球面」，每個特徵按照選項都用「」包住\n\n接著請針對文件北榮-眼科人工水晶體自付差額品項，用markdown表格方式逐一詳細列出全部同時滿足'種類欄位完全符合下面使用者的要求(所有要求同時成立)和你判斷適合的人工水晶體種類'條件的廠商人工水晶體中英文特材品名以及詳細的所有價格(醫院單價、健保給付、自費差額)，注意輸出的數字和特材品名需和文件北榮-眼科人工水晶體自付差額品項表格內容完全相同，除了markdown表格外須說明為何選擇此水晶體種類不用對廠牌有其他的描述，每個特徵按照選項都用「」包住",
+
+                    "require_infos": {
+                        "藍光": "是否需要抗藍光功能", 
+                        "焦點": "適合使用哪種焦點/焦段種類" 
+                    },
+                    "options": {
+
+                        "藍光": [
+                            "抗藍光",
+                            "不用抗藍光"
+                        ],
+
+                        "焦點": [
+                            "單焦點",
+                            "短延焦"
+                        ]
+                    },
+                    "output_infos": {
+                        "人工水晶體種類": [
+                            "「單焦點」「非球面」「抗藍光黃片」",
+                            "「單焦點」「非球面」",
+                            "「短延焦」「非球面」「抗藍光黃片」",
+                            "「短延焦」「非球面」"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_high_decide_mono_or_short": [ "焦點" ],
+                        "opt_get_blue_light":  [ "藍光" ]
+                    },
+                    "next_subtask": {},
+                    "next_tasks": [ "ask_lensx" ]              
+                }
+                
+            },
+
+            "opt_price_high_quality_or_conv": {
+                "import_subtask_module": "request_info_module",
+                "user_define_info": {
+                    "subtask_intention": "取得使用者對較重視的人工水晶體需求，判斷較視立品質、視立方便性，欄位名稱\"重視需求\"",
+
+                    "require_infos": {
+                        "重視需求": "您比較重視下列人工水晶體的哪一項表現？，欄位名稱\"重視需求\"\n注意: 1. 視立品質選擇以外的其他距離需要戴眼鏡\n2. 視立方便性會犧牲一些視覺品質"                        
+                    },
+
+                    "options": {
+                        "重視需求": [
+                            "視立品質：一段距離內視覺品質較高",
+                            "視立方便性：大部分時間不需要戴眼鏡"
+                        ]
+                    },
+                    "output_infos": {
+                        "重視需求": [
+                            "視立品質",
+                            "視立方便性"
+                        ]
+                    },
+                    "input_info": {
+                        "opt_price_glare_or_not": [ "重視需求" ]
+                    },
+                    "next_subtask": {
+                        "opt_price_glare_or_not": {
+                            "視立品質": "opt_price_high_decide_mono_or_short",
+                            "視立方便性": "opt_price_decide_long_or_multi"
+                        }
+                    },
+                    "next_tasks": []                
+                }
+            }
+        }
+        
+    ]
+    
+}

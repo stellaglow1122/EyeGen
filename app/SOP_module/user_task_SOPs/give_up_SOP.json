@@ -1,0 +1,34 @@
+{
+    "task_description": "當你認為使用者意圖並不屬於以上任何意圖",
+    "subtask_descriptions": [
+
+        {
+            "give_up": {
+
+                "import_subtask_module": "none",
+
+                "state_descriptions": {
+                    "state_init_give_up": "判斷使用者任務無法呼叫意圖函式完成，但尚未呼叫 give_up 函式放棄",
+                    "state_success_give_up": "判斷無法完成任務後，先前的步驟和動作已經有成功呼叫 do_answer_and_summary 函式讓通用模型來回答問題"
+                },
+
+                "initial_state": "state_init_give_up",
+                "end_states": [ "state_success_give_up" ],
+                "transitions": {
+                    "_comment": "current_state: action -> next_state",
+                    "state_init_give_up": {
+                        "action_do_answer_and_summary": [ "state_success_give_up" ],
+                        "action_descriptor_do_answer_and_summary": [ 
+                            "你需要呼叫 do_answer_and_summary 函式來讓通用模型來回答問題"
+                        ]
+                    }
+                }
+                
+            }
+        }
+
+    ],
+
+    "next_tasks": []
+    
+}

@@ -1,0 +1,5 @@
+gradio==5.22.0
+pandas==2.2.1
+pymongo==4.11.3
+notebook
+

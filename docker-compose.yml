@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: ../Dockerfile
+    image: ophthalmology_app_image
+    container_name: ophthalmology_app_container
+    ports:
+      - "7860:7860"
+      - "8888:8888"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - mongo
+    networks:
+      - ophthalmology_net
+    stdin_open: true
+    tty: true
+
+  mongo:
+    image: mongo:6
+    container_name: ophthalmology_db_container
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db
+    networks:
+      - ophthalmology_net
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.runCommand('ping').ok"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+networks:
+  ophthalmology_net:
+    driver: bridge
