@@ -166,7 +166,7 @@ To import conversation data from JSON into MongoDB:
 2. Run the import script:
    - Via Docker:
      ```bash
-     docker exec -it ophthalmology_app_app_1 python Dialogue2Mongo.py
+     docker exec -it ophthalmology_app_container python Dialogue2Mongo.py
      ```
    - Locally:
      ```bash
@@ -182,7 +182,7 @@ To import report data from JSON:
 2. Run the import script:
    - Via Docker:
      ```bash
-     docker exec -it ophthalmology_app_app_1 python Report2Mongo.py
+     docker exec -it ophthalmology_app_container python Report2Mongo.py
      ```
    - Locally:
      ```bash
@@ -190,19 +190,6 @@ To import report data from JSON:
      python Report2Mongo.py
      ```
    - This populates the report collection (adjust script as needed).
-
-### Verifying Data
-To check imported data:
-- Via Docker:
-  ```bash
-  docker exec -it ophthalmology_app_app_1 python test.py
-  ```
-- Locally:
-  ```bash
-  cd app
-  python test.py
-  ```
-- Outputs the total document count and sample data from `synthesis_json_user_conv_data_rate_v2`.
 
 ---
 
@@ -258,7 +245,7 @@ To add new SOP JSON files:
 
 3. **Verify Data**:
    ```bash
-   docker exec -it ophthalmology_app_app_1 python test.py
+   docker exec -it ophthalmology_app_container python test.py
    ```
    Output:
    ```
