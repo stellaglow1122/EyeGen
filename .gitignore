@@ -1,0 +1,22 @@
+# 忽略測試與備份檔案
+app/test.py
+app/backup.py
+
+# 忽略 JSON 資料內容，但保留資料夾本身
+app/json_dialogue/*
+!app/json_dialogue/.gitkeep
+
+app/json_report/*
+!app/json_report/.gitkeep
+
+# 忽略 MongoDB 資料內容，但保留資料夾
+mongo_data/*
+!mongo_data/.gitkeep
+
+# Python 環境相關
+__pycache__/
+*.pyc
+.env
+
+# Docker 相關
+*.log
