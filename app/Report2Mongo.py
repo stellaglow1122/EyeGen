@@ -8,49 +8,6 @@ def import_reports_to_mongo():
     db = init_db()
     collection = db["reports"]
 
-    json_dir = "/app/json_report"  # 容器內路徑
-    for filename in os.listdir(json_dir):
-        if filename.endswith(".json"):
-            filepath = os.path.join(json_dir, filename)
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                upload_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-                if isinstance(data, list):
-                    for entry in data:
-                        if "report_id" not in entry:
-                            entry["report_id"] = filename.replace(".json", "")
-                        entry["upload_time"] = upload_time
-                        collection.update_one(
-                            {"report_id": entry["report_id"]},
-                            {"$set": entry},
-                            upsert=True
-                        )
-                else:
-                    data["report_id"] = filename.replace(".json", "")
-                    data["upload_time"] = upload_time
-                    collection.update_one(
-                        {"report_id": data["report_id"]},
-                        {"$set": data},
-                        upsert=True
-                    )
-
-            print(f"Imported (upserted) {filename} to MongoDB")
-
-if __name__ == "__main__":
-    import_reports_to_mongo()
-
-
-import json
-import os
-from datetime import datetime
-from pymongo import MongoClient
-from db_utils_report import init_db
-
-def import_reports_to_mongo():
-    db = init_db()
-    collection = db["reports"]
-
     json_dir = "/app/json_report"
     for filename in os.listdir(json_dir):
         if filename.endswith(".json"):
