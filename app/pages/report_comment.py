@@ -1,7 +1,7 @@
 # pages/report_comment.py
 import gradio as gr
 import pandas as pd
-from db_utils_report import get_report_list, get_report_by_id, submit_comment, get_next_uncommented_report, get_prev_uncommented_report
+from database.db_utils_report import get_report_list, get_report_by_id, submit_comment, get_next_uncommented_report, get_prev_uncommented_report
 from datetime import datetime
 
 def report_comment_page():

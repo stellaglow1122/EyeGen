@@ -8,7 +8,7 @@ from pymongo import MongoClient
 import threading
 from collections import defaultdict
 import unicodedata
-from db_utils_report import init_db
+from database.db_utils_report import init_db
 
 # 互斥鎖確保資料庫操作安全
 db_lock = threading.Lock()

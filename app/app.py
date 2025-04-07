@@ -1,5 +1,5 @@
 import gradio as gr
-from db_utils_report import init_db
+from database.db_utils_report import init_db
 from utils import custom_css
 from pages.home import home_page
 from pages.report_comment import report_comment_page
