@@ -12,6 +12,7 @@ services:
       - "8888:8888"
     volumes:
       - ./app:/app
+      - ./.env:/app/.env
     depends_on:
       - mongo
     networks:

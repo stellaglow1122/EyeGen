@@ -23,8 +23,7 @@ ophthalmology_app/
 │   │   └── report_generator.py # Page for generating or analyzing reports
 
 │   ├── services/               # Business logic or utility modules
-│   │   ├── report_utils.py     # Functions related to report analysis or summarization
-│   │   └── __init__.py         # Makes this directory a Python package
+│   │   ├── GenReport.py     # Functions related to report analysis or summarization
 
 │   ├── database/               # MongoDB-related logic and data import scripts
 │   │   ├── db_utils.py         # MongoDB connection and CRUD helper functions
