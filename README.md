@@ -23,7 +23,8 @@ ophthalmology_app/
 │   │   └── report_generator.py # Page for generating or analyzing reports
 
 │   ├── services/               # Business logic or utility modules
-│   │   ├── GenReport.py     # Functions related to report analysis or summarization
+│   │   ├── GenReport.py        # Functions related to report analysis or summarization
+│   │   └── report_prompts.py   # prompts for LLM to generate summary report
 
 │   ├── database/               # MongoDB-related logic and data import scripts
 │   │   ├── db_utils.py         # MongoDB connection and CRUD helper functions
