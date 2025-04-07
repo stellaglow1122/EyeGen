@@ -115,6 +115,7 @@ http://localhost:7860
 | Enter app container       | `docker exec -it ophthalmology_app_container bash` |
 | Enter MongoDB container   | `docker exec -it ophthalmology_db_container bash` |
 | View logs                 | `docker-compose logs` or `docker-compose logs app` |
+| Start jupyter in container| `jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root` |
 
 ---
 
