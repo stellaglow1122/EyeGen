@@ -9,42 +9,46 @@
 ```
 ophthalmology_app/
 ├── Dockerfile                  # Docker build configuration
-├── docker-compose.yml          # Docker Compose setup for multi-container orchestration
-├── README.md                   # Project documentation and usage instructions
+├── docker-compose.yml         # Docker Compose for multi-container orchestration
+├── README.md                  # Project documentation and usage instructions
 
-├── app/                        # Main application directory
-│   ├── app.py                  # Entry point of the web interface (Gradio or Streamlit)
-│   ├── requirements.txt        # Python dependencies list
+├── app/                       # Main application directory
+│   ├── app.py                 # Entry point of the web interface (Gradio or Streamlit)
+│   ├── requirements.txt       # Python dependency list
 
-│   ├── pages/                  # UI page modules (each corresponds to a tab/page)
-│   │   ├── home.py             # Home page of the application
-│   │   ├── dialogue_comment.py # Page for displaying and commenting on dialogues
-│   │   ├── report_comment.py   # Page for displaying and commenting on reports
-│   │   └── report_generator.py # Page for generating or analyzing reports
+│   ├── pages/                 # UI page modules (each corresponds to a tab/page)
+│   │   ├── home.py                  # Home page
+│   │   ├── dialogue_comment.py     # Dialogue browsing & commenting interface
+│   │   ├── report_comment.py       # Report browsing & feedback interface
+│   │   └── report_generator.py     # Report generation and evaluation page
 
-│   ├── services/               # Business logic or utility modules
-│   │   ├── GenReport.py        # Functions related to report analysis or summarization
-│   │   └── report_prompts.py   # prompts for LLM to generate summary report
+│   ├── services/              # Core business logic and LLM integration
+│   │   ├── GenReport.py             # Report generation via LLM
+│   │   ├── EvalCitation.py          # Citation validation logic via LLM
+│   │   ├── EvalMetrics.py           # Metrics calculation (recall, precision, etc.)
+│   │   ├── generate_full_report.py  # Full pipeline: generate → evaluate → metrics
+│   │   └── report_prompts.py        # Prompt templates for LLM calls
 
-│   ├── database/               # MongoDB-related logic and data import scripts
-│   │   ├── db_utils.py         # MongoDB connection and CRUD helper functions
-│   │   ├── Dialogue2Mongo.py  # Script to import dialogue JSON files into MongoDB
-│   │   └── Report2Mongo.py    # Script to import report JSON files into MongoDB
+│   ├── database/              # MongoDB-related scripts
+│   │   ├── db_utils.py              # MongoDB connection helpers
+│   │   ├── Dialogue2Mongo.py       # Import dialogues into MongoDB
+│   │   └── Report2Mongo.py         # Import reports into MongoDB
 
-│   ├── json_dialogue/          # Folder to place user-provided dialogue JSON files
-│   ├── json_report/            # Folder to place user-provided report JSON files
+│   ├── json_dialogue/         # Folder for user-provided dialogue JSON files
+│   ├── json_report/           # Folder for generated/evaluated report JSON files
 
-│   ├── SOP_module/             # Standard Operating Procedure (SOP) JSON definitions
+│   ├── SOP_module/            # Standard Operating Procedures used by the system
 │   │   └── user_task_SOPs/
 │   │       ├── ask_cataract_len_SOP.json
-│   │       └── ...             # Other SOP templates used in the app
+│   │       └── ...            # Other SOP templates
 
-│   ├── assets/                 # Static files such as images or diagrams
+│   ├── assets/                # Static images or diagrams
 │   │   └── SchematicFlowDiagram.png
 
-│   └── utils.py                # General-purpose utility functions (non-database-specific)
+│   └── utils.py               # General utility functions
 
-├── mongo_data/                 # Persistent volume for MongoDB data storage
+├── mongo_data/                # Volume for MongoDB data persistence
+
 ```
 
 ---
