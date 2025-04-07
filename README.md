@@ -17,7 +17,6 @@ ophthalmology_app/
 │   ├── Dialogue2Mongo.py     # Script to import dialogue data into MongoDB
 │   ├── Report2Mongo.py       # Script to import report data into MongoDB
 │   ├── db_utils_report.py    # MongoDB initialization and helper functions
-│   ├── utils.py              # General utility functions
 │   ├── json_dialogue/        # Folder for dialogue JSON files (must add your files)
 │   ├── json_report/          # Folder for report JSON files (must add your files)
 │   ├── SOP_module/
@@ -26,6 +25,7 @@ ophthalmology_app/
 │   │   ├── home.py
 │   │   ├── dialogue_comment.py
 │   │   └── report_comment.py
+│   │   └── report_generator.py
 │   └── assets/
 │       └── SchematicFlowDiagram.png
 └── mongo_data/               # MongoDB volume for persistent data
