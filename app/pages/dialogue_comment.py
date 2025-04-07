@@ -8,8 +8,10 @@ from pymongo import MongoClient
 import threading
 from collections import defaultdict
 import unicodedata
-# from ..db_utils_report import init_db, db_lock  # 從 db_utils_report 導入
-from db_utils_report import init_db, db_lock
+from db_utils_report import init_db
+
+# 互斥鎖確保資料庫操作安全
+db_lock = threading.Lock()
 
 global map_intention
 map_intention = {
