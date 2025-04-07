@@ -181,8 +181,8 @@ def read_and_set_conv_data_rate_table(new_json_user_conv_data_rate_table):
                 "llama405b_score": all_row['llama405b_score'],
                 "llama405b_feedback": all_row['llama405b_feedback'],
 
-                "show_model_score": all_row['show_model_score'],
-                "show_model_feedback": all_row['show_model_feedback'],
+                "show_eval_model_score": all_row.get('show_eval_model_score'),
+                "show_eval_model_feedback": all_row.get('show_eval_model_feedback'),
 
             
                 #### for doctor eval ui
@@ -240,8 +240,8 @@ def read_and_set_conv_data_rate_table(new_json_user_conv_data_rate_table):
                 "llama405b_score": all_row['llama405b_score'],
                 "llama405b_feedback": all_row['llama405b_feedback'],
 
-                "show_model_score": all_row['show_model_score'],
-                "show_model_feedback": all_row['show_model_feedback'],
+                "show_eval_model_score": all_row.get('show_eval_model_score'),
+                "show_eval_model_feedback": all_row.get('show_eval_model_feedback'),
 
             
                 #### for doctor eval ui
@@ -600,8 +600,8 @@ def get_current_conversation(current_index, conversations_len, prev_data_type, d
                 "llama405b_score": "",
                 "llama405b_feedback": "",
 
-                "show_model_score": "",
-                "show_model_feedback": "",
+                "show_eval_model_score": "",
+                "show_eval_model_feedback": "",
 
             
                 #### for doctor eval ui
@@ -723,8 +723,8 @@ def get_current_conversation(current_index, conversations_len, prev_data_type, d
                     "llama405b_score": "",
                     "llama405b_feedback": "",
     
-                    "show_model_score": "",
-                    "show_model_feedback": "",
+                    "show_eval_model_score": "",
+                    "show_eval_model_feedback": "",
     
                 
                     #### for doctor eval ui
@@ -786,8 +786,8 @@ def get_current_conversation(current_index, conversations_len, prev_data_type, d
                 "gpt_4o_mini_feedback": "",
                 "llama405b_score": "",
                 "llama405b_feedback": "",
-                "show_model_score": "",
-                "show_model_feedback": "",
+                "show_eval_model_score": "",
+                "show_eval_model_feedback": "",
                 "mark_need_label": "",
                 "mark_show_scenario_label": "",
                 "system_response_rate": 0,
@@ -948,8 +948,8 @@ def get_current_conversation(current_index, conversations_len, prev_data_type, d
         rate_conversation_data["doctor_edit_response"],
         rate_conversation_data["system_response_rate"],
         save_status,
-        str(rate_conversation_data['show_model_score']),
-        rate_conversation_data['show_model_feedback'],
+        str(rate_conversation_data['show_eval_model_score']),
+        rate_conversation_data['show_eval_model_feedback'],
         rate_conversation_data['ground_truth_answer'],
         processed_count,
         prev_data_type, 
@@ -1015,7 +1015,7 @@ def change_conversation_data_type(prev_data_type, data_type, data_type_select, e
 
     
     # get rate conversation data as json
-    current_index, conversations_len, user_id_box, previous_conversations, user_input, system_output, modified_output, rating, save_status, model_score_box, model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox = get_current_conversation(current_index = current_index, conversations_len = conversations_len, prev_data_type = prev_data_type, data_type = select_data_type)
+    current_index, conversations_len, user_id_box, previous_conversations, user_input, system_output, modified_output, rating, save_status, eval_model_score_box, eval_model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox = get_current_conversation(current_index = current_index, conversations_len = conversations_len, prev_data_type = prev_data_type, data_type = select_data_type)
 
     
     prev_data_type = deepcopy(select_data_type)
@@ -1029,7 +1029,7 @@ def change_conversation_data_type(prev_data_type, data_type, data_type_select, e
 
 
     # prev_data_type, data_type
-    return prev_data_type, select_data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input, system_output, modified_output, rating, save_status, model_score_box, model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox
+    return prev_data_type, select_data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input, system_output, modified_output, rating, save_status, eval_model_score_box, eval_model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox
 
 
 def save_changes(change_obj, current_index, conversations_len, user_id_box, previous_conversations, user_input, system_output, modified_output, rating, processed_count, prev_data_type, select_data_type, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox):
@@ -1142,7 +1142,7 @@ def save_changes(change_obj, current_index, conversations_len, user_id_box, prev
         conversation_datas = []
     
         # get rate conversation data as json
-        current_index, conversations_len, user_id_box, previous_conversations, get_user_input, system_output, modified_output, rating, save_status, model_score_box, model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox = get_current_conversation(current_index = current_index, conversations_len = conversations_len, prev_data_type = prev_data_type, data_type = select_data_type, prev_str = previous_conversations, user_response = user_input, uid = user_id_box)
+        current_index, conversations_len, user_id_box, previous_conversations, get_user_input, system_output, modified_output, rating, save_status, eval_model_score_box, eval_model_feedback_box, gt_answer, processed_count, prev_data_type, select_data_type, system_cls_output, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox = get_current_conversation(current_index = current_index, conversations_len = conversations_len, prev_data_type = prev_data_type, data_type = select_data_type, prev_str = previous_conversations, user_response = user_input, uid = user_id_box)
         
 
         # print(f"-- 647 user_input: {user_input}\n")
@@ -1277,9 +1277,9 @@ def dialogue_comment_page():
     
                 # show llama3.1-405B evaluated score and feedback
                 gr.Markdown("### 自動評分資訊")
-                model_score_box = gr.Textbox(label = "模型評分", interactive = False)
-                model_feedback_box = gr.Textbox(label = "模型 Feedback", lines = 8, interactive = False, autoscroll = True)
-                model_answer_box = gr.Textbox(label = "ground truth 回答", lines = 8, interactive = False, autoscroll = True, visible = False)
+                eval_model_score_box = gr.Textbox(label = "模型評分", interactive = False)
+                eval_model_feedback_box = gr.Textbox(label = "模型 Feedback", lines = 8, interactive = False, autoscroll = True)
+                eval_model_answer_box = gr.Textbox(label = "ground truth 回答", lines = 8, interactive = False, autoscroll = True, visible = False)
                 
 
             with gr.Column():
@@ -1351,20 +1351,20 @@ def dialogue_comment_page():
         data_type_select.change(
                     change_conversation_data_type,  
                     inputs = [ prev_data_type, data_type, data_type_select, eval_data_type_select, current_index, conversations_len ],  # input select intention type and eval data type
-                    outputs = [ prev_data_type, data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, model_score_box, model_feedback_box, model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]          # update show conversation data result
+                    outputs = [ prev_data_type, data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, eval_model_score_box, eval_model_feedback_box, eval_model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]          # update show conversation data result
                 )
         
         eval_data_type_select.change(
                     change_conversation_data_type,  
                     inputs = [ prev_data_type, data_type, data_type_select, eval_data_type_select, current_index, conversations_len ],  # input select intention type and eval data type
-                    outputs = [ prev_data_type, data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, model_score_box, model_feedback_box, model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]     
+                    outputs = [ prev_data_type, data_type, current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, eval_model_score_box, eval_model_feedback_box, eval_model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]     
                 )
 
         
         # 切換對話的按鈕
-        prev_btn.click(navigate, inputs = [ gr.State("prev"), current_index, conversations_len, prev_data_type, data_type ], outputs = [current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, model_score_box, model_feedback_box, model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ])
+        prev_btn.click(navigate, inputs = [ gr.State("prev"), current_index, conversations_len, prev_data_type, data_type ], outputs = [current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, eval_model_score_box, eval_model_feedback_box, eval_model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ])
         
-        next_btn.click(navigate, inputs = [ gr.State("next"), current_index, conversations_len, prev_data_type, data_type ], outputs = [ current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, model_score_box, model_feedback_box, model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]) # , model_feedback_box 
+        next_btn.click(navigate, inputs = [ gr.State("next"), current_index, conversations_len, prev_data_type, data_type ], outputs = [ current_index, conversations_len, user_id_box, previous_conversations, user_input_box, system_output_box, modified_output_box, rating_slider, save_status, eval_model_score_box, eval_model_feedback_box, eval_model_answer_box, processed_count, prev_data_type, data_type, system_cls_output_box, scenario_cls_output, doctor_edit_option_checkbox, scenario_cls_error_checkbox, sop_step_checkbox ]) # , eval_model_feedback_box 
 
 
 
@@ -1387,9 +1387,9 @@ def dialogue_comment_page():
                 modified_output_box,
                 rating_slider, 
                 save_status,
-                model_score_box,
-                model_feedback_box,
-                model_answer_box,
+                eval_model_score_box,
+                eval_model_feedback_box,
+                eval_model_answer_box,
                 processed_count,
                 prev_data_type,
                 data_type,

@@ -1,26 +1,23 @@
 import gradio as gr
 import asyncio
 import time
-from services.GenReport import GenReport
-
-# Initialize the report generator tool
-gen_report_tool = GenReport()
-
-def run_async(func):
-    """Utility wrapper to run async function in sync context."""
-    return asyncio.run(func)
-
-def generate_report(dialogue, model_name, user_type):
+from services.generate_full_report import generate_full_report
+    
+async def generate_report(dialogue, gen_model, user_type, eval_model):
     try:
         start = time.time()
-        placeholder = "⏳ Generating report... Please wait."
-        yield placeholder
-        report = run_async(gen_report_tool.summary_report(dialogue, model_name, user_type))
+        yield "⏳ Generating report... Please wait.", "", ""
+
+        formatted_report, citation_recall, citation_precision = await generate_full_report(dialogue, gen_model, user_type, eval_model)
+
         elapsed = time.time() - start
-        final_output = f"{report}\n\n---\n⏱️ Elapsed time: {elapsed:.2f} seconds"
-        yield final_output
+        report_with_timer = f"{formatted_report}\n\n---\n⏱️ Elapsed time: {elapsed:.2f} seconds"
+
+        yield report_with_timer, citation_recall, citation_precision
+
     except Exception as e:
-        yield f"❌ Error: {str(e)}"
+        yield f"❌ Error: {e}", "", ""
+
 
 def report_generator_page():
     with gr.Row():
@@ -32,7 +29,7 @@ def report_generator_page():
         # === Column 2: Controls ===
         with gr.Column(scale=2):
             gr.Markdown("### ⚙️ Configuration")
-            model_dropdown = gr.Dropdown(
+            gen_model_dropdown = gr.Dropdown(
                 choices=[
                     "Llama3-TAIDE-LX-70B-Chat",
                     "Llama-3.1-8B-Instruct",
@@ -43,13 +40,13 @@ def report_generator_page():
                     "gpt-4o-mini"
                 ],
                 value="Llama-3.1-8B-Instruct",
-                label="Select LLM to Generate Report"
+                label="LLM for Report Generation"
             )
 
             user_dropdown = gr.Dropdown(
                 choices=["doctor", "patient"],
                 value="doctor",
-                label="Select Report Format"
+                label="Select User"
             )
 
             eval_model_dropdown = gr.Dropdown(
@@ -59,8 +56,7 @@ def report_generator_page():
                     "gpt-4o-mini"
                 ],
                 value="gpt-4o-mini",
-                label="LLM for Evaluation (Coming Soon)",
-                interactive=False
+                label="LLM for Citation Evaluation"
             )
 
             generate_button = gr.Button("Generate Report", interactive=False)
@@ -96,8 +92,8 @@ def report_generator_page():
         # === Click Action ===
         generate_button.click(
             fn=generate_report,
-            inputs=[dialogue_input, model_dropdown, user_dropdown],
-            outputs=output_md
+            inputs=[dialogue_input, gen_model_dropdown, user_dropdown, eval_model_dropdown],
+            outputs=[output_md, citation_recall, citation_precision]
         ).then(
             lambda val: gr.update(interactive=bool(val.strip())),
             inputs=output_md,

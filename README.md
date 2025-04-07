@@ -28,9 +28,8 @@ ophthalmology_app/
 
 │   ├── database/               # MongoDB-related logic and data import scripts
 │   │   ├── db_utils.py         # MongoDB connection and CRUD helper functions
-│   │   ├── import_dialogue.py  # Script to import dialogue JSON files into MongoDB
-│   │   ├── import_report.py    # Script to import report JSON files into MongoDB
-│   │   └── __init__.py         # Makes this directory a Python package
+│   │   ├── Dialogue2Mongo.py  # Script to import dialogue JSON files into MongoDB
+│   │   └── Report2Mongo.py    # Script to import report JSON files into MongoDB
 
 │   ├── json_dialogue/          # Folder to place user-provided dialogue JSON files
 │   ├── json_report/            # Folder to place user-provided report JSON files

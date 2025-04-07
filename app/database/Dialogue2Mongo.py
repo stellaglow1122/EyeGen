@@ -2,8 +2,10 @@ import json
 from pymongo import MongoClient
 from copy import deepcopy
 from db_utils_report import init_db
+from pathlib import Path
 
-doctor_eval_data_v2_30_path = './json_dialogue/hole_qa_v2_doctor_eval_data_30.json'  # 確認此路徑正確
+BASE_DIR = Path(__file__).resolve().parents[1]
+doctor_eval_data_v2_30_path = BASE_DIR / "json_dialogue" / "hole_qa_v2_doctor_eval_data_30.json"
 
 def connect_to_db():
     db = init_db()
@@ -61,8 +63,8 @@ def insert_dialogue_to_mongo(json_path=doctor_eval_data_v2_30_path):
             'gpt_4o_mini_feedback': doctor_eval_data['gpt_4o_mini_feedback'],
             'llama405b_score': doctor_eval_data['llama405b_score'],
             'llama405b_feedback': doctor_eval_data['llama405b_feedback'],
-            'show_model_score': doctor_eval_data['show_model_score'],
-            'show_model_feedback': doctor_eval_data['show_model_feedback'],
+            'show_eval_model_score': doctor_eval_data.get('show_eval_model_score'),
+            'show_eval_model_feedback': doctor_eval_data.get('show_eval_model_feedback'),
 
             #### for doctor eval ui
             'mark_need_label': doctor_eval_data['mark_need_label'],
