@@ -20,6 +20,9 @@ async def generate_report(dialogue, gen_model, user_type, eval_model):
 
 
 def report_generator_page():
+    gr.Markdown("### Generate Report Workflow Overview")
+    gr.Image(value="./assets/GenReportWorkflow.png", elem_classes="esponsive-image img")
+
     with gr.Row():
         # === Column 1: Dialogue Input ===
         with gr.Column(scale=3):
@@ -44,8 +47,8 @@ def report_generator_page():
             )
 
             user_dropdown = gr.Dropdown(
-                choices=["doctor", "patient"],
-                value="doctor",
+                choices=["Doctor", "Patient"],
+                value="Doctor",
                 label="Select User"
             )
 
@@ -56,7 +59,7 @@ def report_generator_page():
                     "gpt-4o-mini"
                 ],
                 value="gpt-4o-mini",
-                label="LLM for Citation Evaluation"
+                label="LLM for Citation Evaluation (Coming Soon)"
             )
 
             generate_button = gr.Button("Generate Report", interactive=False)
@@ -83,7 +86,7 @@ def report_generator_page():
             copy_status = gr.Markdown("", visible=False, elem_id="copy-status")
             copy_button = gr.Button("📋 Copy Report", interactive=False)
 
-            gr.Markdown("### 📊 Evaluation Result")
+            gr.Markdown("### 📊 Evaluation Result (Coming Soon)")
             citation_recall = gr.Textbox(label="Citation Recall", interactive=False)
             citation_precision = gr.Textbox(label="Citation Precision", interactive=False)
 

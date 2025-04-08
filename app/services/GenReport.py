@@ -73,7 +73,7 @@ class GenReport:
         Returns:
             str: Raw report content (can be JSON or plain text)
         """
-        if user_type == "doctor":
+        if user_type == "Doctor":
             system_prompt = Prompts.gen_report_doctor_system_prompt
             user_prompt = Prompts.gen_report_doctor_user_prompt.replace("{dialogue}", dialogue)
         else:

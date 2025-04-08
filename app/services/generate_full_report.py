@@ -68,7 +68,7 @@ async def generate_full_report(dialogue: str, gen_model: str, user_type: str, ev
     report_content = await reporter.summary_report(indexed_dialogue, gen_model, user_type)
 
     # Attempt to parse JSON regardless of user_type
-    if user_type == "doctor":
+    if user_type == "Doctor":
         
         try:
             cleaned_content = report_content.strip("```json").strip("```")
@@ -77,11 +77,22 @@ async def generate_full_report(dialogue: str, gen_model: str, user_type: str, ev
         except Exception as e:
             raise ValueError(f"Failed to parse generated report: {e}\nContent: {report_content}")
     else:
-        formatted_report = report_content 
+        formatted_report = report_content
 
-    return formatted_report, "Coming soon", "Coming soon"
+    # Add LLM information at the bottom
+    formatted_report += f"""\n\n ---
+                        \n\n**Dialogue id**: {dialogue_id}
+                        \n\n**Report id**: {report_id}
+                        \n\n**LLM-generated report**: {gen_model}\n\n"""
+    
+    # Add dialogue with citation at the bottom 
+    formatted_report += f"""**Dialogue with index**: \n\n{indexed_dialogue}"""
+    
 
-    # # Evaluate citations
+    return formatted_report, "(Coming Soon)", "(Coming Soon)"
+
+    # # Evaluate citationsclear
+
     # evaluator = EvalCitation()
     # citation_result = evaluator.evaluate(report_json, indexed_dialogue, eval_model)
 

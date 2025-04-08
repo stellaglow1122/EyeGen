@@ -41,4 +41,11 @@ custom_css = """
 .report-content h2 {
     font-size: 1.5em;
 }
+.responsive-image img {
+    width: 45%;
+    height: 45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 """
