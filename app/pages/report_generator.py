@@ -16,7 +16,7 @@ async def generate_report(dialogue, gen_model, user_type, eval_model):
         yield report_with_timer, citation_recall, citation_precision
 
     except Exception as e:
-        yield f"❌ Error: {e}", "", ""
+        yield f"Error: {e}", "", ""
 
 
 def report_generator_page():
@@ -26,12 +26,9 @@ def report_generator_page():
     with gr.Row():
         # === Column 1: Dialogue Input ===
         with gr.Column(scale=3):
-            gr.Markdown("### 💬 Dialogue Input")
-            dialogue_input = gr.Textbox(lines=20, label="Dialogue Content", placeholder="Paste dialogue text here...")
+            gr.Markdown("## 💬 Dialogue")
+            dialogue_input = gr.Textbox(lines=20, label="", placeholder="Paste dialogue text here...")
 
-        # === Column 2: Controls ===
-        with gr.Column(scale=2):
-            gr.Markdown("### ⚙️ Configuration")
             gen_model_dropdown = gr.Dropdown(
                 choices=[
                     "Llama3-TAIDE-LX-70B-Chat",
@@ -43,23 +40,13 @@ def report_generator_page():
                     "gpt-4o-mini"
                 ],
                 value="Llama-3.1-8B-Instruct",
-                label="LLM for Report Generation"
+                label="Select LLM to Generate Report"
             )
 
             user_dropdown = gr.Dropdown(
                 choices=["Doctor", "Patient"],
                 value="Doctor",
-                label="Select User"
-            )
-
-            eval_model_dropdown = gr.Dropdown(
-                choices=[
-                    "Llama3-TAIDE-LX-70B-Chat",
-                    "Llama-3.1-8B-Instruct",
-                    "gpt-4o-mini"
-                ],
-                value="gpt-4o-mini",
-                label="LLM for Citation Evaluation (Coming Soon)"
+                label="Select User Type"
             )
 
             generate_button = gr.Button("Generate Report", interactive=False)
@@ -71,11 +58,11 @@ def report_generator_page():
                 outputs=generate_button
             )
 
-        # === Column 3: Report Output ===
-        with gr.Column(scale=5):
-            gr.Markdown("### 📝 Summary Report")
+        # === Column 2: Report Output ===
+        with gr.Column(scale=3):
+            gr.Markdown("## 📝 Report")
             output_md = gr.Markdown(
-                value="⬅️ Paste conversation text and click Generate Report\n\n" + "\n".join(["\u00a0" for _ in range(20)]),
+                value="⬅️ Paste dialogue text and click Generate Report\n\n" + "\n".join(["\u00a0" for _ in range(20)]),
                 label="Report Content",
                 elem_id="output-md",
                 elem_classes="scrollable report-content",
@@ -84,13 +71,23 @@ def report_generator_page():
             )
 
             copy_status = gr.Markdown("", visible=False, elem_id="copy-status")
-            copy_button = gr.Button("📋 Copy Report", interactive=False)
+            copy_button = gr.Button("Copy Report", interactive=False)
 
-            gr.Markdown("### 📊 Evaluation Result (Coming Soon)")
+
+            gr.Markdown("## 📊 Evaluation (Coming Soon)")
+            
+            eval_model_dropdown = gr.Dropdown(
+                choices=[
+                    "gpt-4o-mini"
+                ],
+                value="gpt-4o-mini",
+                label="Select LLM to Evalate Citation (Coming Soon)"
+            )
+            
+            evaluate_button = gr.Button("Evaluate Report (Coming Soon)", interactive=False)
             citation_recall = gr.Textbox(label="Citation Recall", interactive=False)
             citation_precision = gr.Textbox(label="Citation Precision", interactive=False)
 
-            gr.Button("Add Report to Database (Coming Soon)", interactive=False)
 
         # === Click Action ===
         generate_button.click(

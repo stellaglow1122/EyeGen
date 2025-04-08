@@ -57,8 +57,8 @@ async def generate_full_report(dialogue: str, gen_model: str, user_type: str, ev
     print("[DEBUG] Running generate_full_report")
 
     # Generate unique IDs
-    dialogue_id = f"dialogue_{uuid.uuid4().hex[:8]}"
-    report_id = f"report_{dialogue_id}"
+    dialogue_id = f"{uuid.uuid4().hex[:8]}"
+    report_id = f"{dialogue_id}"
 
     # Preprocess dialogue
     indexed_dialogue = add_index_to_dialogue(dialogue)

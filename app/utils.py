@@ -32,8 +32,7 @@ custom_css = """
     font-size: 0.8em;
 }
 .spacer {
-    margin-top: 350px;
-    height: 50px;
+    margin-top: 150px;
 }
 .comment-stats h2 {
     font-size: 1.5em;
