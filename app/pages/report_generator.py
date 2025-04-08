@@ -20,7 +20,7 @@ async def generate_report(dialogue, gen_model, user_type, eval_model):
 
 
 def report_generator_page():
-    gr.Markdown("### Generate Report Workflow Overview")
+    gr.Markdown("# Overview of LLM report generation workflow")
     gr.Image(value="./assets/GenReportWorkflow.png", elem_classes="esponsive-image img")
 
     with gr.Row():

@@ -36,6 +36,9 @@ def report_comment_page():
     filtered_df_state = gr.State(initial_df.copy())
     search_term_state = gr.State("")
 
+    gr.Markdown("# Report Scoring System")
+    gr.Markdown("- Comment on existing reports to improve future reports")
+
     with gr.Column():
         with gr.Row():
             search_input = gr.Textbox(label="Search Reports", placeholder="Enter 'Y' or 'N' to filter comment_state (press Enter)...")
