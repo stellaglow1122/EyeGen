@@ -30,7 +30,7 @@ ophthalmology_app/
 │   │   └── report_prompts.py        # Prompt templates for LLM calls
 
 │   ├── database/              # MongoDB-related scripts
-│   │   ├── db_utils.py              # MongoDB connection helpers
+│   │   ├── db_utils_report.py      # MongoDB connection helpers with report
 │   │   ├── Dialogue2Mongo.py       # Import dialogues into MongoDB
 │   │   └── Report2Mongo.py         # Import reports into MongoDB
 
@@ -43,9 +43,10 @@ ophthalmology_app/
 │   │       └── ...            # Other SOP templates
 
 │   ├── assets/                # Static images or diagrams
-│   │   └── SchematicFlowDiagram.png
+│   │   ├── SchematicFlowDiagram.png # Introduction the review platform
+│   │   └── GenReportWorkflow.png # Report generation overview
 
-│   └── utils.py               # General utility functions
+│   └── utils.py               # General utility functions for UI CSS
 
 ├── mongo_data/                # Volume for MongoDB data persistence
 
@@ -54,12 +55,12 @@ ophthalmology_app/
 ---
 
 ## 🧠 Python Script Overview
-
-- **`Dialogue2Mongo.py`**: Imports JSON files from `json_dialogue/` into the `synthesis_json_user_conv_data_rate_v2` collection.
-- **`Report2Mongo.py`**: Imports report JSON files from `json_report/` into the `reports` collection.
 - **`app.py`**: Main entry point for launching the web interface.
-- **`db_utils_report.py`**: Handles database connection and utilities.
-- **`pages/*.py`**: UI pages for home, dialogue, and report commenting.
+- **`pages/*.py`**: UI pages for home, dialogue comment, report comment, and report generator.
+- **`database/Dialogue2Mongo.py`**: Imports JSON files from `json_dialogue/` into the `synthesis_json_user_conv_data_rate_v2` collection.
+- **`database/Report2Mongo.py`**: Imports report JSON files from `json_report/` into the `reports` collection.
+- **`database/db_utils_report.py`**: Handles database connection and utilities.
+- **`services/generate_full_report.py`**: Full pipeline for report generator: generate → evaluate → metrics
 
 ---
 
