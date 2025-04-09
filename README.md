@@ -1,10 +1,6 @@
-這是優化過後的 `README.md`，語言更為精煉、結構更清晰，同時保留你原本的技術細節與流程：
+# Platform for LM-Driven Generation and Summarization of Ophthalmology Dialogues
 
----
-
-# 🧠 LLM-Based Ophthalmology Report Review Platform
-
-This project provides a platform for **LLM-generated ophthalmology dialogues and report summarization**, enabling users to review, comment, and evaluate AI-generated clinical outputs.
+This project provides a platform for **LLM-Driven Generation and Summarization of Ophthalmology Dialogues**, enabling users to review, comment, and evaluate AI-generated clinical outputs.
 
 Designed for medical AI researchers, this system allows importing ophthalmology dialogue/report JSON files into **MongoDB**, and provides a **web interface for reviewing and commenting**. Built in Python and containerized with Docker, the system is modular, extensible, and production-ready.
 

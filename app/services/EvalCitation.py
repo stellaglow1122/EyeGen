@@ -18,15 +18,15 @@ class EvalCitation:
         self.twcc_key = twcc_key or os.getenv("TWCC_API_KEY")
         self.openai_client = OpenAI(api_key=self.openai_key) if self.openai_key else None
 
-    async def _call_openai(self, messages, model_name):
+    async def _call_openai(self, messages, gen_model):
         if not self.openai_client:
             raise ValueError("OpenAI API key not found or client not initialized.")
 
         try:
-            print(f"[OpenAI] Calling model: {model_name}")
+            print(f"[OpenAI] Calling model: {gen_model}")
             response = await asyncio.to_thread(
                 self.openai_client.chat.completions.create,
-                model=model_name,
+                model=gen_model,
                 messages=messages,
                 max_tokens=2000,
                 n=1,
@@ -36,7 +36,7 @@ class EvalCitation:
         except Exception as e:
             raise RuntimeError(f"[OpenAI Error] {e}")
 
-    async def _call_nchc(self, messages, model_name):
+    async def _call_nchc(self, messages, gen_model):
         if not self.twcc_key:
             raise ValueError("TWCC API key not found.")
 
@@ -46,7 +46,7 @@ class EvalCitation:
             "Content-Type": "application/json"
         }
         data = {
-            "model": model_name,
+            "model": gen_model,
             "messages": messages,
             "max_tokens": 2000,
             "temperature": 0,
@@ -54,7 +54,7 @@ class EvalCitation:
         }
 
         try:
-            print(f"[🔁 NCHC] Calling model: {model_name}")
+            print(f"[🔁 NCHC] Calling model: {gen_model}")
             response = await asyncio.to_thread(requests.post, url, headers=headers, json=data)
             if response.status_code == 200:
                 return response.json()['choices'][0]['message']['content']
@@ -86,7 +86,7 @@ class EvalCitation:
             sentences.extend([line.strip() for line in section if line.strip()])
         return sentences
 
-    async def _evaluate_sentence(self, sent: str, citations: list[int], dialogue: str, model_name: str) -> dict:
+    async def _evaluate_sentence(self, sent: str, citations: list[int], dialogue: str, gen_model: str) -> dict:
         if not citations:
             return {
                 "output": sent,
@@ -109,10 +109,10 @@ class EvalCitation:
         ]
 
         try:
-            if "gpt" in model_name.lower():
-                response = await self._call_openai(messages, model_name)
+            if "gpt" in gen_model.lower():
+                response = await self._call_openai(messages, gen_model)
             else:
-                response = await self._call_nchc(messages, model_name)
+                response = await self._call_nchc(messages, gen_model)
 
             json_block = re.search(r'\{.*?\}', response, re.DOTALL)
             if not json_block:
@@ -131,8 +131,8 @@ class EvalCitation:
                 "error": str(e)
             }
 
-    def evaluate(self, report_json: dict, dialogue: str, model_name: str) -> list[dict]:
+    def evaluate(self, report_json: dict, dialogue: str, gen_model: str) -> list[dict]:
         sentences = self._extract_sentences(report_json)
         loop = asyncio.get_event_loop()
-        tasks = [self._evaluate_sentence(sent, self._extract_citations(sent), dialogue, model_name) for sent in sentences]
+        tasks = [self._evaluate_sentence(sent, self._extract_citations(sent), dialogue, gen_model) for sent in sentences]
         return loop.run_until_complete(asyncio.gather(*tasks))

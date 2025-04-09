@@ -12,9 +12,6 @@ from services.EvalMetrics import EvalMetrics
 env_path = Path(__file__).resolve().parents[1] / ".env"
 load_dotenv(dotenv_path=env_path)
 
-SAVE_DIR = Path(__file__).resolve().parents[1] / "json_report"
-SAVE_DIR.mkdir(parents=True, exist_ok=True)
-
 # Add index in front of dialogue lines for citation
 def add_index_to_dialogue(dialogue: str) -> str:
     lines = dialogue.splitlines(keepends=True)
@@ -53,7 +50,7 @@ def report_format_from_json(report_json: dict) -> str:
 """.strip()
 
 # Generate report pipeline
-async def generate_full_report(dialogue: str, gen_model: str, user_type: str, eval_model: str):
+async def generate_full_report(dialogue: str, gen_model: str, user_type: str):
     print("[DEBUG] Running generate_full_report")
 
     # Generate unique IDs
@@ -89,7 +86,7 @@ async def generate_full_report(dialogue: str, gen_model: str, user_type: str, ev
     formatted_report += f"""**Dialogue with index**: \n\n{indexed_dialogue}"""
     
 
-    return formatted_report, "(Coming Soon)", "(Coming Soon)"
+    return formatted_report
 
     # # Evaluate citationsclear
 
