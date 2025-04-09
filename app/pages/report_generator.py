@@ -20,7 +20,7 @@ async def generate_report(dialogue, gen_model, user_type, eval_model):
 
 
 def report_generator_page():
-    gr.Markdown("# Overview of LLM report generation workflow")
+    gr.Markdown("# LLM-Driven Summarization of Ophthalmology Dialogues")
     gr.Image(value="./assets/GenReportWorkflow.png", elem_classes="esponsive-image img")
 
     with gr.Row():
@@ -81,7 +81,7 @@ def report_generator_page():
                     "gpt-4o-mini"
                 ],
                 value="gpt-4o-mini",
-                label="Select LLM to Evalate Citation (Coming Soon)"
+                label="Select LLM to Evaluate Citation (Coming Soon)"
             )
             
             evaluate_button = gr.Button("Evaluate Report (Coming Soon)", interactive=False)

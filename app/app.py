@@ -5,6 +5,7 @@ from pages.home import home_page
 from pages.report_comment import report_comment_page
 from pages.dialogue_comment import dialogue_comment_page
 from pages.report_generator import report_generator_page
+from pages.summary_report import summary_report_page
 
 init_db()
 
@@ -20,6 +21,8 @@ with gr.Blocks(css=custom_css) as app:
                 event
         with gr.TabItem("Report Generator", id=3):
             report_generator = report_generator_page()
+        with gr.TabItem("Summary Report", id=4):
+            summary_report = summary_report_page()
 
 
 app.launch(server_name="0.0.0.0", server_port=7860, debug=True)
