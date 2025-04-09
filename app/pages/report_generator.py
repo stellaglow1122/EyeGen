@@ -1,23 +1,7 @@
 import gradio as gr
 import asyncio
 import time
-# from services.generate_full_report import generate_full_report
 from services.GenReport import GenReport
-    
-# async def generate_report(dialogue, gen_model, user_type, eval_model):
-#     try:
-#         start = time.time()
-#         yield "⏳ Generating report... Please wait.", "", ""
-
-#         formatted_report, citation_recall, citation_precision = await generate_full_report(dialogue, gen_model, user_type, eval_model)
-
-#         elapsed = time.time() - start
-#         report_with_timer = f"{formatted_report}\n\n---\n⏱️ Elapsed time: {elapsed:.2f} seconds"
-
-#         yield report_with_timer, citation_recall, citation_precision
-
-#     except Exception as e:
-#         yield f"Error: {e}", "", ""
 
 async def async_generate_report(dialogue, gen_model, user_type):
     try:
@@ -107,16 +91,6 @@ def report_generator_page():
 
 
         # === Click Action ===
-        # generate_button.click(
-        #     fn=generate_report,
-        #     inputs=[dialogue_input, gen_model_dropdown, user_dropdown],
-        #     outputs=[output_md]
-        # ).then(
-        #     lambda val: gr.update(interactive=bool(val.strip())),
-        #     inputs=output_md,
-        #     outputs=copy_button
-        # )
-
         generate_button.click(
             fn=async_generate_report,
             inputs=[dialogue_input, gen_model_dropdown, user_dropdown],
