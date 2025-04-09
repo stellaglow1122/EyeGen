@@ -86,12 +86,13 @@ Buile the docker container
 docker-compose up --build -d
 ```
 
-Access the containers:
+Access the web container:
 ```bash
-# web container
 docker exec -it ophthalmology_app_container bash
+```
 
-# mongo db container
+Access the mongo db container (optional):
+```bash
 docker exec -it ophthalmology_db_container bash
 ```
 
