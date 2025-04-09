@@ -1,6 +1,12 @@
-# Ophthalmology App
+這是優化過後的 `README.md`，語言更為精煉、結構更清晰，同時保留你原本的技術細節與流程：
 
-**Ophthalmology App** is a tool designed to manage and analyze ophthalmology-related conversation and report data. It allows importing JSON files into MongoDB and provides a web interface for viewing and commenting on the data. Built with Python and containerized using Docker, this app is ideal for researchers and developers in medical data domains.
+---
+
+# 🧠 LLM-Based Ophthalmology Report Review Platform
+
+This project provides a platform for **LLM-generated ophthalmology dialogues and report summarization**, enabling users to review, comment, and evaluate AI-generated clinical outputs.
+
+Designed for medical AI researchers, this system allows importing ophthalmology dialogue/report JSON files into **MongoDB**, and provides a **web interface for reviewing and commenting**. Built in Python and containerized with Docker, the system is modular, extensible, and production-ready.
 
 ---
 
@@ -8,115 +14,111 @@
 
 ```
 ophthalmology_app/
-├── Dockerfile                  # Docker build configuration
-├── docker-compose.yml         # Docker Compose for multi-container orchestration
-├── README.md                  # Project documentation and usage instructions
+├── Dockerfile                 # Docker build configuration
+├── docker-compose.yml        # Docker Compose for container orchestration
+├── README.md                 # Project documentation and usage
 
-├── app/                       # Main application directory
-│   ├── app.py                 # Entry point of the web interface (Gradio or Streamlit)
-│   ├── requirements.txt       # Python dependency list
+├── app/
+│   ├── app.py                # Launches the web UI (Gradio)
+│   ├── requirements.txt      # Python dependencies
 
-│   ├── pages/                 # UI page modules (each corresponds to a tab/page)
-│   │   ├── home.py                  # Home page
-│   │   ├── dialogue_comment.py     # Dialogue browsing & commenting interface
-│   │   ├── report_comment.py       # Report browsing & feedback interface
-│   │   └── report_generator.py     # Report generation and evaluation page
+│   ├── pages/                # UI page modules (via Gradio)
+│   │   ├── home.py
+│   │   ├── dialogue_comment.py
+│   │   ├── report_comment.py
+│   │   ├── report_generator.py
+│   │   └── summary_report.py
 
-│   ├── services/              # Core business logic and LLM integration
-│   │   ├── GenReport.py             # Report generation via LLM
-│   │   ├── EvalCitation.py          # Citation validation logic via LLM
-│   │   ├── EvalMetrics.py           # Metrics calculation (recall, precision, etc.)
-│   │   ├── generate_full_report.py  # Full pipeline: generate → evaluate → metrics
-│   │   └── report_prompts.py        # Prompt templates for LLM calls
+│   ├── services/             # Core business logic
+│   │   ├── GenReport.py              # Dialogue-to-report LLM pipeline
+│   │   ├── EvalCitation.py           # LLM-based citation evaluation
+│   │   ├── EvalMetrics.py            # Computes recall/precision
+│   │   ├── generate_full_report.py   # Full pipeline integration
+│   │   └── report_prompts.py         # Prompt templates
 
-│   ├── database/              # MongoDB-related scripts
-│   │   ├── db_utils_report.py      # MongoDB connection helpers with report
-│   │   ├── Dialogue2Mongo.py       # Import dialogues into MongoDB
-│   │   └── Report2Mongo.py         # Import reports into MongoDB
+│   ├── database/             # MongoDB interaction
+│   │   ├── db_utils_report.py
+│   │   ├── Dialogue2db.py
+│   │   └── Report2db.py
 
-│   ├── json_dialogue/         # Folder for user-provided dialogue JSON files
-│   ├── json_report/           # Folder for generated/evaluated report JSON files
+│   ├── json_dialogue/        # Dialogue JSON data folder
+│   ├── json_report/          # Report JSON data folder
 
-│   ├── SOP_module/            # Standard Operating Procedures used by the system
+│   ├── SOP_module/
 │   │   └── user_task_SOPs/
-│   │       ├── ask_cataract_len_SOP.json
-│   │       └── ...            # Other SOP templates
+│   │       └── *.json        # SOPs for generating clinical recommendations
 
-│   ├── assets/                # Static images or diagrams
-│   │   ├── SchematicFlowDiagram.png # Introduction the review platform
-│   │   └── GenReportWorkflow.png # Report generation overview
+│   ├── assets/               # Static images and diagrams
+│   │   ├── SchematicFlowDiagram.png
+│   │   └── GenReportWorkflow.png
 
-│   └── utils.py               # General utility functions for UI CSS
+│   └── utils.py              # General-purpose utilities
 
-├── mongo_data/                # Volume for MongoDB data persistence
-
+├── mongo_data/               # MongoDB persistent storage
 ```
 
 ---
 
-## 🧠 Python Script Overview
-- **`app.py`**: Main entry point for launching the web interface.
-- **`pages/*.py`**: UI pages for home, dialogue comment, report comment, and report generator.
-- **`database/Dialogue2Mongo.py`**: Imports JSON files from `json_dialogue/` into the `synthesis_json_user_conv_data_rate_v2` collection.
-- **`database/Report2Mongo.py`**: Imports report JSON files from `json_report/` into the `reports` collection.
-- **`database/db_utils_report.py`**: Handles database connection and utilities.
-- **`services/generate_full_report.py`**: Full pipeline for report generator: generate → evaluate → metrics
+## ⚙️ Core Components
+
+- `app.py`: Entry point for launching the web interface
+- `pages/*.py`: Web interface tabs for viewing, scoring, and generating reports
+- `services/*.py`: LLM integration (report generation, citation evaluation, metrics)
+- `database/*.py`: JSON-to-MongoDB data import
+- `json_dialogue/`, `json_report/`: Folders to place your data files
+- `assets/`: Flow diagrams for documentation and platform overview
 
 ---
 
 ## 🚀 Quick Start
 
-#### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://git.dataarch.myds.me/minkuanchen/ophthalmology_app.git
 cd ophthalmology_app
 ```
 
-#### 2. Add JSON Files
+### 2. Start services with Docker
 
-> Make sure to add your own data files. The app will not function without these.
-
-```bash
-# Add dialogue files to:
-app/json_dialogue/
-
-# Add report files to:
-app/json_report/
-```
-
-#### 3. Start Docker Containers
-
+Buile the docker container
 ```bash
 docker-compose up --build -d
 ```
 
-#### 4. Import Data into MongoDB
-
+Access the containers:
 ```bash
-# Access the application container
+# web container
 docker exec -it ophthalmology_app_container bash
 
-# Import dialogue data
-python Dialogue2Mongo.py
-
-# Import report data
-python Report2Mongo.py
-```
-
-You can also enter the MongoDB container (for inspection):
-
-```bash
+# mongo db container
 docker exec -it ophthalmology_db_container bash
 ```
 
-#### 5. Launch the Web App (in container)
+### 3. Prepare data
+
+Put your JSON files in:
+
+```
+app/json_dialogue/   # For dialogues
+app/json_report/     # For reports
+```
+
+Import into MongoDB:
+
+```bash
+cd app/database
+python Dialogue2db.py
+python Report2db.py
+```
+
+### 4. Launch the Web App
 
 ```bash
 python app.py
 ```
 
-Then open your browser at:
+Default URL:
 
 ```
 http://localhost:7860
@@ -124,59 +126,59 @@ http://localhost:7860
 
 ---
 
-## 🐳 Docker Commands
+## 🐳 Docker Cheat Sheet
 
 | Action                     | Command |
 |---------------------------|---------|
 | Start containers          | `docker-compose up -d` |
 | Stop containers           | `docker-compose stop` |
-| Remove containers         | `docker-compose down` |
 | Rebuild containers        | `docker-compose up --build -d` |
-| List running containers   | `docker ps` |
+| View logs                 | `docker-compose logs` |
 | Enter app container       | `docker exec -it ophthalmology_app_container bash` |
-| Enter MongoDB container   | `docker exec -it ophthalmology_db_container bash` |
-| View logs                 | `docker-compose logs` or `docker-compose logs app` |
+| Enter Mongo container     | `docker exec -it ophthalmology_db_container bash` |
 | Start jupyter in container| `jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root` |
 
 ---
 
-## 📦 Maintenance
+## 🔧 Maintenance
 
-- **Backup MongoDB Data**:
+- **Backup MongoDB**:
 
-  ```bash
-  docker-compose stop
-  cp -r mongo_data mongo_data_backup_$(date +%Y%m%d)
-  ```
+```bash
+docker-compose stop
+cp -r mongo_data mongo_data_backup_$(date +%Y%m%d)
+```
 
-- **Update Python Packages**:
+- **Add SOP templates**:
 
-  Modify `app/requirements.txt` as needed, then rebuild:
+Put new SOPs in:
 
-  ```bash
-  docker-compose up --build -d
-  ```
+```
+app/SOP_module/user_task_SOPs/
+```
 
-- **Add New SOP Templates**:
+Then restart:
 
-  Place your JSON files in:
+```bash
+docker-compose restart
+```
 
-  ```
-  app/SOP_module/user_task_SOPs/
-  ```
+- **Update dependencies**:
 
-  Restart the app to apply changes:
+Update `requirements.txt`, then:
 
-  ```bash
-  docker-compose restart
-  ```
+```bash
+docker-compose up --build -d
+```
 
 ---
 
-## 🗂️ MongoDB Collections
+## 🗃️ MongoDB Collections
 
 - **Database**: `ophthalmology_db`
 - **Collections**:
   - `synthesis_json_user_conv_data_rate_v2`: Dialogue data
-  - `reports`: Report data
-  - `user_inter_data_info`: (Optional) User interaction metadata
+  - `reports`: Generated and evaluated reports
+  - `user_inter_data_info`: Optional interaction logs
+
+---
