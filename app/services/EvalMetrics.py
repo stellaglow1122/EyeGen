@@ -1,42 +1,31 @@
 import json
 
 class EvalMetrics:
-    @staticmethod
-    def compute_citation_metrics(data: dict) -> dict:
+    def __init__(self):
+        pass
+
+    async def compute(self, data: list[dict]) -> dict:
         """
         Compute citation recall and precision metrics based on evaluation results.
 
         Parameters:
-            data (dict): JSON evaluation result containing predicted entailment and provenance.
+            data (list[dict]): Evaluation result containing predicted entailment and provenance.
 
         Returns:
             dict: Dictionary containing citation_recall, citation_precision,
-                  and numerator/denominator details.
+                and numerator/denominator details.
         """
-        if not isinstance(data, dict) or not data:
-            raise ValueError("Invalid input: expected a non-empty dictionary.")
+        print("[DEBUG] EvalMetrics.py Entry")
+        if not isinstance(data, list) or not data:
+            raise ValueError("Invalid input: expected a non-empty list of dictionaries.")
 
-        sentences = next(iter(data.values()), None)
-        if not isinstance(sentences, list):
-            raise ValueError("Invalid input format: expected list of sentence entries.")
-
-        total_of_sent = len(sentences)
-        if total_of_sent == 0:
-            return {
-                "citation_recall": 0.0,
-                "total_entailed": 0,
-                "total_of_sent": 0,
-                "citation_precision": 0.0,
-                "total_matched_citations": 0,
-                "total_citations": 0,
-            }
-
+        total_of_sent = len(data)
         total_entailed = 0
         total_matched = 0
         total_cited = 0
         precision_scores = []
 
-        for entry in sentences:
+        for entry in data:
             if not isinstance(entry, dict):
                 continue
 

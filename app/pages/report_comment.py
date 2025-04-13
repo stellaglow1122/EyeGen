@@ -49,8 +49,8 @@ def report_comment_page():
             return display_df
 
     initial_df = get_display_df()
-    print(f"Initial base_df shape: {initial_df.shape}, Comment state counts: {initial_df['comment_state'].value_counts().to_dict()}")
-    print(f"Initial top 5 report_ids: {initial_df['report_id'].head().tolist()}")
+    # print(f"[report_comment.py] Initial base_df shape: {initial_df.shape}, Comment state counts: {initial_df['comment_state'].value_counts().to_dict()}")
+    # print(f"[report_comment.py] Initial top 5 report_ids: {initial_df['report_id'].head().tolist()}")
 
     filtered_df_state = gr.State(initial_df.copy())
     search_term_state = gr.State("")
@@ -70,8 +70,8 @@ def report_comment_page():
             label="Report List",
             show_label=False,
             wrap=False,
-            elem_classes="table-scroll",
-            row_count=10,
+            row_count=(10, "dynamic"),
+            elem_classes="table-scroll"
         )
 
         gr.Markdown("", elem_classes="spacer")
@@ -85,7 +85,7 @@ def report_comment_page():
                 report_id_display = gr.Markdown("**Report ID:** Not Selected")
                 comment_state_display = gr.Markdown("**Comment State:** Not Selected")
                 comment_time = gr.Markdown("**Comment Time:** Not Commented")
-                comment_input = gr.Textbox(label="Comment Content", lines=10, max_lines=50)
+                comment_input = gr.Textbox(label="Comment Content", lines=25, placeholder="Type any comments here...")
                 comment_score = gr.Slider(0, 5, step=1, label="Comment Score", value=0)
                 submit_btn = gr.Button("Submit Comment ✅")
                 prev_btn = gr.Button("⬅️ Previous Unreviewed")
@@ -96,8 +96,8 @@ def report_comment_page():
         filtered_df = get_display_df(search_term)
         display_df = filtered_df.copy()
         display_df.columns = display_headers  # Make sure to display the header
-        print(f"Filter applied - Search term: '{search_term}', Filtered shape: {filtered_df.shape}")
-        print(f"Filter top 5 report_ids: {filtered_df['report_id'].head().tolist()}")
+        # print(f"Filter applied - Search term: '{search_term}', Filtered shape: {filtered_df.shape}")
+        # print(f"Filter top 5 report_ids: {filtered_df['report_id'].head().tolist()}")
         return display_df, calc_comment_stats(), filtered_df, search_term
 
     def update_report_details(evt: gr.SelectData, table_data):
@@ -110,7 +110,7 @@ def report_comment_page():
         if row_idx >= len(current_table_df) or row_idx < 0:
             return "<h2>Invalid selection.</h2>", "**Report ID:** Not Selected", "**Comment State:** Not Selected", "**Comment Time:** Not Commented", "", 0, None
         report_id = current_table_df.iloc[row_idx]["report_id"]
-        print(f"Selected - row_idx: {row_idx}, report_id: {report_id}, Table shape: {current_table_df.shape}")
+        # print(f"Selected - row_idx: {row_idx}, report_id: {report_id}, Table shape: {current_table_df.shape}")
         report = get_report_by_id(report_id)
         if report:
             return (
@@ -131,11 +131,11 @@ def report_comment_page():
         new_state = "Y" if comment_content or comment_score > 0 else "N"
         new_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S") if new_state == "Y" else None
         submit_comment(current_report_id, comment_content, comment_score, new_state, new_time)
-        print(f"Submitted - report_id: {current_report_id}, comment_content: '{comment_content}', comment_score: {comment_score}, comment_state: {new_state}, comment_time: {new_time}")
+        # print(f"Submitted - report_id: {current_report_id}, comment_content: '{comment_content}', comment_score: {comment_score}, comment_state: {new_state}, comment_time: {new_time}")
         filtered_df = get_display_df(search_term)
         display_df = filtered_df.copy()
         display_df.columns = display_headers
-        print(f"Submit update top 5 report_ids: {filtered_df['report_id'].head().tolist()}")
+        # print(f"Submit update top 5 report_ids: {filtered_df['report_id'].head().tolist()}")
         report = get_report_by_id(current_report_id)
         return (
             f"{report.get('report_content', '')}",

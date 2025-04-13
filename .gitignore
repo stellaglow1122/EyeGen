@@ -1,10 +1,9 @@
 # 忽略測試與備份檔案
-app/test.py
 app/backup.py
 
 # 忽略 JSON 資料內容，但保留資料夾本身
-app/json_dialogue/*
-!app/json_dialogue/.gitkeep
+app/json_indexed_dialogue/*
+!app/json_indexed_dialogue/.gitkeep
 
 app/json_report/*
 !app/json_report/.gitkeep

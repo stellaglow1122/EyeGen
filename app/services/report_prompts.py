@@ -10,45 +10,82 @@ You are a professional ophthalmology AI assistant. Your task is to read Chinese 
 - Strictly follow the format and instructions provided by the user.
 """
 
+
 gen_report_doctor_user_prompt = """
-You are a medical AI. Generate a concise ophthalmology report in English from the following Chinese dialogue. Return JSON only, using markdown bullet points.
+You are a medical AI assistant. Generate a concise ophthalmology report in English from the following Chinese dialogue. Return JSON only, using markdown bullet points.
 
 ### Rules:
-1. Each sentence must end with citations from the dialogue, e.g., [1][2][3].
-2. Max 10 citations per sentence.
-3. Only use information from the dialogue. Do not infer or add assumptions.
-4. Bullet points only. No explanations or additional reasoning.
-5. Translate all Chinese terms (e.g., diseases, symptoms, medical units) into correct medical English.
-6. Use "NTD {amount}" for all prices mentioned in the dialogue.
-7. Do not use speculative or uncertain words such as "possible", "suspected", "may be", "early stage", or "due to symptoms of...". Only list factual terms.
+1. Each bullet must end with citation markers from the dialogue, e.g., [1][2][3]. Do not use ranges like [3-6].
+2. Avoid repeating the same information across different sections (e.g., symptoms in both complaints and treatment).
+3. Limit citations to 10 per sentence.
+4. Use only information explicitly mentioned in the dialogue. Do not infer, summarize, or assume.
+5. Translate all Chinese medical terms into accurate English terminology.
+6. Represent all prices as "NTD {amount}".
+7. Do not include speculative words like "possible", "may", "likely", or "early signs of...".
+8. Use professional, concise phrasing suitable for physician readers.
 
-### Specific Instructions:
-- For **Patient Complaint**: extract and list all patient-reported symptoms, including affected eye details (e.g., right eye, left eye).
-- For **Diagnosis**: ONLY list disease names in English (e.g., Cataract, Dry Eye Syndrome, Retinal Disease) with citations. Do not include any explanations, parenthesis, Chinese translations, or additional text.
-- For **Recommended Medical Unit**: Select one option:
-   - General clinic
-   - Outpatient department of medical center
-   - Emergency department
-   - Not mentioned in the dialogue
-- For **Recommended Intraocular Lens (IOL)**:
-   - If the dialogue mentions patient needs or preferences (e.g., non-spherical, anti-blue light), list them first.
-   - Then, list all mentioned IOL options that match these preferences. Include:
-     - IOL name
-     - Pricing details (hospital price, insurance coverage, out-of-pocket cost)
-   - If the patient declined IOL, state: "- The patient declined intraocular lens implantation [x]".
-   - If not mentioned, state: "- Not mentioned in the dialogue".
+### JSON Output Fields:
 
-### JSON Output Format:
+#### **PatientComplaint**
+- List all symptoms directly mentioned by the patient (e.g., blurred vision, eye pain).
+- Include any **medication use**, **eye drops**, **past treatments**, or **self-initiated measures** mentioned by the patient (e.g., "uses artificial tears 4–6 times daily", "considers multifocal lenses").
+- Indicate laterality (left/right eye) when stated.
+- Use one bullet per entry.
+- Include citations.
+
+#### **Diagnosis**
+- List confirmed diagnoses only.
+- Do not repeat symptoms already listed in PatientComplaint.
+- Use medical terms in English only, no explanations or parenthesis.
+- Include citations.
+
+#### **RecommendedMedicalUnit**
+- Choose only one based on dialogue content:
+  - General clinic
+  - Outpatient department of a medical center
+  - Emergency department
+  - Not mentioned in the dialogue
+- Include citation.
+
+#### **RecommendedTreatment**
+- List all actionable suggestions from the dialogue, including:
+  - Surgical recommendation
+  - Lifestyle or behavioral advice
+  - Follow-up time
+- Each suggestion should be concise, one-line bullet point with citation.
+- If intraocular lens (IOL) options are mentioned:
+  - Start with a summary line such as:
+    "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [x][y]"
+  - Summarize brands and prices in one or two bullets:
+    "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [x]"
+    "- Typical pricing: NTD {amount} (hospital), NTD {amount} (insurance), NTD {amount} (out-of-pocket) [x]"
+  - If the patient declined IOL: 
+    "- The patient declined intraocular lens implantation [x]"
+- Avoid repeating symptoms from earlier sections.
+- If nothing is mentioned, include:
+  - "- Not mentioned in the dialogue"
+
+### JSON Output Format Example:
 ```json
-{{
-  "PatientComplaint": ["- ... [x][y]"],
-  "Diagnosis": ["- Cataract [x][y]", "- Dry Eye Syndrome [z]"],
-  "RecommendedMedicalUnit": ["- ... [x][y]"],
-  "RecommendedIntraocularLens (IOL)": ["- ... [x][y]"]
-}}
+{
+  "PatientComplaint": [
+    "- Blurred vision in right eye [1][2]",
+    "- Photophobia [3]",
+    "- Uses artificial tears 4–6 times daily [4]",
+    "- Considers progressive multifocal lenses for presbyopia [5]"
+  ],
+  "Diagnosis": ["- Cataract [6]", "- Dry Eye Syndrome [7]"],
+  "RecommendedMedicalUnit": ["- Outpatient department of a medical center [8]"],
+  "RecommendedTreatment": [
+    "- Follow-up appointment in 6 weeks for reevaluation [9]",
+    "- Consider IOL implantation (non-spherical, yellow tint, anti-blue light) [10]",
+    "- IOL brands discussed: Alcon, Bausch&Lomb, HOYA [10]",
+    "- Typical pricing: NTD 33,600 (hospital), NTD 2,744 (insurance), NTD 30,856 (out-of-pocket) [10]"
+  ]
+}
 ```
 
-### Dialogue:
+### dialogue:
 {dialogue}
 """
 
@@ -107,15 +144,16 @@ You are a professional medical evaluator. Your task is to assess whether each En
   "provenance": [X, Y, Z],
   "entailment_prediction": 1 or 0
 }
+```
 
 ### Example:
 **Entailment (1):**  
 Report: "Patient diagnosed with cataract and surgery is recommended. [10][15]"  
-Dialogue: "The doctor diagnosed cataract and recommended surgery. [10]"  
+dialogue: "The doctor diagnosed cataract and recommended surgery. [10]"  
 → Label: 1
 
 **Not Entailed (0):**  
 Report: "Patient diagnosed with cataract and has severe vision loss. [10]"  
-Dialogue: "The doctor diagnosed cataract. [10]"  
+dialogue: "The doctor diagnosed cataract. [10]"  
 → Label: 0 (severe vision loss is missing)
 """

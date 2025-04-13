@@ -1,6 +1,6 @@
-# Platform for LM-Driven Generation and Summarization of Ophthalmology Dialogues
+# LLM-Driven Generation and Summarization of Ophthalmology Dialogue
 
-This project provides a platform for **LLM-Driven Generation and Summarization of Ophthalmology Dialogues**, enabling users to review, comment, and evaluate AI-generated clinical outputs.
+This project provides a platform for **LLM-Driven Generation and Summarization of Ophthalmology Dialogue**, enabling users to review, comment, and evaluate AI-generated clinical outputs.
 
 Designed for medical AI researchers, this system allows importing ophthalmology dialogue/report JSON files into **MongoDB**, and provides a **web interface for reviewing and commenting**. Built in Python and containerized with Docker, the system is modular, extensible, and production-ready.
 
@@ -23,19 +23,20 @@ ophthalmology_app/
 │   │   ├── dialogue_comment.py
 │   │   ├── report_comment.py
 │   │   ├── report_generator.py
-│   │   └── summary_report.py
+│   │   ├── summary_report.py
+│   │   └── line_comment.py
 
 │   ├── services/             # Core business logic
-│   │   ├── GenReport.py              # Dialogue-to-report LLM pipeline
+│   │   ├── GenReport.py              # Dialogue-to-report LLM
 │   │   ├── EvalCitation.py           # LLM-based citation evaluation
 │   │   ├── EvalMetrics.py            # Computes recall/precision
-│   │   ├── generate_full_report.py   # Full pipeline integration
-│   │   └── report_prompts.py         # Prompt templates
+│   │   └── report_prompts.py         # Prompt for LLM
 
 │   ├── database/             # MongoDB interaction
 │   │   ├── db_utils_report.py
 │   │   ├── Dialogue2db.py
-│   │   └── Report2db.py
+│   │   ├── Report2db.py
+│   │   └── LineComment2db.py # Database operations for line comment
 
 │   ├── json_dialogue/        # Dialogue JSON data folder
 │   ├── json_report/          # Report JSON data folder
@@ -47,6 +48,8 @@ ophthalmology_app/
 │   ├── assets/               # Static images and diagrams
 │   │   ├── SchematicFlowDiagram.png
 │   │   └── GenReportWorkflow.png
+
+│   ├── line_dialogue_report_db.py  # Demonstrates the pipeline from dialogue to report generation and import to db
 
 │   └── utils.py              # General-purpose utilities
 
@@ -63,6 +66,7 @@ ophthalmology_app/
 - `database/*.py`: JSON-to-MongoDB data import
 - `json_dialogue/`, `json_report/`: Folders to place your data files
 - `assets/`: Flow diagrams for documentation and platform overview
+- `line_dialogue_report_db.py`: A utility script demonstrating the pipeline from dialogue to report generation and database import. Provides a function that takes idx, user_type, user_name, dialogue as input.
 
 ---
 
@@ -77,7 +81,7 @@ cd ophthalmology_app
 
 ### 2. Start services with Docker
 
-Buile the docker container
+Build the docker container
 ```bash
 docker-compose up --build -d
 ```
@@ -97,7 +101,7 @@ docker exec -it ophthalmology_db_container bash
 Put your JSON files in:
 
 ```
-app/json_dialogue/   # For dialogues
+app/json_dialogue/   # For dialogue
 app/json_report/     # For reports
 ```
 
@@ -107,6 +111,12 @@ Import into MongoDB:
 cd app/database
 python Dialogue2db.py
 python Report2db.py
+```
+
+Import row dialogue and demonstrate the flow from dialogue to report generation and import into database:
+```bash
+cd app/
+python line_dialogue_report_db.py
 ```
 
 ### 4. Launch the Web App
@@ -168,14 +178,35 @@ Update `requirements.txt`, then:
 docker-compose up --build -d
 ```
 
+- **Clean `line_comment` Collection Lock Info**:
+
+Reset the lock info in the `line_comment` collection:
+
+```bash
+docker exec -it ophthalmology_db_container mongosh
+use ophthalmology_db
+db.line_comment.updateMany( {}, { "$set": { "lock_info": { "locked": false, "session_id": "", "lock_time": 0 } }, "$unset": { "is_locked": "" } } )
+```
+
+- **Check `line_comment` Collection**:
+
+Inspect a specific document in the `line_comment` collection (e.g. idx=="jjjjjj"):
+
+```bash
+docker exec -it ophthalmology_db_container mongosh
+use ophthalmology_db
+db.line_comment.findOne({"idx": "jjjjjj"})
+```
+
 ---
 
 ## 🗃️ MongoDB Collections
 
 - **Database**: `ophthalmology_db`
 - **Collections**:
-  - `synthesis_json_user_conv_data_rate_v2`: Dialogue data
-  - `reports`: Generated and evaluated reports
-  - `user_inter_data_info`: Optional interaction logs
+  - `synthesis_json_user_conv_data_rate_v2`: Dialogue data for comment
+  - `reports`: Generated and evaluated reports for comment
+  - `user_inter_data_info`: Optional interaction logs for comment
+  - `line_comment`: Stores LINE dialogues, reports, and associated comments with lock information for concurrent access
 
 ---

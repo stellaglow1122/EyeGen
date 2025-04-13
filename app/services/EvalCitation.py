@@ -18,15 +18,15 @@ class EvalCitation:
         self.twcc_key = twcc_key or os.getenv("TWCC_API_KEY")
         self.openai_client = OpenAI(api_key=self.openai_key) if self.openai_key else None
 
-    async def _call_openai(self, messages, gen_model):
+    async def _call_openai(self, messages, eval_model):
         if not self.openai_client:
             raise ValueError("OpenAI API key not found or client not initialized.")
 
         try:
-            print(f"[OpenAI] Calling model: {gen_model}")
+            print(f"[OpenAI] Calling model: {eval_model}")
             response = await asyncio.to_thread(
                 self.openai_client.chat.completions.create,
-                model=gen_model,
+                model=eval_model,
                 messages=messages,
                 max_tokens=2000,
                 n=1,
@@ -36,7 +36,7 @@ class EvalCitation:
         except Exception as e:
             raise RuntimeError(f"[OpenAI Error] {e}")
 
-    async def _call_nchc(self, messages, gen_model):
+    async def _call_nchc(self, messages, eval_model):
         if not self.twcc_key:
             raise ValueError("TWCC API key not found.")
 
@@ -46,7 +46,7 @@ class EvalCitation:
             "Content-Type": "application/json"
         }
         data = {
-            "model": gen_model,
+            "model": eval_model,
             "messages": messages,
             "max_tokens": 2000,
             "temperature": 0,
@@ -54,7 +54,7 @@ class EvalCitation:
         }
 
         try:
-            print(f"[🔁 NCHC] Calling model: {gen_model}")
+            print(f"[NCHC] Calling model: {eval_model}")
             response = await asyncio.to_thread(requests.post, url, headers=headers, json=data)
             if response.status_code == 200:
                 return response.json()['choices'][0]['message']['content']
@@ -65,28 +65,29 @@ class EvalCitation:
     def _extract_citations(self, text: str) -> list[int]:
         return list(set(map(int, re.findall(r"\[(\d+)\]", text))))
 
-    def _filter_dialogue(self, dialogue: str, citation_indices: list[int]) -> str:
-        dialogue_lines = dialogue.split("\n")
+    def _filter_indexed_dialogue(self, indexed_dialogue: str, citation_indices: list[int]) -> str:
+        indexed_dialogue_lines = indexed_dialogue.split("\n")
         index_map = {
             int(match.group(1)): i
-            for i, line in enumerate(dialogue_lines)
+            for i, line in enumerate(indexed_dialogue_lines)
             if (match := re.match(r"\[(\d+)\]", line.strip()))
         }
         blocks = []
         for idx in citation_indices:
             start = index_map.get(idx)
-            end = index_map.get(idx + 1, len(dialogue_lines))
+            end = index_map.get(idx + 1, len(indexed_dialogue_lines))
             if start is not None:
-                blocks.append("\n".join(dialogue_lines[start:end]))
+                blocks.append("\n".join(indexed_dialogue_lines[start:end]))
         return "\n".join(blocks)
 
-    def _extract_sentences(self, report_json: dict) -> list[str]:
-        sentences = []
-        for section in report_json.values():
-            sentences.extend([line.strip() for line in section if line.strip()])
-        return sentences
+    def _extract_sentences(self, report_content: str) -> list[str]:
+        return [
+            line.strip()
+            for line in report_content.splitlines()
+            if re.search(r"\[\d+\]", line)
+        ]
 
-    async def _evaluate_sentence(self, sent: str, citations: list[int], dialogue: str, gen_model: str) -> dict:
+    async def _evaluate_sentence(self, sent: str, citations: list[int], indexed_dialogue: str, eval_model: str) -> dict:
         if not citations:
             return {
                 "output": sent,
@@ -94,11 +95,11 @@ class EvalCitation:
                 "warning": "No citations found"
             }
 
-        relevant_dialogue = self._filter_dialogue(dialogue, citations)
+        relevant_indexed_dialogue = self._filter_indexed_dialogue(indexed_dialogue, citations)
         system_prompt = Prompts.gen_citation_system_context
         user_prompt = f"""
-### **Relevant Dialogue**
-{relevant_dialogue}
+### **Relevant indexed_dialogue**
+{relevant_indexed_dialogue}
 
 ### **Report Sentence for Validation**
 {sent}
@@ -109,10 +110,10 @@ class EvalCitation:
         ]
 
         try:
-            if "gpt" in gen_model.lower():
-                response = await self._call_openai(messages, gen_model)
+            if "gpt" in eval_model.lower():
+                response = await self._call_openai(messages, eval_model)
             else:
-                response = await self._call_nchc(messages, gen_model)
+                response = await self._call_nchc(messages, eval_model)
 
             json_block = re.search(r'\{.*?\}', response, re.DOTALL)
             if not json_block:
@@ -131,8 +132,12 @@ class EvalCitation:
                 "error": str(e)
             }
 
-    def evaluate(self, report_json: dict, dialogue: str, gen_model: str) -> list[dict]:
-        sentences = self._extract_sentences(report_json)
-        loop = asyncio.get_event_loop()
-        tasks = [self._evaluate_sentence(sent, self._extract_citations(sent), dialogue, gen_model) for sent in sentences]
-        return loop.run_until_complete(asyncio.gather(*tasks))
+    async def evaluate(self, report_content: str, indexed_dialogue: str, eval_model: str) -> list[dict]:
+        print("[DEBUG] EvalCitation.py & Eval model received:", eval_model)
+        sentences = self._extract_sentences(report_content)
+        tasks = [
+            self._evaluate_sentence(sent, self._extract_citations(sent), indexed_dialogue, eval_model)
+            for sent in sentences
+        ]
+        return await asyncio.gather(*tasks)
+

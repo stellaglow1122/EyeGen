@@ -5,7 +5,7 @@ from db_utils_report import init_db
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-doctor_eval_data_v2_30_path = BASE_DIR / "json_dialogue" / "hole_qa_v2_doctor_eval_data_30.json"
+doctor_eval_data_v2_30_path = BASE_DIR / "json_indexed_dialogue" / "hole_qa_v2_doctor_eval_data_30.json"
 
 def connect_to_db():
     db = init_db()
@@ -13,7 +13,7 @@ def connect_to_db():
     print(f"Connected to database: {db.name}")
     return collection
 
-def insert_dialogue_to_mongo(json_path=doctor_eval_data_v2_30_path):
+def insert_indexed_dialogue_to_mongo(json_path=doctor_eval_data_v2_30_path):
     try:
         with open(json_path, 'r', encoding='utf-8') as json_file:
             doctor_eval_datas = json.load(json_file)
@@ -30,11 +30,11 @@ def insert_dialogue_to_mongo(json_path=doctor_eval_data_v2_30_path):
     
     insert_cnt = 0
     skip_cnt = 0
-    # iterate each dialogue datas
+    # iterate each indexed_dialogue datas
     for doctor_eval_data in doctor_eval_datas:
         update_fields = deepcopy({
 
-            #### dialogue info
+            #### indexed_dialogue info
             'group_id': doctor_eval_data['group_id'],
             'uid': doctor_eval_data['uid'],
             'iter_idx': doctor_eval_data['iter_idx'],
@@ -105,4 +105,4 @@ def insert_dialogue_to_mongo(json_path=doctor_eval_data_v2_30_path):
     print(f"Successfully inserted {insert_cnt} new datas, skipped {skip_cnt} existing datas into db synthesis_json_user_conv_data_rate_v2 table !!!\n")
 
 if __name__ == "__main__":
-    insert_dialogue_to_mongo()
+    insert_indexed_dialogue_to_mongo()

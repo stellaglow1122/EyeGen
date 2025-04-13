@@ -45,3 +45,4 @@ def get_prev_uncommented_report(current_id):
     if current_id:
         query["report_id"] = {"$lt": current_id}
     return db.reports.find_one(query, sort=[("report_id", -1)])
+

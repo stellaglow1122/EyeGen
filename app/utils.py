@@ -1,14 +1,24 @@
 # utils.py
 custom_css = """
+body, * {
+    font-family: Arial, sans-serif !important;
+}
+@font-face {
+    font-family: 'ui-sans-serif';
+    src: local('Arial');
+}
+@font-face {
+    font-family: 'system-ui';
+    src: local('Arial');
+}
 .scrollable {
     max-height: 450px;
     overflow-y: auto;
     z-index: 1;
 }
 .table-scroll {
-    max-height: 200px;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     width: 100%;
     table-layout: fixed;
     z-index: 2;
@@ -32,7 +42,7 @@ custom_css = """
     font-size: 0.8em;
 }
 .spacer {
-    margin-top: 150px;
+    margin-top: 0px;
 }
 .comment-stats h2 {
     font-size: 1.5em;
@@ -46,5 +56,15 @@ custom_css = """
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#popup-status {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
 }
 """
