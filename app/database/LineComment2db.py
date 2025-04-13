@@ -35,11 +35,11 @@ def lock_report(idx, session_id):
         doc = collection.find_one({"idx": idx}, {"_id": 0})
         lock_info = doc.get("lock_info", {"locked": False, "session_id": "", "lock_time": 0})
 
-        # 檢查鎖定時間是否超過 15 秒
+        # 檢查鎖定時間是否超過 300 秒
         if lock_info.get("locked", False) and lock_info.get("lock_time", 0) > 0:
-            current_time = datetime.utcnow().timestamp()  # UTC 時間戳（秒）
+            current_time = datetime.now().timestamp()  # UTC 時間戳（秒）
             time_diff = current_time - lock_info["lock_time"]
-            if time_diff > 15:  # 15 秒
+            if time_diff > 300:  # 300 秒
                 print(f"Lock on idx {idx} has expired (locked for {time_diff:.1f} seconds). Releasing lock.")
                 # 自動解鎖
                 collection.update_one(
@@ -58,7 +58,7 @@ def lock_report(idx, session_id):
                 return False  # 不允許鎖定
 
         # 如果未鎖定，設置鎖定並記錄鎖定時間
-        current_time = datetime.utcnow().timestamp()  # UTC 時間戳（秒）
+        current_time = datetime.now().timestamp()  # UTC 時間戳（秒）
         result = collection.update_one(
             {"idx": idx, "lock_info.locked": {"$ne": True}},  # 確保未被鎖定
             {"$set": {"lock_info": {"locked": True, "session_id": session_id, "lock_time": current_time}}}
