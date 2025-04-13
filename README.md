@@ -92,7 +92,7 @@ app/json_report/    # For reports
 
 Import into MongoDB:
 ```bash
-cd app/database
+cd database
 python Dialogue2db.py
 python Report2db.py
 ```
