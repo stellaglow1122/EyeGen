@@ -15,7 +15,7 @@ mongo_data/*
 # Python 環境相關
 __pycache__/
 *.pyc
-.env
+# .env
 
 # Docker 相關
 *.log

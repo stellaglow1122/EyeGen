@@ -21,13 +21,16 @@ def get_line_list(refresh=False):
         print(f"Error fetching line list: {e}")
         raise
 
-def get_line_by_idx(idx, refresh=False):
+def get_line_by_idx(idx):
     print(f"Fetching line by idx: {idx}")
     try:
-        return collection.find_one({"idx": idx}, {"_id": 0})
+        doc = collection.find_one({"idx": idx}, {"_id": 0})
+        print(f"[MongoDB Result] idx={idx} →", doc)
+        return doc
     except (OperationFailure, ServerSelectionTimeoutError) as e:
         print(f"Error fetching line by idx {idx}: {e}")
         raise
+
 
 def lock_report(idx, session_id):
     print(f"Attempting to lock idx: {idx} for session: {session_id}")
@@ -105,28 +108,110 @@ def submit_comment(idx, comment_content, comment_score, comment_state, comment_t
     finally:
         unlock_report(idx)
 
-# 匯入資料到 MongoDB
-def import_line_comment_to_mongo(data):
+def lock_idx(idx, request_id):
+    """
+    Attempt to lock an idx for processing.
+    Returns True if locked successfully, False if already locked.
+    """
+    print(f"Attempting to lock idx: {idx} for request: {request_id}")
+    try:
+        current_time = datetime.utcnow().timestamp()
+        # 檢查 idx 是否存在
+        existing_doc = collection.find_one({"idx": idx})
+        
+        if existing_doc:
+            # 如果 idx 已存在，檢查鎖定狀態
+            result = collection.update_one(
+                {
+                    "idx": idx,
+                    "$or": [
+                        {"lock_info.locked": {"$ne": True}},
+                        {"lock_info.lock_time": {"$lt": current_time - 30}},
+                        {"lock_info.lock_time": 0},
+                        {"lock_info.lock_time": {"$exists": False}}
+                    ]
+                },
+                {
+                    "$set": {
+                        "lock_info": {
+                            "locked": True,
+                            "request_id": request_id,
+                            "lock_time": current_time
+                        }
+                    }
+                },
+                upsert=False
+            )
+            if result.modified_count == 0:
+                print(f"Failed to lock idx {idx}: already locked by another process")
+                return False
+        else:
+            # 如果 idx 不存在，插入一個臨時記錄並鎖定
+            temp_doc = {
+                "idx": idx,
+                "lock_info": {
+                    "locked": True,
+                    "request_id": request_id,
+                    "lock_time": current_time
+                },
+                "is_temp": True  # 標記為臨時記錄
+            }
+            collection.insert_one(temp_doc)
+            print(f"Created and locked temporary record for idx: {idx}")
+
+        print(f"Locked idx: {idx} for request: {request_id} at timestamp {current_time}")
+        return True
+    except (OperationFailure, ServerSelectionTimeoutError) as e:
+        print(f"Error locking idx {idx}: {e}")
+        raise
+    except DuplicateKeyError as e:
+        print(f"[{idx}] already exists during lock (DuplicateKeyError: {e})")
+        return False
+
+def unlock_idx(idx):
+    """
+    Unlock an idx after processing.
+    If the record is temporary (is_temp: True) and no full data was inserted, remove it.
+    """
+    print(f"Unlocking idx: {idx}")
+    try:
+        doc = collection.find_one({"idx": idx})
+        if doc and doc.get("is_temp", False):
+            # 如果是臨時記錄且未插入完整資料，則刪除
+            if "user_type" not in doc:  # 檢查是否有完整資料
+                collection.delete_one({"idx": idx})
+                print(f"Removed temporary record for idx: {idx}")
+                return
+        
+        # 否則僅更新鎖定狀態
+        collection.update_one(
+            {"idx": idx},
+            {"$set": {"lock_info": {"locked": False, "request_id": "", "lock_time": 0}}}
+        )
+        print(f"Unlocked idx: {idx}")
+    except (OperationFailure, ServerSelectionTimeoutError) as e:
+        print(f"Error unlocking idx {idx}: {e}")
+        raise
+
+def import_line_comment_to_mongo(data, request_id=None):
     """
     Import a line comment data into MongoDB, preventing duplicate idx.
-
-    Parameters:
-    - data (dict): The data to import (e.g., {"idx": ..., "user_type": ..., ...})
-
-    Returns:
-    - bool: True if successful, False if idx already exists, raises an exception on other failures
     """
-    print(f"Importing data for idx: {data.get('idx')}")
+    idx = data.get("idx")
+    print(f"Importing data for idx: {idx}")
     try:
-        # 檢查必要欄位
         if "idx" not in data:
             raise ValueError("Data must contain 'idx' field")
 
         # 檢查 idx 是否已存在
-        existing_doc = collection.find_one({"idx": data["idx"]})
+        existing_doc = collection.find_one({"idx": idx})
         if existing_doc:
-            print(f"[{data['idx']}] already exists")
-            return False
+            if existing_doc.get("is_temp", False):
+                # 如果是臨時記錄，則覆蓋
+                collection.delete_one({"idx": idx})
+            else:
+                print(f"[{idx}] already exists")
+                return False
 
         # 添加必要的欄位（如果不存在）
         taipei_tz = pytz.timezone("Asia/Taipei")
@@ -135,17 +220,18 @@ def import_line_comment_to_mongo(data):
         data["comment_score"] = data.get("comment_score", 0)
         data["comment_state"] = data.get("comment_state", "N")
         data["comment_time"] = data.get("comment_time", "")
-        data["lock_info"] = data.get("lock_info", {"locked": False, "session_id": "", "lock_time": 0})
+        data["lock_info"] = {"locked": False, "request_id": "", "lock_time": 0}
+        data["is_temp"] = False  # 標記為非臨時記錄
 
         # 插入新資料
         collection.insert_one(data)
-        print(f"Successfully inserted idx: {data['idx']}")
+        print(f"Successfully inserted idx: {idx}")
         return True
     except DuplicateKeyError as e:
-        print(f"[{data.get('idx')}] already exists (DuplicateKeyError: {e})")
+        print(f"[{idx}] already exists (DuplicateKeyError: {e})")
         return False
     except (OperationFailure, ServerSelectionTimeoutError) as e:
-        print(f"Error importing data for idx {data.get('idx')}: {e}")
+        print(f"Error importing data for idx {idx}: {e}")
         raise
 
 # 清除集合

@@ -42,7 +42,7 @@ def line_comment_page():
 
     def update_details(evt: gr.SelectData, table_data, session_id):
         if evt.index is None:
-            return ["", "", "", "", "No selection", "No selection", "", 0, "", "N", None, True, True, session_id]
+            return ["", "", "", "", "Please select a row from the table to display the dialogue.", "Please select a row from the table to display the report.", "", 0, "", "N", None, True, True, session_id]
 
         idx = evt.index[0] if isinstance(evt.index, (list, tuple)) else evt.index
         current_table = pd.DataFrame(table_data, columns=display_headers)
@@ -51,7 +51,9 @@ def line_comment_page():
             return ["", "", "", "", "Out of range", "Out of range", "", 0, "", "N", None, True, True, session_id]
 
         selected_idx = current_table.iloc[idx]['idx']
-        row = get_line_by_idx(selected_idx, refresh=True)  # 強制刷新
+        row = get_line_by_idx(selected_idx)  # 強制刷新
+        # print(">>> dialogue_content:", row.get("dialogue_content"))
+        # print(">>> report_content:", row.get("report_content"))
 
         # 嘗試鎖定該行
         locked = lock_report(selected_idx, session_id)
@@ -64,8 +66,8 @@ def line_comment_page():
                 row.get("user_name", ""),
                 row.get("user_type", ""),
                 row.get("upload_time", ""),
-                row.get("dialogue", ""),
-                row.get("report", ""),
+                row.get("dialogue_content", ""),
+                row.get("report_content", ""),
                 row.get("comment_time", ""),
                 row.get("comment_score", 0),
                 row.get("comment_content", ""),
@@ -82,8 +84,8 @@ def line_comment_page():
             row.get("user_name", ""),
             row.get("user_type", ""),
             row.get("upload_time", ""),
-            row.get("dialogue", ""),
-            row.get("report", ""),
+            row.get("dialogue_content", ""),
+            row.get("report_content", ""),
             row.get("comment_time", ""),
             row.get("comment_score", 0),
             row.get("comment_content", ""),
@@ -109,15 +111,15 @@ def line_comment_page():
                 gr.update(value=stats_html, visible=True),
                 filtered_df,
                 search_term,
-                gr.update(value="No selection", visible=True),
-                gr.update(value="No selection", visible=True),
+                gr.update(value="Please select a row from the table to display the dialogue.", visible=True),
+                gr.update(value="Please select a row from the table to display the report.", visible=True),
                 gr.update(value="", visible=True, interactive=True),
                 gr.update(value=0, visible=True, interactive=True),
                 gr.update(value="", visible=False),
                 session_id
             )
 
-        row = get_line_by_idx(selected_idx, refresh=True)
+        row = get_line_by_idx(selected_idx)
         locked = lock_report(selected_idx, session_id)
         # print(f"In refresh_table, lock check result for idx {selected_idx}: locked={locked}")
 
@@ -141,8 +143,8 @@ def line_comment_page():
             gr.update(value=stats_html, visible=True),
             filtered_df,
             search_term,
-            gr.update(value=row.get("dialogue", ""), visible=True),
-            gr.update(value=row.get("report", ""), visible=True),
+            gr.update(value=row.get("dialogue_content", ""), visible=True),
+            gr.update(value=row.get("report_content", ""), visible=True),
             gr.update(value=row.get("comment_content", ""), visible=True, interactive=True),
             gr.update(value=row.get("comment_score", 0), visible=True, interactive=True),
             gr.update(value="", visible=False),
@@ -183,7 +185,7 @@ def line_comment_page():
 
             # print("Refreshing table")
             updated_display_df, stats_html, filtered_df, search_term = get_display_df(search_term)
-            row = get_line_by_idx(selected_idx, refresh=True)
+            row = get_line_by_idx(selected_idx)
             # print("Table refreshed")
 
             # print(f"Returning updated_display_df with {len(updated_display_df)} rows")
@@ -252,7 +254,7 @@ def line_comment_page():
                 copy_dialogue_btn = gr.Button("Copy Dialogue")
 
             with gr.Column():
-                gr.Markdown("## 🕼️ Report")
+                gr.Markdown("## 📝 Report")
                 report_box = gr.Markdown("Click a row to view its report.", elem_classes="scrollable report-content", elem_id="report-md")
                 copy_report_btn = gr.Button("Copy Report")
 
@@ -323,7 +325,7 @@ def line_comment_page():
             () => {
                 const content = document.getElementById('dialogue-md')?.innerText.trim();
                 if (content=="Click a row to view its dialogue.") {
-                    alert("❗ No dialogue to copy. Please select a dialogue first.");
+                    alert("Please select a row from the table to display the dialogue.");
                     return;
                 }
                 navigator.clipboard.writeText(content);
@@ -341,7 +343,7 @@ def line_comment_page():
             () => {
                 const content = document.getElementById('report-md')?.innerText.trim();
                 if (content=="Click a row to view its report.") {
-                    alert("❗ No report to copy. Please select a report first.");
+                    alert("Please select a row from the table to display the report.");
                     return;
                 }
                 navigator.clipboard.writeText(content);

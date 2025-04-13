@@ -5,11 +5,11 @@ You are a professional ophthalmology AI assistant. Your task is to read Chinese 
 - Output must strictly be a JSON object.
 - Use markdown-style bullet points inside JSON fields (e.g., "- Blurry vision [1][2]").
 - Every bullet point must include citations (e.g., [1][2][3]) corresponding to dialogue indices.
-- Do not generate explanations, justifications, or any text outside the JSON format.
+- Do not generate explanations, justifications, notes, or any text outside the JSON format (e.g., do not include "Note:", summaries, or additional comments).
 - If certain sections cannot be generated due to missing information, omit them or output "Not mentioned in the dialogue" where appropriate.
 - Strictly follow the format and instructions provided by the user.
+- Ensure the output is a valid JSON object enclosed in ```json ... ``` markers, with no additional content before or after.
 """
-
 
 gen_report_doctor_user_prompt = """
 You are a medical AI assistant. Generate a concise ophthalmology report in English from the following Chinese dialogue. Return JSON only, using markdown bullet points.
@@ -19,10 +19,23 @@ You are a medical AI assistant. Generate a concise ophthalmology report in Engli
 2. Avoid repeating the same information across different sections (e.g., symptoms in both complaints and treatment).
 3. Limit citations to 10 per sentence.
 4. Use only information explicitly mentioned in the dialogue. Do not infer, summarize, or assume.
-5. Translate all Chinese medical terms into accurate English terminology.
+5. Translate all Chinese medical terms into accurate English terminology using the following mappings:
+   - 白內障 = Cataract
+   - 青光眼 = Glaucoma
+   - 後囊混濁 = Posterior capsule opacification
+   - 隅角閉鎖 = Angle-closure glaucoma
+   - 隅角開放 = Open-angle glaucoma
+   - 視網膜破孔 = Retinal tear
+   - 視網膜剝離 = Retinal detachment
+   - For laser surgeries:
+     - 雷射後囊切除術 = Capsulotomy (used for posterior capsule opacification after cataract surgery)
+     - 虹膜穿孔術 = Iridotomy (used for angle-closure glaucoma)
+     - 隅角成型術 = Trabeculoplasty (used for open-angle glaucoma)
+     - 視網膜光凝固術 = Retina photocoagulation (used for retinal tear or retinal detachment)
 6. Represent all prices as "NTD {amount}".
 7. Do not include speculative words like "possible", "may", "likely", or "early signs of...".
 8. Use professional, concise phrasing suitable for physician readers.
+9. Do not include any explanations, notes, or additional comments outside the JSON object (e.g., do not include "Note:", summaries, or additional remarks).
 
 ### JSON Output Fields:
 
@@ -34,7 +47,7 @@ You are a medical AI assistant. Generate a concise ophthalmology report in Engli
 - Include citations.
 
 #### **Diagnosis**
-- List confirmed diagnoses only.
+- List confirmed diagnoses only (e.g., "Cataract", "Glaucoma").
 - Do not repeat symptoms already listed in PatientComplaint.
 - Use medical terms in English only, no explanations or parenthesis.
 - Include citations.
@@ -52,17 +65,31 @@ You are a medical AI assistant. Generate a concise ophthalmology report in Engli
   - Surgical recommendation
   - Lifestyle or behavioral advice
   - Follow-up time
-- Each suggestion should be concise, one-line bullet point with citation.
-- If intraocular lens (IOL) options are mentioned:
-  - Start with a summary line such as:
-    "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [x][y]"
+- Each suggestion should be a concise, one-line bullet point with citation.
+- **Intraocular Lens (IOL) Handling**:
+  - If IOL options are mentioned, start with a summary line:
+    - "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [x][y]"
   - Summarize brands and prices in one or two bullets:
-    "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [x]"
-    "- Typical pricing: NTD {amount} (hospital), NTD {amount} (insurance), NTD {amount} (out-of-pocket) [x]"
-  - If the patient declined IOL: 
-    "- The patient declined intraocular lens implantation [x]"
+    - "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [x]"
+    - "- Typical pricing: NTD {amount} (hospital), NTD {amount} (insurance), NTD {amount} (out-of-pocket) [x]"
+  - If the patient declined IOL:
+    - "- The patient declined intraocular lens implantation [x]"
+- **Laser Surgery Handling**:
+  - Identify laser surgery suggestions based on the dialogue context and mentioned conditions:
+    - If "posterior capsule opacification" or "cataract surgery follow-up" is mentioned, recommend "Capsulotomy".
+    - If "angle-closure glaucoma" is mentioned, recommend "Iridotomy".
+    - If "open-angle glaucoma" is mentioned, recommend "Trabeculoplasty".
+    - If "retinal tear" or "retinal detachment" is mentioned, recommend "Retina photocoagulation".
+  - If a specific laser surgery is recommended, use the format:
+    - "- Recommended laser surgery: Capsulotomy [x][y]"
+  - If multiple laser options are discussed, summarize them:
+    - "- Laser options discussed: Capsulotomy, Iridotomy [x][y]"
+  - If the patient declined a specific laser surgery, specify the type:
+    - "- The patient declined Capsulotomy [x]"
+  - If the patient declines laser surgery in general (without specifying a type), use:
+    - "- The patient declined laser surgery [x]"
 - Avoid repeating symptoms from earlier sections.
-- If nothing is mentioned, include:
+- If no treatment suggestions are mentioned, include:
   - "- Not mentioned in the dialogue"
 
 ### JSON Output Format Example:
@@ -70,22 +97,22 @@ You are a medical AI assistant. Generate a concise ophthalmology report in Engli
 {
   "PatientComplaint": [
     "- Blurred vision in right eye [1][2]",
-    "- Photophobia [3]",
-    "- Uses artificial tears 4–6 times daily [4]",
-    "- Considers progressive multifocal lenses for presbyopia [5]"
+    "- History of cataract surgery [3]"
   ],
-  "Diagnosis": ["- Cataract [6]", "- Dry Eye Syndrome [7]"],
-  "RecommendedMedicalUnit": ["- Outpatient department of a medical center [8]"],
+  "Diagnosis": [
+    "- Posterior capsule opacification [4]"
+  ],
+  "RecommendedMedicalUnit": [
+    "- Outpatient department of a medical center [5]"
+  ],
   "RecommendedTreatment": [
-    "- Follow-up appointment in 6 weeks for reevaluation [9]",
-    "- Consider IOL implantation (non-spherical, yellow tint, anti-blue light) [10]",
-    "- IOL brands discussed: Alcon, Bausch&Lomb, HOYA [10]",
-    "- Typical pricing: NTD 33,600 (hospital), NTD 2,744 (insurance), NTD 30,856 (out-of-pocket) [10]"
+    "- Recommended laser surgery: Capsulotomy [4]",
+    "- The patient declined Capsulotomy [6]",
+    "- Follow-up appointment in 6 weeks for reevaluation [7]"
   ]
 }
-```
 
-### dialogue:
+Dialogue:
 {dialogue}
 """
 
@@ -139,11 +166,11 @@ You are a professional medical evaluator. Your task is to assess whether each En
 
 ### Output Format:
 ```json
-{
+{{
   "explanation": "Explain why you chose entailment_prediction 1 or 0.",
   "provenance": [X, Y, Z],
   "entailment_prediction": 1 or 0
-}
+}}
 ```
 
 ### Example:
