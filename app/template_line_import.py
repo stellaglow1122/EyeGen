@@ -105,9 +105,6 @@ test_data = [
 ]
 
 if __name__ == "__main__":
-    # 可選擇清空資料庫（視需求啟用）
-    # result = clear_line_comment_collection(confirm=True)
-    # print(f"Clear result: {result}")
 
     # import 10 dialogue to generate as report and save to db
     for i, data in enumerate(test_data, 1):
