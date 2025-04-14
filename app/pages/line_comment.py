@@ -242,10 +242,12 @@ def line_comment_page():
         with gr.Row():
             with gr.Column():
                 gr.Markdown("## 👤 Comment")
-            idx_box = gr.Textbox(label="IDX", interactive=False)
-            user_name = gr.Textbox(label="User Name", interactive=False)
-            user_type = gr.Textbox(label="User Type", interactive=False)
-            upload_time = gr.Textbox(label="Upload Time", interactive=False)
+                # with gr.Row(variant="compact"):
+                with gr.Row():
+                    idx_box = gr.Textbox(label="IDX", interactive=False)
+                    user_name = gr.Textbox(label="User Name", interactive=False)
+                    user_type = gr.Textbox(label="User Type", interactive=False)
+                    upload_time = gr.Textbox(label="Upload Time", interactive=False)
 
         with gr.Row():
             with gr.Column():

@@ -25,7 +25,7 @@ def get_line_by_idx(idx):
     print(f"Fetching line by idx: {idx}")
     try:
         doc = collection.find_one({"idx": idx}, {"_id": 0})
-        print(f"[MongoDB Result] idx={idx} →", doc)
+        # print(f"[MongoDB Result] idx={idx} →", doc)
         return doc
     except (OperationFailure, ServerSelectionTimeoutError) as e:
         print(f"Error fetching line by idx {idx}: {e}")
