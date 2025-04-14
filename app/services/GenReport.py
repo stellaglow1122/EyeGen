@@ -24,7 +24,7 @@ class GenReport:
         index = 1
         for line in lines:
             if line.startswith('使用者問題/回覆') or line.startswith('系統回覆'):
-                indexed_lines.append(f'[{index}] {line}')
+                indexed_lines.append(f'\n\n [{index}] {line}')
                 index += 1
             else:
                 indexed_lines.append(line)

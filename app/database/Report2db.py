@@ -10,7 +10,7 @@ def import_reports_to_mongo():
 
     json_dir = "/app/json_report"
     for filename in os.listdir(json_dir):
-        if filename.endswith(".json"):
+        if filename.endswith(".json") and filename != "dialogue_reports.json":
             filepath = os.path.join(json_dir, filename)
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)

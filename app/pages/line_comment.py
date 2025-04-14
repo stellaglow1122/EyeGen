@@ -10,6 +10,28 @@ def line_comment_page(username_state):
     comment_headers = ["IDX", "Comment time", "User", "Comment content", "Score"]
     comment_columns = ["idx", "comment_time", "user_name", "comment_content", "comment_score"]
 
+    # 新增：計算統計資訊的函數
+    def get_statistics():
+        data = get_line_list()
+        total_records = len(data)
+
+        # 統計 object_type 分佈
+        doctor_count = sum(1 for item in data if item.get("object_type") == "Doctor")
+        patient_count = sum(1 for item in data if item.get("object_type") == "Patient")
+        
+        # 計算比例（避免除以 0）
+        doctor_ratio = (doctor_count / total_records * 100) if total_records > 0 else 0
+        patient_ratio = (patient_count / total_records * 100) if total_records > 0 else 0
+
+        # 格式化統計資訊
+        records_text = total_records
+        type_text = (
+            f"Doctor: {doctor_count} ({doctor_ratio:.2f}%)\n"
+            f"Patient: {patient_count} ({patient_ratio:.2f}%)"
+        )
+
+        return records_text, type_text
+
     def get_display_df(search_term=""):
         data = get_line_list()
         df = pd.DataFrame(data)
@@ -27,19 +49,19 @@ def line_comment_page(username_state):
             idx = comment["idx"]
             comment_counts[idx] = comment_counts.get(idx, 0) + 1
 
-        # 新增 Number of comment 欄位
         df["Number of comment"] = df["idx"].apply(lambda x: comment_counts.get(x, 0))
-
 
         if search_term:
             mask = df.astype(str).apply(lambda row: row.str.contains(search_term, case=False, na=False).any(), axis=1)
             df = df[mask]
 
-        filtered_df = df.head(50)  # 限制為前 50 行
+        filtered_df = df.head(100)  # 限制為前 100 行
         display_df = filtered_df[original_columns + ["Number of comment"]].copy()
         display_df.columns = display_headers
 
-        return display_df, filtered_df, search_term
+        # 每次更新表格時也更新統計資訊
+        records_text, type_text = get_statistics()
+        return display_df, filtered_df, search_term, records_text, type_text
 
     def update_details(evt: gr.SelectData, table_data, username):
         if evt.index is None:
@@ -83,13 +105,15 @@ def line_comment_page(username_state):
         ]
 
     def refresh_table(search_term, selected_idx, username):
-        updated_display_df, filtered_df, search_term = get_display_df(search_term)
+        updated_display_df, filtered_df, search_term, records_text, type_text = get_display_df(search_term)
 
         if not selected_idx or selected_idx.strip() == "":
             return (
                 gr.update(value=updated_display_df, visible=True, interactive=False),
                 filtered_df,
                 search_term,
+                gr.update(value=records_text, visible=True),
+                gr.update(value=type_text, visible=True),
                 gr.update(value="Please select a row from the table to display the dialogue.", visible=True),
                 gr.update(value="Please select a row from the table to display the report.", visible=True),
                 gr.update(value="", visible=True, interactive=True),
@@ -111,6 +135,8 @@ def line_comment_page(username_state):
             gr.update(value=updated_display_df, visible=True, interactive=False),
             filtered_df,
             search_term,
+            gr.update(value=records_text, visible=True),
+            gr.update(value=type_text, visible=True),
             gr.update(value=row.get("dialogue_content", ""), visible=True),
             gr.update(value=row.get("report_content", ""), visible=True),
             gr.update(value=user_comment.get("comment_content", ""), visible=True, interactive=True),
@@ -124,10 +150,17 @@ def line_comment_page(username_state):
         try:
             if not selected_idx or selected_idx.strip() == "":
                 return (
-                    gr.update(), gr.update(value="⚠️ No row selected.", visible=True),
-                    gr.update(), gr.update(), gr.update(), gr.update(value=""), gr.update(value=0),
-                    gr.update(visible=True), pd.DataFrame(columns=comment_headers),
-                    "", "", "", "", ""
+                    gr.update(),  # table
+                    "",           # comment_time
+                    gr.State(),   # filtered_df_state
+                    search_term,  # search_term_state
+                    gr.update(),  # number_of_records
+                    gr.update(),  # number_of_type
+                    "",           # comment_box
+                    0,            # comment_score
+                    "⚠️ No row selected.",  # lock_message
+                    pd.DataFrame(columns=comment_headers),  # comments_table
+                    "", "", "", "", ""  # comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
                 )
 
             taipei_tz = pytz.timezone("Asia/Taipei")
@@ -136,38 +169,51 @@ def line_comment_page(username_state):
 
             if not success:
                 return (
-                    gr.update(), gr.update(value="⚠️ Submission skipped: empty content or zero score", visible=True),
-                    gr.update(), gr.update(), gr.update(value=""), gr.update(value=0),
-                    gr.update(value="⚠️ Submission skipped: empty content or zero score", visible=True),
-                    pd.DataFrame(columns=comment_headers),
-                    "", "", "", "", ""
+                    gr.update(),  # table
+                    "",           # comment_time
+                    gr.State(),   # filtered_df_state
+                    search_term,  # search_term_state
+                    gr.update(),  # number_of_records
+                    gr.update(),  # number_of_type
+                    "",           # comment_box
+                    0,            # comment_score
+                    "⚠️ Submission skipped: empty content or zero score",  # lock_message
+                    pd.DataFrame(columns=comment_headers),  # comments_table
+                    "", "", "", "", ""  # comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
                 )
 
-            updated_display_df, filtered_df, search_term = get_display_df(search_term)
+            updated_display_df, filtered_df, search_term, records_text, type_text = get_display_df(search_term)
             comments = get_comments_by_idx(selected_idx)
             comments_df = pd.DataFrame(comments, columns=comment_columns)
             comments_df.columns = comment_headers
 
             return (
-                gr.update(value=updated_display_df, visible=True, interactive=False),
-                gr.update(value=now, visible=True, interactive=False),
-                filtered_df,
-                search_term,
-                gr.update(value=comment_content, visible=True, interactive=True),
-                gr.update(value=comment_score, visible=True, interactive=True),
-                gr.update(value="", visible=False),
-                comments_df,
-                "", "", "", "", ""
+                updated_display_df,  # table
+                now,                # comment_time
+                filtered_df,        # filtered_df_state
+                search_term,        # search_term_state
+                records_text,       # number_of_records
+                type_text,          # number_of_type
+                comment_content,    # comment_box
+                comment_score,      # comment_score
+                "",                 # lock_message
+                comments_df,        # comments_table
+                "", "", "", "", ""  # comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
             )
         except Exception as e:
             print(f"Error in save_comment_fn: {e}")
             return (
-                gr.update(), gr.update(value=f"⚠️ Submission failed: {str(e)}", visible=True),
-                gr.update(), gr.update(),
-                gr.update(value=""), gr.update(value=0),
-                gr.update(value=f"⚠️ Submission failed: {str(e)}", visible=True),
-                pd.DataFrame(columns=comment_headers),
-                "", "", "", "", ""
+                gr.update(),  # table
+                "",           # comment_time
+                gr.State(),   # filtered_df_state
+                search_term,  # search_term_state
+                gr.update(),  # number_of_records
+                gr.update(),  # number_of_type
+                "",           # comment_box
+                0,            # comment_score
+                f"⚠️ Submission failed: {str(e)}",  # lock_message
+                pd.DataFrame(columns=comment_headers),  # comments_table
+                "", "", "", "", ""  # comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
             )
 
     def update_comment_details(evt: gr.SelectData, comments_data):
@@ -184,12 +230,11 @@ def line_comment_page(username_state):
             row["IDX"],
             row["Comment time"],
             row["User"],
-            row["Comment content"],  # 修正：從 "Comment" 改為 "Comment content"
+            row["Comment content"],
             str(row["Score"])
         ]
 
     with gr.Blocks() as demo:
-
         filtered_df_state = gr.State()
         search_term_state = gr.State("")
         selected_idx_hidden = gr.Textbox(visible=False)
@@ -197,6 +242,9 @@ def line_comment_page(username_state):
         search_input = gr.Textbox(label="🔍 Search", placeholder="Enter keyword to filter table...")
 
         gr.Markdown("## 📂 Line, Dialogue & Report Table")
+        with gr.Row():
+            number_of_records = gr.Textbox(label="Number of records", interactive=False)
+            number_of_type = gr.Textbox(label="Number of types", interactive=False, lines=2)
         with gr.Row():
             refresh_btn = gr.Button("🔄 Refresh Table")
         table = gr.Dataframe(
@@ -253,21 +301,21 @@ def line_comment_page(username_state):
                     comment_user_box = gr.Textbox(label="User", interactive=False)
                     comment_score_box = gr.Textbox(label="Score", interactive=False)
                 with gr.Row():
-                    comment_content_box = gr.Textbox(label="Comment Content", lines=10, placeholder="Click a row to view its comment.", interactive=False)
+                    comment_content_box = gr.Textbox(label="Comment Content", lines=10, placeholder="Click a row to view its comment.", elem_id="comment_content_box_id", interactive=False)
                 with gr.Row():
-                    copy_comment_btn = gr.Button("Copy Comment", elem_id="comment_content")
+                    copy_comment_btn = gr.Button("Copy Comment")
 
         demo.load(
             fn=lambda: list(get_display_df("")) + [None],
             inputs=[],
-            outputs=[table, filtered_df_state, search_term_state, selected_idx_hidden],
+            outputs=[table, filtered_df_state, search_term_state, number_of_records, number_of_type, selected_idx_hidden],
             queue=False
         )
 
         search_input.change(
             get_display_df,
             inputs=[search_input],
-            outputs=[table, filtered_df_state, search_term_state],
+            outputs=[table, filtered_df_state, search_term_state, number_of_records, number_of_type],
             queue=False
         )
 
@@ -288,10 +336,22 @@ def line_comment_page(username_state):
             inputs=[comment_box, comment_score, selected_idx_hidden, search_term_state, username_state],
             outputs=[
                 table, comment_time, filtered_df_state, search_term_state,
+                number_of_records, number_of_type,
                 comment_box, comment_score, lock_message, comments_table,
                 comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
             ],
-            queue=False
+            queue=False,
+            preprocess=False,
+            js="""
+            (comment_content, comment_score, selected_idx, search_term, username) => {
+                const dialogueContent = document.getElementById('dialogue-md')?.innerText.trim();
+                if (dialogueContent === "Click a row to view its dialogue.") {
+                    alert("Please select a row from the table to display the dialogue before submitting a comment.");
+                    return;
+                }
+                return [comment_content, comment_score, selected_idx, search_term, username];
+            }
+            """
         )
 
         refresh_btn.click(
@@ -299,6 +359,7 @@ def line_comment_page(username_state):
             inputs=[search_term_state, selected_idx_hidden, username_state],
             outputs=[
                 table, filtered_df_state, search_term_state,
+                number_of_records, number_of_type,
                 dialogue_box, report_box, comment_box, comment_score,
                 lock_message, comments_table,
                 comment_idx_box, comment_time_box, comment_user_box, comment_content_box, comment_score_box
@@ -357,9 +418,17 @@ def line_comment_page(username_state):
             outputs=[],
             preprocess=False,
             js="""
-            () => {
-                const content = document.getElementById('comment_content')?.innerText.trim();
-                if (content=="Click a row to view its comment.") {
+                () => {
+                // 使用 data-testid 定位 textarea
+                const element = document.querySelector('[data-testid="textbox"][placeholder="Click a row to view its comment."]');
+                if (!element) {
+                    console.error("Textarea element not found.");
+                    alert("Error: Comment content box not found.");
+                    return;
+                }
+                // 獲取 textarea 的值
+                const content = (element.value || "").trim();
+                if (content === "" || content === "Click a row to view its comment.") {
                     alert("Please select a row from the table to display the comment.");
                     return;
                 }

@@ -123,9 +123,9 @@ def report_generator_page():
                     label="Select LLM to Evaluate Citation"
                 )
                 evaluate_button = gr.Button("Evaluating Report")
-                citation_recall = gr.Textbox(label="Citation Recall", interactive=False)
-                citation_precision = gr.Textbox(label="Citation Precision", interactive=False)
-                citation_result = gr.Textbox(lines=10, label="Citation Detail", interactive=False)
+                citation_recall = gr.Textbox(label="Citation Recall", placeholder="Citation recall here...", interactive=False)
+                citation_precision = gr.Textbox(label="Citation Precision", placeholder="Citation precision here...", interactive=False)
+                citation_result = gr.Textbox(lines=10, label="Citation Detail", placeholder="Citation information here...", interactive=False)
 
         # ==== Button with JS Pop ====
         generate_button.click(

@@ -8,7 +8,7 @@ users_collection = db["users"]
 # 準備 user1 到 user50 的使用者資料
 users = [
     {"username": f"user{i}", "password": f"user{i}"}
-    for i in range(1, 50)
+    for i in range(1, 51)
 ]
 
 # 插入資料

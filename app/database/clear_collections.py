@@ -8,8 +8,8 @@ clear_line_dialogue_report_collection(confirm=True)
 print("Clearing line_comment collection...")
 clear_line_comment_collection(confirm=True)
 
-# 清空 users 集合
-print("Clearing user collection...")
-clear_users_collection(confirm=True)
+# # 清空 users 集合
+# print("Clearing user collection...")
+# clear_users_collection(confirm=True)
 
 print("Collections cleared successfully.")

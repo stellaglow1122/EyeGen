@@ -5,7 +5,7 @@ from db_utils_report import init_db
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-doctor_eval_data_v2_30_path = BASE_DIR / "json_indexed_dialogue" / "hole_qa_v2_doctor_eval_data_30.json"
+doctor_eval_data_v2_30_path = BASE_DIR / "json_dialogue" / "hole_qa_v2_doctor_eval_data_30.json"
 
 def connect_to_db():
     db = init_db()

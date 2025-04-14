@@ -1,33 +1,6 @@
 import gradio as gr
-from database.db_utils_report import init_db
-from utils import custom_css
-from pages.home import home_page
-from pages.dialogue_comment import dialogue_comment_page
-from pages.report_comment import report_comment_page
-from pages.report_generator import report_generator_page
-from pages.line_comment import line_comment_page
-
-# init_db()
-
-# with gr.Blocks(css=custom_css, ) as app:
-#     with gr.Tabs(selected=0) as tabs:
-#         with gr.TabItem("Home", id=0):
-#             home_page()
-#         with gr.TabItem("Line Comment", id=1):
-#             line_comment_page()
-#         with gr.TabItem("Report Generator", id=2):
-#             report_generator_page()
-#         with gr.TabItem("Dialogue Comment", id=3):
-#             dialogue_comment_page()
-#         with gr.TabItem("Report Comment", id=4):
-#             report_components = report_comment_page()
-#             for event in report_components["events"]:
-#                 event
-        
-# app.launch(server_name="0.0.0.0", server_port=7860, debug=True)
-import gradio as gr
 from pages.home import home_page
 
 if __name__ == "__main__":
-    # 啟動 Gradio 應用
+    # start gradio app
     home_page().launch(server_name="0.0.0.0", server_port=7860, debug=True)
