@@ -1,13 +1,11 @@
 import asyncio
 import logging
 import uuid
+import secrets
+import string
 from datetime import datetime
 from services.GenReport import GenReport
-
-# import sys
-# import os
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from database.LineComment2db import import_line_comment_to_mongo, get_line_by_idx, lock_idx, unlock_idx
+from database.LineComment2db import import_line_dialogue_report_to_mongo, get_line_by_idx
 
 # 設置日誌記錄
 logging.basicConfig(
@@ -19,79 +17,80 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-async def line_dialogue_report_db(idx, user_type, user_name, dialogue, gen_model="Llama-3.1-Nemotron-70B-Instruct"):
+def generate_random_suffix(length=8):
+    """
+    Generate a random alphanumeric suffix of specified length.
+    
+    Parameters:
+    - length (int): Length of the random suffix (default: 8)
+    
+    Returns:
+    - str: Random alphanumeric string
+    """
+    characters = string.ascii_letters + string.digits  # a-z, A-Z, 0-9
+    return ''.join(secrets.choice(characters) for _ in range(length))
+
+async def line_dialogue_report_db(idx, object_type, object_name, dialogue, gen_model="Llama-3.1-Nemotron-70B-Instruct"):
     """
     Generate a summary report for a given dialogue and insert it into MongoDB.
 
     Parameters:
     - idx (str): Unique identifier for the dialogue report (used as DB key)
-    - user_type (str): Role of the user, either "Doctor" or "Patient"
-    - user_name (str): Name of the user submitting the dialogue
+    - object_type (str): Role of the user, either "Doctor" or "Patient"
+    - object_name (str): Name of the user submitting the dialogue
     - dialogue (str): Raw text of the dialogue that needs summarization
     - gen_model (str, optional): LLM model used to generate the report (default: Llama-3.1-Nemotron-70B-Instruct)
 
     Returns:
-    - str: Status message indicating success or failure
+    - tuple: (status_message, data)
+        - status_message (str): Status message indicating success or failure
+        - data (dict or None): The data prepared for MongoDB insertion, or None if failed
     """
     request_id = str(uuid.uuid4())  # 生成唯一的請求 ID
-    logger.info(f"Processing idx: {idx}, user: {user_name} ({user_type}), request_id: {request_id}")
+    random_suffix = generate_random_suffix(8) # 為 idx 附加 8 位亂碼
+    idx = f"{idx}-{random_suffix}"  # 例如 test1-abcdef12
+    logger.info(f"Processing idx: {idx}, user: {object_name} ({object_type}), request_id: {request_id}")
 
     # 先檢查 idx 是否已存在
     existing_doc = get_line_by_idx(idx)
     if existing_doc and not existing_doc.get("is_temp", False):
         logger.info(f"[{idx}] already exists in MongoDB, skipping report generation")
-        return f"[{idx}] already exists"
-
-    # 在調用 LLM 之前嘗試鎖定 idx，重試 3 次，每次間隔 2 秒
-    max_retries = 3
-    retry_delay = 2  # 秒
-    for attempt in range(max_retries):
-        logger.info(f"Attempting to lock idx: {idx} for request: {request_id} (Attempt {attempt + 1}/{max_retries})")
-        if lock_idx(idx, request_id):
-            break
-        if attempt < max_retries - 1:
-            logger.info(f"[{idx}] is currently locked, retrying in {retry_delay} seconds...")
-            await asyncio.sleep(retry_delay)
-    else:
-        logger.info(f"[{idx}] is currently locked by another process after {max_retries} attempts, skipping report generation")
-        return f"[{idx}] is currently locked by another process"
+        return f"[{idx}] already exists", None
 
     try:
         # 生成報告
         logger.info(f"Calling model: {gen_model}")
         reporter = GenReport()
         indexed_dialogue = reporter.add_index_to_indexed_dialogue(dialogue)
-        report_content = await reporter.summary_report(indexed_dialogue, gen_model, user_type)
+        report_content = await reporter.summary_report(indexed_dialogue, gen_model, object_type)
         report_content = report_content.partition('---')[0]
     except Exception as e:
         logger.error(f"Failed to generate report for idx {idx}: {e}")
-        return f"Failed to generate report for idx {idx}: {str(e)}"
+        return f"Failed to generate report for idx {idx}: {str(e)}", None
     finally:
         # 確保在生成報告後解鎖
         logger.info(f"Unlocking idx: {idx}")
-        unlock_idx(idx)
 
     # 準備資料
     data = {
         "idx": idx,
-        "user_type": user_type,
-        "user_name": user_name,
+        "object_type": object_type,
+        "object_name": object_name,
         "dialogue_content": indexed_dialogue,
         "report_content": report_content,
         "gen_model": gen_model
     }
 
-
     # 匯入資料庫
     try:
         logger.info(f"[{idx}] Ready to import...")
-        result = import_line_comment_to_mongo(data, request_id=request_id)
+        result = import_line_dialogue_report_to_mongo(data, request_id=request_id)
         if result:
             logger.info(f"[{idx}] imported successfully")
-            return f"[{idx}] imported successfully"
+            return f"[{idx}] imported successfully", data
         else:
             logger.info(f"[{idx}] import skipped (already exists)")
-            return f"[{idx}] import skipped (already exists)"
+            return f"[{idx}] import skipped (already exists)", data
     except Exception as e:
         logger.error(f"Failed to import idx {idx} to MongoDB: {e}")
-        return f"Failed to import idx {idx}: {str(e)}"
+        return f"Failed to import idx {idx}: {str(e)}", None

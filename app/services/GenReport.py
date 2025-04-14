@@ -96,14 +96,14 @@ class GenReport:
         except Exception as e:
             raise RuntimeError(f"[NCHC API Error] {e}")
 
-    async def summary_report(self, indexed_dialogue: str, eval_model: str, user_type: str) -> str:
+    async def summary_report(self, indexed_dialogue: str, eval_model: str, object_type: str) -> str:
         """
         Generate report content using the specified LLM model.
 
         Args:
             indexed_dialogue (str): Indexed dialogue with citation [1], [2], ...
             eval_model (str): The name of the LLM model.
-            user_type (str): 'Doctor' or 'Patient'
+            object_type (str): 'Doctor' or 'Patient'
 
         Returns:
             str: Formatted report content as a Markdown string
@@ -111,7 +111,7 @@ class GenReport:
         # Preprocess indexed_dialogue
         # indexed_dialogue = self.add_index_to_indexed_dialogue(indexed_dialogue)
 
-        if user_type == "Doctor":
+        if object_type == "Doctor":
             system_prompt = Prompts.gen_report_doctor_system_prompt
             user_prompt = Prompts.gen_report_doctor_user_prompt.replace("{dialogue}", indexed_dialogue)
         else:
@@ -128,8 +128,8 @@ class GenReport:
         else:
             report_content = await self._call_nchc(messages, eval_model)
         
-        # Attempt to parse JSON regardless of user_type
-        if user_type == "Doctor":
+        # Attempt to parse JSON regardless of object_type
+        if object_type == "Doctor":
             try:
                 # 提取有效的 JSON 部分
                 start_marker = "```json\n"
