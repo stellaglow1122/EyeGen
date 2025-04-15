@@ -42,7 +42,7 @@ def line_comment_page(username_state):
         if search_term:
             mask = df.astype(str).apply(lambda row: row.str.contains(search_term, case=False, na=False).any(), axis=1)
             df = df[mask]
-        filtered_df = df.head(100)
+        filtered_df = df.sort_values(by="upload_time", ascending=False).head(100)
         display_df = filtered_df[original_columns + ["Number of comment"]].copy()
         display_df.columns = display_headers
         records_text, type_text = get_statistics()
