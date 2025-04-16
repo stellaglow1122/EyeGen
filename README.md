@@ -68,11 +68,12 @@ ophthalmology_app/
 - **`database/*.py`**: Manages data import/export between JSON files and MongoDB.
 - **`json_dialogue/` & `json_report/`**: Stores dialogue and report JSON files.
 - **`assets/`**: Contains flow diagrams for documentation.
-- **`line_dialogue_report_db.py`**: Processes LINE dialogues into reports and imports them into the database. It takes `idx`, `user_type`, `user_name`, and `dialogue` as inputs. The `idx` is appended with `username` and an 8-character random suffix (e.g., `Emily-abcdef12`) to ensure uniqueness.
+- **`line_dialogue_report_db.py`**: Processes LINE dialogues into reports and imports them into the database. It takes `object_idx`, `object_type`, `object_name`, and `dialogue` as inputs. The `idx` is appended with `upload_time` and an 8-character random suffix (e.g., `Emily-abcdef12`) to ensure uniqueness.
   - **Example Output**:
     ```json
-    {
-      "idx": "Emily-abcdef12",
+    { "idx": "20250416192350-1Dz6KZw0",
+      "upload_time": "2025-04-16 19:23:50",
+      "object_idx": "Ud91f828be624ba6003e00fae00bac9a1",
       "object_type": "Doctor",
       "object_name": "Emily",
       "dialogue_content": "使用者問題/回覆1: 大約一個星期以來，每次用電腦久了，兩眼都會感到酸痛\n系統回覆1: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？",
@@ -135,7 +136,7 @@ To demo the LINE comment page with sample data, import 10 dialogues and generate
 python app/template_line_import_with_usecase.py
 ```
 
-This script demonstrates the pipeline in `line_dialogue_report_db.py`. It processes LINE dialogues into reports and imports them into the database. Each `idx` is appended with `use_rname` and an 8-character random suffix (e.g., `Emily-abcdef12`) to ensure uniqueness.
+This script demonstrates the pipeline in `line_dialogue_report_db.py`. It processes LINE dialogues into reports and imports them into the database. Each `idx` is appended with `upload_time` and an 8-character random suffix (e.g., `20250416192350-1Dz6KZw0`) to ensure uniqueness.
 
 ### 4. Launch the Web App
 ```bash
@@ -189,7 +190,7 @@ docker-compose up --build -d
 ```
 
 ### Clean Database
-Clean the `line_dialogue_report`, `line_comment`, and `users` (need to uncomment) collections. Specify collections to exclude in `clear_collection.py`:
+Clean the `line_dialogue_report`, `line_dialogue_comment`, `line_report_comment`, and `users` (need to uncomment) collections. Specify collections to exclude in `clear_collection.py`:
 ```bash
 python database/clear_collection.py
 ```
@@ -206,25 +207,36 @@ python database/clear_collection.py
   - `line_dialogue_report`: Stores LINE dialogues and reports. The `idx` values are appended with `username` and an 8-character random suffix (e.g., `Emily-abcdef12`).
     - **Example Document**:
       ```json
-      {
-        "idx": "Emily-abcdef12",
+      { "idx": "20250416192350-1Dz6KZw0",
+        "upload_time": "2025-04-16 19:23:50",
+        "object_idx": "Ud91f828be624ba6003e00fae00bac9a1",
         "object_type": "Doctor",
         "object_name": "Emily",
-        "upload_time": "2025-04-14 10:00:00",
         "dialogue_content": "使用者問題/回覆1: 大約一個星期以來，每次用電腦久了，兩眼都會感到酸痛\n系統回覆1: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？",
         "report_content": "#### **1. Patient Complaint**\n\n- Eye strain and soreness in both eyes. \n\n- This has been going on for about a week.",
         "gen_model": "Llama-3.1-Nemotron-70B-Instruct"
       }
       ```
-  - `line_comment`: Stores comments for dialogues and reports.
+  - `line_dialogue_comment`: Stores comments for dialogues.
     - **Example Document**:
       ```json
       {
-        "idx": "Emily-abcdef12",
-        "comment_time": "2025-04-14 10:30:00",
-        "username": "user1",
-        "comment_content": "The report is concise.",
-        "comment_score": 4
+        "idx": "20250416192350-1Dz6KZw0",
+        "user_name": "user1",
+        "dialogue_comment_content": "The dialogue is concise.",
+        "dialogue_comment_score": 4,
+        "dialogue_comment_time": "2025-04-16 19:23:50",
+      }
+      ```
+  - `line_report_comment`: Stores comments for reports.
+    - **Example Document**:
+      ```json
+      {
+        "idx": "20250416192350-1Dz6KZw0",
+        "user_name": "user1",
+        "report_comment_content": "The report is concise.",
+        "report_comment_score": 4,
+        "report_comment_time": "2025-04-16 19:23:50",
       }
       ```
   - `users`: Stores login usernames and passwords (user0 to user49, where username equals password).
