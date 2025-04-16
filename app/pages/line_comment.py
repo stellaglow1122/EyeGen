@@ -5,7 +5,7 @@ import gradio as gr
 from database.LineComment2db import get_line_list, get_line_by_idx, get_dialogue_comments_by_idx, get_report_comments_by_idx, submit_dialogue_comment, submit_report_comment
 
 def line_comment_page(username_state):
-    print(f"Initializing line_comment_page with username_state: {username_state}")
+    # print(f"Initializing line_comment_page with username_state: {username_state}")
     display_headers = ["Upload time", "Name", "Type", "# Dialogue comments", "# Report comments", "IDX"]
     original_columns = ["upload_time", "object_name", "object_type", "idx"]
     dialogue_comment_headers = ["Comment time", "User", "Dialogue comment content", "Score"]
@@ -28,14 +28,14 @@ def line_comment_page(username_state):
         return records_text, type_text
 
     def get_display_df(search_term=""):
-        print(f"Fetching display dataframe with search_term: {search_term}")
+        # print(f"Fetching display dataframe with search_term: {search_term}")
         data = get_line_list()
         df = pd.DataFrame(data)
         for col in original_columns:
             if col not in df.columns:
                 df[col] = ""
         df = df.fillna("")
-        df["idx"] = df["idx"].astype(str)  # Ensure idx is string
+        df["idx"] = df["idx"].astype(str)
         if search_term:
             mask = df.astype(str).apply(lambda row: row.str.contains(search_term, case=False, na=False).any(), axis=1)
             df = df[mask]
@@ -54,9 +54,9 @@ def line_comment_page(username_state):
         return display_df, filtered_df, search_term, records_text, type_text
 
     def update_details(evt: gr.SelectData, table_data, username):
-        print(f"update_details called with username: {username}, evt.index: {evt.index}")
+        # print(f"update_details called with username: {username}, evt.index: {evt.index}")
         if evt.index is None:
-            print("No row selected in table")
+            # print("No row selected in table")
             return [
                 "", "", "", "", "Please select a row from the table to display the dialogue.",
                 "Please select a row from the table to display the report.", "", 0, "", "", 0, "",
@@ -67,14 +67,14 @@ def line_comment_page(username_state):
         current_table = pd.DataFrame(table_data, columns=display_headers)
         current_table.columns = ["upload_time", "object_name", "object_type", "# Dialogue comments", "# Report comments", "idx"]
         if idx >= len(current_table):
-            print(f"Index {idx} out of range, table length: {len(current_table)}")
+            # print(f"Index {idx} out of range, table length: {len(current_table)}")
             return [
                 "", "", "", "", "Out of range", "Out of range", "", 0, "", "", 0, "",
                 pd.DataFrame(columns=dialogue_comment_headers), 0, pd.DataFrame(columns=report_comment_headers), 0,
                 "", "", "", "", "", "", "", ""
             ]
         selected_idx = current_table.iloc[idx]['idx']
-        print(f"Selected idx: {selected_idx}")
+        # print(f"Selected idx: {selected_idx}")
         row = get_line_by_idx(selected_idx)
         dialogue_comments = get_dialogue_comments_by_idx(selected_idx)
         report_comments = get_report_comments_by_idx(selected_idx)
@@ -107,21 +107,14 @@ def line_comment_page(username_state):
             dialogue_number_of_comments,
             report_comments_df,
             report_number_of_comments,
-            "",  # dialogue_comment_time_box
-            "",  # dialogue_comment_user_box
-            "",  # dialogue_comment_score_box
-            "",  # dialogue_comment_content_box
-            "",  # report_comment_time_box
-            "",  # report_comment_user_box
-            "",  # report_comment_score_box
-            ""   # report_comment_content_box
+            "", "", "", "", "", "", "", ""
         ]
 
     def refresh_table(search_term, selected_idx, username):
-        print(f"refresh_table called with username: {username}, selected_idx: {selected_idx}")
+        # print(f"refresh_table called with username: {username}, selected_idx: {selected_idx}")
         updated_display_df, filtered_df, search_term, records_text, type_text = get_display_df(search_term)
         if not selected_idx or selected_idx.strip() == "":
-            print("No selected_idx in refresh_table")
+            # print("No selected_idx in refresh_table")
             return (
                 gr.update(value=updated_display_df, visible=True, interactive=False),
                 filtered_df,
@@ -191,10 +184,10 @@ def line_comment_page(username_state):
         )
 
     def save_dialogue_comment_fn(dialogue_comment_content, dialogue_comment_score, selected_idx, search_term, username):
-        print(f"save_dialogue_comment_fn called with username: {username}, selected_idx: {selected_idx}, dialogue_comment_content: {dialogue_comment_content}, dialogue_comment_score: {dialogue_comment_score}")
+        # print(f"save_dialogue_comment_fn called with username: {username}, selected_idx: {selected_idx}, dialogue_comment_content: {dialogue_comment_content}, dialogue_comment_score: {dialogue_comment_score}")
         try:
             if not selected_idx or selected_idx.strip() == "":
-                print("No row selected for dialogue comment submission")
+                # print("No row selected for dialogue comment submission")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ No row selected.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -202,7 +195,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if not username:
-                print("No valid username provided, dialogue comment submission blocked")
+                # print("No valid username provided, dialogue comment submission blocked")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Please log in to submit a dialogue comment.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -210,7 +203,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if not dialogue_comment_content or dialogue_comment_content.strip() == "":
-                print("No dialogue comment content provided")
+                # print("No dialogue comment content provided")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Dialogue comment content cannot be empty.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -218,7 +211,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if dialogue_comment_score is None or dialogue_comment_score < 0 or dialogue_comment_score > 5:
-                print("Invalid dialogue comment score")
+                # print("Invalid dialogue comment score")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Dialogue comment score must be between 0 and 5.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -229,7 +222,7 @@ def line_comment_page(username_state):
             now = datetime.now(taipei_tz).strftime("%Y-%m-%d %H:%M:%S")
             success = submit_dialogue_comment(selected_idx, dialogue_comment_content.strip(), dialogue_comment_score, now, username)
             if not success:
-                print("Dialogue comment submission failed: empty content or zero score")
+                # print("Dialogue comment submission failed: empty content or zero score")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Submission skipped: empty content or zero score", pd.DataFrame(columns=dialogue_comment_headers),
@@ -247,7 +240,7 @@ def line_comment_page(username_state):
             report_comments_df.columns = report_comment_headers
             dialogue_number_of_comments = len(dialogue_comments_df)
             report_number_of_comments = len(report_comments_df)
-            print(f"Dialogue comment submitted successfully for idx: {selected_idx}, username: {username}")
+            # print(f"Dialogue comment submitted successfully for idx: {selected_idx}, username: {username}")
             return (
                 updated_display_df, now, filtered_df, search_term, records_text, type_text,
                 dialogue_comment_content, dialogue_comment_score, "", 0, "", dialogue_comments_df,
@@ -264,10 +257,10 @@ def line_comment_page(username_state):
             )
 
     def save_report_comment_fn(report_comment_content, report_comment_score, selected_idx, search_term, username):
-        print(f"save_report_comment_fn called with username: {username}, selected_idx: {selected_idx}, report_comment_content: {report_comment_content}, report_comment_score: {report_comment_score}")
+        # print(f"save_report_comment_fn called with username: {username}, selected_idx: {selected_idx}, report_comment_content: {report_comment_content}, report_comment_score: {report_comment_score}")
         try:
             if not selected_idx or selected_idx.strip() == "":
-                print("No row selected for report comment submission")
+                # print("No row selected for report comment submission")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ No row selected.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -275,7 +268,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if not username:
-                print("No valid username provided, report comment submission blocked")
+                # print("No valid username provided, report comment submission blocked")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Please log in to submit a report comment.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -283,7 +276,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if not report_comment_content or report_comment_content.strip() == "":
-                print("No report comment content provided")
+                # print("No report comment content provided")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Report comment content cannot be empty.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -291,7 +284,7 @@ def line_comment_page(username_state):
                     "", "", "", "", "", "", "", ""
                 )
             if report_comment_score is None or report_comment_score < 0 or report_comment_score > 5:
-                print("Invalid report comment score")
+                # print("Invalid report comment score")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Report comment score must be between 0 and 5.", pd.DataFrame(columns=dialogue_comment_headers),
@@ -302,7 +295,7 @@ def line_comment_page(username_state):
             now = datetime.now(taipei_tz).strftime("%Y-%m-%d %H:%M:%S")
             success = submit_report_comment(selected_idx, report_comment_content.strip(), report_comment_score, now, username)
             if not success:
-                print("Report comment submission failed: empty content or zero score")
+                # print("Report comment submission failed: empty content or zero score")
                 return (
                     gr.update(), "", gr.State(), search_term, gr.update(), gr.update(),
                     "", 0, "", 0, "⚠️ Submission skipped: empty content or zero score", pd.DataFrame(columns=dialogue_comment_headers),
@@ -320,7 +313,7 @@ def line_comment_page(username_state):
             report_comments_df.columns = report_comment_headers
             dialogue_number_of_comments = len(dialogue_comments_df)
             report_number_of_comments = len(report_comments_df)
-            print(f"Report comment submitted successfully for idx: {selected_idx}, username: {username}")
+            # print(f"Report comment submitted successfully for idx: {selected_idx}, username: {username}")
             return (
                 updated_display_df, now, filtered_df, search_term, records_text, type_text,
                 "", 0, report_comment_content, report_comment_score, "", dialogue_comments_df,
@@ -337,15 +330,15 @@ def line_comment_page(username_state):
             )
 
     def update_username_hidden(username):
-        print(f"Updating username_hidden to: {username}")
+        # print(f"Updating username_hidden to: {username}")
         return username
 
     def update_selected_idx_hidden(selected_idx):
-        print(f"Updating selected_idx_hidden to: {selected_idx}")
+        # print(f"Updating selected_idx_hidden to: {selected_idx}")
         return selected_idx
 
     def select_dialogue_comment(evt: gr.SelectData, table_data):
-        print(f"select_dialogue_comment called with evt.index: {evt.index}")
+        # print(f"select_dialogue_comment called with evt.index: {evt.index}")
         if evt.index is None or not isinstance(evt.index, (list, tuple)) or evt.index[0] >= len(table_data):
             return (
                 gr.update(value="", visible=True),
@@ -362,7 +355,7 @@ def line_comment_page(username_state):
         )
 
     def select_report_comment(evt: gr.SelectData, table_data):
-        print(f"select_report_comment called with evt.index: {evt.index}")
+        # print(f"select_report_comment called with evt.index: {evt.index}")
         if evt.index is None or not isinstance(evt.index, (list, tuple)) or evt.index[0] >= len(table_data):
             return (
                 gr.update(value="", visible=True),
@@ -378,7 +371,7 @@ def line_comment_page(username_state):
             gr.update(value=table_data.iloc[row_idx]["Report comment content"] or "無評論內容", visible=True)
         )
 
-    with gr.Blocks() as demo:
+    with gr.Blocks(css=".go-to-top { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #007bff; color: white; border-radius: 5px; }") as demo:
         filtered_df_state = gr.State()
         search_term_state = gr.State("")
         username_hidden = gr.Textbox(value="", visible=False)
@@ -471,10 +464,12 @@ def line_comment_page(username_state):
                 with gr.Row():
                     report_comment_content_box = gr.Textbox(label="Report comment content", lines=10, placeholder="Click a row to view its report comment.", interactive=False)
 
+        go_to_top_btn = gr.Button("⬆ Go to Top", elem_classes="go-to-top")
+
         demo.load(
-            fn=lambda: list(get_display_df("")) + [username_state.value if hasattr(username_state, 'value') else "", ""],
+            fn=lambda: list(get_display_df("")) + [username_state.value if hasattr(username_state, 'value') else ""],
             inputs=[],
-            outputs=[table, filtered_df_state, search_term_state, number_of_records, number_of_type, username_hidden, selected_idx_hidden],
+            outputs=[table, filtered_df_state, search_term_state, number_of_records, number_of_type, username_hidden],
             queue=False
         )
 
@@ -488,7 +483,7 @@ def line_comment_page(username_state):
         def handle_table_select(evt: gr.SelectData, table_data, username):
             details = update_details(evt, table_data, username)
             username_updated = update_username_hidden(username)
-            selected_idx_updated = update_selected_idx_hidden(details[0])  # details[0] 是 idx
+            selected_idx_updated = update_selected_idx_hidden(details[0])
             return details + [username_updated, selected_idx_updated]
 
         table.select(
@@ -528,7 +523,7 @@ def line_comment_page(username_state):
 
         dialogue_submit_btn.click(
             fn=lambda dialogue_comment_content, dialogue_comment_score, selected_idx, search_term, username: (
-                print(f"dialogue_submit_btn.click triggered with username: {username}, selected_idx: {selected_idx}, dialogue_comment_content: {dialogue_comment_content}, dialogue_comment_score: {dialogue_comment_score}"),
+                # print(f"dialogue_submit_btn.click triggered with username: {username}, selected_idx: {selected_idx}, dialogue_comment_content: {dialogue_comment_content}, dialogue_comment_score: {dialogue_comment_score}"),
                 save_dialogue_comment_fn(dialogue_comment_content, dialogue_comment_score, selected_idx, search_term, username)
             )[1],
             inputs=[dialogue_comment_box, dialogue_comment_score, selected_idx_hidden, search_term_state, username_hidden],
@@ -584,7 +579,7 @@ def line_comment_page(username_state):
 
         report_submit_btn.click(
             fn=lambda report_comment_content, report_comment_score, selected_idx, search_term, username: (
-                print(f"report_submit_btn.click triggered with username: {username}, selected_idx: {selected_idx}, report_comment_content: {report_comment_content}, report_comment_score: {report_comment_score}"),
+                # print(f"report_submit_btn.click triggered with username: {username}, selected_idx: {selected_idx}, report_comment_content: {report_comment_content}, report_comment_score: {report_comment_score}"),
                 save_report_comment_fn(report_comment_content, report_comment_score, selected_idx, search_term, username)
             )[1],
             inputs=[report_comment_box, report_comment_score, selected_idx_hidden, search_term_state, username_hidden],
@@ -688,6 +683,18 @@ def line_comment_page(username_state):
                 }
                 navigator.clipboard.writeText(content);
                 alert("✅ Report copied successfully!");
+            }
+            """
+        )
+
+        go_to_top_btn.click(
+            fn=None,
+            inputs=[],
+            outputs=[],
+            preprocess=False,
+            js="""
+            () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             """
         )

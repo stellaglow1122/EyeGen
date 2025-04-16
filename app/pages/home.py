@@ -11,16 +11,16 @@ db = client["ophthalmology_db"]
 users_collection = db["users"]
 
 def login(username, password):
-    print(f"Attempting login for user_name: {username}, password: {password}")
+    # print(f"Attempting login for user_name: {username}, password: {password}")
     user = users_collection.find_one({"username": username, "password": password})
     if user:
-        print(f"Login successful for user_name: {username}")
+        print(f"Login successful for username: {username}")
         return username, "Login successful!", True
-    print(f"Login failed: No user found for user_name: {username}")
+    print(f"Login failed: No user found for username: {username}")
     return None, "Invalid username or password.", False
 
-def logout():
-    print("Logging out")
+def logout(username):
+    print(f"Logging out for username: {username}")
     return None, "Logged out successfully!", False
 
 def home_page():
@@ -57,14 +57,14 @@ def home_page():
                     event
 
         def handle_login_logout(username, logged_in, new_username, password):
-            print(f"handle_login_logout: username={username}, logged_in={logged_in}, new_username={new_username}")
+            # print(f"handle_login_logout: username={username}, logged_in={logged_in}, new_username={new_username}")
             if logged_in:
-                new_username, message, new_logged_in = logout()
+                new_username, message, new_logged_in = logout(username)
                 username_hidden_value = ""
             else:
                 new_username, message, new_logged_in = login(new_username, password)
                 username_hidden_value = new_username if new_username else ""
-            print(f"handle_login_logout: new_user_name={new_username}, logged_in={new_logged_in}")
+            # print(f"handle_login_logout: new_user_name={new_username}, logged_in={new_logged_in}")
             return (
                 new_username,
                 message,
