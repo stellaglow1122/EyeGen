@@ -108,8 +108,6 @@ class GenReport:
         Returns:
             str: Formatted report content as a Markdown string
         """
-        # Preprocess indexed_dialogue
-        # indexed_dialogue = self.add_index_to_indexed_dialogue(indexed_dialogue)
 
         if object_type == "Doctor":
             system_prompt = Prompts.gen_report_doctor_system_prompt

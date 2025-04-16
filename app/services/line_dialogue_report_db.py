@@ -4,6 +4,7 @@ import uuid
 import secrets
 import string
 from datetime import datetime
+import pytz
 from services.GenReport import GenReport
 from database.LineComment2db import import_line_dialogue_report_to_mongo, get_line_by_idx
 
@@ -30,12 +31,12 @@ def generate_random_suffix(length=8):
     characters = string.ascii_letters + string.digits  # a-z, A-Z, 0-9
     return ''.join(secrets.choice(characters) for _ in range(length))
 
-async def line_dialogue_report_db(idx, object_type, object_name, dialogue, gen_model="Llama-3.1-Nemotron-70B-Instruct"):
+async def line_dialogue_report_db(object_idx, object_type, object_name, dialogue, gen_model="Llama-3.1-Nemotron-70B-Instruct"):
     """
     Generate a summary report for a given dialogue and insert it into MongoDB.
 
     Parameters:
-    - idx (str): Unique identifier for the dialogue report (used as DB key)
+    - object_idx (str): Unique identifier for the dialogue report
     - object_type (str): Role of the user, either "Doctor" or "Patient"
     - object_name (str): Name of the user submitting the dialogue
     - dialogue (str): Raw text of the dialogue that needs summarization
@@ -47,8 +48,15 @@ async def line_dialogue_report_db(idx, object_type, object_name, dialogue, gen_m
         - data (dict or None): The data prepared for MongoDB insertion, or None if failed
     """
     request_id = str(uuid.uuid4())  # 生成唯一的請求 ID
+
+    # 生成時間
+    taipei_tz = pytz.timezone("Asia/Taipei")
+    upload_time =datetime.now(taipei_tz).strftime("%Y-%m-%d %H:%M:%S")
+
+    # 製作unique key id
     random_suffix = generate_random_suffix(8) # 為 idx 附加 8 位亂碼
-    idx = f"{idx}-{random_suffix}"  # 例如 test1-abcdef12
+    time_id = upload_time.replace("-", "").replace(" ", "").replace(":", "")
+    idx = f"{time_id}-{random_suffix}"  # 例如 Eric-abcdef12
     logger.info(f"Processing idx: {idx}, user: {object_name} ({object_type}), request_id: {request_id}")
 
     # 先檢查 idx 是否已存在
@@ -74,6 +82,8 @@ async def line_dialogue_report_db(idx, object_type, object_name, dialogue, gen_m
     # 準備資料
     data = {
         "idx": idx,
+        "upload_time": upload_time,
+        "object_idx":object_idx,
         "object_type": object_type,
         "object_name": object_name,
         "dialogue_content": indexed_dialogue,

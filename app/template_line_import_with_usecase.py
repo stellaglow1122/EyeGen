@@ -4,7 +4,7 @@ from services.line_dialogue_report_db import line_dialogue_report_db
 # 定義 10 組測試資料
 test_data = [
     {
-        "idx": "Emily",
+        "object_idx": "Uc95d2228e6137ab8f0f5e9cba8b36e98",
         "object_type": "Doctor",
         "object_name": "Emily",
         "dialogue": """
@@ -13,7 +13,7 @@ test_data = [
 """
     },
     {
-        "idx": "Emily",
+        "object_idx": "Uc95d2228e6137ab8f0f5e9cba8b36e98",
         "object_type": "Patient",
         "object_name": "Emily",
         "dialogue": """
@@ -22,7 +22,7 @@ test_data = [
 """
     },
     {
-        "idx": "John",
+        "object_type": "U2e837ca6b8cd8cea8f7cbc6821002477",
         "object_type": "Doctor",
         "object_name": "John",
         "dialogue": """
@@ -30,9 +30,8 @@ test_data = [
 系統回覆1: 建議進行眼底檢查，可能是視網膜問題。
 """
     },
-    # idx: "idx2" (不重複)
     {
-        "idx": "Bob",
+        "object_type": "Ub7a026340cdeaf6d8adeb188d14d49f3",
         "object_type": "Patient",
         "object_name": "Bob",
         "dialogue": """
@@ -40,9 +39,8 @@ test_data = [
 系統回覆1: 可能是用眼過度，建議每小時休息 5 分鐘。
 """
     },
-    # idx: "idx3" (不重複)
     {
-        "idx": "Eric",
+        "object_type": "U68cfd83f431af2b49466499e154e613c",
         "object_type": "Doctor",
         "object_name": "Eric",
         "dialogue": """
@@ -51,7 +49,7 @@ test_data = [
 """
     },
     {
-        "idx": "Penny",
+        "object_type": "U05815572208b40a6e4d7f82c072dd955",
         "object_type": "Patient",
         "object_name": "Penny",
         "dialogue": """
@@ -60,7 +58,7 @@ test_data = [
 """
     },
     {
-        "idx": "John",
+        "object_type": "U2e837ca6b8cd8cea8f7cbc6821002477",
         "object_type": "Doctor",
         "object_name": "John",
         "dialogue": """
@@ -69,7 +67,7 @@ test_data = [
 """
     },
     {
-        "idx": "Mary",
+        "object_type": "Ud91f989be624ba6003e99fae46bac4a1",
         "object_type": "Doctor",
         "object_name": "Mary",
         "dialogue": """
@@ -78,7 +76,7 @@ test_data = [
 """
     },
     {
-        "idx": "Peter",
+        "idx": "Ud91f828be714ba6003e99fae46bac4n0",
         "object_type": "Doctor",
         "object_name": "Peter",
         "dialogue": """
@@ -87,7 +85,7 @@ test_data = [
 """
     },
     {
-        "idx": "David",
+        "idx": "Ud91f828be624ba6003e00fae00bac9a1",
         "object_type": "Doctor",
         "object_name": "David",
         "dialogue": """
@@ -103,7 +101,7 @@ if __name__ == "__main__":
     for i, data in enumerate(test_data, 1):
         print(f"\nProcessing test case {i}/{len(test_data)}: idx={data['idx']}")
         status_message, returned_data = asyncio.run(line_dialogue_report_db(
-            idx=data["idx"],
+            iobject_idx=data["iobject_idx"],
             object_type=data["object_type"],
             object_name=data["object_name"],
             dialogue=data["dialogue"]

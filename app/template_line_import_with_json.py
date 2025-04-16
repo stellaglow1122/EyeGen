@@ -3,6 +3,8 @@ import json
 import random
 import secrets
 import string
+from datetime import datetime
+import pytz
 from services.GenReport import GenReport
 from database.LineComment2db import import_line_dialogue_report_to_mongo
 
@@ -45,10 +47,31 @@ def generate_random_suffix(length=8):
     characters = string.ascii_letters + string.digits  # a-z, A-Z, 0-9
     return ''.join(secrets.choice(characters) for _ in range(length))
 
+def add_newlines_to_dialogue(dialogue_content):
+    # 按行分割對話內容
+    lines = dialogue_content.strip().splitlines()
+    
+    # 用來儲存處理後的行
+    processed_lines = []
+    
+    for line in lines:
+        # 檢查是否為對話條目（以 [數字] 開頭）
+        if re.match(r'^\[\d+\]', line.strip()):
+            # 在對話條目之前添加兩行換行
+            processed_lines.append("\n\n" + line)
+        else:
+            processed_lines.append(line)
+    
+    # 組合處理後的內容，並移除開頭多餘的 \n\n（如果有）
+    result = "".join(processed_lines).lstrip("\n\n")
+    return result
+
 # 處理資料：添加 idx, object_type, object_name
 def process_data(raw_data):
     processed_data = []
     for i, item in enumerate(raw_data, 1):
+
+
         # 確保 item 是字串（對話內容）
         if not isinstance(item, str):
             print(f"Warning: Skipping item {i} due to invalid dialogue format (not a string).")
@@ -58,13 +81,19 @@ def process_data(raw_data):
         object_name = random.choice(institutions)
         
         # 生成基礎 idx，並附加 8 位亂碼
-        base_idx = object_name
         random_suffix = generate_random_suffix(8)
-        idx = f"{base_idx}-{random_suffix}"  # 例如 dialogue_Emily_1-abcdef12
+        
+        taipei_tz = pytz.timezone("Asia/Taipei")
+        upload_time =datetime.now(taipei_tz).strftime("%Y-%m-%d %H:%M:%S")
+
+        time_id = upload_time.replace("-", "").replace(" ", "").replace(":", "")
+        idx = f"{time_id}-{random_suffix}"  # 例如 Eric-abcdef12
         
         # 組合資料
         processed_item = {
             "idx": idx,
+            "upload_time": upload_time,
+            "object_idx": random_suffix,
             "object_type": "Doctor",
             "object_name": object_name,
             "dialogue_content": item
@@ -97,8 +126,8 @@ async def generate_report(data, gen_model="Llama-3.1-Nemotron-70B-Instruct"):
         # 更新資料
         data["dialogue_content"] = indexed_dialogue
         data["report_content"] = report_content
-        data["gen_model"] = gen_model  # 修正 gen_mode; 為 gen_model
-        
+        data["gen_model"] = gen_model
+
         return data
     except Exception as e:
         print(f"Error generating report for idx {data['idx']}: {e}")
@@ -141,9 +170,27 @@ def ready_report_from_dialogue():
 def import_completed_data_to_db():
     # Read completed preprocess dialogues and reports
     json_data = json_load(output_path)
+
     for i, data in enumerate(json_data, 1):
+        
+        # # 生成基礎 idx，並附加 8 位亂碼
+        # random_suffix = generate_random_suffix(8)
+        
+        # taipei_tz = pytz.timezone("Asia/Taipei")
+        # upload_time =datetime.now(taipei_tz).strftime("%Y-%m-%d %H:%M:%S")
+
+        # time_id = upload_time.replace("-", "").replace(" ", "").replace(":", "")
+        # idx = f"{time_id}-{random_suffix}"  # 例如 Eric-abcdef12
+        
+        # data["idx"] = idx
+        # data["upload_time"] = upload_time
+        # data["object_idx"] = random_suffix
+        # data_ls.append(data)
+
         import_line_dialogue_report_to_mongo(data)
         print("[Import] FINISH.")
+    
+    # save_as_json(data_ls, output_path)
 
 if __name__ == "__main__":
 
