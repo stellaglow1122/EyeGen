@@ -247,10 +247,11 @@ python database/clear_collection.py
   docker exec -it ophthalmology_db_container mongosh
   use ophthalmology_db
   db.users.find().limit(5)
-  db.line_comment.find().limit(5)
   db.line_dialogue_report.find().limit(5)
+  db.line_dialogue_comment.find().limit(5)
+  db.line_report_comment.find().limit(5)
   ```
-- **Inspect a Document** (e.g., `idx="Emily-abcdef12"`):
+- **Inspect a Document** (e.g., `idx="20250416192350-1Dz6KZw0"`):
   ```bash
   docker exec -it ophthalmology_db_container mongosh
   use ophthalmology_db
