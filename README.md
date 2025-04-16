@@ -255,7 +255,7 @@ python database/clear_collection.py
   ```bash
   docker exec -it ophthalmology_db_container mongosh
   use ophthalmology_db
-  db.line_dialogue_report.findOne({"idx": "Emily-abcdef12"})
+  db.line_dialogue_report.findOne({"idx": "20250416192350-1Dz6KZw0"})
   ```
 
 ---
