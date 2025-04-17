@@ -22,7 +22,7 @@ test_data = [
 """
     },
     {
-        "object_type": "U2e837ca6b8cd8cea8f7cbc6821002477",
+        "object_idx": "U2e837ca6b8cd8cea8f7cbc6821002477",
         "object_type": "Doctor",
         "object_name": "John",
         "dialogue": """
@@ -31,7 +31,7 @@ test_data = [
 """
     },
     {
-        "object_type": "Ub7a026340cdeaf6d8adeb188d14d49f3",
+        "object_idx": "Ub7a026340cdeaf6d8adeb188d14d49f3",
         "object_type": "Patient",
         "object_name": "Bob",
         "dialogue": """
@@ -40,7 +40,7 @@ test_data = [
 """
     },
     {
-        "object_type": "U68cfd83f431af2b49466499e154e613c",
+        "object_idx": "U68cfd83f431af2b49466499e154e613c",
         "object_type": "Doctor",
         "object_name": "Eric",
         "dialogue": """
@@ -49,7 +49,7 @@ test_data = [
 """
     },
     {
-        "object_type": "U05815572208b40a6e4d7f82c072dd955",
+        "object_idx": "U05815572208b40a6e4d7f82c072dd955",
         "object_type": "Patient",
         "object_name": "Penny",
         "dialogue": """
@@ -58,7 +58,7 @@ test_data = [
 """
     },
     {
-        "object_type": "U2e837ca6b8cd8cea8f7cbc6821002477",
+        "object_idx": "U2e837ca6b8cd8cea8f7cbc6821002477",
         "object_type": "Doctor",
         "object_name": "John",
         "dialogue": """
@@ -67,7 +67,7 @@ test_data = [
 """
     },
     {
-        "object_type": "Ud91f989be624ba6003e99fae46bac4a1",
+        "object_idx": "Ud91f989be624ba6003e99fae46bac4a1",
         "object_type": "Doctor",
         "object_name": "Mary",
         "dialogue": """
@@ -76,7 +76,7 @@ test_data = [
 """
     },
     {
-        "idx": "Ud91f828be714ba6003e99fae46bac4n0",
+        "object_idx": "Ud91f828be714ba6003e99fae46bac4n0",
         "object_type": "Doctor",
         "object_name": "Peter",
         "dialogue": """
@@ -85,7 +85,7 @@ test_data = [
 """
     },
     {
-        "idx": "Ud91f828be624ba6003e00fae00bac9a1",
+        "object_idx": "Ud91f828be624ba6003e00fae00bac9a1",
         "object_type": "Doctor",
         "object_name": "David",
         "dialogue": """
@@ -99,14 +99,14 @@ if __name__ == "__main__":
 
     # import 10 dialogue to generate as report and save to db
     for i, data in enumerate(test_data, 1):
-        print(f"\nProcessing test case {i}/{len(test_data)}: idx={data['idx']}")
+        print(f"\nProcessing test case {i}/{len(test_data)}: object_idx={data['object_idx']}")
         status_message, returned_data = asyncio.run(line_dialogue_report_db(
-            iobject_idx=data["iobject_idx"],
+            object_idx=data["object_idx"],
             object_type=data["object_type"],
             object_name=data["object_name"],
             dialogue=data["dialogue"]
         ))
-        print(f"Result for idx {data['idx']}: {status_message}")
+        print(f"Result for idx {data['object_idx']}: {status_message}")
         if returned_data:
-            print(f"Data for idx {data['idx']}: {returned_data["report_content"][:30]}")
+            print(f"Data for idx {returned_data['idx']}: {returned_data['report_content'][:30]}")
         

@@ -90,7 +90,7 @@ async def line_dialogue_report_db(object_idx, object_type, object_name, dialogue
         "report_content": report_content,
         "gen_model": gen_model
     }
-
+  
     # 匯入資料庫
     try:
         logger.info(f"[{idx}] Ready to import...")

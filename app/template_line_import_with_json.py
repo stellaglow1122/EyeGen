@@ -188,7 +188,7 @@ def import_completed_data_to_db():
         # data_ls.append(data)
 
         import_line_dialogue_report_to_mongo(data)
-        print("[Import] FINISH.")
+        print("[Import] FINISH.", data["idx"])
     
     # save_as_json(data_ls, output_path)
 
