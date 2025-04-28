@@ -56,7 +56,7 @@ async def line_dialogue_report_db(object_idx, object_type, object_name, dialogue
     # 製作unique key id
     random_suffix = generate_random_suffix(8) # 為 idx 附加 8 位亂碼
     time_id = upload_time.replace("-", "").replace(" ", "").replace(":", "")
-    idx = f"{time_id}-{random_suffix}"  # 例如 Eric-abcdef12
+    idx = f"{time_id}-{random_suffix}"  # 例如 20250420105040-abcdef12
     logger.info(f"Processing idx: {idx}, user: {object_name} ({object_type}), request_id: {request_id}")
 
     # 先檢查 idx 是否已存在

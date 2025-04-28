@@ -15,12 +15,12 @@ try:
     # 為新集合設置索引（非唯一）
     line_dialogue_comment_coll.create_index("idx")
     line_report_comment_coll.create_index("idx")
-    print("Indexes created for line_dialogue_comment and line_report_comment")
+    # print("Indexes created for line_dialogue_comment and line_report_comment")
 except OperationFailure as e:
     print(f"Error managing indexes: {e}")
 
 def get_line_list(refresh=False):
-    print("Fetching line list from MongoDB (line_dialogue_report)")
+    # print("Fetching line list from MongoDB (line_dialogue_report)")
     try:
         return list(line_dialogue_report_coll.find({}, {"_id": 0}))
     except (OperationFailure, ServerSelectionTimeoutError) as e:
@@ -74,7 +74,7 @@ def submit_dialogue_comment(idx, dialogue_comment_content, dialogue_comment_scor
             "dialogue_comment_time": dialogue_comment_time
         }
         line_dialogue_comment_coll.insert_one(data)
-        print(f"Inserted dialogue comment for idx: {idx} by user: {user_name}")
+        # print(f"Inserted dialogue comment for idx: {idx} by user: {user_name}")
         return True
     except Exception as e:
         print(f"Error submitting dialogue comment for idx {idx}: {e}")
@@ -100,7 +100,7 @@ def submit_report_comment(idx, report_comment_content, report_comment_score, rep
             "report_comment_time": report_comment_time
         }
         line_report_comment_coll.insert_one(data)
-        print(f"Inserted report comment for idx: {idx} by user: {user_name}")
+        # print(f"Inserted report comment for idx: {idx} by user: {user_name}")
         return True
     except Exception as e:
         print(f"Error submitting report comment for idx {idx}: {e}")
@@ -108,7 +108,7 @@ def submit_report_comment(idx, report_comment_content, report_comment_score, rep
 
 def import_line_dialogue_report_to_mongo(data, request_id=None):
     idx = data.get("idx")
-    print(f"Importing data for idx: {idx} into line_dialogue_report")
+    # print(f"Importing data for idx: {idx} into line_dialogue_report")
     try:
         if "idx" not in data:
             raise ValueError("Data must contain 'idx' field")
@@ -117,7 +117,7 @@ def import_line_dialogue_report_to_mongo(data, request_id=None):
             print(f"[{idx}] already exists in line_dialogue_report")
             return False
         line_dialogue_report_coll.insert_one(data)
-        print(f"Successfully inserted idx: {idx} into line_dialogue_report")
+        # print(f"Successfully inserted idx: {idx} into line_dialogue_report")
         return True
     except DuplicateKeyError as e:
         print(f"[{idx}] already exists in line_dialogue_report (DuplicateKeyError: {e})")
