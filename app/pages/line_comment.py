@@ -439,9 +439,9 @@ def line_comment_page(username_state):
             with gr.Column():
                 gr.Markdown("## 👤 Information")
                 with gr.Row():
-                    user_name = gr.Textbox(label="Name", interactive=False)
-                    user_type = gr.Textbox(label="Type", interactive=False)
                     upload_time = gr.Textbox(label="Upload Time", interactive=False)
+                    user_name = gr.Textbox(label="Name", interactive=False)
+                    user_type = gr.Textbox(label="Type", interactive=False)  
                     idx_box = gr.Textbox(label="IDX", interactive=False)
 
         with gr.Row():
@@ -452,9 +452,9 @@ def line_comment_page(username_state):
             
             with gr.Column():
                 gr.Markdown("## 📢 Dialogue Comment")
-                dialogue_submit_message = gr.Textbox(label="Submission Status", interactive=False, visible=True)
                 dialogue_comment_score = gr.Slider(minimum=0, maximum=5, step=1, label="Dialogue Comment Score", value=0, visible=True)
                 dialogue_comment_box = gr.Textbox(label="Dialogue Comment Content", lines=10, placeholder="Type your dialogue comment here...", value="", elem_classes="scrollable", visible=True)
+                dialogue_submit_message = gr.Textbox(label="Submission Status", interactive=False, visible=True)
                 dialogue_submit_btn = gr.Button("Submit Dialogue Comment ✅")
 
                 gr.Markdown("## 📜 Dialogue Comment Table for this IDX")
@@ -482,10 +482,9 @@ def line_comment_page(username_state):
             
             with gr.Column():
                 gr.Markdown("## 📢 Report Comment")
-                report_submit_message = gr.Textbox(label="Submission Status", interactive=False, visible=True)
                 report_comment_score = gr.Slider(minimum=0, maximum=5, step=1, label="Report Comment Score", value=0, visible=True)
                 report_comment_box = gr.Textbox(label="Report Comment Content", lines=10, placeholder="Type your report comment here...", value="", elem_classes="scrollable", visible=True)
-                report_lock_message = gr.Textbox(label="Lock Status", interactive=False, visible=False)
+                report_submit_message = gr.Textbox(label="Submission Status", interactive=False, visible=True)
                 report_submit_btn = gr.Button("Submit Report Comment ✅")
 
                 gr.Markdown("## 📜 Report Comment Table for this IDX")
