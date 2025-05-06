@@ -22,12 +22,29 @@ class GenReport:
         lines = indexed_dialogue.splitlines(keepends=True)
         indexed_lines = []
         index = 1
-        for line in lines:
-            if line.startswith('使用者問題/回覆') or line.startswith('系統回覆'):
-                indexed_lines.append(f'\n\n [{index}] {line}')
-                index += 1
-            else:
-                indexed_lines.append(line)
+
+        # check the format tag in dialogue
+        has_tags = any(
+            line.startswith('使用者問題/回覆') or line.startswith('系統回覆')
+            for line in lines
+        )
+
+        if has_tags:
+            for line in lines:
+                if line.startswith('使用者問題/回覆') or line.startswith('系統回覆'):
+                    indexed_lines.append(f'\n\n [{index}] {line}')
+                    index += 1
+                else:
+                    indexed_lines.append(line)
+        else:
+            for line in lines:
+                # skip the empty line
+                if line.strip():
+                    indexed_lines.append(f' [{index}] {line}')
+                    index += 1
+                else:
+                    indexed_lines.append(line)
+
         return ''.join(indexed_lines)
 
     # Format JSON report into Markdown

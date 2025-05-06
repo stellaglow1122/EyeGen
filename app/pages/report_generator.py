@@ -11,7 +11,7 @@ async def async_generate_report(dialogue, gen_model, object_type):
         return
     try:
         start = time.time()
-        yield "⏳ Generating report... Please wait.", "", ""
+        yield "⏳ Generating report... Please wait.", "⏳ Generating report... Please wait.", ""
 
         reporter = GenReport()
         indexed_dialogue = reporter.add_index_to_indexed_dialogue(dialogue)
