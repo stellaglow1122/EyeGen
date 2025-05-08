@@ -1,0 +1,97 @@
+{
+  "idx": "20250507115612-23rvlq31",
+  "upload_time": "2025-05-07 11:56:12",
+  "object_idx": "dialogue-95",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經約了醫生門診，想請問一下，如果現在晚上看燈時會看到彩虹色的光圈，去看診之前有什麼要注意的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約已經有一個星期的時間，眼睛有時候會感到刺痛，還有點模糊的情況。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過視神經炎，當時有視力減退的情況。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我不確定家裡有沒有眼睛相關疾病，大部分人好像都沒有遇到過什麼特別的問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前有做過玻璃體切除術，因為我的視網膜剝離情況需要治療。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 這次我想諮詢的問題跟我之前做的玻璃體切除術沒有關係，我主要是想了解最近眼睛刺痛和模糊的情況。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用高血脂的藥物，醫生有提到這可能會對我的視力造成影響。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是40歲。\n\n\n [18] 系統回覆9: 根據您的描述，您提到的眼睛問題包括晚上看燈時會看到彩虹色的光圈、刺痛和模糊，這些症狀持續了一個星期。這些症狀可能涉及以下幾種眼部疾病：\n\n1. **急性青光眼（Acute Glaucoma）**：\n    **特徵**：可能伴隨劇烈眼痛、視力迅速下降以及光盤周圍出現彩虹色光環。\n    **解決方法**：這是一種緊急情況，需要儘快進行眼壓檢查及醫學介入。若確定為青光眼，可能需要使用藥物降低眼壓，甚至進行手術。\n\n2. **角膜水腫（Corneal Edema）**：\n    **特徵**：可能造成視力模糊，眼睛在光線下出現彩虹色圈。\n    **解決方法**：需由醫生進行檢查以確定診斷，如有必要，可以考慮使用角膜護理藥物或手術治療。\n\n3. **其他角膜異常（Other Corneal Abnormalities）**：\n    **特徵**：角膜變形、病變或污損可能導致類似症狀，如光暈或視力變化。\n    **解決方法**：通常需要透過醫學檢查來評估治療選擇。\n\n考慮到您有視神經炎的病史，這可能會加重眼部疾病的風險，並且您所提到的允許視力變差，因此建議儘快就醫。您的情況可能需要專科醫生進行進一步的檢查，檢查視網膜及眼壓以確定是否存在以上提到的病症，特別是在您提到的視網膜剝離史之下，定期檢查是相當重要的。\n\n由於目前沒有足夠的信息來確定症狀是否與您過去的玻璃體切除術相關，也考慮到您目前使用高血脂藥物的情況，這有可能對視力造成影響，因此向眼科醫生詳細諮詢是適合的做法。\n\n**總結建議**：由於您的症狀最近有變化，我建議您儘快安排眼科的專科門診進行檢查，以便為您的視力健康獲得合適的治療和建議。\n\n\n\n [19] 使用者問題/回覆10: 我在看診時需要告訴醫生我最近的症狀，包括眼睛刺痛和模糊的情況，有沒有其他特別的檢查項目是我需要提前了解的呢？\n\n\n [20] 系統回覆10: 在您最近提到的症狀中，包括眼睛刺痛和模糊，這些可能與多種眼科疾病有關，例如乾眼症（Dry Eye Syndrome）、視網膜問題、青光眼（Glaucoma）及白內障（Cataract）等。以下是一些可能的檢查項目，醫生可能會建議進行相關評估：\n\n1. **眼底檢查（Fundus Examination）**：透過醫生使用眼底鏡來檢查視網膜和視神經的健康狀況，這可以幫助及早發現視網膜病變或其他內部結構的問題。\n\n2. **視力測試（Visual Acuity Test）**：這是一個基本的測試，可以評估您的可見度和視力清晰度。視力模糊往往會影響日常生活。\n\n3. **眼壓測量（Intraocular Pressure Measurement）**：若懷疑有青光眼問題，醫生會測量眼內壓，這是一項重要的檢查項目。\n\n4. **染色試驗（Fluorescein Staining）**：通過在眼睛上滴入染劑檢查表面是否存在損傷，並評估淚液的分泌情況。\n\n5. **眼表評估（Ocular Surface Evaluation）**：這包括直接檢查眼角膜和結膜的狀況，以確定是否有任何炎症或其它病變。\n\n6. **視神經檢查（Optic Nerve Examination）**：檢查視神經的健康狀況，以確保沒有任何病變影響視力。\n\n基於您的症狀，建議在更新病歷時告知醫生所有的視力問題，並提及眼睛刺痛的感受。這樣醫生將能根據您的狀況做出更加精確的診斷和治療計劃。若有必要，醫生可能會建議進一步的手術，例如白內障手術，尤其是當水晶體出現混濁時。\n\n以上回答基於模型思考，仍須經專業醫生評估決策，具體的檢查項目和對策建議還是要遵循醫生的指導。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Rainbow-colored halos around lights at night [1][3][18]\n- Eye pain and occasional blurry vision in right eye [3][5][18]\n- History of optic neuritis with vision loss [7]\n- Currently using medication for high cholesterol, which may affect vision [15]\n\n#### **2. Diagnosis**\n\n- Not mentioned in the dialogue\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Urgent consultation with an ophthalmologist recommended for further evaluation [18]\n- Suggested examinations: Fundus examination, Visual acuity test, Intraocular pressure measurement, Fluorescein staining, Ocular surface evaluation, Optic nerve examination [20]\n- Not mentioned in the dialogue",
+  "citation_result": [
+    {
+      "output": "- Rainbow-colored halos around lights at night [1][3][18]",
+      "citations": [
+        1,
+        18,
+        3
+      ],
+      "provenance": [
+        1,
+        3,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye pain and occasional blurry vision in right eye [3][5][18]",
+      "citations": [
+        18,
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of optic neuritis with vision loss [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [
+        7
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Currently using medication for high cholesterol, which may affect vision [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Urgent consultation with an ophthalmologist recommended for further evaluation [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Suggested examinations: Fundus examination, Visual acuity test, Intraocular pressure measurement, Fluorescein staining, Ocular surface evaluation, Optic nerve examination [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8571,
+    "total_entailed": 6,
+    "total_of_sent": 7,
+    "citation_precision": 0.8571,
+    "total_matched_citations": 10,
+    "total_citations": 11
+  }
+}

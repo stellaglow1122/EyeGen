@@ -1,0 +1,117 @@
+{
+  "idx": "20250507115034-ik8oicd9",
+  "upload_time": "2025-05-07 11:50:34",
+  "object_idx": "dialogue-83",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我這次已經預約了醫生的門診，最近我的右眼時常感覺到一些不舒服，我平常有使用青光眼的降眼壓藥，想問問這次看診前有什麼需要特別注意的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個半月的時間，最近右眼時常感到癢癢的，會想去揉眼睛。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 否\n\n\n [6] 系統回覆3: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [7] 使用者問題/回覆4: 我知道我的爸爸有高度近視，他的視力一直都很差，經常需要換眼鏡。\n\n\n [8] 系統回覆4: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [9] 使用者問題/回覆5: 我之前沒有做過任何眼睛手術。\n\n\n [10] 系統回覆5: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [11] 使用者問題/回覆6: 我今年是75歲。\n\n\n [12] 系統回覆6: 根據您提供的資訊，您目前75歲，右眼時常感到不舒服且癢癢的情況已持續約一個半月，同時您提到平常有使用青光眼的降眼壓藥，這些症狀可能與以下幾種眼科疾病相關：\n\n1. **青光眼 (Glaucoma)**：\n    因您有使用降眼壓藥的歷史，這表示您曾被診斷為青光眼。青光眼可導致視神經受損，進而影響視力且可能無明顯疼痛。在您的情況下，右眼不舒服可能是青光眼的相關症狀之一。\n   \n2. **乾眼症 (Dry Eye Syndrome)**：\n    您提到的眼睛癢癢感可能與乾眼症有關。年紀增長後，眼睛的潤滑能力降低，容易產生不適及疲勞感。\n   \n3. **結膜炎 (Conjunctivitis)**：\n    若伴隨紅癢和分泌物，可能是結膜炎。在治療中需要確認病因是過敏還是感染。\n   \n4. **視網膜問題 (Retinal Issues)**：\n    雖然您未提及視力明顯下降或閃光，但長期未檢查可能存在視網膜病變的風險，特別是在年長者中。\n\n**建議**：\n基於您的症狀持續時間及所用藥物，建議儘速就醫進行眼科評估，尤其是青光眼患者應定期檢查眼壓以及視神經的狀況。眼科醫師可能會進行視野測試、眼底檢查等完整檢查，以清楚了解眼部的健康狀況。\n\n若症狀輕微，您可選擇一般診所，但因為有青光眼的背景，建議直接前往醫學中心由專業醫師對您的眼睛健康進行詳細評估與治療。\n\n這些建議僅供參考，最終仍需由專業醫師根據實際檢查結果進行評估與診斷。\n\n\n\n [13] 使用者問題/回覆7: 我需要在看診前做些什麼準備？比如說要不要先停用我的降眼壓藥，還是要提前檢查眼壓？\n\n\n [14] 系統回覆7: 根據您提供的資訊，您目前有以下的眼睛狀況與相關背景：\n\n1. **右眼不適**：您提到右眼時常感覺不舒服並且有癢癢的感覺，這可能與乾眼症或青光眼相關。\n   \n2. **症狀持續時間**：這種不適已經持續了一個半月，這表明症狀是持續性的，需引起重視。\n   \n3. **症狀發生在單眼**：根據您的敘述，不適主要集中在右眼。\n   \n4. **視力狀況**：雖然您有右眼的不適，但未提及明顯的視力變化，這可能是目前尚可接受的狀態，但仍需注意。\n   \n5. **既往病史**：您曾被診斷為青光眼並且平常有使用降眼壓藥，這意味著需要特別注意您的眼睛健康。\n   \n6. **家族病史**：您父親有高度近視，這顯示家族中存在眼病的遺傳風險。\n\n### 可能的眼睛疾病及建議：\n\n1. **乾眼症 (Dry Eye Syndrome)**：\n    **特性**：造成眼睛乾澀、灼熱感，常伴隨異物感。\n    **建議**：使用人工淚液（如玻尿酸類型的眼藥水）來緩解症狀，如果情況改善不大，建議尋求專業醫師協助。\n\n2. **青光眼 (Glaucoma)**：\n    **特性**：雖然您已在使用降眼壓藥，但仍需定期檢查，防止視神經損害。\n    **建議**：定期檢查眼壓，了解藥物效果，並在醫生建議下調整用藥。\n\n3. **過敏性結膜炎 (Allergic Conjunctivitis)**：\n    **特性**：會導致眼睛發癢、紅腫，常因環境過敏引起。\n    **建議**：如果有過敏源，應盡量避免接觸，必要時可使用抗組織胺的眼藥水。\n\n### 準備看診建議：\n\n **降眼壓藥的使用**：您應遵循醫生的建議，通常不需在看診前停用藥物，但如有不確定，最好在就診前向醫生確認。\n **檢查眼壓**：如果您對眼壓狀況有疑慮，可提前與醫生討論，是否需在門診前進行眼壓檢查。\n\n建議您在門診時詳細諮詢醫生，並告訴醫生您的症狀、家庭病史和使用的藥物等資訊，以便得到更好的診斷與治療。若血壓或眼壓異常，應優先就醫進行檢查。\n\n如果有任何不明白的地方，隨時可以再詢問！\n\n\n\n [15] 使用者問題/回覆8: 在看診時，醫生會有可能進行哪些具體的檢查，來了解我眼睛的狀況呢？\n\n\n [16] 系統回覆8: 在眼科診所，醫生會採取多種檢查來了解您眼睛的狀況。這些檢查可用於評估視力、眼睛結構以至於檢查是否存在疾病。以下是一些常見的眼科檢查：\n\n1. **視力測試** (Visual Acuity Test)\n    通常使用視力表，讓您讀取不同大小的字母牌，這是評估視力的基本測試。\n\n2. **眼壓測量** (Tonometry)\n    檢查眼內壓，常用來篩檢青光眼（Glaucoma）。醫生會使用壓力計進行測量。\n\n3. **散瞳檢查** (Pupillary Dilation)\n    通過使用散瞳藥水讓瞳孔擴大，使醫生能夠更清楚地觀察眼底，包括視網膜（Retina）和視神經（Optic Nerve）的狀況。\n\n4. **眼底檢查** (Fundus Examination)\n    使用眼底鏡查看視網膜和視神經部位，能夠檢查索引其他眼部疾病（如糖尿病視網膜病變、黃斑部病變）。\n\n5. **角膜地形圖** (Corneal Topography)\n    用來測量角膜的形狀和曲率，對於各種屈光不正問題有助於分析，特別是散光（Astigmatism）或圓錐角膜（Keratoconus）。\n\n6. **眼部超音波檢查** (Ultrasound Examination)\n    用於評估眼球內部結構，尤其在檢查視網膜脫落或後玻璃體出血等狀況時很有用。\n\n7. **光學相干斷層掃描 (OCT)** \n    一種非侵入性的影像技術，能夠提供視網膜的詳細切面圖，對於評估黃斑部疾病、視神經萎縮非常重要。\n\n8. **色覺測試** (Color Vision Test)\n    檢查您是否對顏色有良好的辨識能力，確認是否存在色盲（Color Blindness）問題。\n\n9. **視野檢查** (Visual Field Test)\n    評估視野的範圍，可以幫助檢查青光眼和其他視覺障礙問題。\n\n這些檢查能夠幫助醫生了解您眼睛的健康狀態，及早發現問題、制定治療計畫。若有進一步需要的檢查或特殊情況，醫生會根據檢查結果給予建議。\n\n以上回答僅供參考，最好還是尋求專業醫生的意見來確保診斷的準確性。參考(Reference): 文件(Document1)  老眼不昏花_page156, 文件(Document2)  老眼不昏花_page119, 文件(Document3)  老眼不昏花_page105。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Discomfort and itching in right eye for one and a half months [3][12][14]\n- Uses glaucoma eye drops [1][12]\n\n#### **2. Diagnosis**\n\n- Glaucoma [12]\n- Dry Eye Syndrome [12]\n- Allergic Conjunctivitis [12]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [12]\n\n#### **4. Recommended Treatment**\n\n- Recommended to use artificial tears to alleviate symptoms [12][14]\n- Regular eye pressure checks are advised [12][14]\n- Follow-up appointment for comprehensive eye evaluation [12]",
+  "citation_result": [
+    {
+      "output": "- Discomfort and itching in right eye for one and a half months [3][12][14]",
+      "citations": [
+        3,
+        12,
+        14
+      ],
+      "provenance": [
+        3,
+        12,
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Uses glaucoma eye drops [1][12]",
+      "citations": [
+        1,
+        12
+      ],
+      "provenance": [
+        1,
+        12
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Glaucoma [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [
+        12
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [
+        12
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Allergic Conjunctivitis [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Outpatient department of a medical center [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended to use artificial tears to alleviate symptoms [12][14]",
+      "citations": [
+        12,
+        14
+      ],
+      "provenance": [
+        12,
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye pressure checks are advised [12][14]",
+      "citations": [
+        12,
+        14
+      ],
+      "provenance": [
+        12,
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for comprehensive eye evaluation [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [
+        12
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.7778,
+    "total_entailed": 7,
+    "total_of_sent": 9,
+    "citation_precision": 0.7778,
+    "total_matched_citations": 12,
+    "total_citations": 14
+  }
+}

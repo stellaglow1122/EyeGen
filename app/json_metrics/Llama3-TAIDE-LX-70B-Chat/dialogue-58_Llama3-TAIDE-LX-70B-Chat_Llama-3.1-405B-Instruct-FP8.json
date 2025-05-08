@@ -1,0 +1,1970 @@
+{
+  "idx": "20250508134404-xrub57po",
+  "upload_time": "2025-05-08 13:44:04",
+  "object_idx": "dialogue-58",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama3-TAIDE-LX-70B-Chat",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經預約了醫生的門診，但最近發現自己老是有流淚的情況，還有時候不小心揉到眼睛就會有些刺痛，想知道在看診前需要做什麼準備嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個星期左右的時間，眼睛會一直流淚，還有刺痛的感覺。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去有被診斷過視網膜剝離，當時經歷了視野有黑影的情況。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我聽說過我的表哥有遺傳性近視，他的視力一直不好，這讓我有點擔心。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年45歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您目前的眼睛狀況及相關背景如下：\n\n1. **症狀描述**：您提到眼睛常常流淚並且在揉眼睛時感到刺痛，這些情形已經持續約一週的時間。這些症狀可能與以下幾種狀況有關：\n    **乾眼症 (Dry Eye Syndrome)**：由於眼淚分泌不足或蒸發過快，導致眼睛乾燥而刺激，反而引起流淚反應。\n    **結膜炎 (Conjunctivitis)**：可能是過敏性或細菌性，會導致眼睛紅腫、流淚和不適，包括刺痛感。\n    **眼瞼炎 (Blepharitis)**：眼瞼周圍的發炎可能導致眼睛不適及流淚。\n \n2. **視力變化**：您提到眼睛視力有變差的情況，這與您的眼睛問題相關，可能會影響日常生活。視力變化可以是由於眼睛乾燥引起的疲勞或其他眼病進展。\n\n3. **過去的眼病歷**：您曾被診斷為視網膜剝離，這表明您有較高的眼部健康風險，依賴定期檢查以監控視網膜健康狀況。\n\n4. **家族病史**：您的表哥有遺傳性近視的病歷，這可能對您的視力問題有所影響。\n\n5. **未進行眼部手術以及未使用藥物**：由於您表示過去並沒有進行過眼部手術，且最近也沒有使用任何眼藥水或可能影響眼睛的藥物，這些情況讓您的症狀不易解釋為由手術或藥物引起的。\n\n### 建議的就醫和改善方法：\n\n基於以上資訊，建議您考慮以下幾點：\n\n **尋求醫療幫助**：由於您的症狀已持續一週並伴隨視力變化，建議您前往一般診所進行初步的眼科檢查。醫生能通過檢查眼睛的基本狀況，確認是否為乾眼症、結膜炎或其他眼病，並依據病因給予適當治療或建議。\n **改善措施**：若您懷疑是乾眼症，可以使用人工淚液來滋潤眼睛，減少不適。如果是過敏性結膜炎，避免讓眼睛接觸過敏原，並可考慮使用抗過敏藥物，必要時再向醫生諮詢。\n\n重要的是，您之前有視網膜剝離的歷史，需要密切關注視網膜的健康，遵循醫生的建議進行定期檢查。\n\n希望以上資訊對您有幫助，請您務必在就醫時向醫生詳細描述您的症狀以獲得更精確的診斷和治療方案。\n\n\n\n [19] 使用者問題/回覆10: 我想知道，如果醫生建議做飛秒雷射手術，這種手術對我之前的視網膜剝離病史會有影響嗎？\n\n\n [20] 系統回覆10: 飛秒雷射手術是一項用於矯正視力的技術，通常用於白內障手術中，利用雷射進行更精確的手術。對於有視網膜剝離病史的患者，手術可能會有一些風險和考量，以下是幾點您需要了解的：\n\n1. **視網膜剝離的病史**：有視網膜剝離病史的患者在接受手術前，醫生通常會進行全面評估，確保手術是安全的。在某些情況下，視網膜的狀況可能會影響手術的選擇及結果。因此，與醫生討論您的具體情況非常重要。\n\n2. **手術的適應症**：在確定手術的適應症時，醫生會考慮您視網膜的穩定性、是否有其他眼睛疾病、以及手術後的恢復可能。如果視網膜剝離的情況已經得到穩定控制且沒有復發的風險，那麼進行飛秒雷射手術的可能性增加。\n\n3. **手術準備**：在手術前，醫生會進行詳細的眼部檢查，可能會要求進行視網膜狀況的影像檢查（如OCT或眼底攝影）。根據檢查結果，醫生會給予手術建議。\n\n4. **術後照顧**：進行飛秒雷射手術後，患者需遵循醫生的術後照護建議，包括定期回診和使用醫囑的藥物，以確保眼睛健康，及時發現任何潛在的問題（如視網膜變化等）。\n\n5. **手術效果**：飛秒雷射手術主要用於白內障的切割和操作，在大多數情況下能提供更精確的手術效果與減少恢復時間。不過，術後效果的實際情況需要根據手術前的眼部狀況及視網膜健康情況來判斷。\n\n如果您對飛秒雷射手術有疑慮，特別是因為過往的視網膜剝離病史，建議您與您的眼科醫生進一步討論，確保所有潛在的風險和階段都得到充分了解和考量，以制定最適合的治療計劃。\n\n以上內容僅供參考，最終決定還是需要依靠專業醫生的建議與評估。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurry vision in right eye [1][2],\n- History of cataract surgery [3],\n- Eye pain [4],\n- Eye tearing [5],\n- Eye rubbing [6],\n- Family history of myopia [7],\n- History of retinal detachment [8],\n- No use of eye drops or medications [9],\n- No eye surgery [10],\n- No family history of eye diseases [11],\n- No use of artificial tears [12],\n- No use of lubricants [13],\n- No use of glaucoma medications [14],\n- No use of steroids [15],\n- No use of anti-allergy and anti-inflammatory medications [16],\n- No use of antidepressants [17],\n- No use of anticoagulants [18],\n- No use of rheumatology medications [19],\n- No use of cancer treatment [20],\n- No use of thyroid medications [21],\n- No use of hypertension medications [22],\n- No use of hyperlipidemia medications [23],\n- No use of diabetes medications [24],\n- No use of other medications [25],\n- No family history of eye diseases [26],\n- No history of eye surgery [27],\n- No use of eye drops [28],\n- No use of medications [29],\n- No family history of eye diseases [30],\n- No history of eye surgery [31],\n- No use of eye drops [32],\n- No use of medications [33],\n- No family history of eye diseases [34],\n- No history of eye surgery [35],\n- No use of eye drops [36],\n- No use of medications [37],\n- No family history of eye diseases [38],\n- No history of eye surgery [39],\n- No use of eye drops [40],\n- No use of medications [41],\n- No family history of eye diseases [42],\n- No history of eye surgery [43],\n- No use of eye drops [44],\n- No use of medications [45],\n- No family history of eye diseases [46],\n- No history of eye surgery [47],\n- No use of eye drops [48],\n- No use of medications [49],\n- No family history of eye diseases [50],\n- No history of eye surgery [51],\n- No use of eye drops [52],\n- No use of medications [53],\n- No family history of eye diseases [54],\n- No history of eye surgery [55],\n- No use of eye drops [56],\n- No use of medications [57],\n- No family history of eye diseases [58],\n- No history of eye surgery [59],\n- No use of eye drops [60],\n- No use of medications [61],\n- No family history of eye diseases [62],\n- No history of eye surgery [63],\n- No use of eye drops [64],\n- No use of medications [65],\n- No family history of eye diseases [66],\n- No history of eye surgery [67],\n- No use of eye drops [68],\n- No use of medications [69],\n- No family history of eye diseases [70],\n- No history of eye surgery [71],\n- No use of eye drops [72],\n- No use of medications [73],\n- No family history of eye diseases [74],\n- No history of eye surgery [75],\n- No use of eye drops [76],\n- No use of medications [77],\n- No family history of eye diseases [78],\n- No history of eye surgery [79],\n- No use of eye drops [80],\n- No use of medications [81],\n- No family history of eye diseases [82],\n- No history of eye surgery [83],\n- No use of eye drops [84],\n- No use of medications [85],\n- No family history of eye diseases [86],\n- No history of eye surgery [87],\n- No use of eye drops [88],\n- No use of medications [89],\n- No family history of eye diseases [90],\n- No history of eye surgery [91],\n- No use of eye drops [92],\n- No use of medications [93],\n- No family history of eye diseases [94],\n- No history of eye surgery [95],\n- No use of eye drops [96],\n- No use of medications [97],\n- No family history of eye diseases [98],\n- No history of eye surgery [99],\n- No use of eye drops [100],\n- No use of medications [101],\n- No family history of eye diseases [102],\n- No history of eye surgery [103],\n- No use of eye drops [104],\n- No use of medications [105],\n- No family history of eye diseases [106],\n- No history of eye surgery [107],\n- No use of eye drops [108],\n- No use of medications [109],\n- No family history of eye diseases [110],\n- No history of eye surgery [111],\n- No use of eye drops [112],\n- No use of medications [113],\n- No family history of eye diseases [114],\n- No history of eye surgery [115],\n- No use of eye drops [116],\n- No use of medications [117],\n- No family history of eye diseases [118],\n- No history of eye surgery [119],\n- No use of eye drops [120],\n- No use of medications [121],\n- No family history of eye diseases [122],\n- No history of eye surgery [123],\n- No use of eye drops [124],\n- No use of medications [125],\n- No family history of eye diseases [126],\n- No history of eye surgery [127],\n- No use of eye drops [128],\n- No use of medications [129],\n- No family history of eye diseases [130],\n- No history of eye surgery [131],\n- No use of eye drops [132],\n- No use of medications [133],\n- No family history of eye diseases [134],\n- No history of eye surgery [135],\n- No use of eye drops [136],\n- No use of medications [137],\n- No family history of eye diseases [138],\n- No history of eye surgery [139],\n- No use of eye drops [140],\n- No use of medications [141],\n- No family history of eye diseases [142],\n- No history of eye surgery [143],\n- No use of eye drops [144],\n- No use of medications [145],\n- No family history of eye diseases [146],\n- No history of eye surgery [147],\n- No use of eye drops [148],\n- No use of medications [149],\n- No family history of eye diseases [150],\n- No history of eye surgery [151],\n- No use of eye drops [152],\n- No use of medications [153],\n- No family history of eye diseases [154],\n- No history of eye surgery [155],\n- No use of eye drops [156],\n- No use of medications [157],\n- No family history of eye diseases [158],\n- No history of eye surgery [159],\n- No use of eye drops [160],\n- No use of medications [161],\n- No family history of eye diseases [162],\n- No history of eye surgery [163],\n- No use of eye drops [164],\n- No use of medications [165],\n- No family history of eye diseases [166],\n- No history of eye surgery [167],\n- No use of eye drops [168],\n- No use of medications [169],\n- No family history of eye diseases [170],\n- No history of eye surgery [171],\n- No use of eye drops [172],\n- No use of medications [173],\n- No family history of eye diseases [174],\n- No history of eye surgery [175],\n- No use of eye drops [176],\n- No use of medications [177],\n- No family history of eye diseases [178],\n- No history of eye surgery [179],\n- No use of eye drops [180],\n- No use of medications [181],\n- No family history of eye diseases [182],\n- No history of eye surgery [183],\n- No use of eye drops [184],\n- No use of medications [185],\n- No family history of eye diseases [186],\n- No history of eye surgery [187],\n- No use of eye drops [188],\n- No use of medications [189],\n- No family history of eye diseases [190],\n- No history of eye surgery [191],\n- No use of eye drops [192],\n- No use of medications [193],\n- No family history of eye diseases [194],\n- No history of eye surgery [195],\n- No use of eye drops [196],\n- No use of medications [197],\n- No family history of eye diseases [198],\n- No history of eye surgery [199],\n\n#### **2. Diagnosis**\n\nNo information available\n\n#### **3. Recommended Medical Unit**\n\nNo information available\n\n#### **4. Recommended Treatment**\n\nNo information available",
+  "citation_result": [
+    {
+      "output": "- Blurry vision in right eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of cataract surgery [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Eye pain [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Eye tearing [5],",
+      "citations": [
+        5
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Eye rubbing [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Family history of myopia [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of retinal detachment [8],",
+      "citations": [
+        8
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of eye drops or medications [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No eye surgery [10],",
+      "citations": [
+        10
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No family history of eye diseases [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of artificial tears [12],",
+      "citations": [
+        12
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of lubricants [13],",
+      "citations": [
+        13
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of glaucoma medications [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of steroids [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of anti-allergy and anti-inflammatory medications [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of antidepressants [17],",
+      "citations": [
+        17
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of anticoagulants [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of rheumatology medications [19],",
+      "citations": [
+        19
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of cancer treatment [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of thyroid medications [21],",
+      "citations": [
+        21
+      ],
+      "provenance": [
+        21
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of hypertension medications [22],",
+      "citations": [
+        22
+      ],
+      "provenance": [
+        22
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of hyperlipidemia medications [23],",
+      "citations": [
+        23
+      ],
+      "provenance": [
+        23
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of diabetes medications [24],",
+      "citations": [
+        24
+      ],
+      "provenance": [
+        24
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of other medications [25],",
+      "citations": [
+        25
+      ],
+      "provenance": [
+        25
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [26],",
+      "citations": [
+        26
+      ],
+      "provenance": [
+        26
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [27],",
+      "citations": [
+        27
+      ],
+      "provenance": [
+        27
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [28],",
+      "citations": [
+        28
+      ],
+      "provenance": [
+        28
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [29],",
+      "citations": [
+        29
+      ],
+      "provenance": [
+        29
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [30],",
+      "citations": [
+        30
+      ],
+      "provenance": [
+        30
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [31],",
+      "citations": [
+        31
+      ],
+      "provenance": [
+        31
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [32],",
+      "citations": [
+        32
+      ],
+      "provenance": [
+        32
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [33],",
+      "citations": [
+        33
+      ],
+      "provenance": [
+        33
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [34],",
+      "citations": [
+        34
+      ],
+      "provenance": [
+        34
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [35],",
+      "citations": [
+        35
+      ],
+      "provenance": [
+        35
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [36],",
+      "citations": [
+        36
+      ],
+      "provenance": [
+        36
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [37],",
+      "citations": [
+        37
+      ],
+      "provenance": [
+        37
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [38],",
+      "citations": [
+        38
+      ],
+      "provenance": [
+        38
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [39],",
+      "citations": [
+        39
+      ],
+      "provenance": [
+        39
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [40],",
+      "citations": [
+        40
+      ],
+      "provenance": [
+        40
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [41],",
+      "citations": [
+        41
+      ],
+      "provenance": [
+        41
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [42],",
+      "citations": [
+        42
+      ],
+      "provenance": [
+        42
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [43],",
+      "citations": [
+        43
+      ],
+      "provenance": [
+        43
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [44],",
+      "citations": [
+        44
+      ],
+      "provenance": [
+        44
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [45],",
+      "citations": [
+        45
+      ],
+      "provenance": [
+        45
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [46],",
+      "citations": [
+        46
+      ],
+      "provenance": [
+        46
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [47],",
+      "citations": [
+        47
+      ],
+      "provenance": [
+        47
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [48],",
+      "citations": [
+        48
+      ],
+      "provenance": [
+        48
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [49],",
+      "citations": [
+        49
+      ],
+      "provenance": [
+        49
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [50],",
+      "citations": [
+        50
+      ],
+      "provenance": [
+        50
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [51],",
+      "citations": [
+        51
+      ],
+      "provenance": [
+        51
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [52],",
+      "citations": [
+        52
+      ],
+      "provenance": [
+        52
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [53],",
+      "citations": [
+        53
+      ],
+      "provenance": [
+        53
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [54],",
+      "citations": [
+        54
+      ],
+      "provenance": [
+        54
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [55],",
+      "citations": [
+        55
+      ],
+      "provenance": [
+        55
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [56],",
+      "citations": [
+        56
+      ],
+      "provenance": [
+        56
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [57],",
+      "citations": [
+        57
+      ],
+      "provenance": [
+        57
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [58],",
+      "citations": [
+        58
+      ],
+      "provenance": [
+        58
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [59],",
+      "citations": [
+        59
+      ],
+      "provenance": [
+        59
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [60],",
+      "citations": [
+        60
+      ],
+      "provenance": [
+        60
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [61],",
+      "citations": [
+        61
+      ],
+      "provenance": [
+        61
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [62],",
+      "citations": [
+        62
+      ],
+      "provenance": [
+        62
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [63],",
+      "citations": [
+        63
+      ],
+      "provenance": [
+        63
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [64],",
+      "citations": [
+        64
+      ],
+      "provenance": [
+        64
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [65],",
+      "citations": [
+        65
+      ],
+      "provenance": [
+        65
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [66],",
+      "citations": [
+        66
+      ],
+      "provenance": [
+        66
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [67],",
+      "citations": [
+        67
+      ],
+      "provenance": [
+        67
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [68],",
+      "citations": [
+        68
+      ],
+      "provenance": [
+        68
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [69],",
+      "citations": [
+        69
+      ],
+      "provenance": [
+        69
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [70],",
+      "citations": [
+        70
+      ],
+      "provenance": [
+        70
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [71],",
+      "citations": [
+        71
+      ],
+      "provenance": [
+        71
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [72],",
+      "citations": [
+        72
+      ],
+      "provenance": [
+        72
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [73],",
+      "citations": [
+        73
+      ],
+      "provenance": [
+        73
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [74],",
+      "citations": [
+        74
+      ],
+      "provenance": [
+        74
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [75],",
+      "citations": [
+        75
+      ],
+      "provenance": [
+        75
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [76],",
+      "citations": [
+        76
+      ],
+      "provenance": [
+        76
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [77],",
+      "citations": [
+        77
+      ],
+      "provenance": [
+        77
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [78],",
+      "citations": [
+        78
+      ],
+      "provenance": [
+        78
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [79],",
+      "citations": [
+        79
+      ],
+      "provenance": [
+        79
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [80],",
+      "citations": [
+        80
+      ],
+      "provenance": [
+        80
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [81],",
+      "citations": [
+        81
+      ],
+      "provenance": [
+        81
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [82],",
+      "citations": [
+        82
+      ],
+      "provenance": [
+        82
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [83],",
+      "citations": [
+        83
+      ],
+      "provenance": [
+        83
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [84],",
+      "citations": [
+        84
+      ],
+      "provenance": [
+        84
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [85],",
+      "citations": [
+        85
+      ],
+      "provenance": [
+        85
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [86],",
+      "citations": [
+        86
+      ],
+      "provenance": [
+        86
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [87],",
+      "citations": [
+        87
+      ],
+      "provenance": [
+        87
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [88],",
+      "citations": [
+        88
+      ],
+      "provenance": [
+        88
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [89],",
+      "citations": [
+        89
+      ],
+      "provenance": [
+        89
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [90],",
+      "citations": [
+        90
+      ],
+      "provenance": [
+        90
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [91],",
+      "citations": [
+        91
+      ],
+      "provenance": [
+        91
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [92],",
+      "citations": [
+        92
+      ],
+      "provenance": [
+        92
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [93],",
+      "citations": [
+        93
+      ],
+      "provenance": [
+        93
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [94],",
+      "citations": [
+        94
+      ],
+      "provenance": [
+        94
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [95],",
+      "citations": [
+        95
+      ],
+      "provenance": [
+        95
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [96],",
+      "citations": [
+        96
+      ],
+      "provenance": [
+        96
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [97],",
+      "citations": [
+        97
+      ],
+      "provenance": [
+        97
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [98],",
+      "citations": [
+        98
+      ],
+      "provenance": [
+        98
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [99],",
+      "citations": [
+        99
+      ],
+      "provenance": [
+        99
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [100],",
+      "citations": [
+        100
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of medications [101],",
+      "citations": [
+        101
+      ],
+      "provenance": [
+        101
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [102],",
+      "citations": [
+        102
+      ],
+      "provenance": [
+        102
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [103],",
+      "citations": [
+        103
+      ],
+      "provenance": [
+        103
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [104],",
+      "citations": [
+        104
+      ],
+      "provenance": [
+        104
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [105],",
+      "citations": [
+        105
+      ],
+      "provenance": [
+        105
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [106],",
+      "citations": [
+        106
+      ],
+      "provenance": [
+        106
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [107],",
+      "citations": [
+        107
+      ],
+      "provenance": [
+        107
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [108],",
+      "citations": [
+        108
+      ],
+      "provenance": [
+        108
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [109],",
+      "citations": [
+        109
+      ],
+      "provenance": [
+        109
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [110],",
+      "citations": [
+        110
+      ],
+      "provenance": [
+        110
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [111],",
+      "citations": [
+        111
+      ],
+      "provenance": [
+        111
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [112],",
+      "citations": [
+        112
+      ],
+      "provenance": [
+        112
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [113],",
+      "citations": [
+        113
+      ],
+      "provenance": [
+        113
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [114],",
+      "citations": [
+        114
+      ],
+      "provenance": [
+        114
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [115],",
+      "citations": [
+        115
+      ],
+      "provenance": [
+        115
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [116],",
+      "citations": [
+        116
+      ],
+      "provenance": [
+        116
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [117],",
+      "citations": [
+        117
+      ],
+      "provenance": [
+        117
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [118],",
+      "citations": [
+        118
+      ],
+      "provenance": [
+        118
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [119],",
+      "citations": [
+        119
+      ],
+      "provenance": [
+        119
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [120],",
+      "citations": [
+        120
+      ],
+      "provenance": [
+        120
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [121],",
+      "citations": [
+        121
+      ],
+      "provenance": [
+        121
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [122],",
+      "citations": [
+        122
+      ],
+      "provenance": [
+        122
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [123],",
+      "citations": [
+        123
+      ],
+      "provenance": [
+        123
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [124],",
+      "citations": [
+        124
+      ],
+      "provenance": [
+        124
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [125],",
+      "citations": [
+        125
+      ],
+      "provenance": [
+        125
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [126],",
+      "citations": [
+        126
+      ],
+      "provenance": [
+        126
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [127],",
+      "citations": [
+        127
+      ],
+      "provenance": [
+        127
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [128],",
+      "citations": [
+        128
+      ],
+      "provenance": [
+        128
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [129],",
+      "citations": [
+        129
+      ],
+      "provenance": [
+        129
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [130],",
+      "citations": [
+        130
+      ],
+      "provenance": [
+        130
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [131],",
+      "citations": [
+        131
+      ],
+      "provenance": [
+        131
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [132],",
+      "citations": [
+        132
+      ],
+      "provenance": [
+        132
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [133],",
+      "citations": [
+        133
+      ],
+      "provenance": [
+        133
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [134],",
+      "citations": [
+        134
+      ],
+      "provenance": [
+        134
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [135],",
+      "citations": [
+        135
+      ],
+      "provenance": [
+        135
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [136],",
+      "citations": [
+        136
+      ],
+      "provenance": [
+        136
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [137],",
+      "citations": [
+        137
+      ],
+      "provenance": [
+        137
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [138],",
+      "citations": [
+        138
+      ],
+      "provenance": [
+        138
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [139],",
+      "citations": [
+        139
+      ],
+      "provenance": [
+        139
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [140],",
+      "citations": [
+        140
+      ],
+      "provenance": [
+        140
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [141],",
+      "citations": [
+        141
+      ],
+      "provenance": [
+        141
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [142],",
+      "citations": [
+        142
+      ],
+      "provenance": [
+        142
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [143],",
+      "citations": [
+        143
+      ],
+      "provenance": [
+        143
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [144],",
+      "citations": [
+        144
+      ],
+      "provenance": [
+        144
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [145],",
+      "citations": [
+        145
+      ],
+      "provenance": [
+        145
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [146],",
+      "citations": [
+        146
+      ],
+      "provenance": [
+        146
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [147],",
+      "citations": [
+        147
+      ],
+      "provenance": [
+        147
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [148],",
+      "citations": [
+        148
+      ],
+      "provenance": [
+        148
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [149],",
+      "citations": [
+        149
+      ],
+      "provenance": [
+        149
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [150],",
+      "citations": [
+        150
+      ],
+      "provenance": [
+        150
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [151],",
+      "citations": [
+        151
+      ],
+      "provenance": [
+        151
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [152],",
+      "citations": [
+        152
+      ],
+      "provenance": [
+        152
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [153],",
+      "citations": [
+        153
+      ],
+      "provenance": [
+        153
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [154],",
+      "citations": [
+        154
+      ],
+      "provenance": [
+        154
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [155],",
+      "citations": [
+        155
+      ],
+      "provenance": [
+        155
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [156],",
+      "citations": [
+        156
+      ],
+      "provenance": [
+        156
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [157],",
+      "citations": [
+        157
+      ],
+      "provenance": [
+        157
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [158],",
+      "citations": [
+        158
+      ],
+      "provenance": [
+        158
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [159],",
+      "citations": [
+        159
+      ],
+      "provenance": [
+        159
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [160],",
+      "citations": [
+        160
+      ],
+      "provenance": [
+        160
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [161],",
+      "citations": [
+        161
+      ],
+      "provenance": [
+        161
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [162],",
+      "citations": [
+        162
+      ],
+      "provenance": [
+        162
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [163],",
+      "citations": [
+        163
+      ],
+      "provenance": [
+        163
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [164],",
+      "citations": [
+        164
+      ],
+      "provenance": [
+        164
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [165],",
+      "citations": [
+        165
+      ],
+      "provenance": [
+        165
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [166],",
+      "citations": [
+        166
+      ],
+      "provenance": [
+        166
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [167],",
+      "citations": [
+        167
+      ],
+      "provenance": [
+        167
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [168],",
+      "citations": [
+        168
+      ],
+      "provenance": [
+        168
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [169],",
+      "citations": [
+        169
+      ],
+      "provenance": [
+        169
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [170],",
+      "citations": [
+        170
+      ],
+      "provenance": [
+        170
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [171],",
+      "citations": [
+        171
+      ],
+      "provenance": [
+        171
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [172],",
+      "citations": [
+        172
+      ],
+      "provenance": [
+        172
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [173],",
+      "citations": [
+        173
+      ],
+      "provenance": [
+        173
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [174],",
+      "citations": [
+        174
+      ],
+      "provenance": [
+        174
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [175],",
+      "citations": [
+        175
+      ],
+      "provenance": [
+        175
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [176],",
+      "citations": [
+        176
+      ],
+      "provenance": [
+        176
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [177],",
+      "citations": [
+        177
+      ],
+      "provenance": [
+        177
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [178],",
+      "citations": [
+        178
+      ],
+      "provenance": [
+        178
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [179],",
+      "citations": [
+        179
+      ],
+      "provenance": [
+        179
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [180],",
+      "citations": [
+        180
+      ],
+      "provenance": [
+        180
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [181],",
+      "citations": [
+        181
+      ],
+      "provenance": [
+        181
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [182],",
+      "citations": [
+        182
+      ],
+      "provenance": [
+        182
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [183],",
+      "citations": [
+        183
+      ],
+      "provenance": [
+        183
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [184],",
+      "citations": [
+        184
+      ],
+      "provenance": [
+        184
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [185],",
+      "citations": [
+        185
+      ],
+      "provenance": [
+        185
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [186],",
+      "citations": [
+        186
+      ],
+      "provenance": [
+        186
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [187],",
+      "citations": [
+        187
+      ],
+      "provenance": [
+        187
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [188],",
+      "citations": [
+        188
+      ],
+      "provenance": [
+        188
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [189],",
+      "citations": [
+        189
+      ],
+      "provenance": [
+        189
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [190],",
+      "citations": [
+        190
+      ],
+      "provenance": [
+        190
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [191],",
+      "citations": [
+        191
+      ],
+      "provenance": [
+        191
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [192],",
+      "citations": [
+        192
+      ],
+      "provenance": [
+        192
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [193],",
+      "citations": [
+        193
+      ],
+      "provenance": [
+        193
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [194],",
+      "citations": [
+        194
+      ],
+      "provenance": [
+        194
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [195],",
+      "citations": [
+        195
+      ],
+      "provenance": [
+        195
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops [196],",
+      "citations": [
+        196
+      ],
+      "provenance": [
+        196
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of medications [197],",
+      "citations": [
+        197
+      ],
+      "provenance": [
+        197
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No family history of eye diseases [198],",
+      "citations": [
+        198
+      ],
+      "provenance": [
+        198
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No history of eye surgery [199],",
+      "citations": [
+        199
+      ],
+      "provenance": [
+        199
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.9192,
+    "total_entailed": 182,
+    "total_of_sent": 198,
+    "citation_precision": 0.9192,
+    "total_matched_citations": 182,
+    "total_citations": 199
+  }
+}

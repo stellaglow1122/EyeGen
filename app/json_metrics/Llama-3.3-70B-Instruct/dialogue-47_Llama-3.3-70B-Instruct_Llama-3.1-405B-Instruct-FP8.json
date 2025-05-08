@@ -1,0 +1,142 @@
+{
+  "idx": "20250508133943-2kgsivp0",
+  "upload_time": "2025-05-08 13:39:43",
+  "object_idx": "dialogue-47",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我之前已經預約了醫生的門診，這段時間發現看東西的時候有些視物有光圈現象，還有眼睛總是感覺有些酸痛，不知道在看診前是否需要做什麼特別準備嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有三個星期的時間感到眼睛有些乾澀和異物感。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [7] 使用者問題/回覆4: 我聽說過我的外公有青光眼，他幾年前開始出現視力問題，我不太確定這對我有沒有影響。\n\n\n [8] 系統回覆4: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [9] 使用者問題/回覆5: 我沒有做過任何眼睛手術。\n\n\n [10] 系統回覆5: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [11] 使用者問題/回覆6: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年52歲。\n\n\n [14] 系統回覆7: 根據您的描述，您提到「視物有光圈現象」和「眼睛總是感覺有些酸痛」，這些症狀可能與以下幾種眼部疾病有關：\n\n1. **白內障 (Cataract)**：視物有光圈的現象通常是由於水晶體混濁造成的，導致光線在通過晶狀體時發生散射。因此，視力可能會出現重影或光暈現象。隨著年齡增長，這種情況會變得更為普遍，尤其是您現在52歲，感受到視物有光圈現象，可能需要進一步檢查是否患有白內障。\n\n2. **隅角閉鎖型青光眼 (Angle-Closure Glaucoma)**：此種青光眼的發作也可能導致視物有光圈現象，並可伴隨頭痛、眼睛酸痛、視力變差等。由於您提及家中有青光眼的病史，這也是值得注意的風險因素。\n\n3. **乾眼症 (Dry Eye Syndrome)**：您提到的眼睛感到酸痛和異物感可能與乾眼症有關。當眼睛的淚液分泌不足或淚液蒸發過快時，會導致眼睛不適、酸痛和視力模糊。\n\n4. **眼睛疲勞 (Asthenopia)**：如果您經常使用電子設備或長時間注視近距離的物品，也可能導致眼睛疲累感，進而出現酸痛的症狀。\n\n由於這些症狀已持續約三個星期，建議您儘快就醫到眼科進行詳細檢查，以確認病因並制定適當的治療方案。眼科醫生可能會進行視力檢查、檢查眼底、檢查淚液分泌等專業檢查，以獲取更準確的診斷。如果確診為白內障，則可能需要進行手術以移除混濁的水晶體並植入人工水晶體，這樣可以明確改善您的視力。\n\n至於就診的醫療單位，建議您首先去**一般診所**進行初步檢查，這裡對於乾眼症等輕微症狀有基本的應對能力，若醫生評估後認為需要更進階的檢查，再轉診至醫學中心進行更深入的檢查與治療。\n\n最後，所有對於症狀的初步推測僅供參考，建議您向專業的醫生諮詢以獲得具體的診斷與治療建議。\n\n\n\n [15] 使用者問題/回覆8: 我聽說白內障手術效果不錯，但手術後需要注意什麼事情呢？\n\n\n [16] 系統回覆8: 白內障手術是一種相對安全且普遍的處置，通常能有效改善視力。然而，術後的護理及注意事項十分重要，可以確保您順利康復。以下是手術後需要注意的幾個關鍵事項：\n\n### 手術後注意事項\n\n1. **使用眼藥水**：\n    醫生會為您開具抗生素眼藥水和類固醇眼藥水，以減少感染和發炎的風險。請依醫囑按時使用，確保療效。\n\n2. **避免眼睛受壓**：\n    在術後的初期，避免任何可能使眼睛受到外力擠壓的情況，如揉眼睛、擦眼睛或受到撞擊。\n    建議佩戴護目鏡保護眼睛，特別是在睡覺時，防止不小心的碰撞或擠壓。\n\n3. **保持眼周清潔**：\n    術後要保持眼睛周圍的清潔，避免讓水或髒物進入眼睛，這可以降低感染的風險。\n\n4. **避免劇烈活動**：\n    術後一段時間內應避免劇烈運動、彎腰或用力，以免增加眼內壓力或造成手術後的傷口影響。\n\n5. **避免開車或操作重型機械**：\n    在剛剛手術後的幾天內，最好請他人代為駕駛，讓您的視力穩定後再考慮開車，以降低風險。\n\n6. **定期回診**：\n    按照醫生的安排定期回診，讓醫生檢查術後恢復情況及視力變化，及時發現任何異常情況。\n\n7. **注意症狀變化**：\n    若術後出現持續的疼痛、視力模糊、眼睛發紅或異常分泌物等，應立即告知醫生，必要時接受進一步檢查。\n\n手術後的護理對於恢復視力至關重要，遵循醫生的指示能有效提高手術成功的機率。希望這能幫助您更好地了解白內障手術後需要注意的事項。如有任何疑慮或問題，建議直接與醫生聯繫以獲得專業建議。\n\n以上建議僅供參考，具體情況還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  老眼不昏花_page91, 文件(Document4)  告別白內障生活_page8。\n\n\n\n [17] 使用者問題/回覆9: 如果我真的需要接受白內障手術，術後大概多久可以恢復正常生活呢？\n\n\n [18] 系統回覆9: 根據您提到的問題，關於白內障手術後恢復正常生活的時間，一般來說，大多數患者在手術後的一到兩天內可以恢復基本的日常活動。以下是一些更具體的恢復階段：\n\n1. **術後1至2天**：許多患者在手術後的第一天就能進行輕微的日常活動，可能會有稍微的視力模糊或不適感，但一般不會影響日常生活。\n\n2. **術後1至3週**：視力通常會在這段期間逐漸穩定。許多人會開始更加順利地進行日常生活，如看電視、使用電腦或閱讀。\n\n3. **術後1個月**：大部分患者都能恢復到術前的活動能力，視力也會逐步改善。醫師會在術後回診時檢查您的恢復情況，確保一切正常。\n\n然而，實際的恢復時間會因人而異，取決於患者的個人健康狀況、手術的複雜度以及是否遵循醫生的術後護理指導。如果您有任何不適或視力不如預期的問題，建議及早回診與醫生進行評估和後續處理。\n\n以上提供的建議僅供參考，實際情況仍需向專業醫生評估。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  告別白內障生活_page4, 文件(Document3)  告別白內障生活_page8。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision with halos in the right eye [1][2],\n- Eye discomfort and feeling of fatigue in the right eye [1][2],\n- History of family members with eye diseases, including Glaucoma [7]\n\n#### **2. Diagnosis**\n\n- Possible Cataract [14],\n- Possible Angle-Closure Glaucoma [14],\n- Possible Dry Eye Syndrome [14]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [14]\n\n#### **4. Recommended Treatment**\n\n- Consider Cataract surgery [14][15],\n- Use of antibiotic and steroid eye drops post-surgery [16],\n- Avoid heavy activities and rubbing of the eyes after surgery [16],\n- Follow-up appointment for post-operative care [16],\n- Recovery time: 1-2 days for basic daily activities, 1-3 weeks for stable vision, and 1 month for full recovery [17][18]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision with halos in the right eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Eye discomfort and feeling of fatigue in the right eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of family members with eye diseases, including Glaucoma [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [
+        7
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Cataract [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Angle-Closure Glaucoma [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Dry Eye Syndrome [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider Cataract surgery [14][15],",
+      "citations": [
+        14,
+        15
+      ],
+      "provenance": [
+        14,
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Use of antibiotic and steroid eye drops post-surgery [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Avoid heavy activities and rubbing of the eyes after surgery [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for post-operative care [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recovery time: 1-2 days for basic daily activities, 1-3 weeks for stable vision, and 1 month for full recovery [17][18]",
+      "citations": [
+        17,
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8333,
+    "total_entailed": 10,
+    "total_of_sent": 12,
+    "citation_precision": 0.7917,
+    "total_matched_citations": 11,
+    "total_citations": 16
+  }
+}

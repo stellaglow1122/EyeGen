@@ -1,0 +1,81 @@
+{
+  "idx": "20250507114859-m1oh2gjr",
+  "upload_time": "2025-05-07 11:48:59",
+  "object_idx": "dialogue-79",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 你好，我有預約了眼科的門診，因為我平常需要服用降眼壓藥，想知道在看診前是否需要注意什麼或準備什麼其他事項嗎？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 最近我有時候會覺得眼睛周圍有點脹，這種感覺已經持續了五天了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我知道我的叔叔有高度近視，他經常需要換眼鏡，視力好像還是有些問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前沒有做過任何眼睛手術。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年是36歲。\n\n\n [14] 系統回覆7: 根據您提供的信息，您最近提到的『眼睛周圍有點脹』的情況，且這種感覺已經持續了五天，可能與幾種眼科疾病相關。以下是基於您的描述推測的可能情況：\n\n1. **眼壓變化**：\n   由於您提及需長期服用降眼壓藥，眼睛周圍的脹痛可能與眼壓波動有關。青光眼患者的眼壓不穩定可能會引發眼睛周圍不適的感覺，尤其當眼壓升高時。\n\n2. **青光眼（Glaucoma）**：\n   由於您有既往用藥的記錄，這暗示您可能有青光眼的潛在風險。雖然您目前並未提及視力變化，但青光眼初期的病症常常不明顯，建議進一步檢查以確保眼壓在安全範圍內，並評估視神經是否有受損情況。\n\n3. **眼睛疲勞（Asthenopia）**：\n   若您常接觸電子屏幕，眼疲勞也可能導致眼睛周圍感到脹或不適，尤其是在長時間用眼後。這也可能解釋為何您在特定時間感到不適。\n\n建議您及時找醫生進行眼部檢查，特別是針對眼壓和視神經的評估，進而了解是否有青光眼或其他視網膜問題的風險。必要時，醫生可能會安排進一步的檢查，例如視神經檢查或視野測試。\n\n考慮到您的年齡（36歲）和用藥狀況，建議您定期回診，以早期發現任何潛在的眼疾。依據專家建議，這樣能及早採取措施，降低視力損害的風險。\n\n這些建議僅供參考，最終仍須由專業醫師根據實際檢查結果進行評估與診斷。\n\n\n\n [15] 使用者問題/回覆8: 我該怎麼檢查我的眼壓和視神經狀況？這些檢查會不會很了不起的痛苦？\n\n\n [16] 系統回覆8: 檢查眼壓和視神經狀況是眼科檢查中非常重要的一部分，尤其對於青光眼等眼科疾病的早期診斷具有重要意義。以下是關於眼壓和視神經檢查的詳細說明：\n\n### 眼壓檢查\n1. **檢查方法**：\n    **非接觸式眼壓計測**：這是一種常見的檢查方式，醫生會使用一種氣流裝置向眼睛吹送氣體，測量眼內壓力。這種方法通常不需要麻醉，也不會造成疼痛。\n    **接觸式眼壓計測（如Goldmann眼壓計）**：醫生會在洗手和戴上手套後，使用一顆小的藍色圓形測試儀器，在局部麻醉的情況下接觸到您的眼睛，這種檢查相對準確，但可能會感覺稍微不適。 \n\n2. **疼痛程度**：\n    大部分人對於非接觸型眼壓計測的檢查並不會感到痛苦。對於接觸式檢查，由於會有局部麻醉，通常也不會感受到明顯的痛苦。\n\n### 視神經檢查\n1. **檢查方法**：\n    **眼底檢查（Fundus Examination）**：醫生將會使用一種特殊的眼底鏡，透過瞳孔觀察視網膜和視神經盤。在此過程中，可能會用眼藥水散瞳，這會導致短時間內視力變模糊及畏光。散瞳後需要約20分鐘才能開始檢查，檢查過程中大多數人不會感到痛苦。\n    **視神經纖維層攝影（OCT）**：這是一種精確的掃描技術，可以安全地檢查視神經纖維層，並幫助評估視神經的健康狀況。\n\n### 總結與建議\n這些檢查過程一般不會造成太大的痛苦，多數人能夠輕鬆完成。若有任何不適感，應隨時告知醫生。及早的檢查和預防非常重要，若您有青光眼、高眼壓、糖尿病等相關病史，建議定期進行這些檢查，以保護您的眼睛健康。若您以上述症狀有疑慮，亦可與眼科醫生進行詳細討論。\n\n以上回答基於模型思考，仍須經專業醫生評估決策。參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document)1  老眼不昏花_page110, 文件(Document)2  老眼不昏花_page164, 文件(Document)5  老眼不昏花_page156。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Feeling of pressure around the eyes for five days [3][14]\n- Uses eye pressure-lowering medication [1]\n\n#### **2. Diagnosis**\n\n- Glaucoma [14]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [14]\n\n#### **4. Recommended Treatment**\n\n- Recommended eye pressure and optic nerve assessment [14]\n- Follow-up appointment recommended for regular check-ups [14]",
+  "citation_result": [
+    {
+      "output": "- Feeling of pressure around the eyes for five days [3][14]",
+      "citations": [
+        3,
+        14
+      ],
+      "provenance": [
+        3,
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Uses eye pressure-lowering medication [1]",
+      "citations": [
+        1
+      ],
+      "provenance": [
+        1
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Glaucoma [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended eye pressure and optic nerve assessment [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment recommended for regular check-ups [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8333,
+    "total_entailed": 5,
+    "total_of_sent": 6,
+    "citation_precision": 0.8333,
+    "total_matched_citations": 6,
+    "total_citations": 7
+  }
+}

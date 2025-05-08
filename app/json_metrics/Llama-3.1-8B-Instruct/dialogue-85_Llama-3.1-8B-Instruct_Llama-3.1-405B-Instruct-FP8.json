@@ -1,0 +1,216 @@
+{
+  "idx": "20250508134934-v7faiz6s",
+  "upload_time": "2025-05-08 13:49:34",
+  "object_idx": "dialogue-85",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 不久前我預約了要去看眼科醫生，但最近眼睛常常覺得像有沙子一樣不舒服，還有眼皮會覺得癢癢的。我以前做過青光眼的手術，這次門診前我需要注意什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個星期的時間，眼睛有時會覺得沉重，並且有些模糊。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [7] 使用者問題/回覆4: 我不知道我家裡有沒有眼睛相關的疾病，感覺大家都沒有特別的問題。\n\n\n [8] 系統回覆4: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [9] 使用者問題/回覆5: 這次我想諮詢的問題和我之前做過的白內障手術有關，我想知道最近眼睛的不適會不會影響到手術的結果。\n\n\n [10] 系統回覆5: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [11] 使用者問題/回覆6: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年是53歲。\n\n\n [14] 系統回覆7: 根據您提供的資訊，您有以下的眼睛狀況與相關背景：\n\n1. 您的眼睛不適持續約為一星期，常感覺像有沙子一樣不舒服，並伴隨眼皮癢感，這可能與乾眼症（Dry Eye Syndrome）及過敏性結膜炎（Allergic Conjunctivitis）有關。\n\n2. 眼睛有時會覺得模糊，這可能是由於眼睛的潤滑不足，導致視力波動，並暗示視力可能有變差的情況。\n\n3. 您提到曾經接受過青光眼的手術，這意味著您有一定的眼疾病歷史，可能讓您更容易受到其他眼疾的影響。\n\n4. 根據您的描述，您目前情況下沒有在使用任何藥物，這可能使得乾眼或過敏性症狀的處理變得更簡單，因為不會有其他藥物相互干擾的因素。\n\n### 可能的眼睛疾病與建議\n\n1. **乾眼症（Dry Eye Syndrome）**：\n    **特性**：由於淚液不足，可能會讓您有眼睛乾澀、刺癢或沙子感的症狀。\n    **建議**：可使用人工淚液（artificial tears）狀態來滋潤眼睛，並且在日常生活中注意避免長時間用眼，配合休息與適當的環境濕度。\n\n2. **過敏性結膜炎（Allergic Conjunctivitis）**：\n    **特性**：常發生於換季或接觸過敏原時，表現為眼睛癢、紅潤和流淚。\n    **建議**：避免接觸過敏源，必要時可以使用抗組織胺眼藥水來緩解症狀，並向醫生詢問合適的治療選擇。\n\n3. **眼睛乾燥的相關檢查**：\n    **特性**：若持續感到不適，建議定期檢查淚腺的功能及眼表的健康。\n    **建議**：前往一般診所或眼科門診進行評估，尋求專業醫生的意見。\n\n### 手術考量\n\n您提到此次諮詢的問題與之前的白內障手術有關。在經過手術後，您可能需要特別注意是否有出現視力的變化，持續的眼睛不適是否會影響到手術的結果：\n\n **白內障手術後的視力問題**：如果您在手術後出現視力模糊或不適，建議及時就醫，因為可能會需要進一步檢查是否有發生白內障再發或外圍問題。\n\n### 建議的醫療單位\n\n基於您的症狀和病史，建議您前往**一般診所**或眼科門診（不需立即前往醫學中心），因為您的症狀雖然影響至視力，但目前不顯示急性危險的眼疾。這樣可以獲得更適合的初步評估和建議。\n\n請務必在門診時向醫生詳細諮詢您的症狀，並及時告訴醫生關於過去手術的經歷以及當前的用藥和生活習慣，這將有助於精準診斷及治療。\n\n若您有任何疑問或需要進一步的協助，隨時可以告訴我。\n\n\n\n [15] 使用者問題/回覆8: 我想知道這種眼睛的不適是否會影響到我的日常生活，比如閱讀或開車，該怎麼做來減輕這些症狀呢？\n\n\n [16] 系統回覆8: 您所提到的眼睛不適，像是閱讀或開車時的困難，可能影響到您的日常生活。有幾種可能的原因導致這些情況，包括但不限於白內障、老花眼（Presbyopia）、乾眼症（Dry Eye Syndrome）、屈光不正（如近視、遠視或散光），這些都可以導致視力模糊、眼睛疲勞（Asthenopia）或對光的敏感。\n\n以下是針對這些症狀的一些解決方案與建議：\n\n1. **眼睛健康檢查**：定期進行眼科檢查，以便找出問題根源並獲得適當的治療。特別是白內障患者，會出現視力逐漸模糊及畏光等症狀，建議儘早就醫。\n\n2. **使用適當的眼鏡或隱形眼鏡**：根據您眼睛的需求配戴合適的眼鏡，特別是如果您有屈光不正或老花問題，佩戴合適的眼鏡能大大改善看近和看遠的能力。\n\n3. **照明改善**：在閱讀時，使用足夠的燈光可以幫助減少眼睛的壓力。選擇柔和且足夠亮的光源，這樣可以降低眼睛的不適感。\n\n4. **保持眼睛潤滑**：若有乾眼症的問題，使用人工淚液以保持眼球的潤滑，有助於緩解不適。在長時間用眼的狀況下，記得經常眨眼。\n\n5. **合理作息與用眼習慣**：保持合理的作息時間，避免長時間盯著螢幕或書本，可以適當休息，進行短暫的眼部運動，減少眼睛疲勞。\n\n6. **注意視距與屏幕位置**：閱讀或使用電腦時，保持正確的視覺距離和姿勢，能讓眼睛減少負擔。\n\n倘若您的症狀持續未改善或有所加重，建議您盡速就醫，接受專業眼科醫生的評估，以取得適當的診斷與治療，必要時可能會考慮進行手術來移除老化的水晶體並植入新的人工晶狀體。\n\n以上回答基於模型思考，仍須經專業醫生評估決策。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in left eye [3][5],\n- History of cataract surgery [9],\n- Dry eye sensation and eye itchiness [1][3],\n- Eye feels heavy and sandy [1][3],\n- Vision fluctuation [3]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [14],\n- Dry eye syndrome [14],\n- Allergic conjunctivitis [14]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [17]\n\n#### **4. Recommended Treatment**\n\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [9],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [9],\n- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [9],\n- The patient declined intraocular lens implantation [9],\n- Recommended laser surgery: Capsulotomy [14],\n- Laser options discussed: Capsulotomy, Iridotomy [14],\n- The patient declined Capsulotomy [14],\n- Follow-up appointment in 6 weeks for reevaluation [14],\n- Use artificial tears to maintain eye lubrication [14],\n- Avoid long-term screen use and take regular breaks [16],\n- Use proper lighting for reading [16],\n- Maintain regular sleep schedule and eye care habits [16]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in left eye [3][5],",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of cataract surgery [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry eye sensation and eye itchiness [1][3],",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye feels heavy and sandy [1][3],",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Vision fluctuation [3]",
+      "citations": [
+        3
+      ],
+      "provenance": [
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Posterior capsule opacification [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Dry eye syndrome [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Allergic conjunctivitis [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [17]",
+      "citations": [
+        17
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined intraocular lens implantation [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Laser options discussed: Capsulotomy, Iridotomy [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Use artificial tears to maintain eye lubrication [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Avoid long-term screen use and take regular breaks [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Use proper lighting for reading [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Maintain regular sleep schedule and eye care habits [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.5238,
+    "total_entailed": 11,
+    "total_of_sent": 21,
+    "citation_precision": 0.5,
+    "total_matched_citations": 13,
+    "total_citations": 24
+  }
+}

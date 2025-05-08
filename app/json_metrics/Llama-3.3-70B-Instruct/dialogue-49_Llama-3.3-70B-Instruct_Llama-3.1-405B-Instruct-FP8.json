@@ -1,0 +1,133 @@
+{
+  "idx": "20250508134012-aj7tsmej",
+  "upload_time": "2025-05-08 13:40:12",
+  "object_idx": "dialogue-49",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我有安排了醫生的門診，想知道在看診前，我需要為最近出現的飛蚊症和視覺扭曲準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個月的時間，眼睛有時會感到刺痛和疲勞。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 雙眼\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我曾經被診斷過黃斑部病變，這讓我有時候看東西會變得模糊。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我不太確定家裡有沒有其他人有眼睛相關的疾病，可能大部分人都沒有。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年40歲。\n\n\n [18] 系統回覆9: 根據您的描述，您提到的眼睛症狀包括「飛蚊症」和「視覺扭曲」，這些症狀已持續約一個月，並且出現了雙眼的問題。您過去有黃斑部病變的診斷史，這可能與您目前的症狀有關，以下是一些可能的眼科疾病，以及建議的解決方案：\n\n1. **飛蚊症（Floaters）**：\n    **特徵**：飛蚊症通常表現為視野中出現小黑點或浮動的影像，隨著眼球運動而移動，常見於玻璃體退化。\n    **解決方式**：若症狀輕微，通常不需特別治療。但若與視網膜問題有關，則需要進一步檢查。\n\n2. **視網膜問題（Retinal Issues）**：\n    **特徵**：如視網膜剝離或視網膜裂孔可能伴隨飛蚊症出現，並可能導致視力急遽下降或出現閃光。\n    **解決方式**：建議儘快就醫檢查視網膜狀況，以確保沒有潛在的嚴重問題。\n\n3. **黃斑部病變（Macular Degeneration）**：\n    **特徵**：視覺扭曲可能與黃斑部病變有關，尤其當涉及衰退或變性時。\n    **解決方式**：此病需要持續監控，有必要的話可考慮定期檢查視網膜，以評估病情進展。\n\n4. **乾眼症（Dry Eye Syndrome）**：\n    **特徵**：偶爾出現刺痛和眼疲勞，這可能是由於淚液不足所導致。\n    **解決方式**：可以使用人工淚液來潤滑眼睛，減輕症狀，也要注意適當休息眼睛。\n\n由於您有黃斑部病變的病史，這次的飛蚊症和視覺扭曲症狀應引起足夠重視。建議您儘速就醫，尋求專業眼科醫生的評估，尤其是在您年僅40歲但卻有這麼多眼睛問題的情況下。醫生會進行全面檢查，包括視網膜檢查，以判斷是否需要進一步的處理或治療，這樣能保障眼睛的健康與視力的穩定。\n\n**總結建議**：建議儘早到眼科就診，進一步確認您眼睛的狀況，及早治療能減少可能的併發症。\n\n參考文獻: 文件(Document)10  告別白內障生活_page2, 文件(Document)8  老眼不昏花_page143, 文件(Document)16  common_eye_diseases_symptom.txt\n\n\n\n [19] 使用者問題/回覆10: 我聽說飛秒雷射可以改善視力，這種手術適合我這種有黃斑部病變的情況嗎？\n\n\n [20] 系統回覆10: 飛秒雷射手術（Femto LASIK）主要是用於矯正於近視、遠視和散光的屈光不正問題，並不特別針對黃斑部病變（Age-related Macular Degeneration, AMD）。其目的在於改善眼睛屈光度，而對於已存在的黃斑部病變，飛秒雷射並不能直接改善眼部的病變狀況。\n\n黃斑部病變的患者可能會經歷視力模糊、視野缺失或中央視力下降等問題，這些症狀無關飛秒雷射手術的適應症。相反，飛秒雷射手術在病變的視網膜上可能不會得到有效的改善，甚至可能在術後造成視力進一步下降的風險。\n\n因此，如果您有黃斑部病變，建議您首先向眼科專業醫生尋求建議並接受詳細檢查，以確定是否適合進行其它形式的治療，可能包括注射療法、光動力療法或其他視網膜保護措施，而不是飛秒雷射手術。\n\n總結來說，飛秒雷射不適合用於直接治療黃斑部病變的情況，最好的做法是與眼科醫生深入討論，並根據您的具體病情制定合適的治療計劃。以上的建議基於一般知識，仍需專業醫生的具體評估。\n\n\n\n [21] 使用者問題/回覆11: 那我想知道，黃斑部病變會影響日常生活的哪些部分呢？\n\n\n [22] 系統回覆11: 黃斑部病變是一種常見的眼部疾病，特別是隨著年齡增長，它會直接影響日常生活中的多個方面，主要包括：\n\n1. **視力模糊**：患者往往在看近物或遠物時，可能會出現視力模糊的情況，這使得閱讀、看電視或辨識面孔變得困難。\n\n2. **視覺扭曲**：許多患者會發現直線或方形的物體在視覺上出現變形，可能呈現彎曲或不規則的形狀，這會影響看書、觀看畫作等活動。\n\n3. **中央視野暗影**：隨著病變的加重，患者的視野中心部分會出現暗點或陰影，這可能導致看東西變得不清晰，影響正常生活，尤其是進行需要精確視覺的工作時。\n\n4. **顏色辨識困難**：黃斑部病變會影響對顏色的辨識，患者可能會發現顏色變得暗淡或失真，這對於日常的活動如選擇衣物或辨別交通信號燈等都會造成困擾。\n\n5. **夜間視力下降**：在光線不足的環境下，患者會感到了解視力的下降，可能會影響夜間駕駛或在黑暗地方的活動。\n\n6. **社交互動影響**：由於以上視力問題，患者可能會避免社交場合，影響與他人交往的信心。\n\n基於這些影響，黃斑部病變不僅對視覺造成困難，還可能對患者的心理和生活質量造成負面影響。因此，若有相關症狀或是擔心自己有這類問題，建議及早尋求專業醫療的評估與幫助。\n\n以上回答是根據相關文獻進行整合，僅供參考，具體情況仍需向專業的醫生諮詢。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Floaters and visual distortion in both eyes [1][2][5],\n- Eye pain and fatigue [3],\n- Blurred vision [7],\n- History of macular degeneration [9]\n\n#### **2. Diagnosis**\n\n- Macular degeneration [9],\n- Possible retinal issues [18]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended to seek medical evaluation for retinal issues [18],\n- Consider regular check-ups for macular degeneration [18],\n- Use of artificial tears for dry eye syndrome [18],\n- Not recommended: Femto LASIK for macular degeneration [19][20]",
+  "citation_result": [
+    {
+      "output": "- Floaters and visual distortion in both eyes [1][2][5],",
+      "citations": [
+        1,
+        2,
+        5
+      ],
+      "provenance": [
+        1,
+        2,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye pain and fatigue [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurred vision [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of macular degeneration [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Macular degeneration [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible retinal issues [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended to seek medical evaluation for retinal issues [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider regular check-ups for macular degeneration [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Use of artificial tears for dry eye syndrome [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Not recommended: Femto LASIK for macular degeneration [19][20]",
+      "citations": [
+        19,
+        20
+      ],
+      "provenance": [
+        19,
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8182,
+    "total_entailed": 9,
+    "total_of_sent": 11,
+    "citation_precision": 0.8182,
+    "total_matched_citations": 12,
+    "total_citations": 14
+  }
+}

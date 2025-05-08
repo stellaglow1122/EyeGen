@@ -1,0 +1,132 @@
+{
+  "idx": "20250508135116-posf0odi",
+  "upload_time": "2025-05-08 13:51:16",
+  "object_idx": "dialogue-92",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 下周我有預約眼科門診，最近覺得看到明亮的地方時常感到不舒服，不知道這次看診前我需要做些什麼準備呢？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約已經有五個星期的時間，眼睛在長時間盯著手機時會覺得很疲勞。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去有被診斷過乾眼症，當時眼睛經常感到乾澀和異物感。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我不太確定家裡是否有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是45歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您提到「在明亮的地方時常感到不舒服」，這樣的症狀符合**畏光（Photophobia）**的表現。畏光常見於以下幾種情況，您可能感受到的不適感與以下疾病有關：\n\n1. **乾眼症（Dry Eye Syndrome）**：\n    這是一種因淚水產生不足或淚水蒸發過快而造成眼睛乾澀的疾病，其中乾淨的淚水對於眼睛的保護至關重要。乾眼症可能導致眼睛感到刺痛或灼熱，進而引起畏光的情況。\n    **解決方案**：使用人工淚液來保濕眼睛，並盡量減少長時間盯著電子屏幕，並保持室內環境濕潤。\n\n2. **白內障（Cataract）**：\n    隨著年齡增加，白內障可能導致晶狀體變得混濁，影響視力，特別是對光的感知和夜間視力，可能出現畏光的情況。雖然您提到視力變化不大，但因您已有45歲，白內障仍然是需要注意的潛在疾病。\n    **判斷依據**：白內障患者一般會感受到視力逐漸模糊、對比敏感度下降及夜間視力變差，這些症狀需要進一步檢查確認。\n    **解決方案**：建議您進一步檢查視網膜和透過專業醫師評估是否需要進行白內障手術，通常會除去混濁的晶狀體並植入人工水晶體以改善視力。\n\n3. **視網膜問題（例如黃斑部病變）**：\n    畏光有時可能與視網膜健康有關，尤其是相關年齡性疾病如黃斑部病變，這可能會導致中心視力受損。\n    **解決方案**：定期進行眼科檢查以追蹤視網膜健康。\n\n由於您先前有過乾眼症的診斷，且目前症狀持續約五週，建議儘快就醫，讓眼科醫師能夠做全面檢查，排除潛在的其他眼科疾病，特別是白內障與視網膜健康的可能性。\n\n**醫療單位建議**：\n   因您有持續的不適症狀，建議您前往**一般診所**進行初步檢查。如果醫生進一步認為有必要，可能會轉診至醫學中心進行更進一步的測試和治療。\n\n以上建議僅供參考，如有視力或症狀問題持續存在，仍需尋求專業醫生的建議與處理。\n\n參考文獻：文件(Document1  九、常見眼科疾病症狀),文件(Document16  common_eye_diseases_symptom.txt)\n\n\n\n [19] 使用者問題/回覆10: 我想知道白內障手術後，需要多長時間才能恢復正常的視力呢？會不會有什麼特別的注意事項？\n\n\n [20] 系統回覆10: 白內障手術後的恢復情況受多種因素影響，但大多數患者在手術後幾小時至幾天內會感覺視力逐漸改善。通常，以下是恢復過程的一些關鍵要點：\n\n### 恢復時間\n **初期恢復**：手術後，許多患者在術後1至2天內就能見到明顯的視力改善，能夠進行日常活動。\n **完全恢復**：在術後1到3週內，您的視力會逐漸穩定，這段時間也會視乎個人的眼睛狀況和手術後的護理情況。\n\n### 特別注意事項\n **使用眼藥水**：根據醫生的建議，術後可能需要使用抗生素和類固醇眼藥水，以幫助防止感染和減少發炎。\n **避免眼睛受壓**：術後應避免用手按壓眼睛，並應戴上眼罩來保護眼睛，特別是在睡覺時。\n **不接觸水**：應避免眼睛接觸水，包括洗臉、游泳以及熱水澡等，以防感染。\n **避免劇烈活動**：術後一段時間內，應避免激烈運動或提重物，以免影響恢復。\n\n### 其他注意事項\n **定期回診**：務必依照醫生的指示按時回診，以確保視力恢復良好，並及早發現任何可能的併發症。\n **視力變化**：如果術後出現任何異常情況，例如持續的疼痛、視力下降或紅腫，應立即就醫。\n\n白內障手術是一個相對簡單且有效的程序，正確的術後護理有助於加速恢復和確保良好的視力改善。此回答僅供參考，實際情況仍需根據醫生的專業建議進行判斷。\n\n參考僅供參考，還是需要向專業的醫生諮詢。\n\n\n\n [21] 使用者問題/回覆11: 如果我考慮接受白內障手術，手術前需要進行哪些檢查？這些檢查會影響手術的決定嗎？\n\n\n [22] 系統回覆11: 在考慮接受白內障手術之前，進行適當的術前檢查是非常重要的，這些檢查不僅能幫助醫生了解您的眼睛健康狀況，還能影響最終的手術決定。以下是手術前通常需要進行的一些檢查：\n\n1. **視力檢查**：使用視力表測量您在不同距離上的視力，確定視力下降的程度。\n\n2. **眼壓檢查**：測量您眼內的壓力，這有助於篩檢青光眼等潛在問題。\n\n3. **散瞳檢查**：透過滴眼藥水擴大瞳孔，以便更詳細檢查眼底、視網膜及水晶體的狀況。\n\n4. **生物計量檢查**：使用超音波或其他設備測量眼睛的各項數據，這些數據用來計算適合您的人工水晶體的度數。\n\n5. **眼底檢查**：檢查眼底的健康狀況，評估視網膜、視神經及其他眼部結構是否存在疾病。\n\n這些檢查結果會給予醫生關於您眼睛健康的全面了解，並根據您的具體情況決定手術方案。此外，檢查過程中的發現可能會影響是否進行手術的決定，例如如果檢查中發現其他眼部疾病，可能需要先治療這些疾病。\n\n進行手術前，與醫生進一步詳細討論，了解所有的風險及益處，將有助於做出明智的決定。若您對手術有任何疑慮，也可以隨時向醫生提出，以便獲得更多的資訊和建議。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  Web_The_pre-operative_examination_before_a_cataract_surgery.txt, 文件(Document4)  告別白內障生活_page4, 文件(Document9)  告別白內障生活_page1。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in right eye [3][7],\n- History of dry eye syndrome [9],\n- Recent fatigue and discomfort when looking at bright places [1][7]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [4],\n- Cataract [18]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [19]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [4],\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [19][20],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [20],\n- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [20],\n- The patient declined intraocular lens implantation [20],\n- The patient declined laser surgery [20],\n- Follow-up appointment in 6 weeks for reevaluation [20]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in right eye [3][7],",
+      "citations": [
+        3,
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of dry eye syndrome [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recent fatigue and discomfort when looking at bright places [1][7]",
+      "citations": [
+        1,
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Posterior capsule opacification [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Cataract [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [19]",
+      "citations": [
+        19
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [19][20],",
+      "citations": [
+        19,
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined intraocular lens implantation [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined laser surgery [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.1538,
+    "total_entailed": 2,
+    "total_of_sent": 13,
+    "citation_precision": 0.1538,
+    "total_matched_citations": 2,
+    "total_citations": 16
+  }
+}

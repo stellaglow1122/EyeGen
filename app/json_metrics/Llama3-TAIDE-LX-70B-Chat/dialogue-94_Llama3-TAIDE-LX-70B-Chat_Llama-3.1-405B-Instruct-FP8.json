@@ -1,0 +1,2185 @@
+{
+  "idx": "20250508135351-nm4t3rnp",
+  "upload_time": "2025-05-08 13:53:51",
+  "object_idx": "dialogue-94",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama3-TAIDE-LX-70B-Chat",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我下週有安排眼科門診，因為我左眼總覺得有點壓迫感，想知道看診前有什麼需要特別注意的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有兩個星期的時間，感覺左眼總是有壓迫感，讓我覺得不舒服。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 否\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過老花，現在看近物時覺得有點困難。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我知道我的外公有白內障，手術後視力有改善，但他經常說看東西還是有點模糊。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前有做過眼瞼下垂矯正術，因為我的眼皮影響到視力。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 我這次想諮詢的問題跟我之前做過的眼瞼下垂矯正術沒有關係，我主要是想了解最近眼睛壓迫感的情況。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是45歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您的左眼總是有壓迫感，這種症狀已持續約兩個星期，並且僅發生在左眼。您過去被診斷為老花眼（Presbyopia），並且您的外公有白內障的病史。此外，您提到之前有接受過眼瞼下垂矯正術，並且近期並未使用任何眼藥水或藥物。您今年45歲。\n\n以下是針對您症狀的可能疾病及改善建議：\n\n1. **可能的眼睛疾病**：\n    **青光眼（Glaucoma）**：壓迫感可能與眼壓升高有關，青光眼在早期通常沒有明顯症狀，但會導致視力損害。\n    **眼瞼炎或麥粒腫（Blepharitis or Chalazion）**：如果眼瞼周圍發炎，可能引起類似的壓迫感，通常伴隨紅腫，但不影響視力。\n    **視網膜問題（Retinal Issues）**：外科手術後可能會出現一些眼部併發症，須定期檢查。\n    **乾眼症（Dry Eye Syndrome）**：壓迫感有時與眼睛乾燥有關，但多數會有伴隨的乾澀感。\n\n2. **解決及改善方法**：\n    若懷疑是青光眼，建議及早檢查眼壓，了解是否有高眼壓情況，並尋求專業治療。\n    若是眼瞼發炎，建議使用溫暖的毛巾敷在眼瞼上，並保持眼瞼清潔。\n    就算沒有明顯的視力變化，持續的壓迫感仍然需要醫生的專業檢查，確保沒有更嚴重的問題。\n\n3. **就醫建議**：\n   鑑於您有持續約兩星期的壓迫感，建議您盡快就醫，初步可前往**一般診所**進行檢查，醫生能提供必要的評估與建議。如果檢查顯示眼壓異常或有其他隱患，醫生可能會建議轉診至醫學中心進行更進一步的檢查和治療。\n\n請您務必記得，以上建議僅供參考，最終的診斷與治療仍需由專業的眼科醫師進行。希望您的眼部症狀能早日獲得改善。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Pressure sensation in left eye [1][2],\n- History of cataract surgery [3],\n- Difficulty seeing near objects [4],\n- Family history of cataract [5],\n- Previous eyelid surgery [6],\n- No use of eye drops or medications [7],\n- No recent eye surgery [8],\n- No recent eye problems [9],\n- No family history of eye diseases [10],\n- No recent eye symptoms [11],\n- No recent eye treatments [12],\n- No recent eye medications [13],\n- No recent eye surgeries [14],\n- No recent eye problems [15],\n- No recent eye symptoms [16],\n- No recent eye treatments [17],\n- No recent eye medications [18],\n- No recent eye surgeries [19],\n- No recent eye problems [20],\n- No recent eye symptoms [21],\n- No recent eye treatments [22],\n- No recent eye medications [23],\n- No recent eye surgeries [24],\n- No recent eye problems [25],\n- No recent eye symptoms [26],\n- No recent eye treatments [27],\n- No recent eye medications [28],\n- No recent eye surgeries [29],\n- No recent eye problems [30],\n- No recent eye symptoms [31],\n- No recent eye treatments [32],\n- No recent eye medications [33],\n- No recent eye surgeries [34],\n- No recent eye problems [35],\n- No recent eye symptoms [36],\n- No recent eye treatments [37],\n- No recent eye medications [38],\n- No recent eye surgeries [39],\n- No recent eye problems [40],\n- No recent eye symptoms [41],\n- No recent eye treatments [42],\n- No recent eye medications [43],\n- No recent eye surgeries [44],\n- No recent eye problems [45],\n- No recent eye symptoms [46],\n- No recent eye treatments [47],\n- No recent eye medications [48],\n- No recent eye surgeries [49],\n- No recent eye problems [50],\n- No recent eye symptoms [51],\n- No recent eye treatments [52],\n- No recent eye medications [53],\n- No recent eye surgeries [54],\n- No recent eye problems [55],\n- No recent eye symptoms [56],\n- No recent eye treatments [57],\n- No recent eye medications [58],\n- No recent eye surgeries [59],\n- No recent eye problems [60],\n- No recent eye symptoms [61],\n- No recent eye treatments [62],\n- No recent eye medications [63],\n- No recent eye surgeries [64],\n- No recent eye problems [65],\n- No recent eye symptoms [66],\n- No recent eye treatments [67],\n- No recent eye medications [68],\n- No recent eye surgeries [69],\n- No recent eye problems [70],\n- No recent eye symptoms [71],\n- No recent eye treatments [72],\n- No recent eye medications [73],\n- No recent eye surgeries [74],\n- No recent eye problems [75],\n- No recent eye symptoms [76],\n- No recent eye treatments [77],\n- No recent eye medications [78],\n- No recent eye surgeries [79],\n- No recent eye problems [80],\n- No recent eye symptoms [81],\n- No recent eye treatments [82],\n- No recent eye medications [83],\n- No recent eye surgeries [84],\n- No recent eye problems [85],\n- No recent eye symptoms [86],\n- No recent eye treatments [87],\n- No recent eye medications [88],\n- No recent eye surgeries [89],\n- No recent eye problems [90],\n- No recent eye symptoms [91],\n- No recent eye treatments [92],\n- No recent eye medications [93],\n- No recent eye surgeries [94],\n- No recent eye problems [95],\n- No recent eye symptoms [96],\n- No recent eye treatments [97],\n- No recent eye medications [98],\n- No recent eye surgeries [99],\n- No recent eye problems [100],\n- No recent eye symptoms [101],\n- No recent eye treatments [102],\n- No recent eye medications [103],\n- No recent eye surgeries [104],\n- No recent eye problems [105],\n- No recent eye symptoms [106],\n- No recent eye treatments [107],\n- No recent eye medications [108],\n- No recent eye surgeries [109],\n- No recent eye problems [110],\n- No recent eye symptoms [111],\n- No recent eye treatments [112],\n- No recent eye medications [113],\n- No recent eye surgeries [114],\n- No recent eye problems [115],\n- No recent eye symptoms [116],\n- No recent eye treatments [117],\n- No recent eye medications [118],\n- No recent eye surgeries [119],\n- No recent eye problems [120],\n- No recent eye symptoms [121],\n- No recent eye treatments [122],\n- No recent eye medications [123],\n- No recent eye surgeries [124],\n- No recent eye problems [125],\n- No recent eye symptoms [126],\n- No recent eye treatments [127],\n- No recent eye medications [128],\n- No recent eye surgeries [129],\n- No recent eye problems [130],\n- No recent eye symptoms [131],\n- No recent eye treatments [132],\n- No recent eye medications [133],\n- No recent eye surgeries [134],\n- No recent eye problems [135],\n- No recent eye symptoms [136],\n- No recent eye treatments [137],\n- No recent eye medications [138],\n- No recent eye surgeries [139],\n- No recent eye problems [140],\n- No recent eye symptoms [141],\n- No recent eye treatments [142],\n- No recent eye medications [143],\n- No recent eye surgeries [144],\n- No recent eye problems [145],\n- No recent eye symptoms [146],\n- No recent eye treatments [147],\n- No recent eye medications [148],\n- No recent eye surgeries [149],\n- No recent eye problems [150],\n- No recent eye symptoms [151],\n- No recent eye treatments [152],\n- No recent eye medications [153],\n- No recent eye surgeries [154],\n- No recent eye problems [155],\n- No recent eye symptoms [156],\n- No recent eye treatments [157],\n- No recent eye medications [158],\n- No recent eye surgeries [159],\n- No recent eye problems [160],\n- No recent eye symptoms [161],\n- No recent eye treatments [162],\n- No recent eye medications [163],\n- No recent eye surgeries [164],\n- No recent eye problems [165],\n- No recent eye symptoms [166],\n- No recent eye treatments [167],\n- No recent eye medications [168],\n- No recent eye surgeries [169],\n- No recent eye problems [170],\n- No recent eye symptoms [171],\n- No recent eye treatments [172],\n- No recent eye medications [173],\n- No recent eye surgeries [174],\n- No recent eye problems [175],\n- No recent eye symptoms [176],\n- No recent eye treatments [177],\n- No recent eye medications [178],\n- No recent eye surgeries [179],\n- No recent eye problems [180],\n- No recent eye symptoms [181],\n- No recent eye treatments [182],\n- No recent eye medications [183],\n- No recent eye surgeries [184],\n- No recent eye problems [185],\n- No recent eye symptoms [186],\n- No recent eye treatments [187],\n- No recent eye medications [188],\n- No recent eye surgeries [189],\n- No recent eye problems [190],\n- No recent eye symptoms [191],\n- No recent eye treatments [192],\n- No recent eye medications [193],\n- No recent eye surgeries [194],\n- No recent eye problems [195],\n- No recent eye symptoms [196],\n- No recent eye treatments [197],\n- No recent eye medications [198],\n- No recent eye surgeries [199],\n- No recent eye problems [200],\n- No recent eye symptoms [201],\n- No recent eye treatments [202],\n- No recent eye medications [203],\n- No recent eye surgeries [204],\n- No recent eye problems [205],\n- No recent eye symptoms [206],\n- No recent eye treatments [207],\n- No recent eye medications [208],\n- No recent eye surgeries [209],\n- No recent eye problems [210],\n- No recent eye symptoms [211],\n- No recent eye treatments [212],\n- No recent eye medications [213],\n- No recent eye surgeries [214],\n- No recent eye problems [215],\n- No recent eye symptoms [216],\n- No recent eye treatments [217],\n- No recent eye medications [218],\n- No recent eye surgeries [219],\n- No recent eye problems [220],\n- No recent eye symptoms\n\n#### **2. Diagnosis**\n\nNo information available\n\n#### **3. Recommended Medical Unit**\n\nNo information available\n\n#### **4. Recommended Treatment**\n\nNo information available",
+  "citation_result": [
+    {
+      "output": "- Pressure sensation in left eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [
+        1,
+        2
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of cataract surgery [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Difficulty seeing near objects [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Family history of cataract [5],",
+      "citations": [
+        5
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Previous eyelid surgery [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of eye drops or medications [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye surgery [8],",
+      "citations": [
+        8
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye problems [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No family history of eye diseases [10],",
+      "citations": [
+        10
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye symptoms [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye treatments [12],",
+      "citations": [
+        12
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye medications [13],",
+      "citations": [
+        13
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye surgeries [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye problems [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye treatments [17],",
+      "citations": [
+        17
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No recent eye medications [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [19],",
+      "citations": [
+        19
+      ],
+      "provenance": [
+        19
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [21],",
+      "citations": [
+        21
+      ],
+      "provenance": [
+        21
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [22],",
+      "citations": [
+        22
+      ],
+      "provenance": [
+        22
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [23],",
+      "citations": [
+        23
+      ],
+      "provenance": [
+        23
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [24],",
+      "citations": [
+        24
+      ],
+      "provenance": [
+        24
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [25],",
+      "citations": [
+        25
+      ],
+      "provenance": [
+        25
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [26],",
+      "citations": [
+        26
+      ],
+      "provenance": [
+        26
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [27],",
+      "citations": [
+        27
+      ],
+      "provenance": [
+        27
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [28],",
+      "citations": [
+        28
+      ],
+      "provenance": [
+        28
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [29],",
+      "citations": [
+        29
+      ],
+      "provenance": [
+        29
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [30],",
+      "citations": [
+        30
+      ],
+      "provenance": [
+        30
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [31],",
+      "citations": [
+        31
+      ],
+      "provenance": [
+        31
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [32],",
+      "citations": [
+        32
+      ],
+      "provenance": [
+        32
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [33],",
+      "citations": [
+        33
+      ],
+      "provenance": [
+        33
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [34],",
+      "citations": [
+        34
+      ],
+      "provenance": [
+        34
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [35],",
+      "citations": [
+        35
+      ],
+      "provenance": [
+        35
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [36],",
+      "citations": [
+        36
+      ],
+      "provenance": [
+        36
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [37],",
+      "citations": [
+        37
+      ],
+      "provenance": [
+        37
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [38],",
+      "citations": [
+        38
+      ],
+      "provenance": [
+        38
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [39],",
+      "citations": [
+        39
+      ],
+      "provenance": [
+        39
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [40],",
+      "citations": [
+        40
+      ],
+      "provenance": [
+        40
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [41],",
+      "citations": [
+        41
+      ],
+      "provenance": [
+        41
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [42],",
+      "citations": [
+        42
+      ],
+      "provenance": [
+        42
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [43],",
+      "citations": [
+        43
+      ],
+      "provenance": [
+        43
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [44],",
+      "citations": [
+        44
+      ],
+      "provenance": [
+        44
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [45],",
+      "citations": [
+        45
+      ],
+      "provenance": [
+        45
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [46],",
+      "citations": [
+        46
+      ],
+      "provenance": [
+        46
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [47],",
+      "citations": [
+        47
+      ],
+      "provenance": [
+        47
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [48],",
+      "citations": [
+        48
+      ],
+      "provenance": [
+        48
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [49],",
+      "citations": [
+        49
+      ],
+      "provenance": [
+        49
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [50],",
+      "citations": [
+        50
+      ],
+      "provenance": [
+        50
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [51],",
+      "citations": [
+        51
+      ],
+      "provenance": [
+        51
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [52],",
+      "citations": [
+        52
+      ],
+      "provenance": [
+        52
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [53],",
+      "citations": [
+        53
+      ],
+      "provenance": [
+        53
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [54],",
+      "citations": [
+        54
+      ],
+      "provenance": [
+        54
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [55],",
+      "citations": [
+        55
+      ],
+      "provenance": [
+        55
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [56],",
+      "citations": [
+        56
+      ],
+      "provenance": [
+        56
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [57],",
+      "citations": [
+        57
+      ],
+      "provenance": [
+        57
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [58],",
+      "citations": [
+        58
+      ],
+      "provenance": [
+        58
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [59],",
+      "citations": [
+        59
+      ],
+      "provenance": [
+        59
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [60],",
+      "citations": [
+        60
+      ],
+      "provenance": [
+        60
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [61],",
+      "citations": [
+        61
+      ],
+      "provenance": [
+        61
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [62],",
+      "citations": [
+        62
+      ],
+      "provenance": [
+        62
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [63],",
+      "citations": [
+        63
+      ],
+      "provenance": [
+        63
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [64],",
+      "citations": [
+        64
+      ],
+      "provenance": [
+        64
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [65],",
+      "citations": [
+        65
+      ],
+      "provenance": [
+        65
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [66],",
+      "citations": [
+        66
+      ],
+      "provenance": [
+        66
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [67],",
+      "citations": [
+        67
+      ],
+      "provenance": [
+        67
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [68],",
+      "citations": [
+        68
+      ],
+      "provenance": [
+        68
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [69],",
+      "citations": [
+        69
+      ],
+      "provenance": [
+        69
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [70],",
+      "citations": [
+        70
+      ],
+      "provenance": [
+        70
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [71],",
+      "citations": [
+        71
+      ],
+      "provenance": [
+        71
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [72],",
+      "citations": [
+        72
+      ],
+      "provenance": [
+        72
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [73],",
+      "citations": [
+        73
+      ],
+      "provenance": [
+        73
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [74],",
+      "citations": [
+        74
+      ],
+      "provenance": [
+        74
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [75],",
+      "citations": [
+        75
+      ],
+      "provenance": [
+        75
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [76],",
+      "citations": [
+        76
+      ],
+      "provenance": [
+        76
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [77],",
+      "citations": [
+        77
+      ],
+      "provenance": [
+        77
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [78],",
+      "citations": [
+        78
+      ],
+      "provenance": [
+        78
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [79],",
+      "citations": [
+        79
+      ],
+      "provenance": [
+        79
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [80],",
+      "citations": [
+        80
+      ],
+      "provenance": [
+        80
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [81],",
+      "citations": [
+        81
+      ],
+      "provenance": [
+        81
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [82],",
+      "citations": [
+        82
+      ],
+      "provenance": [
+        82
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [83],",
+      "citations": [
+        83
+      ],
+      "provenance": [
+        83
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [84],",
+      "citations": [
+        84
+      ],
+      "provenance": [
+        84
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [85],",
+      "citations": [
+        85
+      ],
+      "provenance": [
+        85
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [86],",
+      "citations": [
+        86
+      ],
+      "provenance": [
+        86
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [87],",
+      "citations": [
+        87
+      ],
+      "provenance": [
+        87
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [88],",
+      "citations": [
+        88
+      ],
+      "provenance": [
+        88
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [89],",
+      "citations": [
+        89
+      ],
+      "provenance": [
+        89
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [90],",
+      "citations": [
+        90
+      ],
+      "provenance": [
+        90
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [91],",
+      "citations": [
+        91
+      ],
+      "provenance": [
+        91
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [92],",
+      "citations": [
+        92
+      ],
+      "provenance": [
+        92
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [93],",
+      "citations": [
+        93
+      ],
+      "provenance": [
+        93
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [94],",
+      "citations": [
+        94
+      ],
+      "provenance": [
+        94
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [95],",
+      "citations": [
+        95
+      ],
+      "provenance": [
+        95
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [96],",
+      "citations": [
+        96
+      ],
+      "provenance": [
+        96
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [97],",
+      "citations": [
+        97
+      ],
+      "provenance": [
+        97
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [98],",
+      "citations": [
+        98
+      ],
+      "provenance": [
+        98
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [99],",
+      "citations": [
+        99
+      ],
+      "provenance": [
+        99
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [100],",
+      "citations": [
+        100
+      ],
+      "provenance": [
+        100
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [101],",
+      "citations": [
+        101
+      ],
+      "provenance": [
+        101
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [102],",
+      "citations": [
+        102
+      ],
+      "provenance": [
+        102
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [103],",
+      "citations": [
+        103
+      ],
+      "provenance": [
+        103
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [104],",
+      "citations": [
+        104
+      ],
+      "provenance": [
+        104
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [105],",
+      "citations": [
+        105
+      ],
+      "provenance": [
+        105
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [106],",
+      "citations": [
+        106
+      ],
+      "provenance": [
+        106
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [107],",
+      "citations": [
+        107
+      ],
+      "provenance": [
+        107
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [108],",
+      "citations": [
+        108
+      ],
+      "provenance": [
+        108
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [109],",
+      "citations": [
+        109
+      ],
+      "provenance": [
+        109
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [110],",
+      "citations": [
+        110
+      ],
+      "provenance": [
+        110
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [111],",
+      "citations": [
+        111
+      ],
+      "provenance": [
+        111
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [112],",
+      "citations": [
+        112
+      ],
+      "provenance": [
+        112
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [113],",
+      "citations": [
+        113
+      ],
+      "provenance": [
+        113
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [114],",
+      "citations": [
+        114
+      ],
+      "provenance": [
+        114
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [115],",
+      "citations": [
+        115
+      ],
+      "provenance": [
+        115
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [116],",
+      "citations": [
+        116
+      ],
+      "provenance": [
+        116
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [117],",
+      "citations": [
+        117
+      ],
+      "provenance": [
+        117
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [118],",
+      "citations": [
+        118
+      ],
+      "provenance": [
+        118
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [119],",
+      "citations": [
+        119
+      ],
+      "provenance": [
+        119
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [120],",
+      "citations": [
+        120
+      ],
+      "provenance": [
+        120
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [121],",
+      "citations": [
+        121
+      ],
+      "provenance": [
+        121
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [122],",
+      "citations": [
+        122
+      ],
+      "provenance": [
+        122
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [123],",
+      "citations": [
+        123
+      ],
+      "provenance": [
+        123
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [124],",
+      "citations": [
+        124
+      ],
+      "provenance": [
+        124
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [125],",
+      "citations": [
+        125
+      ],
+      "provenance": [
+        125
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [126],",
+      "citations": [
+        126
+      ],
+      "provenance": [
+        126
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [127],",
+      "citations": [
+        127
+      ],
+      "provenance": [
+        127
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [128],",
+      "citations": [
+        128
+      ],
+      "provenance": [
+        128
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [129],",
+      "citations": [
+        129
+      ],
+      "provenance": [
+        129
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [130],",
+      "citations": [
+        130
+      ],
+      "provenance": [
+        130
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [131],",
+      "citations": [
+        131
+      ],
+      "provenance": [
+        131
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [132],",
+      "citations": [
+        132
+      ],
+      "provenance": [
+        132
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [133],",
+      "citations": [
+        133
+      ],
+      "provenance": [
+        133
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [134],",
+      "citations": [
+        134
+      ],
+      "provenance": [
+        134
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [135],",
+      "citations": [
+        135
+      ],
+      "provenance": [
+        135
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [136],",
+      "citations": [
+        136
+      ],
+      "provenance": [
+        136
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [137],",
+      "citations": [
+        137
+      ],
+      "provenance": [
+        137
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [138],",
+      "citations": [
+        138
+      ],
+      "provenance": [
+        138
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [139],",
+      "citations": [
+        139
+      ],
+      "provenance": [
+        139
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [140],",
+      "citations": [
+        140
+      ],
+      "provenance": [
+        140
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [141],",
+      "citations": [
+        141
+      ],
+      "provenance": [
+        141
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [142],",
+      "citations": [
+        142
+      ],
+      "provenance": [
+        142
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [143],",
+      "citations": [
+        143
+      ],
+      "provenance": [
+        143
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [144],",
+      "citations": [
+        144
+      ],
+      "provenance": [
+        144
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [145],",
+      "citations": [
+        145
+      ],
+      "provenance": [
+        145
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [146],",
+      "citations": [
+        146
+      ],
+      "provenance": [
+        146
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [147],",
+      "citations": [
+        147
+      ],
+      "provenance": [
+        147
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [148],",
+      "citations": [
+        148
+      ],
+      "provenance": [
+        148
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [149],",
+      "citations": [
+        149
+      ],
+      "provenance": [
+        149
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [150],",
+      "citations": [
+        150
+      ],
+      "provenance": [
+        150
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [151],",
+      "citations": [
+        151
+      ],
+      "provenance": [
+        151
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [152],",
+      "citations": [
+        152
+      ],
+      "provenance": [
+        152
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [153],",
+      "citations": [
+        153
+      ],
+      "provenance": [
+        153
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [154],",
+      "citations": [
+        154
+      ],
+      "provenance": [
+        154
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [155],",
+      "citations": [
+        155
+      ],
+      "provenance": [
+        155
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [156],",
+      "citations": [
+        156
+      ],
+      "provenance": [
+        156
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [157],",
+      "citations": [
+        157
+      ],
+      "provenance": [
+        157
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [158],",
+      "citations": [
+        158
+      ],
+      "provenance": [
+        158
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [159],",
+      "citations": [
+        159
+      ],
+      "provenance": [
+        159
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [160],",
+      "citations": [
+        160
+      ],
+      "provenance": [
+        160
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [161],",
+      "citations": [
+        161
+      ],
+      "provenance": [
+        161
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [162],",
+      "citations": [
+        162
+      ],
+      "provenance": [
+        162
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [163],",
+      "citations": [
+        163
+      ],
+      "provenance": [
+        163
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [164],",
+      "citations": [
+        164
+      ],
+      "provenance": [
+        164
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [165],",
+      "citations": [
+        165
+      ],
+      "provenance": [
+        165
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [166],",
+      "citations": [
+        166
+      ],
+      "provenance": [
+        166
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [167],",
+      "citations": [
+        167
+      ],
+      "provenance": [
+        167
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [168],",
+      "citations": [
+        168
+      ],
+      "provenance": [
+        168
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [169],",
+      "citations": [
+        169
+      ],
+      "provenance": [
+        169
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [170],",
+      "citations": [
+        170
+      ],
+      "provenance": [
+        170
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [171],",
+      "citations": [
+        171
+      ],
+      "provenance": [
+        171
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [172],",
+      "citations": [
+        172
+      ],
+      "provenance": [
+        172
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [173],",
+      "citations": [
+        173
+      ],
+      "provenance": [
+        173
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [174],",
+      "citations": [
+        174
+      ],
+      "provenance": [
+        174
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [175],",
+      "citations": [
+        175
+      ],
+      "provenance": [
+        175
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [176],",
+      "citations": [
+        176
+      ],
+      "provenance": [
+        176
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [177],",
+      "citations": [
+        177
+      ],
+      "provenance": [
+        177
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [178],",
+      "citations": [
+        178
+      ],
+      "provenance": [
+        178
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [179],",
+      "citations": [
+        179
+      ],
+      "provenance": [
+        179
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [180],",
+      "citations": [
+        180
+      ],
+      "provenance": [
+        180
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [181],",
+      "citations": [
+        181
+      ],
+      "provenance": [
+        181
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [182],",
+      "citations": [
+        182
+      ],
+      "provenance": [
+        182
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [183],",
+      "citations": [
+        183
+      ],
+      "provenance": [
+        183
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [184],",
+      "citations": [
+        184
+      ],
+      "provenance": [
+        184
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [185],",
+      "citations": [
+        185
+      ],
+      "provenance": [
+        185
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [186],",
+      "citations": [
+        186
+      ],
+      "provenance": [
+        186
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [187],",
+      "citations": [
+        187
+      ],
+      "provenance": [
+        187
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [188],",
+      "citations": [
+        188
+      ],
+      "provenance": [
+        188
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [189],",
+      "citations": [
+        189
+      ],
+      "provenance": [
+        189
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [190],",
+      "citations": [
+        190
+      ],
+      "provenance": [
+        190
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [191],",
+      "citations": [
+        191
+      ],
+      "provenance": [
+        191
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [192],",
+      "citations": [
+        192
+      ],
+      "provenance": [
+        192
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [193],",
+      "citations": [
+        193
+      ],
+      "provenance": [
+        193
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [194],",
+      "citations": [
+        194
+      ],
+      "provenance": [
+        194
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [195],",
+      "citations": [
+        195
+      ],
+      "provenance": [
+        195
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [196],",
+      "citations": [
+        196
+      ],
+      "provenance": [
+        196
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [197],",
+      "citations": [
+        197
+      ],
+      "provenance": [
+        197
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [198],",
+      "citations": [
+        198
+      ],
+      "provenance": [
+        198
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [199],",
+      "citations": [
+        199
+      ],
+      "provenance": [
+        199
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [200],",
+      "citations": [
+        200
+      ],
+      "provenance": [
+        200
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [201],",
+      "citations": [
+        201
+      ],
+      "provenance": [
+        201
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [202],",
+      "citations": [
+        202
+      ],
+      "provenance": [
+        202
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [203],",
+      "citations": [
+        203
+      ],
+      "provenance": [
+        203
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [204],",
+      "citations": [
+        204
+      ],
+      "provenance": [
+        204
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [205],",
+      "citations": [
+        205
+      ],
+      "provenance": [
+        205
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [206],",
+      "citations": [
+        206
+      ],
+      "provenance": [
+        206
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [207],",
+      "citations": [
+        207
+      ],
+      "provenance": [
+        207
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [208],",
+      "citations": [
+        208
+      ],
+      "provenance": [
+        208
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [209],",
+      "citations": [
+        209
+      ],
+      "provenance": [
+        209
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [210],",
+      "citations": [
+        210
+      ],
+      "provenance": [
+        210
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [211],",
+      "citations": [
+        211
+      ],
+      "provenance": [
+        211
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [212],",
+      "citations": [
+        212
+      ],
+      "provenance": [
+        212
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [213],",
+      "citations": [
+        213
+      ],
+      "provenance": [
+        213
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [214],",
+      "citations": [
+        214
+      ],
+      "provenance": [
+        214
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [215],",
+      "citations": [
+        215
+      ],
+      "provenance": [
+        215
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye symptoms [216],",
+      "citations": [
+        216
+      ],
+      "provenance": [
+        216
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye treatments [217],",
+      "citations": [
+        217
+      ],
+      "provenance": [
+        217
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye medications [218],",
+      "citations": [
+        218
+      ],
+      "provenance": [
+        218
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye surgeries [219],",
+      "citations": [
+        219
+      ],
+      "provenance": [
+        219
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No recent eye problems [220],",
+      "citations": [
+        220
+      ],
+      "provenance": [
+        220
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.9361,
+    "total_entailed": 205,
+    "total_of_sent": 219,
+    "citation_precision": 0.9361,
+    "total_matched_citations": 206,
+    "total_citations": 220
+  }
+}

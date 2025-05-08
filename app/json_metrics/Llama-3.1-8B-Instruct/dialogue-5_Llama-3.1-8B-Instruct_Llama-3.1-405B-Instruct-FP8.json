@@ -1,0 +1,104 @@
+{
+  "idx": "20250508132929-iits8ivs",
+  "upload_time": "2025-05-08 13:29:29",
+  "object_idx": "dialogue-5",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我這禮拜已經預約了醫生的門診，最近我發現有些時候看書或看手機，會覺得中央區域變黑或總有暗影，還有些時候人臉或直線看起來有點扭曲，這次去看診之前我需要特別準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有兩個星期開始感到中央區域變黑和暗影的情況了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有診斷過黃斑部病變，這已經有一段時間了。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我家裡好像沒有特別的眼睛疾病歷史，不過我對於家裡人的健康狀況不太清楚。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前做過視網膜光凝固術，因為我有視網膜剝離的情況。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 這次我想詢問的問題和我之前做的視網膜光凝固術有關，最近的症狀讓我有點擔心。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 最近我有在使用一些眼藥水是為了緩解眼睛的 dryness，這些藥水可以幫助我的眼睛不那麼乾燥。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我現在28歲。\n\n\n [18] 系統回覆9: 根據您的描述，我們可以分析您目前的眼睛狀況：\n\n1. **症狀與疾病推論**：\n   由於您提到在看書或手機時會出現中央區域變黑或有暗影，以及直線和人臉看起來扭曲，這些症狀可能與**老年性黃斑部病變**（Age-related Macular Degeneration, AMD）有關。黃斑部病變會影響中央視力，導致中央區域出現黑影或暗點，並可能使視物扭曲。這些皆屬於眼科常見的視覺症狀。\n\n2. **症狀持續時間**：\n   您明確表示這些症狀大約「持續了兩個星期」，這表明視覺異常需引起重視，及早就醫檢查是必要的。\n\n3. **視力變化**：\n   您所描述的情況，包括中央視覺出現黑點，以及直線扭曲的現象，皆屬於視力變差的典型表現。\n\n4. **過去眼睛疾病歷史**：\n   您曾被診斷過**黃斑部病變**，這進一步增加了再次出現此類症狀的可能性，因此必須進行詳細檢查，以確保病情不會加劇。\n\n5. **眼睛手術與藥物使用歷史**：\n   由於您曾經做過視網膜光凝固術，這也可能影響您眼睛的健康狀況。而且您目前正使用眼藥水以緩解乾燥問題，這可能顯示您的眼睛狀況仍需注意。\n\n### 建議的解決方案：\n基於以上資訊，我建議您儘快就醫，找眼科專科醫師進行專業檢查。檢查可能包括：\n 視網膜檢查，以評估黃斑部的狀況。\n 視野測試，檢查視力是否存在其他異常變化。\n 進行其他必要的影像學檢查。\n\n### 就診單位建議：\n鑒於您目前的症狀及病史，建議您前往**醫學中心**進行進一步檢查，因為此類症狀可能涉及進一步的眼科疾病，且醫學中心能提供更全面的檢查及評估。\n\n最終希望您能及早就醫，採取適當的檢查與治療措施，以保護您的視力健康。\n\n以上內容僅供參考，仍需向專業的醫生諮詢以獲得具體的診斷與治療建議。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in right eye [1][3][5],\n- History of retinal tear and retinal detachment [11][6],\n- Uses artificial tears 4–6 times daily [15]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [4],\n- Age-related Macular Degeneration (AMD) [18]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [4],\n- The patient declined Capsulotomy [6],\n- Follow-up appointment in 6 weeks for reevaluation [7],\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [x],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [x],\n- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [x],\n- The patient declined intraocular lens implantation [x],\n- Not mentioned in the dialogue",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in right eye [1][3][5],",
+      "citations": [
+        1,
+        3,
+        5
+      ],
+      "provenance": [
+        1,
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of retinal tear and retinal detachment [11][6],",
+      "citations": [
+        11,
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Uses artificial tears 4–6 times daily [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Posterior capsule opacification [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Age-related Macular Degeneration (AMD) [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.3333,
+    "total_entailed": 3,
+    "total_of_sent": 9,
+    "citation_precision": 0.3333,
+    "total_matched_citations": 5,
+    "total_citations": 12
+  }
+}

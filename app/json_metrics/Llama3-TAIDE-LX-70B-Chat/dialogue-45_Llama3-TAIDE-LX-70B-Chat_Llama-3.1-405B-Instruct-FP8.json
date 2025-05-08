@@ -1,0 +1,78 @@
+{
+  "idx": "20250508133923-bbl0wk4g",
+  "upload_time": "2025-05-08 13:39:23",
+  "object_idx": "dialogue-45",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama3-TAIDE-LX-70B-Chat",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經掛號了醫生門診，過去一個月我的眼睛有時候會感到刺痛不舒服，在看診之前需要特別準備什麼嗎？\n\n\n [2] 系統回覆1: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [3] 使用者問題/回覆2: 雙眼\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 是\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我以前有被診斷過散光，常常感到看東西有些扭曲。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我家人好像沒有什麼人有眼睛相關的疾病，不過我不太確定。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前沒有做過任何眼睛手術。\n\n\n [12] 系統回覆6: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [13] 使用者問題/回覆7: 我最近有在使用高血壓藥物，醫生建議我定期檢查眼睛。\n\n\n [14] 系統回覆7: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [15] 使用者問題/回覆8: 我今年35歲。\n\n\n [16] 系統回覆8: 根據您提供的資訊，您的眼睛不適症狀包括刺痛感和不舒服，並持續約一個月，這可能關聯到以下一些眼科疾病：\n\n1. **乾眼症 (Dry Eye Syndrome)**：由於淚水分泌不足或蒸發過快，乾眼症會導致眼睛疼痛、刺刺的感覺、視力模糊等症狀。使用者提到的刺痛感，通常與乾眼症有關。\n\n2. **眼睛疲勞 (Asthenopia)**：長時間用眼（如使用電腦或手機）有可能引起眼睛疲勞，表現為刺痛、不舒服及視線模糊，特別是在閱讀或對著螢幕的時候。\n\n3. **散光 (Astigmatism)**：您曾被診斷出有散光，這可能導致在特定距離下視力模糊，並伴隨眼睛的不適感。散光會使光線在眼睛中聚焦不均，影響視力。\n\n4. **過敏性結膜炎 (Allergic Conjunctivitis)**：如果您接觸了過敏源，可能會出現刺痛和眼睛不舒服，並伴隨眼紅、流淚等症狀。\n\n針對您的症狀，建議您進一步就醫檢查，特別是眼科醫師，以進行專業評估。醫師將會檢查眼睛的潤滑情況，視網膜、角膜以及屈光度等，並制定適合您的治療方案。例如，如果確定為乾眼症，醫生可能會建議使用人工淚液來改善症狀。\n\n在準備門診時，您可以記錄下症狀的詳細情況，包括刺痛的感覺、症狀的特定時間，以及造成不適的環境因素（如長時間用眼）。這些資訊將有助於醫生進行診斷。\n\n額外再提醒，由於您有使用高血壓藥物，某些藥物可能會影響眼睛的健康，因此務必告知醫師您目前的用藥情況。\n\n以上資訊僅供參考，還需向專業醫生諮詢以獲得正確的診斷和治療建議。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in right eye [1][2],\n- History of cataract surgery [3]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [4]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [5]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [4],\n- The patient declined Capsulotomy [6],\n- Follow-up appointment in 6 weeks for reevaluation [7]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in right eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of cataract surgery [3]",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Posterior capsule opacification [4]",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Outpatient department of a medical center [5]",
+      "citations": [
+        5
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.0,
+    "total_entailed": 0,
+    "total_of_sent": 7,
+    "citation_precision": 0.0,
+    "total_matched_citations": 0,
+    "total_citations": 8
+  }
+}

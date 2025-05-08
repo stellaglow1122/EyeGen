@@ -1,0 +1,133 @@
+{
+  "idx": "20250508134147-1p9115r9",
+  "upload_time": "2025-05-08 13:41:47",
+  "object_idx": "dialogue-56",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我有預約醫生的門診，有時候眼睛會有突然發黑的情況，想知道這種情況下去看診前需要做什麼準備嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個半月的時間，眼睛有時會感到脹痛和不舒服。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 雙眼\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去有被診斷過視神經炎，當時有時候視力會減退，也有眼球轉動時的疼痛。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我不太確定家裡其他的成員有沒有眼睛相關的疾病，大部分人好像都沒有什麼問題。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前做過雷射後囊切除術，因為手術後有後囊混濁的情況。\n\n\n [14] 系統回覆7: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [15] 使用者問題/回覆8: 這次想諮詢的問題跟我之前做的雷射後囊切除術有關，我想確認是否會影響我的視力或有其他的健康問題。\n\n\n [16] 系統回覆8: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [17] 使用者問題/回覆9: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [18] 系統回覆9: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [19] 使用者問題/回覆10: 我今年41歲。\n\n\n [20] 系統回覆10: 根據您的描述，您目前的眼睛問題特別是有時候眼睛會突然發黑、感覺脹痛與不舒服，且這些症狀已持續約一個半月。這些症狀需要引起注意，以下是可能相關的眼疾及解決方法：\n\n1. **視網膜剝離（Retinal Detachment）**：\n    **特徵**：視網膜剝離會導致視野中突然有影像消失或出現黑影，可能會伴隨閃光。這種情況需要立即就醫，因為如果不及時治療，可能會導致永久性視力喪失。\n    **解決方法**：建議您儘速就醫，眼科醫生會進行詳細檢查以確認視網膜的狀況，必要時可能需要進行手術來修復。\n\n2. **視神經炎（Optic Neuritis）**：\n    **特徵**：您提到過去有診斷視神經炎，這是一種可能導致視力暫時變差的病症，通常伴隨眼痛，影響編輯，但大多數患者會恢復視力。\n    **解決方法**：如有再次發作，需再次進行視神經檢查，醫生可能會建議進行影像學檢查以評估神經的損傷情況。\n\n3. **眼睛疲勞（Asthenopia）**：\n    **特徵**：眼睛脹痛與不舒服的經常表現，可能是由於長時間用眼或用眼不當所導致的疲勞。\n    **解決方法**：避免長時間盯著螢幕，適度休息，並可使用人工淚液來減輕眼部疲勞。\n\n基於您之前做過的雷射後囊切除術，這顯示您可能對眼睛問題有一定的脆弱性，因此此次出現的症狀應特別引起重視。建議您到醫學中心接受更全面的眼科檢查，尤其是在有可能的視網膜問題的情況下。\n\n在就醫時，您可以告訴醫生您最近的症狀、用藥歷史與手術歷史，這樣能幫助醫生更準確地診斷和治療。\n\n**總結建議**：建議您儘早就醫，以獲得正確的診斷和適切的治療方案。\n\n以上內容僅供參考，還是需要向專業的醫生諮詢。\n\n\n\n [21] 使用者問題/回覆11: 這次就診時，我需要準備哪些相關的健康資訊或症狀描述，才能讓醫生更好地了解我的情況嗎？\n\n\n [22] 系統回覆11: 根據您提供的症狀和相關資訊，我們對於您的眼睛狀況有以下推測：\n\n1. **視神經炎（Optic Neuritis）**：\n   您過去曾被診斷為視神經炎，這種情況會在視神經有疲勞或發炎時，有可能會導致視力下降和眼球運動時的疼痛。當前您提到的『眼睛會突然發黑』，配合過去病歷可能再度出現視神經的問題，這需要進一步檢查以確認是否仍存在病理變化。\n\n2. **眼壓異常（如青光眼）**：\n   一些眼睛突發性黑影以及不適感可能與眼壓異常有關，青光眼可能會引起類似的症狀。儘管您没有明確提到，但需評估是否需檢查眼壓。\n\n3. **白內障（Cataract）**：\n   雖然您沒有明確表達視力逐漸減退，但您的年齡（41歲）和以往的健康問題使得這種可能性不能排除。白內障會導致視力模糊和對比敏感度的下降，並可能伴隨對光的敏感。若青光眼已有症狀存在，建議同時檢查白內障的形成情況，因白內障的發生常會影響視力質量。\n\n4. **視網膜或角膜問題**：\n   若未明確指出是由視神經問題引起的脹痛，建议做視網膜和角膜的相關檢查，以排除其他視覺問題。\n\n5. **眼睛疲勞（Asthenopia）**：\n   在長期用眼或壓力的條件下，可能會導致短暫的視覺變化、脹痛及不舒服感。建議注意用眼健康，適時休息。\n\n考慮到您症狀的嚴重性和持續性，建議您儘快就醫、檢查及報告以下資訊：\n\n 詳細描述您的症狀，包括發生的時間、頻率及程度（如發黑現象）。\n 您對過去視神經炎的病史及其他可能的眼科手術紀錄，如雷射後囊切除術後的狀況。\n 若有可能的家族病史（如青光眼或視神經問題）也較為重要。\n\n這樣醫生能更精準地評估您的情況，決定後續的檢查和治療方案。\n\n再次確認，因為有關眼神經與疼痛的問題，建議您選擇**醫學中心門診**進行詳細檢查，因為您可能需要專業的評估，以決定更合適的治療方案。\n\n### Reference Website\n1. [關於白內障最常見的十個問題　作者：臺大醫院眼科部林昌平主治醫師　　　專題報導　2018年7月臺大醫院健康電子報](https://epaper.ntuh.gov.tw/health/201807/project_2.html)\n\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Sudden blackness in vision [1][2],\n- Eye pain and discomfort [3],\n- Blurred vision [7],\n- History of cataract surgery and posterior capsule opacification [13]\n\n#### **2. Diagnosis**\n\n- Possible Retinal Detachment [20],\n- Possible Optic Neuritis [20],\n- Possible Glaucoma [20],\n- Possible Cataract [20]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [22]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Not mentioned in the dialogue,\n- Follow-up appointment for reevaluation [20],\n- Detailed description of symptoms, including time, frequency, and severity [22],\n- Review of past medical history, including Optic Neuritis and cataract surgery [22]",
+  "citation_result": [
+    {
+      "output": "- Sudden blackness in vision [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [
+        1,
+        2
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye pain and discomfort [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurred vision [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of cataract surgery and posterior capsule opacification [13]",
+      "citations": [
+        13
+      ],
+      "provenance": [
+        13
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Retinal Detachment [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Optic Neuritis [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Glaucoma [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Possible Cataract [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Outpatient department of a medical center [22]",
+      "citations": [
+        22
+      ],
+      "provenance": [
+        22
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for reevaluation [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Detailed description of symptoms, including time, frequency, and severity [22],",
+      "citations": [
+        22
+      ],
+      "provenance": [
+        22
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Review of past medical history, including Optic Neuritis and cataract surgery [22]",
+      "citations": [
+        22
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.5833,
+    "total_entailed": 7,
+    "total_of_sent": 12,
+    "citation_precision": 0.5833,
+    "total_matched_citations": 8,
+    "total_citations": 13
+  }
+}

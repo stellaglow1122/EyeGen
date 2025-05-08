@@ -1,0 +1,151 @@
+{
+  "idx": "20250507115054-iwlz1v9n",
+  "upload_time": "2025-05-07 11:50:54",
+  "object_idx": "dialogue-84",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我預約了眼科門診，最近發現自己的雙眼有不少黏性分泌物，還有些畏光，想知道在去看診前有什麼需要特別注意的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有兩個星期的時間，感覺眼睛有點刺刺的，還有少許不適。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 是\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我之前曾經被診斷過角膜炎，當時感到眼睛紅腫以及有些疼痛。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我不確定家裡有沒有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前沒有做過任何眼睛手術。\n\n\n [12] 系統回覆6: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [13] 使用者問題/回覆7: 我最近有在使用風濕免疫科的藥物，醫生有說過要注意視力方面的問題。\n\n\n [14] 系統回覆7: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [15] 使用者問題/回覆8: 我今年是30歲。\n\n\n [16] 系統回覆8: 根據您的描述，您提到的眼睛症狀包括雙眼有黏性分泌物及畏光，這些症狀已持續約兩週，並且您有過角膜炎的病史。以下是可能的疾病及其說明：\n\n1. **結膜炎（Conjunctivitis）**：\n     **特徵**：常見症狀包括眼睛紅腫、黏性分泌物、搔癢或壓痛，另有畏光現象。\n     **解決方法**：依照病因（細菌、病毒或過敏）使用對應的眼藥水治療。如果症狀持續且不改善，建議就醫復診。\n\n2. **角膜炎（Keratitis）**：\n     **特徵**：可能會引起紅腫、疼痛以及異物感，出現分泌物。一旦角膜受損，容易影響視力。\n     **解決方法**：需要專業醫生檢查以確定問題，通常會使用抗生素眼藥水或抗病毒藥物治療。\n\n3. **過敏性眼疾（Allergic Eye Disease）**：\n     **特徵**：如果眼睛對某些物質過敏，可能會出現紅腫、流淚和黏性分泌物。\n     **解決方法**：避免接觸過敏源，並可考慮使用抗過敏眼藥水來緩解症狀。\n\n基於您的眼睛症狀及過往角膜炎的病史，我建議您應該去**一般診所**進行初步檢查。若在檢查過程中發現有影響視力的情況，醫生可能會轉診您至醫學中心以便進一步檢查和治療。\n\n若您正在服用風濕免疫科的藥物，請務必告知醫生，因為某些藥物可能會對眼睛健康造成影響。\n\n總之，建議您儘快就診以獲得正確的診斷與治療。請記得保護眼睛，避免長時間用眼及輕微刺激。\n\n\n\n [17] 使用者問題/回覆9: 我聽說有飛秒雷射手術可以改善視力，這樣的手術對我來說適合嗎？\n\n\n [18] 系統回覆9: 根據您的描述，您提到的眼睛症狀包括雙眼有黏性分泌物及畏光，這些症狀已持續約兩週，並且您有過角膜炎的病史。以下是可能的疾病及其說明：\n\n1. **結膜炎（Conjunctivitis）**：\n     **特徵**：常見症狀包括眼睛紅腫、黏性分泌物、搔癢或壓痛，另有畏光現象。\n     **解決方法**：依照病因（細菌、病毒或過敏）使用對應的眼藥水治療。如果症狀持續且不改善，建議就醫復診。\n\n2. **角膜炎（Keratitis）**：\n     **特徵**：可能會引起紅腫、疼痛以及異物感，出現分泌物。一旦角膜受損，容易影響視力。\n     **解決方法**：需要專業醫生檢查以確定問題，通常會使用抗生素眼藥水或抗病毒藥物治療。\n\n3. **過敏性眼疾（Allergic Eye Disease）**：\n     **特徵**：如果眼睛對某些物質過敏，可能會出現紅腫、流淚和黏性分泌物。\n     **解決方法**：避免接觸過敏源，並可考慮使用抗過敏眼藥水來緩解症狀。\n\n基於您的眼睛症狀及過往角膜炎的病史，我建議您應該去**一般診所**進行初步檢查。若在檢查過程中發現有影響視力的情況，醫生可能會轉診您至醫學中心以便進一步檢查和治療。\n\n若您正在服用風濕免疫科的藥物，請務必告知醫生，因為某些藥物可能會對眼睛健康造成影響。\n\n總之，建議您儘快就診以獲得正確的診斷與治療。請記得保護眼睛，避免長時間用眼及輕微刺激。\n\n\n [19] 使用者問題/回覆: 我聽說有飛秒雷射手術可以改善視力，這樣的手術對我來說適合嗎？，請判斷為科普問題\n系統詢問: 需要提供\"請問您是否想要了解飛秒雷射(需要自費)？\"資訊:\n 請注意: 飛秒雷射（Lensx）可輔助白內障手術\n適應症：水晶體過硬、過熟、韌帶鬆弛、膜內皮細胞不足\n可能回覆選項: ['是的我想了解', '否我不需要']\n\n\n\n\n [20] 使用者問題/回覆10: 否我不需要\n\n\n [21] 系統回覆10: 好的，若您有其他眼睛疾病或人工水晶體相關的問題，歡迎再次詢問我\n\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Sticky discharge from both eyes [1][3][16]\n- Photophobia [1][3][16]\n- Stinging sensation in eyes for about two weeks [3][16]\n- History of keratitis [7][16]\n- Currently using rheumatology medication with potential vision impact [13][16]\n\n#### **2. Diagnosis**\n\n- Conjunctivitis [16]\n- Keratitis [16]\n- Allergic Eye Disease [16]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [16]\n\n#### **4. Recommended Treatment**\n\n- Follow-up appointment for further evaluation [16]\n- Avoid prolonged eye strain and mild irritants [16]\n- Inform the doctor about current rheumatology medication [16]",
+  "citation_result": [
+    {
+      "output": "- Sticky discharge from both eyes [1][3][16]",
+      "citations": [
+        16,
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Photophobia [1][3][16]",
+      "citations": [
+        16,
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Stinging sensation in eyes for about two weeks [3][16]",
+      "citations": [
+        16,
+        3
+      ],
+      "provenance": [
+        3,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of keratitis [7][16]",
+      "citations": [
+        16,
+        7
+      ],
+      "provenance": [
+        7,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Currently using rheumatology medication with potential vision impact [13][16]",
+      "citations": [
+        16,
+        13
+      ],
+      "provenance": [
+        13,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Conjunctivitis [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Keratitis [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Allergic Eye Disease [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- General clinic [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for further evaluation [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Avoid prolonged eye strain and mild irritants [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Inform the doctor about current rheumatology medication [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8333,
+    "total_entailed": 10,
+    "total_of_sent": 12,
+    "citation_precision": 0.8333,
+    "total_matched_citations": 17,
+    "total_citations": 19
+  }
+}

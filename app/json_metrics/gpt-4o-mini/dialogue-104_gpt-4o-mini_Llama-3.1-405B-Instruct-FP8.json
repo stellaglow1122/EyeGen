@@ -1,0 +1,132 @@
+{
+  "idx": "20250507120111-ydmrv7bd",
+  "upload_time": "2025-05-07 12:01:11",
+  "object_idx": "dialogue-104",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 這次我已經約好了看醫生，最近覺得晚上開車的時候眼睛會有強光刺眼的感覺，想知道看診前我需不需要特別做什麼準備？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個多月的時間，晚上開車時覺得眼睛受強光影響會很不舒服。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去沒有診斷過任何眼睛的問題或疾病。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我不確定家裡是否有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前有做過隅角成型術，因為我有開放型青光眼的問題。\n\n\n [14] 系統回覆7: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [15] 使用者問題/回覆8: 我這次想諮詢的問題跟我之前做的隅角成型術有關，我想了解最近眼睛的刺痛和乾澀感是否會影響我的眼睛健康。\n\n\n [16] 系統回覆8: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [17] 使用者問題/回覆9: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [18] 系統回覆9: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [19] 使用者問題/回覆10: 我今年是29歲。\n\n\n [20] 系統回覆10: 根據您提供的症狀和病史，以下是可能的眼睛疾病及建議：\n\n1. **白內障（Cataract）**：\n    **症狀**：您提到晚上開車時眼睛對強光特別敏感，且會有刺眼的感覺，這是白內障最常見的症狀之一。白內障通常會導致視力逐漸模糊、對比敏感度下降，特別是在亮光下，如汽車燈光的強度。\n    **建議**：建議您進一步檢查眼睛的狀況，這可能需要進行視力測試和眼底檢查。若確診為白內障，手術移除混濁的水晶體並植入人工水晶體可能是合適的解決方案。\n\n2. **乾眼症（Dry Eye Syndrome）**：\n    **症狀**：乾眼症也可能導致眼睛感到不適，尤其是在強光環境下。您提到的眼睛不舒服感和對強光的敏感也可能與此有關。\n    **建議**：如果是乾眼症，可以考慮使用人工淚液來幫助眼睛保持濕潤，並減少對強光的敏感。\n\n3. **開放型青光眼（Open-Angle Glaucoma）**：\n    **症狀**：由於您提及曾經做過隅角成型術以治療開放型青光眼，且與眩光及視力變差可能有關。雖然您目前未感覺到明顯視力下降，但青光眼的病程往往是緩慢且無聲的。\n    **建議**：由於青光眼的症狀可能不明顯，定期檢查眼壓及視野是非常重要的，這樣可以及早發現有無病情惡化。\n\n### 就診建議：\n基於您的症狀及以往的病史，我建議您前往**醫學中心門診**，因為以下原因：\n 您有開放型青光眼的既往史，需要專業的眼科醫生進行評估。\n 白內障和青光眼都屬於較為複雜的眼疾，需要進行更深入的檢查，特別是視網膜檢查和眼壓測量。\n\n### 總結\n您應該在即將到來的門診中，與醫生詳細討論您的夜間視力問題和對強光的敏感，並告知您過去的眼科手術及病史。這有助於醫生做出更準確的診斷與治療建議。請務必注意這些資訊僅供參考，最終的診斷和處理仍需要由專業醫生進行評估。\n\n參考資料僅供參考，仍需向專業的醫生諮詢。希望這些資訊能幫助您做出明智的選擇。\n\n\n\n [21] 使用者問題/回覆11: 我想問一下，如果我真的有白內障的話，那手術後恢復的時間大約會需要多久？\n\n\n [22] 系統回覆11: 如果您被診斷出有白內障，手術後的恢復時間通常會因人而異，但大部分人會在手術後的1至2天內感到視力有所改善。以下是白內障手術後恢復的時間及注意事項的具體說明：\n\n1. **手術後的恢復時間**：\n    **術後1至2天**：大部分患者會感到視力明顯改善，但可能仍需適應。\n    **術後1至3週**：在這段時間內，視力會逐漸穩定，患者可以開始恢復日常生活的活動。\n    **術後1個月**：大多數患者的視力會完全恢復，但還是需要定期回診，以確保狀況良好。\n\n2. **術後注意事項**：\n    **保護眼睛**：手術後需要佩戴眼罩，避免眼睛受到外力的擠壓。避免揉眼睛或讓眼睛接觸到不潔物質。\n    **點藥**：醫生會開處方眼藥水，通常包含抗生素和類固醇以減少炎症，患者需按時點藥。\n    **避免劇烈活動**：至少在術後的幾週內，應該避免重物搬運或劇烈運動，以幫助眼睛平穩恢復。\n    **定期回診**：術後需按醫生建議定期回診檢查視力恢復狀態。\n\n總之，白內障手術是一項相對安全且有效的手術，絕大部分病患能夠在幾天到幾週內恢復正常視力。然而，具體的恢復時間和效果會因每位患者的具體情況而異，因此建議及早就醫進行評估，並遵循醫生的建議。\n\n以上回答僅供參考，還是需要向專業的醫生諮詢以獲取具體醫療建議。參考(Reference): 文件(Document1) 白內障手術預留度數解析_page15, 文件(Document3) 告別白內障生活_page4, 文件(Document6) 老眼不昏花_page92。\n有鑒於您的症狀鑑別診斷包含白內障，您是否需要有關於白內障與人工水晶體選擇的相關諮詢？\n系統詢問: 需要提供\"請問您想要了解適合您的人工水晶體種類？\"資訊:\n 請注意: 若您選擇是，會進入推薦水晶體流程，您接下來需要連續回答4-12個問題，過程中將無法詢問其他問題\n可能回覆選項: ['是的，我想了解', '否，我不需要']\n\n\n\n\n [23] 使用者問題/回覆12: 否，我不需要\n\n\n [24] 系統回覆12: 好的，若還需要其他協助可以再次詢問我\n\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Sensitivity to bright lights while driving at night in left eye [1][3][5]\n- Blurred vision [7]\n- History of angle-closure glaucoma surgery [13][15]\n- No use of eye drops or medications recently [17]\n\n#### **2. Diagnosis**\n\n- Cataract [20]\n- Dry Eye Syndrome [20]\n- Open-Angle Glaucoma [20]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [20]\n\n#### **4. Recommended Treatment**\n\n- Recommended further examination for cataract [20]\n- Consider using artificial tears for dry eye syndrome [20]\n- Regular eye pressure and visual field checks for glaucoma [20]\n- Not mentioned in the dialogue",
+  "citation_result": [
+    {
+      "output": "- Sensitivity to bright lights while driving at night in left eye [1][3][5]",
+      "citations": [
+        1,
+        3,
+        5
+      ],
+      "provenance": [
+        1,
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurred vision [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of angle-closure glaucoma surgery [13][15]",
+      "citations": [
+        13,
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- No use of eye drops or medications recently [17]",
+      "citations": [
+        17
+      ],
+      "provenance": [
+        17
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Cataract [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Open-Angle Glaucoma [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended further examination for cataract [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider using artificial tears for dry eye syndrome [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye pressure and visual field checks for glaucoma [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8182,
+    "total_entailed": 9,
+    "total_of_sent": 11,
+    "citation_precision": 0.8182,
+    "total_matched_citations": 11,
+    "total_citations": 14
+  }
+}

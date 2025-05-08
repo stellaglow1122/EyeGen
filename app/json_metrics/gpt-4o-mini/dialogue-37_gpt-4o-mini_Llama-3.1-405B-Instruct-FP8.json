@@ -1,0 +1,115 @@
+{
+  "idx": "20250507113404-ycmumtiq",
+  "upload_time": "2025-05-07 11:34:04",
+  "object_idx": "dialogue-37",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 之前有預約醫生的門診，這段時間有時候眼睛覺得痠痛，想了解看看在看診前需要做些什麼準備嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我已經大約持續了五天眼睛不舒服，偶爾會覺得癢和乾。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去曾經診斷過糖尿病視網膜病變，醫生有提醒我要定期檢查。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我有一位阿姨，她曾經得過黃斑部病變。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是29歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊和之前的對話內容，以下是對您眼睛狀況的分析與建議：\n\n1. **眼睛不適持續約五天**：您提到的眼睛痠痛及偶爾感到癢與乾燥，這些症狀在持續五天的情況下，可能與以下疾病有關：\n\n    **乾眼症（Dry Eye Syndrome）**：\n      **特徵**：症狀包括眼睛乾澀、異物感、痠痛感以及長時間用眼後不適。\n      **建議**：您可考慮使用人工淚液來緩解乾燥與不適，並注意避免長時間盯著螢幕，每隔一段時間就應該適當休息眼睛。\n\n    **眼睛疲勞（Asthenopia）**：\n      **特徵**：在長時間用眼（例如看電視、閱讀或使用電腦）後出現的症狀，會引起不適、痠痛及視力模糊。\n      **建議**：適時的休息與運用護眼操可減輕眼睛疲勞，並確保良好的照明環境以減少眼睛負擔。\n\n2. **視力無變差**：您並未提到視力有下降的情況，這是良好的徵兆，因為嚴重的眼睛疾病通常會伴隨視力的明顯變化。\n\n3. **過去的健康狀況**：您曾診斷為糖尿病視網膜病變，這可能影響眼睛的整體健康狀況。因此，特別要注意視網膜的健康，定期詢問醫生有關視網膜的檢查與掌握就醫建議。\n\n4. **家族病史**：您提到家中有成員曾經得過黃斑部病變，這可能增加您的風險，雖然目前沒有明顯的視力問題，但建議定期檢查。\n\n5. **就醫建議**：\n     考慮到您有糖尿病視網膜病變的病史，建議您到**一般診所**進行初步檢查。如果眼科醫生認為情況需要，會轉介至醫學中心進行進一步的檢查和評估。\n     在就醫時，提供醫生您所有的症狀，過去的病史，以及現有的任何用藥信息為您獲得最佳的診斷與治療意見都是非常重要的。\n\n綜合上述，若您的症狀在日常生活中仍可接受且未影響視力，建議您可在一般診所休息並觀察情況。若症狀加劇或者有新的不適出現，請立即就醫。\n\n**總結建議**：建議儘早就醫檢查，以避免病情惡化，並得到準確的治療方案。\n\n\n\n [19] 使用者問題/回覆10: 除了眼睛不適的症狀之外，我有時候感覺到右眼的視野有點模糊，這會不會和之前的視網膜病變有關呢？\n\n\n [20] 系統回覆10: 根據您描述的右眼視野模糊的情況，這可能與視網膜病變有關。視網膜病變的病症多樣，可能導致視野模糊、失真或視野缺損等問題，以下是可能的原因和需要您注意的事項：\n\n1. **視網膜病變**(Retinal Pathology)：如糖尿病視網膜病變(Diabetic Retinopathy)、老年性黃斑部病變(Age-related Macular Degeneration)等，會導致視力模糊和視野缺損。\n2. **視網膜剝離**(Retinal Detachment)：這是一個急症，可以引起視野模糊、閃光感或突然的飛蚊症。如果視網膜剝離，會需要立刻就醫。\n3. **視神經病變**(Optic Nerve Pathology)：如視神經炎(Optic Neuritis)等，可能讓您感受到視野模糊，尤其是在眼球轉動時的不適。\n4. **白內障**(Cataract)：雖然主要影響的是眼前的影像清晰度，但有時也會造成視野的模糊和畏光感。\n\n### 如何解決改善：\n **諮詢眼科醫師**：如果您有視野問題，建議您儘快就醫，進行全面的眼科檢查，包括視網膜檢查和視神經評估，以便及早發現任何潛在的問題。\n **定期檢查**：若您有糖尿病或有家族史的眼病，定期檢查可以幫助及早發現及治療。\n\n### 手術可能性：\n如果檢查結果顯示有需要妥善的介入或手術，醫生可能會根據您的病情建議相應的治療方案，包括可能的手術選擇。常見的手術有：\n1. **視網膜修補手術**：如視網膜剝離，需要手術修補。\n2. **白內障手術**：如果檢查發現白內障的問題，則需要移除混濁的水晶體並植入人工水晶體。\n\n以上是針對您目前症狀的相關資訊，建議您儘速向專業醫生諮詢，讓他們幫您進行詳細評估和及時處理。\n\n以上提供的建議僅供參考，實際情況還是需向專業醫師評估。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Eye discomfort in right eye for five days [3][5]\n- Occasional itching and dryness in right eye [3][5]\n- Blurry vision in right eye [19][20]\n\n#### **2. Diagnosis**\n\n- Diabetic retinopathy [9]\n- Retinal pathology [20]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [18]\n\n#### **4. Recommended Treatment**\n\n- Consider using artificial tears to relieve dryness [18]\n- Recommended to consult an ophthalmologist for comprehensive eye examination [20]\n- Regular check-ups advised due to history of diabetic retinopathy [20]",
+  "citation_result": [
+    {
+      "output": "- Eye discomfort in right eye for five days [3][5]",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Occasional itching and dryness in right eye [3][5]",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurry vision in right eye [19][20]",
+      "citations": [
+        19,
+        20
+      ],
+      "provenance": [
+        19,
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Diabetic retinopathy [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Retinal pathology [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider using artificial tears to relieve dryness [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended to consult an ophthalmologist for comprehensive eye examination [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular check-ups advised due to history of diabetic retinopathy [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8889,
+    "total_entailed": 8,
+    "total_of_sent": 9,
+    "citation_precision": 0.8889,
+    "total_matched_citations": 11,
+    "total_citations": 12
+  }
+}

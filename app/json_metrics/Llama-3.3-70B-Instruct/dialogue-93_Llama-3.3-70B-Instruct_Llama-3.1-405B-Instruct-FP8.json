@@ -1,0 +1,129 @@
+{
+  "idx": "20250508135118-4d6s92fe",
+  "upload_time": "2025-05-08 13:51:18",
+  "object_idx": "dialogue-93",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我有預約醫生的門診，這兩週眼睛總有乾澀感，有時候還會悶到流淚，看診前有需要做什麼準備嗎？\n\n\n [2] 系統回覆1: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [3] 使用者問題/回覆2: 單眼(右眼)\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 是\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過糖尿病視網膜病變，當時視力模糊，有時候會出現一些黑點。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我不確定家裡是否有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前有做過視網膜光凝固術，因為我也有糖尿病視網膜病變的情況。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 我這次想諮詢的問題不太確定和我之前做過的視網膜光凝固術有關，但最近眼睛的不適讓我有點擔心，希望了解這是否會影響我的視力。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是50歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您目前面臨的眼睛狀況及相關背景如下：\n\n1. **眼睛不適症狀**：您提到『眼睛總有乾澀感』，並且『有時候還會悶到流淚』，這符合**乾眼症**（Dry Eye Syndrome）的常見症狀，如乾澀、刺痛和流淚不適。這些症狀常見於長時間使用電子產品或環境乾燥時。\n\n2. **症狀持續時間**：您提到『這兩週眼睛總有乾澀感』，顯示您的症狀已持續大約兩週。\n\n3. **症狀位置**：由於您並未明確指出症狀是集中在單眼或雙眼，這無法確定目前的情況。\n\n4. **視力變化**：您提及視力變化，這可能意味著除了乾眼症，您的視力可能也受到影響。\n\n5. **既往病史**：您曾被診斷過**糖尿病視網膜病變**（Diabetic Retinopathy），這是一種會影響視力的眼科疾病，且常與糖尿病有關。\n\n6. **手術史**：您提到曾經接受過*視網膜光凝固術*，這是針對視網膜病變的一種處理方式，表明您眼部過去有較為複雜的醫療歷史。\n\n### 可能的眼睛疾病及建議\n\n根據以上資料，您的眼睛症狀可能涉及以下情況：\n\n1. **乾眼症**：\n    **特性**：眼球表面缺乏足夠淚液潤滑，造成不適。\n    **建議**：持續使用人工淚液或保濕眼藥水，避免長時間盯著螢幕，使眼睛有休息時間。如果改善不大，建議看眼科醫生進行進一步檢查。\n\n2. **糖尿病視網膜病變**：\n    **特性**：慢性糖尿病可能傷害視網膜血管，導致視力逐漸模糊。\n    **建議**：必須定期追蹤眼科檢查以監控病況，特別是了解眼底的情況，以免影響視力。\n\n3. **視網膜問題**：\n    **特性**：您接受的視網膜手術有可能造成視網膜部位的變化，不可忽視。\n    **建議**：建議定期檢查視網膜狀況，尤其是如果您感到視力突然惡化或有其他新症狀。\n\n### 就醫建議\n\n **一般診所**：您可以在一般診所就診，若無明顯的視力影響或劇烈疼痛，可以先進行初步檢查，若症狀較為輕微或非緊急，但建議說明既往病史，醫生會綜合考量再做診斷。\n\n **醫學中心門診**：若您感覺視力變化顯著，或眼睛不適持續且明顯影響日常生活，建議您前往醫學中心進行詳細檢查，評估病情及適合的對策。\n\n請務必在就診時告訴醫生您的所有症狀、既往病史和目前情況，以獲得最佳的診斷與治療意見。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Dryness and irritation in the right eye [1][2][3],\n- Blurred vision [4][5],\n- History of diabetic retinopathy [7],\n- History of retinal photocoagulation surgery [11]\n\n#### **2. Diagnosis**\n\n- Dry Eye Syndrome [18],\n- Diabetic Retinopathy [7][18]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [18]\n\n#### **4. Recommended Treatment**\n\n- Use artificial tears for dry eye symptoms [18],\n- Regular follow-up for diabetic retinopathy [18],\n- Regular check-ups for retinal conditions [18]",
+  "citation_result": [
+    {
+      "output": "- Dryness and irritation in the right eye [1][2][3],",
+      "citations": [
+        1,
+        2,
+        3
+      ],
+      "provenance": [
+        1,
+        2,
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurred vision [4][5],",
+      "citations": [
+        4,
+        5
+      ],
+      "provenance": [
+        4,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of diabetic retinopathy [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [
+        7
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of retinal photocoagulation surgery [11]",
+      "citations": [
+        11
+      ],
+      "provenance": [
+        11
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Diabetic Retinopathy [7][18]",
+      "citations": [
+        18,
+        7
+      ],
+      "provenance": [
+        7,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Use artificial tears for dry eye symptoms [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular follow-up for diabetic retinopathy [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular check-ups for retinal conditions [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 1.0,
+    "total_entailed": 10,
+    "total_of_sent": 10,
+    "citation_precision": 1.0,
+    "total_matched_citations": 14,
+    "total_citations": 14
+  }
+}

@@ -6,6 +6,7 @@ from openai import OpenAI
 from pathlib import Path
 from dotenv import load_dotenv
 import services.report_prompts as Prompts
+import re
 
 # Load .env for keys
 env_path = Path(__file__).resolve().parents[1] / ".env"
@@ -112,6 +113,77 @@ class GenReport:
             raise RuntimeError(f"[NCHC Error] {response.status_code}: {response.text}")
         except Exception as e:
             raise RuntimeError(f"[NCHC API Error] {e}")
+  
+    def parse_json_from_llm_output(self, content: str) -> dict:
+        # Step 1: Normalize special characters
+        content = content.replace("“", '"').replace("”", '"')\
+                        .replace("‘", "'").replace("’", "'")\
+                        .replace("\u2028", "").replace("\u2029", "").strip()
+
+        # Step 2: Remove ```json blocks
+        content = re.sub(r"^```json\s*", "", content)
+        content = re.sub(r"\s*```$", "", content)
+
+        # Step 3: Extract from first {
+        match = re.search(r"{[\s\S]*", content)
+        if not match:
+            raise ValueError("❌ No valid JSON object found.")
+        content = match.group(0)
+
+        # Step 4: Process line-by-line and fix incomplete strings
+        lines = content.splitlines()
+        fixed_lines = []
+
+        for line in lines:
+            line = line.strip()
+
+            # Remove any inner " inside strings
+            quote_match = re.match(r'^"- .*"(.*?)$', line)
+            if quote_match:
+                line = line.replace('"', '')  # drop internal quote
+                line = f'"{line}"'  # wrap again
+
+            # Fix line with missing quote at end (truncate and close)
+            if line.count('"') % 2 != 0:
+                line = line + '"'  # close the quote if odd
+
+            fixed_lines.append(line)
+
+        # Step 5: Add commas between items if needed
+        new_lines = []
+        for i in range(len(fixed_lines)):
+            current = fixed_lines[i].strip()
+            next_line = fixed_lines[i+1].strip() if i < len(fixed_lines) - 1 else ""
+            new_lines.append(fixed_lines[i])
+
+            if (
+                current.endswith('"') and not current.endswith(',') and
+                (next_line.startswith('"') or next_line.startswith('- "') or next_line.startswith(']') or next_line.startswith('}'))
+            ):
+                new_lines[-1] = current + ','
+
+        # Step 6: Remove trailing commas before ] or }
+        for i in range(len(new_lines)-1):
+            if new_lines[i+1].strip() in [']', '}', '],', '},']:
+                new_lines[i] = re.sub(r',\s*$', '', new_lines[i])
+
+        # Step 7: Join and fix brackets
+        json_str = "\n".join(new_lines)
+        json_str += ']' * max(0, json_str.count('[') - json_str.count(']'))
+        json_str += '}' * max(0, json_str.count('{') - json_str.count('}'))
+
+        # Final quote fix
+        if json_str.count('"') % 2 != 0:
+            json_str += '"'
+
+        # Step 8: Try parse
+        try:
+            print("✅ JSONSuccessfuls:")
+            return json.loads(json_str)
+        except json.JSONDecodeError as e:
+            print("❌ JSONDecodeError:", e)
+            print("🧪 Final Attempt:\n", json_str[:1000])
+            raise
 
     async def summary_report(self, indexed_dialogue: str, eval_model: str, object_type: str) -> str:
         """
@@ -142,25 +214,16 @@ class GenReport:
             report_content = await self._call_openai(messages, eval_model)
         else:
             report_content = await self._call_nchc(messages, eval_model)
-        
-        # Attempt to parse JSON regardless of object_type
+
+        # For doctor-type reports, try to parse and format JSON response
         if object_type == "Doctor":
             try:
-                # 提取有效的 JSON 部分
-                start_marker = "```json\n"
-                end_marker = "\n```"
-                start_idx = report_content.find(start_marker)
-                end_idx = report_content.rfind(end_marker)
-                
-                if start_idx == -1 or end_idx == -1:
-                    raise ValueError(f"Invalid JSON format: ```json markers not found.\nContent: {report_content}")
-                
-                json_str = report_content[start_idx + len(start_marker):end_idx]
-                report_content = json.loads(json_str)
-                formatted_report = self.report_format_from_json(report_content)
+                parsed_json = self.parse_json_from_llm_output(report_content)
+                formatted_report = self.report_format_from_json(parsed_json)
             except Exception as e:
-                raise ValueError(f"Failed to parse generated report: {e}\nContent: {report_content}")
+                raise ValueError(f"❌ Failed to parse generated report: {e}\nOriginal Content:\n{report_content}")
         else:
+            # For patient, keep the raw string output
             formatted_report = report_content
 
         return formatted_report

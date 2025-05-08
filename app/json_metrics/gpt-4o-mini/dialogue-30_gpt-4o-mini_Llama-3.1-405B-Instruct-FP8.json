@@ -1,0 +1,143 @@
+{
+  "idx": "20250507113111-a0uttua9",
+  "upload_time": "2025-05-07 11:31:11",
+  "object_idx": "dialogue-30",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 當我預約好了醫生的門診時，我正在使用抗過敏與抗發炎藥，想了解是否需要在看診之前先停用，還是要注意什麼呢？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 最近我的眼睛有時候會感到乾澀，特別是看電腦螢幕久了之後，還有時候會有些刺痛的感覺。這樣的情況已經持續了幾個星期了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 雙眼\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我的母親曾經得過白內障，後來做了手術。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前沒有做過眼睛手術。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年30歲。\n\n\n [14] 系統回覆7: 根據您的描述，您目前存在的症狀包括在使用電腦螢幕久了後感到乾澀及偶爾刺痛感，這些症狀持續了幾個星期。根據這些資訊，以下是可能的眼科疾病及建議的解決方案：\n\n1. **乾眼症（Dry Eye Syndrome）**：\n    **特徵**：您的眼睛乾澀和刺痛感都是乾眼症的典型症狀。這種疾病是由於淚水分泌不足或淚水蒸發過快，導致眼睛無法維持充足的濕潤。\n    **解決方法**：建議使用人工淚液或潤滑劑來緩解乾澀感，同時注意環境的濕度，避免風吹或長時間盯著螢幕，並定期讓眼睛休息，如遵守20-20-20規則（每20分鐘看20英尺外的物體20秒）。\n\n2. **視疲勞（Asthenopia）**：\n    **特徵**：由長時間使用電子產品造成的眼睛不適感，常伴隨乾澀、刺痛及易疲勞的症狀。\n    **解決方法**：調整螢幕的亮度和對比度，避免疲勞，確保適當的閱讀距離和姿勢，並多次休息眼睛，保持適當的環境照明。\n\n3. **過敏性結膜炎（Allergic Conjunctivitis）**：\n    **特徵**：如果過去有任何過敏史，刺痛感可能與過敏反應有關，如環境過敏、花粉等。\n    **解決方法**：避免接觸過敏源，使用抗過敏眼藥水來緩解症狀。\n\n考慮到您是第一次看醫生，進行全面檢查將是必要的。尤其是您提到母親有白內障病史，這無疑增加了您需要關心眼睛健康的必要性，而白內障通常會出現視力模糊、夜間視力變差等症狀。\n\n由於您的症狀目前並未導致明顯的視力變化，以下醫療建議將更合適：\n **一般診所**：由於您目前的症狀包括眼睛的不適但未影響視力，建議您前往一般診所進行初步檢查。醫生可以為您開立眼藥水，並通過進一步評估來確認是否需轉診至專科醫療單位進行進一步檢查。\n\n總結來說，乾眼症是一種常見且可以治療的眼部問題，但如有任何視力或病症變化，仍要及時諮詢醫生以獲得適當的診療。\n\n以上內容僅供參考，仍需向專業醫生諮詢以獲得具體的診斷與治療建議。\n\n\n\n [15] 使用者問題/回覆8: 如果我真的有乾眼症，這樣的症狀會不會影響到視力，還是我需要特別注意一些什麼呢？\n\n\n [16] 系統回覆8: 乾眼症會影響視力，這是因為淚液的不足或質量不良會導致眼睛表面無法形成穩定的淚液膜，進而影響到視力的清晰度。當淚液蒸發過快，或是淚液分泌不足時，眼表就會出現乾點，讓視物感覺模糊，就像蝕刻了一層霧一樣。這種模糊的視力會因為長時間使用電腦、閱讀或其他需要集中視線的活動而加重。\n\n如果您擔心自己有乾眼症，建議您特別注意以下幾點：\n\n1. **使用人工淚液**：這是最直接的緩解方法，能幫助增加眼部的濕潤度，減少不適感和模糊視力的情況。\n\n2. **注意用眼習慣**：盡量減少長時間對著電子屏幕，可以遵循20-20-20法則，讓眼睛每20分鐘休息20秒，盡量注視20英尺（約6米）外的地方。\n\n3. **保持良好的眼部環境**：可以考慮使用加濕器來增加環境中的濕度，避免在過於乾燥或風大的環境中長時間停留。\n\n4. **定期檢查眼睛**：如果症狀持續，建議尋求眼科醫生的專業建議，進行進一步評估和診斷。有必要時，醫生可能會建議進行淚道塞術，或者使用其他治療方法。\n\n乾眼症不僅影響舒適感，還會對日常生活造成影響，因此一旦出現相關症狀，應及時處理並尋求醫療幫助。以上提供的建議僅供參考，實際情況仍需向專業醫生評估。\n\n### Reference Website\n1. [白內障手術非逆轉視力萬靈丹_醫提醒「5種眼病」會影響手術效果_-_亞洲大學附屬醫院](https://www.auh.org.tw/NewsInfo/NewsArticle?no=2424)\n\n\n\n\n [17] 使用者問題/回覆9: 如果我開始使用人工淚液，多久後可以感覺到效果呢？需要每天使用幾次比較好呢？\n\n\n [18] 系統回覆9: 使用人工淚液後，感覺到效果的時間因個人情況而異。一般來說，許多使用者在點用人工淚液後的幾分鐘內即可感覺到眼睛的潤滑感有所改善。然而，具體的改善時間可能因為不同品牌、配方及個人的眼睛狀況而有所不同。\n\n至於每天使用的次數，通常建議是根據每個人的乾眼症狀而定。如果症狀較為嚴重，可以考慮每天使用多次，例如每2到4小時點一次。對於長時間用眼或在乾燥環境中工作的人，可能需要更頻繁地補充。\n\n如果您在使用人工淚液後仍感到不適，建議尋求醫生的意見，這樣能夠確保最佳的治療方案和產品選擇。\n\n以上提供的建議僅供參考，實際情況仍需向專業醫生諮詢。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Dryness in both eyes after prolonged computer use [3][5]\n- Occasional stinging sensation in both eyes [3][5]\n- No significant change in vision [7]\n- Family history of cataract [9]\n\n#### **2. Diagnosis**\n\n- Dry Eye Syndrome [14]\n- Asthenopia [14]\n- Allergic Conjunctivitis [14]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [14]\n\n#### **4. Recommended Treatment**\n\n- Recommended use of artificial tears to alleviate dryness [14][16]\n- Follow the 20-20-20 rule to reduce eye strain [16]\n- Maintain a humid environment to support eye comfort [16]\n- Regular eye check-ups recommended if symptoms persist [16]\n- Not mentioned in the dialogue",
+  "citation_result": [
+    {
+      "output": "- Dryness in both eyes after prolonged computer use [3][5]",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Occasional stinging sensation in both eyes [3][5]",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No significant change in vision [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Family history of cataract [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Asthenopia [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Allergic Conjunctivitis [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- General clinic [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended use of artificial tears to alleviate dryness [14][16]",
+      "citations": [
+        16,
+        14
+      ],
+      "provenance": [
+        14,
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow the 20-20-20 rule to reduce eye strain [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Maintain a humid environment to support eye comfort [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye check-ups recommended if symptoms persist [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8333,
+    "total_entailed": 10,
+    "total_of_sent": 12,
+    "citation_precision": 0.8333,
+    "total_matched_citations": 13,
+    "total_citations": 15
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "idx": "20250507114232-11dk5jkg",
+  "upload_time": "2025-05-07 11:42:32",
+  "object_idx": "dialogue-64",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經安排了眼科門診，現在眼睛老是有乾澀和灼熱感，請問在去看診前有什麼需要特別準備或注意的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個月的時間，感覺眼睛有時會有點腫脹，不太舒服。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去沒有被診斷過任何眼睛的問題或疾病。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我知道我媽媽曾經得過白內障，她的視力在那段時間變得不太好。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年65歲。\n\n\n [18] 系統回覆9: 根據您的描述，您目前的眼睛症狀包括乾澀、灼熱感及腫脹，這些症狀持續約一個月。您提到過去沒有診斷過眼睛疾病，但您的媽媽曾經得過白內障。以下是與您的症狀相關的可能眼睛疾病及改善建議：\n\n1. **乾眼症（Dry Eye Syndrome）**：\n    **特徵**：這是一種常見的情況，症狀包括眼睛乾澀、異物感、灼熱感等。通常與淚液產生不足或泪液蒸發過快有關。\n    **解決方法**：\n      使用人工淚液來潤滑眼睛，減少乾燥感。\n      儘量避免長時間用眼（如看螢幕或閱讀），可每隔一段時間進行眼睛放鬆。\n      確保室內濕度適中，避免強風及空調直吹眼睛。\n\n2. **過敏性眼疾（Allergic Eye Disease）**：\n    **特徵**：若症狀有季節性，眼睛紅腫、癢，可能與過敏有關。 \n    **解決方法**：遠離可能的過敏源，並考慮使用抗過敏眼藥水。\n\n3. **結膜炎（Conjunctivitis）**：\n    **特徵**：若伴隨分泌物、眼睛紅或受到感染，也可能是結膜炎。\n    **解決方法**：如果症狀持續或加重，應尋求醫生處方，避免接觸其他人。\n\n4. **視力變化（Visual Changes）**：\n    雖然您目前未提及視力明顯下降的情況，但有視力變化的情況仍需留意。因您提到視力有變差的情況，建議在門診時談論這個問題，以排除如白內障或其他眼疾的可能性。\n\n由於您有與視力相關的症狀，建議您及早就醫，進行詳細的眼科檢查。一般診所就可以進行初步檢查，但如果醫生考慮到您可能有白內障的症狀，可能會建議轉診至醫學中心以進行更全面的檢查。\n\n**總結建議**：建議儘快就醫評估眼睛狀況，以獲得正確的診斷與治療方案，並及早改善眼睛不適。\n\n\n\n [19] 使用者問題/回覆10: 我想知道如果確診為白內障，手術過程會是怎樣的？術後恢復期需要多久呢？\n\n\n [20] 系統回覆10: 如果確診為白內障，手術過程通常是相對安全且基本標準的。以下是手術的主要過程以及術後的恢復期說明：\n\n### 手術過程\n1. **術前評估**：在手術前，醫生會進行詳細的眼科檢查，包括視力測試和眼壓測量，以確定患者的眼睛狀況，並選擇合適的人工水晶體類型。\n\n2. **麻醉**：手術通常使用局部麻醉藥，讓患者眼部感到麻木，這樣可以減少手術過程中的不適感。患者通常在手術中保持清醒。\n\n3. **取出混濁的水晶體**：醫生會通過微小的切口進入眼睛，使用超音波乳化術將混濁的水晶體分解並移除。\n\n4. **植入人工水晶體**：在移除混濁的水晶體後，醫生會將預先挑選好的人工水晶體植入眼內。\n\n5. **關閉切口**：手術過程結束後，切口通常不需要縫合，因為傷口自動閉合。\n\n### 術後恢復期\n術後，患者的恢復時間可能有所不同，但一般來說，以下是常見的情況：\n\n **初步恢復**：大多數患者在手術後幾小時內即可回家，進入恢復期。視力的改善可能在術後幾天內逐步出現，但也可能需要數週才能達到最佳效果。\n\n **定期回診**：患者應在術後1至2天內回診，以監測眼睛的恢復情況，接下來則根據醫生的建議進行定期回診。\n\n **避免特定活動**：術後應避免劇烈運動、游泳和任何會使眼睛受到撞擊的活動，通常建議在術後約一個月內保持謹慎。\n\n整體來說，白內障手術的恢復瞬間見效，且大多數患者在手術後能明顯改善視力，甚至能回到日常生活。若手術後出現任何異常情況，例如紅腫、疼痛或視力變差，應立即就醫。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  告別白內障生活_page8, 文件(Document5)  哪一種人工水晶體最適合_page4, 文件(Document12)  aspicio告別眼前灰濛濛_page2。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Dryness in right eye [1][3][18]\n- Burning sensation in right eye [1][3][18]\n- Swelling in right eye [3][18]\n- Blurred vision [6][18]\n- No use of eye drops or medications [15]\n\n#### **2. Diagnosis**\n\n- Not mentioned in the dialogue\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended to use artificial tears to lubricate the eyes [18]\n- Avoid prolonged screen time and take breaks [18]\n- Maintain appropriate indoor humidity [18]\n- Follow-up appointment in 1-2 days post-evaluation [20]",
+  "citation_result": [
+    {
+      "output": "- Dryness in right eye [1][3][18]",
+      "citations": [
+        1,
+        18,
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Burning sensation in right eye [1][3][18]",
+      "citations": [
+        1,
+        18,
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Swelling in right eye [3][18]",
+      "citations": [
+        18,
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Blurred vision [6][18]",
+      "citations": [
+        18,
+        6
+      ],
+      "provenance": [
+        6,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- No use of eye drops or medications [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended to use artificial tears to lubricate the eyes [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Avoid prolonged screen time and take breaks [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Maintain appropriate indoor humidity [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment in 1-2 days post-evaluation [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.6,
+    "total_entailed": 6,
+    "total_of_sent": 10,
+    "citation_precision": 0.6,
+    "total_matched_citations": 7,
+    "total_citations": 16
+  }
+}

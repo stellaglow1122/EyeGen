@@ -1,0 +1,105 @@
+{
+  "idx": "20250508140222-zidqll5w",
+  "upload_time": "2025-05-08 14:02:22",
+  "object_idx": "dialogue-119",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Mistral-Small-24B-Instruct-2501",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我之前就安排好醫生的門診，這段時間眼睛有時候會感覺到異樣，去看診前我應該要準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個星期的時間，眼睛總是感覺有些酸痛，特別是在看電視的時候。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去有被診斷過視網膜剝離，當時有視野出現黑影的情況。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我知道我的爺爺有高度近視的問題，他的眼睛一直需要定期檢查。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前有做過玻璃體切除術，因為我的視網膜剝離過。\n\n\n [14] 系統回覆7: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [15] 使用者問題/回覆8: 這次我想諮詢的問題不太確定和我之前做的玻璃體切除術有關，但我最近眼睛有時會覺得酸痛，想知道這是不是會影響我的眼睛狀況。\n\n\n [16] 系統回覆8: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [17] 使用者問題/回覆9: 我最近有在使用高血脂的藥物，醫生有說過這可能會造成視網膜方面的問題。\n\n\n [18] 系統回覆9: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [19] 使用者問題/回覆10: 我今年是55歲。\n\n\n [20] 系統回覆10: 根據您的描述與過去的健康歷史，您的眼睛不適主要表現在左眼感覺酸痛，這種症狀已經持續約一週。雖然您未提及視力模糊或變差，這樣的眼部不適感仍需特別關注，尤其考量到您有過視網膜剝離的病史以及與相關家族疾病的關聯。\n\n以下是您當前眼睛不適可能的疾病及解決方案：\n\n1. **視網膜問題/後遺症**：由於過去曾經發生視網膜剝離，現在出現的症狀（如左眼酸痛）可能與此有關。視網膜問題可能導致眼睛不適或異常感受，需要進行視網膜檢查來確認眼睛狀況。\n    **建議**：馬上就醫，尋求眼科醫生的評估。眼科醫師能進行有效的檢查，以確認視網膜的健康狀況。\n\n2. **眼疲勞 (Asthenopia)**：您提到的酸痛感也可能與長時間用眼、過度使用電子設備有關，導致眼睛疲勞。\n    **改善建議**：規劃休息時間，每隔一段時間就讓眼睛休息，避免長時間集中注意在屏幕上，並可考慮使用人工淚液改善乾燥感。\n\n3. **家族病歷**：您提到爺爺有高度近視，高度近視患者相對更容易發生視網膜問題或其他眼病。雖然您現在無視力變差的現象，但建議定期檢查。\n    **建議**：監控視力狀況，及早進行眼科篩檢，以避免潛在問題的惡化。\n\n4. **藥物使用**：您提及正在使用高血脂的藥物，這可能會影響眼睛健康。\n    **建議**：與醫生討論您目前的藥物使用，了解其是否可能對眼睛症狀造成影響。有必要時，醫生可能會為您調整或更換藥物。\n\n綜合以上情況，建議您在即將到來的門診中告訴醫生您的眼部不適，以及您過去的眼疾病史。這將有助於醫生做出正確的診斷與治療方案。如果情況有惡化的跡象，請尋求更專業的醫療意見。\n\n以上內容僅供參考，還是需要向專業的醫生諮詢以獲得正確的診斷和治療意見。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Eye discomfort in left eye [1][5],\n- Eye pain in left eye [3],\n- History of retinal detachment [9],\n- History of vitrectomy [13],\n- Uses high cholesterol medication [17]\n\n#### **2. Diagnosis**\n\n- Retinal detachment [9]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [20]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Retina photocoagulation [20],\n- Follow-up appointment in 6 weeks for reevaluation [20]",
+  "citation_result": [
+    {
+      "output": "- Eye discomfort in left eye [1][5],",
+      "citations": [
+        1,
+        5
+      ],
+      "provenance": [
+        1,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye pain in left eye [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of retinal detachment [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of vitrectomy [13],",
+      "citations": [
+        13
+      ],
+      "provenance": [
+        13
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Uses high cholesterol medication [17]",
+      "citations": [
+        17
+      ],
+      "provenance": [
+        17
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Retinal detachment [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Retina photocoagulation [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.5556,
+    "total_entailed": 5,
+    "total_of_sent": 9,
+    "citation_precision": 0.5556,
+    "total_matched_citations": 6,
+    "total_citations": 10
+  }
+}

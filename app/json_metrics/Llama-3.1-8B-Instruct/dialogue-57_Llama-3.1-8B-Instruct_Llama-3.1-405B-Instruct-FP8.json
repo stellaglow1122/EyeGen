@@ -1,0 +1,144 @@
+{
+  "idx": "20250508134215-q8xddcif",
+  "upload_time": "2025-05-08 13:42:15",
+  "object_idx": "dialogue-57",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我安排了看診時間，對於這次眼睛檢查前，有什麼需要提前注意或準備的嗎？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 我最近發現看東西的時候，特別是兩個物體的時候，會有些重疊的情況，這樣已經持續了幾天了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去有被診斷過老花，這讓我看近物時會有點困難。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我知道我的叔叔有馬凡氏症候群，這影響了他的視力，特別是在遠距離看東西時。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用風濕免疫科藥物，醫生建議我注意視力的變化。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年48歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您目前的眼睛症狀顯示出「複視」的情況，也就是看東西時出現重疊影像。這可能與以下幾種眼科疾病有關：\n\n1. **斜視（Strabismus）**\n    特徵：眼睛未能正確對焦在同一目標上，即使是在單個眼睛的觀察中，也可能導致影像重疊。\n    解決方法：需進行專業評估，可能需要輔助治療或手術矯正。\n\n2. **眼肌調控異常（Ocular Muscle Imbalance）**\n    特徵：眼睛的外部肌肉可能因為神經或肌肉的問題而無法正常協調運動，這會引起複視。\n    解決方法：醫生可能建議眼部運動療法或其他治療方式。\n\n3. **白內障（Cataract）**\n    特徵：白內障可導致混濁並影響視力，可能在早期表現為重影，尤其在看近物時。\n    解決方法：醫生將評估是否需要手術以移除混濁的水晶體並植入人工水晶體。\n\n4. **視神經炎（Optic Neuritis）**\n    特徵：視神經發炎可能導致視覺變化，包括複視。這種情況通常伴隨其他症狀，如視力模糊及眼痛。\n    解決方法：需立即醫療介入，常見治療包括類固醇藥物。\n\n考慮到您提到的症狀持續了一段時間，以及曾被診斷過老花（Presbyopia），建議您儘快尋求眼科專業醫生進行詳細檢查。這樣可以確認視力問題的根本原因，並根據檢查結果採取合適的治療措施。\n\n由於您已經提到在使用風濕免疫科藥物，這類藥物可能會有影響視力的風險，因此在就醫時向醫師提供全部用藥紀錄也十分重要。若條件許可，建議您直接至大型醫療機構進行檢查，以獲得更完善的診斷與後續治療。\n\n上述資訊僅供參考，實際診斷與治療仍需由專業醫師親自評估與決定，請務必依醫囑進行後續處置。\n\n\n\n [19] 使用者問題/回覆10: 如果真的需要做手術來解決這個複視問題，那我需要提前知道哪些事情，或者有什麼風險需要擔心嗎？\n\n\n [20] 系統回覆10: 如果您真的需要進行手術來解決複視（雙視）問題，以下是您需要提前了解的事情和可能面臨的風險：\n\n### 1. 手術的適應症\n **複視可由多種原因造成**，如眼肌問題、屈光不正、白內障、角膜問題或視神經疾病等。如果係因某種病變引起，則需要詳細的診斷來決定是否進行手術。對於白內障患者，手術通常是移除混濁的水晶體並替換為人工水晶體。\n\n### 2. 手術準備\n **詳細檢查**：手術前，醫生會進行全面的眼部檢查，以確定複視的原因。這包括視力檢查、眼部影像學檢查等。\n **告知醫生**：向醫生提供詳細的健康歷史，包括任何用藥的情況和過往的眼科手術經驗。\n **術前指導**：醫生會給予有關手術前幾天的準備指南，例如抗生素藥物的使用或乳酸攝取等。\n\n### 3. 手術後照顧\n **抗生素及抗發炎藥物**：術後需要使用醫生開的眼藥水，這有助於降低感染風險及減少炎症。\n **避免物理壓力**：在手術後的一段時間內，必須避免用力擦眼或施加壓力，並按時回診檢查恢復情況。\n **防止感染**：注意眼睛的衛生，避免進入髒水或接觸刺激性物質。\n\n### 4. 可能的風險\n **感染**：手術後可能發生眼內感染，這是一種較為嚴重的併發症。\n **視力問題**：眼睛重新校正後可能仍有視力問題，並需要進一步調整或再次手術。\n **眼壓升高**：手術後某些情況下可能引起眼壓的升高。\n **視皮質的刺激**：個別患者可能術後會感到視覺刺激之不適，例如視野缺損或重影。\n\n如果出現複視的情況持續不改善，建議您及時就醫，進行詳盡的檢查和評估。醫生會根據您的具體狀況提供相應的專業建議和治療方案。\n\n以上回覆主要組成為網絡模型所產生的建議，仍需經過專業醫生的評估與建議。\n\n參考僅供參考，還是需要向專業的醫生諮詢。\n\n\n\n [21] 使用者問題/回覆11: 如果需要手術的話，手術的恢復時間大約需要多久？恢復期間我能不能正常做日常活動呢？\n\n\n [22] 系統回覆11: 在進行白內障手術後，恢復時間通常會因人而異，但大多數患者在手術後的24小時內即可回家並開始恢復日常活動。一般來說，手術過程本身非常快速，通常只需約10至20分鐘。而在術後，患者通常會在短時間內感覺到視力的改善。\n\n不過，在手術後的最初幾天，您需要遵循一些注意事項，例如：\n 避免劇烈運動和重物搬運，以防止眼睛受傷。\n 可能需要佩戴眼罩幾天以保護眼睛。\n 在手術後幾週內定期回診，確保恢復正常。\n\n總體而言，大多數人在術後1至3週內會逐漸回復正常生活，不過在術後的最初幾天，建議您還是應該避免任何可能對眼睛造成壓力的活動，並根據醫生的建議進行情境調整。\n\n若在恢復過程中感到任何不適或有異常情況，務必要聯繫醫生進行檢查，以確保手術的順利恢復，避免可能的併發症。\n\n參考和建議的資訊仍然需要向專業的醫生諮詢，以確保較佳的恢復與視力改善效果。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in both eyes [3][4],\n- History of presbyopia [9],\n- Using immunosuppressive medication [15]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [18],\n- Possible strabismus [18],\n- Possible ocular muscle imbalance [18],\n- Possible cataract [18]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [20]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [18],\n- The patient declined Capsulotomy [19],\n- Follow-up appointment in 6 weeks for reevaluation [20],\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [18],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [18],\n- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [18]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in both eyes [3][4],",
+      "citations": [
+        3,
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of presbyopia [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Using immunosuppressive medication [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Posterior capsule opacification [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Possible strabismus [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible ocular muscle imbalance [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible cataract [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [19],",
+      "citations": [
+        19
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.3571,
+    "total_entailed": 5,
+    "total_of_sent": 14,
+    "citation_precision": 0.3571,
+    "total_matched_citations": 5,
+    "total_citations": 15
+  }
+}

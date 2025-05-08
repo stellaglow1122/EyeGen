@@ -1,0 +1,128 @@
+{
+  "idx": "20250507120703-kuuagwfu",
+  "upload_time": "2025-05-07 12:07:03",
+  "object_idx": "dialogue-116",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我下週預約了看醫生，但這幾天開始覺得眼睛時不時充血，像是有點疲勞，不知道看診前有什麼需要準備的嗎？\n\n\n [2] 系統回覆1: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [3] 使用者問題/回覆2: 雙眼\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 是\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過黃斑部病變，當時視線中間感覺有些變暗。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我家裡沒有任何人有眼睛相關的疾病，大家都很好。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前有做過雷射手術，名稱是隅角成型術，因為我那時有發現眼壓問題。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 這次我想諮詢的問題和我之前做的隅角成型術有關，我想知道這樣會不會讓我的視力變得更差。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是40歲。\n\n\n [18] 系統回覆9: 根據您所提供的症狀與過去病史，以下是針對您的眼睛情況的評估與推測：\n\n1. **眼睛充血（Conjunctival Hyperemia）**：\n    **特徵**：眼睛時不時充血通常顯示結膜炎或其他眼部血管充血的情況。這可能是由於環境因素、過敏或眼睛疲勞所引起。\n    **解決方法**：可以考慮使用人工淚液來緩解不適，保持眼睛濕潤，避免過度使用電子產品及強烈光源。\n\n2. **眼睛疲勞（Asthenopia）**：\n    **特徵**：眼睛有點疲勞的狀況，通常與長時間用眼或不當的眼鏡度數有關。\n    **解決方法**：定期讓眼睛休息，進行20-20-20法則（每20分鐘看遠20尺的物體20秒），並確保使用合適的眼鏡度數。\n\n3. **視力變差（Visual Acuity Decline）**：\n    **特徵**：您提到有視力變差的情況，這可能是由於早前診斷的黃斑部病變（Age-related Macular Degeneration, AMD）所導致的。此病會影響中央視力，導致清晰度下降。\n    **解決方法**：建議進行眼底檢查，以評估黃斑部的健康狀態，進一步監測病情的進展。\n\n4. **隅角成型術的相關影響**：\n    **特徵**：您的病史中提到進行過隅角成型術，這是針對眼壓問題的一種手術。眼壓問題的持續或惡化可能會影響視力，特別在有黃斑部病變的風險下。\n    **解決方法**：建議定期檢查眼睛，特別是眼壓和視網膜狀況來預防進一步的視力損失。\n\n考慮到您的症狀包括眼睛充血與疲勞，並且過去有黃斑部病變的病史，這些情況若未能及早處理，可能導致視力進一步惡化。因此，建議您儘快就醫進行詳細的眼科檢查，以確認您的眼睛狀態，並針對具體問題採取適當的治療措施。\n\n**就診建議**：\n **一般診所**：如症狀較輕微且尚不影響視力，則可前往一般診所進行初步檢查。\n **醫學中心門診**：若眼睛病症較為複雜，或是視力持續變差，建議到醫學中心進行進一步檢查，尤其是針對黃斑部病變提供專業的眼科評估。\n\n最後，若這次的症狀與您的過去手術有關，醫生將能根據檢查結果，確定是否需要進一步的處理措施。\n\n若您有進一步的問題或需要更詳細的諮詢，歡迎隨時與我們聯繫，我們會提供更多幫助。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Eye redness [1][3]\n- Eye fatigue [1][3]\n- Decline in vision [5][18]\n- History of laser surgery: Trabeculoplasty [11]\n\n#### **2. Diagnosis**\n\n- Age-related Macular Degeneration [7][18]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended eye examination to assess macular health [18]\n- Regular eye pressure and retinal condition checks to prevent further vision loss [18]\n- Consider using artificial tears to alleviate discomfort [18]\n- Follow the 20-20-20 rule to reduce eye fatigue [18]",
+  "citation_result": [
+    {
+      "output": "- Eye redness [1][3]",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye fatigue [1][3]",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Decline in vision [5][18]",
+      "citations": [
+        18,
+        5
+      ],
+      "provenance": [
+        5,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of laser surgery: Trabeculoplasty [11]",
+      "citations": [
+        11
+      ],
+      "provenance": [
+        11
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Age-related Macular Degeneration [7][18]",
+      "citations": [
+        18,
+        7
+      ],
+      "provenance": [
+        7,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended eye examination to assess macular health [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye pressure and retinal condition checks to prevent further vision loss [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider using artificial tears to alleviate discomfort [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow the 20-20-20 rule to reduce eye fatigue [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 1.0,
+    "total_entailed": 10,
+    "total_of_sent": 10,
+    "citation_precision": 0.95,
+    "total_matched_citations": 13,
+    "total_citations": 14
+  }
+}

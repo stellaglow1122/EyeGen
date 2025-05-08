@@ -1,0 +1,125 @@
+{
+  "idx": "20250508135802-f52predw",
+  "upload_time": "2025-05-08 13:58:02",
+  "object_idx": "dialogue-110",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我排了醫生門診，想提前了解一下自己眼睛的狀況以便看診時能夠更有效率，有什麼需要我注意或準備的嗎？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 我最近發現眼睛有時候會有流淚的情況，特別是在乾燥的環境下，這種情況已經持續了大約一週了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去沒有診斷過任何眼睛的問題或疾病。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我知道我的爸爸有阿勒茨海默氏症，最近他也提到視力好像變得不太好。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過任何眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用抗凝血藥物，醫生有提醒過這可能會造成眼睛方面的問題。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是59歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您59歲，有時候出現流淚的現象，尤其在乾燥環境下這種情況更為明顯，且已持續了一週。您沒有過去的眼睛疾病報告，但提到您的爸爸有阿爾茨海默病，並且最近他反映視力似乎變差。您過去沒有進行過眼睛手術，目前正在使用抗凝血藥物。以下是針對您症狀的可能疾病、解決方法以及就醫建議。\n\n1. **可能的眼睛疾病**：\n    **乾眼症 (Dry Eye Syndrome)**: 當眼睛的淚水分泌不足或蒸發過快時，可能會導致眼睛乾澀和刺激感。流淚在這種情況下是對於刺激的一種反應。\n    **結膜炎 (Conjunctivitis)**: 如果眼睛發紅，伴隨分泌物，可能是因為過敏或感染。\n    **眼瞼炎 (Blepharitis)**: 眼瞼的發炎可能導致流淚與不適感。\n\n2. **解決及改善方法**：\n    若懷疑乾眼症，可以考慮使用人工淚液來保持眼睛的濕潤並減少不適感。\n    為了減少環境對眼睛的影響，建議注意適度休息眼睛，避免長時間以乾燥的環境。\n    如果有結膜炎的可能，應考慮使用抗過敏或消炎眼藥水，詳情建議與醫生討論以獲得合適藥物。\n\n3. **就醫建議**：\n   鑒於您已經持續一週的症狀，且並未明顯影響視力，但考慮到您的年齡及使用抗凝血藥物，建議您儘快前往**一般診所**進行初步檢查。一般醫師可以檢查眼睛狀況並給予初步建議。如果情況在服用藥物或其他原因下加重，則可轉診至專科醫療單位進一步評估。\n\n最後，因為您的家族有眼睛相關疾病的歷史，建議定期進行眼科檢查，早期發現問題以便及時處理。以上內容僅供參考，最終的診斷與治療仍需由專業的醫生進行建議與治療。\n\n\n\n [19] 使用者問題/回覆10: 我最近聽說飛秒雷射手術可以改善視力，這種手術對我這種有視力模糊問題的人適合嗎？\n\n\n [20] 系統回覆10: 飛秒雷射手術是一種先進的眼科手術技術，主要用於白內障和屈光手術等，以提高手術的精確性和安全性。對於視力模糊的問題，飛秒雷射有其特定的適應症和效果，值得您了解。\n\n### 適應症\n1. **視力模糊的原因**：視力模糊可能由多種因素造成，包括近視（Myopia）、遠視（Hyperopia）、散光（Astigmatism）、老花眼（Presbyopia）或白內障（Cataract）等。飛秒雷射手術適合想要改善屈光不正（近視或遠視）或白內障患者。\n  \n2. **白內障患者：** 如果您的視力模糊是因為白內障，飛秒雷射手術可以幫助去除混濁的水晶體並植入人工水晶體，讓您的視力得到改善。手術後，許多患者能夠體驗顯著的視力改善。\n\n### 準備\n **術前檢查**：在接受飛秒雷射手術之前，醫生會進行全面的眼科檢查，以確認患者的眼睛狀況，包括眼壓、角膜厚度等。\n  \n **麻醉**：手術過程中會使用局部麻醉藥物，您將能夠保持清醒並隨時與醫生溝通。\n\n### 處置後照顧\n **術後護理**：術後需要按照醫生的指示使用抗生素和類固醇眼藥水，這有助於減少術後感染和發炎的風險。\n  \n **注意事項**：避免眼睛受壓，保持眼睛周圍的清潔，如有異常情況需要及時回診。\n\n### 效果\n飛秒雷射手術的主要優點包括：\n **高精確度**：飛秒雷射能製造出精確的切口，減少對眼睛組織的損傷。\n **快速恢復**：許多患者在手術後幾天內即可恢復正常活動。\n\n然而，由於每位患者的眼睛狀況及個體差異不同，建議您在決定手術之前，向眼科醫生諮詢，了解是否適合進行此手術，以及有關於手術可能帶來的效果和風險，這樣能幫助您做出更為明智的選擇。\n\n以上回答是基於模型的思考，具體情況仍需專業醫生進行評估與決策。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Flowing tears, especially in dry environments [3],\n- Blurred vision [7],\n- Using anticoagulant medication [15]\n\n#### **2. Diagnosis**\n\n- Dry Eye Syndrome [18],\n- Conjunctivitis [18],\n- Blepharitis [18]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [18]\n\n#### **4. Recommended Treatment**\n\n- Using artificial tears to keep eyes moist [18],\n- Avoiding long periods in dry environments [18],\n- Considering anti-allergic or anti-inflammatory eye drops for conjunctivitis [18],\n- Follow-up appointment for further evaluation [18]",
+  "citation_result": [
+    {
+      "output": "- Flowing tears, especially in dry environments [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blurred vision [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Using anticoagulant medication [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Conjunctivitis [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blepharitis [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- General clinic [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Using artificial tears to keep eyes moist [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Avoiding long periods in dry environments [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Considering anti-allergic or anti-inflammatory eye drops for conjunctivitis [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for further evaluation [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.7273,
+    "total_entailed": 8,
+    "total_of_sent": 11,
+    "citation_precision": 0.7273,
+    "total_matched_citations": 8,
+    "total_citations": 11
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "idx": "20250508134139-0cia524f",
+  "upload_time": "2025-05-08 13:41:39",
+  "object_idx": "dialogue-55",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經預約了醫生的門診，發現右眼有點視力模糊，這種狀況在看診前需要特別準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我最近發現眼睛有點模糊，大約持續了三個星期。\n\n\n [4] 系統回覆2: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [5] 使用者問題/回覆3: 我過去有被診斷過角膜炎，當時眼睛非常不舒服。\n\n\n [6] 系統回覆3: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [7] 使用者問題/回覆4: 我家裡好像沒有人有眼睛相關的疾病，我不太清楚具體情況。\n\n\n [8] 系統回覆4: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [9] 使用者問題/回覆5: 我之前沒有做過任何眼睛手術。\n\n\n [10] 系統回覆5: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [11] 使用者問題/回覆6: 我最近有在使用糖尿病的藥物，醫生提醒我需要注意眼睛的健康。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年31歲。\n\n\n [14] 系統回覆7: 根據您提供的資訊，您的左眼目前有視力模糊的情況，且已持續大約三個星期。這些症狀可能與以下一些眼科疾病相關，並需進一步關注：\n\n1. **屈光不正（Refractive Errors）**：\n    這種情況可能包括近視、遠視或散光，導致單眼視力模糊。考虑到您的年齡（31歲），這是常見的原因之一。建議可通過重新驗光並更換眼鏡來改善。\n   \n2. **角膜問題（Corneal Issues）**：\n    由於您有過角膜炎的病史，這可能意味着角膜的恢復或健康狀況不佳，這可能是造成視力模糊的原因之一。角膜炎可以導致視力的暫時性下降，並且可能需要專業醫師的評估和治療。\n\n3. **糖尿病視網膜病變（Diabetic Retinopathy）**：\n    您提到最近有在使用糖尿病藥物，糖尿病患者增加罹患視網膜病變的風險。若出現視網膜損害，可能會影響視力，建議定期進行視網膜檢查。\n\n4. **青光眼（Glaucoma）**：\n    雖然您目前並未表現出明顯的青光眼症狀，但有糖尿病醫療背景可增加此病發的風險。此外，青光眼的早期症狀通常不明顯，應定期檢查眼壓與視野。\n\n### 建議的行動：\n 建議您儘快就診於一般眼科診所，進行詳細的眼科檢查，如測量眼壓、視力及視網膜檢查，以便排除任何潛在的眼科問題。在此期間，應避免自行用藥或延誤就醫，以防症狀惡化。\n\n雖然這些建議僅供參考，最終的診斷和治療方案仍需由眼科專業醫師根據您的具體情況來確定，請務必在門診時提供完整的病史與使用的藥物信息，以便獲得最佳的照護。\n\n參考文獻:\n文件1  Web_關於白內障最常見的十個問題　作者：臺大醫院眼科部林昌平主治醫師　專題報導　2018年7月臺大醫院健康電子報,\n文件4  博士倫 如何選擇人工水晶體_page2,\n文件10  老眼不昏花_page10.\n\n\n\n [15] 使用者問題/回覆8: 我聽說有些眼科手術可以幫助改善視力，像是飛秒雷射手術，這樣的手術適合我這種狀況嗎？\n\n\n [16] 系統回覆8: 飛秒雷射手術是一種先進的眼科手術技術，通常用於白內障手術或近視矯正手術。這類手術適用於不同的眼睛狀況，但是否適合您，需要考慮以下幾個方面：\n\n### 1. 適應症\n **白內障**：如果您有白內障，手術可通過取出混濁的晶狀體並植入新的人工水晶體以改善視力。\n **近視、遠視、散光**：對於有屈光不正的患者，飛秒雷射技術能通過改變角膜形狀來矯正視力。\n **水晶體已硬化或老化**：若水晶體過硬或鬆弛，也可有助於手術安全性及效果。\n\n### 2. 準備\n在手術之前，您需要進行詳細的眼科檢查，以確認以下情況：\n **眼睛健康狀況**：檢查是否有其他眼部疾病，如青光眼、糖尿病視網膜病變等。\n **角膜狀況**：檢查角膜厚度和形狀，以確定適合該手術的條件。\n\n### 3. 手術過程\n飛秒雷射手術通常使用局部麻醉，患者在手術中會感受到輕微的吸附感和可能的壓力感，但不會造成劇烈疼痛。手術過程較快，通常在數分鐘內完成。\n\n### 4. 术后照护\n手術後，通常需要遵循以下護理建議：\n **使用眼藥水**：按醫生指示用藥，通常包括抗生素和類固醇眼藥水以防感染及減少發炎反應。\n **保持眼睛清潔**：避免眼睛受外力 воздействия，保持術後清潔，定期回診。\n\n### 5. 效果\n飛秒雷射手術能顯著改善視力，且大多數患者在手術後可迅速恢復日常活動。不過，術後視力恢復程度會根據個體差異而異。\n\n如果您有任何眼睛的不適或疑慮，建議您儘快與眼科醫生諮詢，獲得更專業的評估以決定是否適合進行飛秒雷射手術。\n\n本回答僅供參考，仍需與專業的醫生進一步溝通以獲得更合適的建議和治療方案。\n\n參考資料僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  老眼不昏花_page97, 文件(Document6)  老眼不昏花_page120, 文件(Document11)  老眼不昏花_page14。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in left eye [3][4],\n- History of diabetes [11],\n- Uses diabetes medication [11]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [14],\n- Possible diabetic retinopathy [14]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [14]\n\n#### **4. Recommended Treatment**\n\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [15][16],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [15],\n- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [15],\n- The patient declined intraocular lens implantation [15],\n- Recommended laser surgery: Capsulotomy [14],\n- Follow-up appointment in 6 weeks for reevaluation [14]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in left eye [3][4],",
+      "citations": [
+        3,
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of diabetes [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [
+        11
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Uses diabetes medication [11]",
+      "citations": [
+        11
+      ],
+      "provenance": [
+        11
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Posterior capsule opacification [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Possible diabetic retinopathy [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [15][16],",
+      "citations": [
+        16,
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 50,000 (hospital), NTD 30,000 (insurance), NTD 20,000 (out-of-pocket) [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined intraocular lens implantation [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.25,
+    "total_entailed": 3,
+    "total_of_sent": 12,
+    "citation_precision": 0.25,
+    "total_matched_citations": 3,
+    "total_citations": 14
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "idx": "20250507121422-knhwmtqi",
+  "upload_time": "2025-05-07 12:14:22",
+  "object_idx": "dialogue-130",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 最近我有預約眼科醫生，聽說家人中的某些眼疾可能會遺傳，想知道我在看診前需要提前準備什麼檢查嗎？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 最近我有時候會感到眼睛的視野有些模糊，特別是在看遠的時候，這種情況已經持續了大約兩天了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 雙眼\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過乾眼症，當時常常感到眼睛乾澀和異物感。\n\n\n [8] 系統回覆4: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [9] 使用者問題/回覆5: 我之前沒有做過任何眼睛手術。\n\n\n [10] 系統回覆5: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [11] 使用者問題/回覆6: 我最近有在使用高血壓的藥物，醫生說過這可能會影響視力。\n\n\n [12] 系統回覆6: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [13] 使用者問題/回覆7: 我今年是50歲。\n\n\n [14] 系統回覆7: 根據您的描述，您提到在看遠時「視野模糊」的情況已持續約兩天，這可能與以下幾種眼科疾病相關：\n\n1. **近視（Myopia）**：當眼球過長或水晶體的彈性過強時，遠處物體的影像會在視網膜前形成，導致遠視模糊。您提到的模糊主要發生在看遠的時候，這與近視的症狀一致。\n\n2. **乾眼症（Dry Eye Syndrome）**：已知您過去曾被診斷過乾眼症，這可能導致眼睛無法保持濕潤，從而影響視力。當眼睛乾燥時，可能會感到不適，並在長時間看近物後出現視力模糊或疲勞感。\n\n3. **藥物影響**：您提到最近使用的高血壓藥物可能會影響視力，某些降壓藥有可能導致視網膜問題，進而影響視覺清晰度。\n\n4. **屈光不正（Refractive Error）**：除了近視外，也有可能存在遠視（Hyperopia）或散光（Astigmatism）等其他屈光不正問題，其症狀可能與模糊視力有關。\n\n基於您的年齡（50歲）以及以前的眼病歷，建議進一步進行眼科檢查，以確定視力模糊的具體原因。您提及症狀是雙眼，目前在一般診所能夠進行初步的檢查和評估。若檢查結果顯示有潛在的問題，醫生會建議進一步的專業治療或轉診至醫學中心進行詳細檢查。\n\n在就診前，您可以準備好以下訊息以供醫生參考：\n 腦部任何相關家族病史\n 服用的藥物及使用頻率\n 症狀發作的詳細情況及其影響日常生活的程度\n\n此外，若您感到視力變化迅速或有顯著不適，建議儘快就醫，以避免可能的併發症。\n\n以上內容僅供參考，仍需向專業的醫生諮詢以獲得具體的診斷與治療建議。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision, especially when looking far away, lasting for about two days [3][5]\n- History of dry eye syndrome, experiencing dryness and foreign body sensation [7][14]\n- Currently using antihypertensive medication, which may affect vision [11]\n\n#### **2. Diagnosis**\n\n- Myopia [14]\n- Dry Eye Syndrome [14]\n- Refractive Error [14]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [14]\n\n#### **4. Recommended Treatment**\n\n- Further ophthalmic examination recommended to determine the specific cause of blurred vision [14]\n- Prepare information regarding family history, medications, and symptom details for the doctor [14]\n- Seek medical attention promptly if experiencing rapid vision changes or significant discomfort [14]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision, especially when looking far away, lasting for about two days [3][5]",
+      "citations": [
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of dry eye syndrome, experiencing dryness and foreign body sensation [7][14]",
+      "citations": [
+        14,
+        7
+      ],
+      "provenance": [
+        7,
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Currently using antihypertensive medication, which may affect vision [11]",
+      "citations": [
+        11
+      ],
+      "provenance": [
+        11
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Myopia [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Refractive Error [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Further ophthalmic examination recommended to determine the specific cause of blurred vision [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Prepare information regarding family history, medications, and symptom details for the doctor [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Seek medical attention promptly if experiencing rapid vision changes or significant discomfort [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 1.0,
+    "total_entailed": 10,
+    "total_of_sent": 10,
+    "citation_precision": 1.0,
+    "total_matched_citations": 12,
+    "total_citations": 12
+  }
+}

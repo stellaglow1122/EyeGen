@@ -1,0 +1,155 @@
+{
+  "idx": "20250507113213-dnqui94g",
+  "upload_time": "2025-05-07 11:32:13",
+  "object_idx": "dialogue-32",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我之前預約了醫生的門診，最近偶爾發現看東西時眼睛好像會偶爾有點浮腫，這次看診前需要準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我差不多有兩個星期感覺眼睛不太舒服了，時常會覺得有點刺刺的。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 否\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去曾經有診斷過白內障，但現在沒有問題了。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我不太確定，家裡好像沒有人有眼睛方面的疾病。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前沒有做過眼睛手術。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用高血壓藥物。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年54歲。\n\n\n [18] 系統回覆9: 根據您的描述，您提到的眼睛症狀包括偶爾有點浮腫、刺痛感以及不太舒服的情況，這些症狀持續約兩周。這些症狀可能會與以下幾種眼科疾病或狀態有關：\n\n1. **過敏性結膜炎（Allergic Conjunctivitis）**：\n    **特徵**：眼睛可能會有紅腫、癢或刺痛的感覺，且容易出現浮腫。\n    **解決方法**：可以使用抗過敏眼藥水來緩解症狀，並避免接觸過敏源，如灰塵、花粉等。\n\n2. **眼瞼炎（Blepharitis）**：\n    **特徵**：眼瞼邊緣發炎導致紅腫及有異物感，可能伴隨浮腫。\n    **解決方法**：可使用溫熱敷及清潔眼瞼來減輕炎症，必要時請醫生開具抗生素眼藥水。\n\n3. **乾眼症（Dry Eye Syndrome）**：\n    **特徵**：會出現眼睛浮腫及刺痛的感覺，亦可能伴隨眼睛乾燥。\n    **解決方法**：使用人工淚液來保持眼睛潤滑，減少不適。\n\n4. **白內障（Cataract）**：\n    **特徵**：雖然您語中未明確提及視力變差，但白內障在某些情況下也會導致偶爾的浮腫感，特別是在白天或在強光下。\n    **建議**：隨著年齡增長，建議定期檢查，尤其須注意手術後的狀態。\n\n5. **視網膜或角膜問題**：\n    由於您有高血壓病史，這可能涉及眼部血管的健康，從而影響眼睛的浮腫或其他病狀。建議定期檢查視網膜狀態。\n\n由於您提到的症狀並未明顯影響您的視力，因此可以考慮前往**一般診所**進行初步檢查。一般診所可以評估您的症狀並提供適當的治療建議。若在檢查過程中發現更複雜的問題，則可能需要轉診至醫學中心進行更專業的評估。\n\n若症狀持續或加重，建議儘早就醫。這樣可以更確保不會耽誤病情，並獲得適當的治療方案以及建議。\n\n**總結建議**：建議您儘早就醫檢查眼睛，以獲得正確的診斷與治療。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Occasional swelling in right eye [1][3][18]\n- Stinging sensation in right eye [3][18]\n- Using antihypertensive medication [15]\n\n#### **2. Diagnosis**\n\n- Allergic Conjunctivitis [18]\n- Blepharitis [18]\n- Dry Eye Syndrome [18]\n- Cataract [9][18]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [18]\n\n#### **4. Recommended Treatment**\n\n- Consider using antihistamine eye drops for allergic conjunctivitis [18]\n- Recommended warm compress and eyelid hygiene for blepharitis [18]\n- Suggested using artificial tears for dry eye syndrome [18]\n- Regular eye examinations recommended due to history of hypertension [18]\n- Follow-up if symptoms persist or worsen [18]",
+  "citation_result": [
+    {
+      "output": "- Occasional swelling in right eye [1][3][18]",
+      "citations": [
+        1,
+        18,
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Stinging sensation in right eye [3][18]",
+      "citations": [
+        18,
+        3
+      ],
+      "provenance": [
+        3,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Using antihypertensive medication [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Allergic Conjunctivitis [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Blepharitis [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Cataract [9][18]",
+      "citations": [
+        9,
+        18
+      ],
+      "provenance": [
+        9,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider using antihistamine eye drops for allergic conjunctivitis [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended warm compress and eyelid hygiene for blepharitis [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Suggested using artificial tears for dry eye syndrome [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye examinations recommended due to history of hypertension [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up if symptoms persist or worsen [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.9231,
+    "total_entailed": 12,
+    "total_of_sent": 13,
+    "citation_precision": 0.9231,
+    "total_matched_citations": 14,
+    "total_citations": 17
+  }
+}

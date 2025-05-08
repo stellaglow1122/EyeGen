@@ -1,0 +1,116 @@
+{
+  "idx": "20250507114204-andvfhcy",
+  "upload_time": "2025-05-07 11:42:04",
+  "object_idx": "dialogue-63",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我有醫生門診的預約，不知道這次看診前有沒有需要特別準備的地方？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 最近我有時會覺得眼睛好像有東西在那裡，特別是一大早起床的時候，這種感覺已經持續了大約四天了。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [7] 使用者問題/回覆4: 是\n\n\n [8] 系統回覆4: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [9] 使用者問題/回覆5: 我過去曾經被診斷過乾眼症，醫生告訴我需要注意用眼衛生。\n\n\n [10] 系統回覆5: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [11] 使用者問題/回覆6: 我記得我的爸爸有青光眼，他有時候會覺得眼睛看東西不清楚。\n\n\n [12] 系統回覆6: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [13] 使用者問題/回覆7: 我之前有做過隅角成型術，因為我有隅角開放型青光眼的問題。\n\n\n [14] 系統回覆7: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [15] 使用者問題/回覆8: 這次我想諮詢的問題跟我之前做的隅角成型術有關，我想了解這會不會影響我的眼睛健康。\n\n\n [16] 系統回覆8: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [17] 使用者問題/回覆9: 我最近有在使用降眼壓藥，因為我有青光眼的問題。\n\n\n [18] 系統回覆9: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [19] 使用者問題/回覆10: 我今年是22歲。\n\n\n [20] 系統回覆10: 根據您的描述，您提到最近有時會覺得眼睛內有異物感，尤其是在早晨起床時這種感覺更為明顯，並且持續了大約四天。這些症狀可能與以下幾種眼部疾病相關：\n\n1. **乾眼症 (Dry Eye Syndrome)**：\n    **特性**：乾眼症的症狀包括眼睛乾燥、異物感、視力模糊及刺痛感。長時間使用電腦或在乾燥環境下更容易加重此病。\n    **解決方案**：建議使用人工淚液來緩解症狀，並定期休息眼睛，特別是在長時間用眼的情況下。\n\n2. **結膜炎 (Conjunctivitis)**：\n    **特性**：結膜炎的表現包括眼睛發紅、流淚及異物感。這種病症通常伴隨著輕微的發癢或不適，可能由過敏或感染引起。\n    **解決方案**：必要時可使用抗過敏眼藥水或抗感染眼藥水，並保持良好的衛生習慣。\n\n3. **眼瞼炎 (Blepharitis)**：\n    **特性**：眼瞼炎導致眼瞼紅腫、發癢及有異物感，通常與油脂腺功能不全或細菌感染有關。\n    **解決方案**：可透過清潔眼瞼邊緣，使用溫水或專用的眼瞼清潔劑來緩解症狀。\n\n您提到過去曾經被診斷為乾眼症，這可能使您容易再次出現此類症狀。此外，您有家族病史（父親有青光眼），以及過去進行過隅角成型術。這都可能是影響您目前眼睛狀況的重要因素。\n\n建議您儘快就醫，以便醫生能進行徹底的眼科檢查。尤其考慮到青光眼的風險與您目前的異物感、視力變化等症狀，及早檢查並了解眼睛健康狀況非常必要。現代眼科有多種檢查工具，如眼壓測試和視神經檢查，可以幫助評估您的眼睛健康狀況。\n\n**醫療單位建議**：\n若您的症狀不嚴重，可考慮優先前往**一般診所**就醫，接受初步的檢查與處方。如果醫生評估後認為需要進一步檢查或專科評估，則可建議轉診至醫學中心。\n\n這些建議僅供參考，具體情況仍需專業醫師進行評估與處理。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Foreign body sensation in left eye, especially in the morning, lasting for about four days [3][5][20]\n- Decreased vision [7][20]\n- History of dry eye syndrome [9]\n- Currently using eye pressure-lowering medication due to glaucoma [17]\n\n#### **2. Diagnosis**\n\n- Dry Eye Syndrome [20]\n- Open-angle glaucoma [13][20]\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [20]\n\n#### **4. Recommended Treatment**\n\n- Recommended use of artificial tears to alleviate symptoms [20]\n- Follow-up appointment for thorough eye examination recommended [20]",
+  "citation_result": [
+    {
+      "output": "- Foreign body sensation in left eye, especially in the morning, lasting for about four days [3][5][20]",
+      "citations": [
+        3,
+        20,
+        5
+      ],
+      "provenance": [
+        3,
+        5,
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Decreased vision [7][20]",
+      "citations": [
+        20,
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of dry eye syndrome [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Currently using eye pressure-lowering medication due to glaucoma [17]",
+      "citations": [
+        17
+      ],
+      "provenance": [
+        17
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Dry Eye Syndrome [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Open-angle glaucoma [13][20]",
+      "citations": [
+        20,
+        13
+      ],
+      "provenance": [
+        13,
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended use of artificial tears to alleviate symptoms [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow-up appointment for thorough eye examination recommended [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.8889,
+    "total_entailed": 8,
+    "total_of_sent": 9,
+    "citation_precision": 0.8889,
+    "total_matched_citations": 11,
+    "total_citations": 13
+  }
+}

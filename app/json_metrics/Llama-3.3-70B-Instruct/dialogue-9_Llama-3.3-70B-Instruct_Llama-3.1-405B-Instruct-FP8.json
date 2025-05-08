@@ -1,0 +1,153 @@
+{
+  "idx": "20250508133015-w22n4d03",
+  "upload_time": "2025-05-08 13:30:15",
+  "object_idx": "dialogue-9",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 上次我有做過雷射後囊切除手術，這次我又預約了眼科的門診，我想知道自己目前的情況？\n\n\n [2] 系統回覆1: 您好，接下來將為您進行初步診斷，最近您的眼睛有什麼不舒服的地方嗎？請盡可能詳細的告訴我，以便更好的幫助您找出原因，確保您的視力健康！\n\n\n\n [3] 使用者問題/回覆2: 最近我會覺得看東西的時候，特別是看近的東西，眼睛有點酸又不太清楚，常常想跨開距離，才會看得比較清楚。\n\n\n [4] 系統回覆2: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [5] 使用者問題/回覆3: 大約已經有兩個星期了。\n\n\n [6] 系統回覆3: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [7] 使用者問題/回覆4: 單眼(右眼)\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我有一個叔叔曾經被診斷過白內障，聽說這可能跟遺傳有關。\n\n\n [10] 系統回覆5: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [11] 使用者問題/回覆6: 我不確定這次的眼睛不舒服是否和我之前的手術有關，但我想向醫生了解一下。\n\n\n [12] 系統回覆6: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [13] 使用者問題/回覆7: 我最近沒有在使用任何眼藥水或其他藥物。\n\n\n [14] 系統回覆7: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [15] 使用者問題/回覆8: 25歲\n\n\n [16] 系統回覆8: 根據您提供的資訊，您目前的眼睛狀況可歸納如下：\n\n1. 您感到近距離看東西時眼睛會酸痛，且視線不清楚，這樣的症狀與**遠視（Hyperopia）**相關，因為遠視會導致近距離物體視力模糊，需將物體拿的更遠才能看清楚。另方面，雖然您年輕，但現今也有可能出現**老花眼（Presbyopia）**的調節問題，造成您調整近距離視力時的困難。\n\n2. 您的症狀已經持續了約兩週，這段時間的眼睛不適可能表示存在潛在的屈光問題或乾眼症等情況。\n\n3. 您提到過去曾經接受過雷射後囊切除手術，該手術通常是針對已經做過白內障手術後產生的囊後混濁，因此歷史上有過眼疾。這可能會使您的眼部狀況處於持續觀察中，需注意術後的感受。\n\n4. 您的叔叔也有過白內障的病歷，這可能在家族中增強了您未來發展相關眼疾的風險。\n\n### 可能的眼睛疾病\n基於以上資料，以下是您可能面臨的眼睛疾病及建議：\n\n1. **遠視（Hyperopia）**：\n    **特性**：近距離觀看物體時模糊，睫狀肌疲勞，可能導致眼睛酸痛。\n    **建議**：建議您去做眼睛檢查，確定是否需要矯正眼鏡，以改善視力。\n\n2. **老花眼（Presbyopia）**：\n    **特性**：年齡引起的視力調節困難，影響近距離視物的清晰度，雖然年紀相對較輕，也可能開始出現。\n    **建議**：如果檢查結果顯示有老花眼，可能需要適當的老花眼鏡來協助看近的物體。\n\n3. **乾眼症（Dry Eye Syndrome）**：\n    **特性**：會出現眼睛乾澀、酸痛、視線模糊等，長時間用眼後症狀會更明顯。\n    **建議**：建議使用人工淚液來緩解症狀，並尋求醫生的建議。\n\n### 就診建議\n基於您的症狀，建議您前往**眼科專科醫院或診所**進行更詳細的眼睛檢查。若眼科醫生認為您有必要進行視網膜或其他部位的檢查，可能會建議採用先進的檢測設備，這在醫學中心更有保障。\n\n請務必在就診時向醫生清楚地描述您的症狀及既往病史，以獲得最佳的診斷與治療意見。\n\n若還有其他問題或需要協助，請隨時告訴我。\n\n\n\n [17] 使用者問題/回覆9: 我想了解更多關於乾眼症的症狀，除了眼睛乾澀之外，還有其他的表現嗎？\n\n\n [18] 系統回覆9: 乾眼症（Dry Eye Syndrome）是由於淚液分泌不足或淚液蒸發過快而引起的一種常見眼科疾病，其主要症狀有：\n\n1. **眼睛乾澀**：這是最常見的症狀，尤其在長時間注視螢幕、閱讀或處於乾燥環境中時會更加明顯。\n\n2. **刺痛感或灼熱感**：在乾燥的情況下，眼睛會感到刺痛或燒灼，這種疼痛感可能會引起不適。\n\n3. **異物感**：有些患者會感到眼內好像有異物或沙粒的感覺，這通常是由於淚液無法均勻覆蓋眼球表面造成的。\n\n4. **眼睛疲勞**：由於眼睛乾燥，眼睛需要更大努力保持清晰視力，導致眼睛疲勞（Asthenopia），這種情況在使用電腦或看書時特別明顯。\n\n5. **視力模糊**：在眼睛乾燥的情況下，視力可能會暫時變得模糊，這是因為缺乏淚液潤滑眼球表面。\n\n6. **流淚過多**：這可能會讓人感到矛盾，因為乾眼症患者有時會出現過多的流淚，這是由於眼睛感覺不適而引起的補償性反應。\n\n7. **對光敏感**：患者可能對強光特別敏感，容易感到不適。\n\n8. **眼皮紅腫**：眼瞼周圍的發炎可能導致眼皮紅腫，這也是乾眼症的一個常見表現。\n\n乾眼症的症狀因人而異，可能會隨著環境因素而不同。如果您有這些症狀，建議您尋求醫師的幫助，醫師可以進行詳細的檢查，確定病因並提供合適的治療方案。例如，使用人工淚液（artificial tears）可以幫助增加眼睛的濕潤，減少不適感。此外，醫師也可能建議其他治療措施，比如淚道栓塞術（punctal occlusion）。\n\n這些資訊僅供參考，實際情況應由專業醫生進行評估和診斷。\n\n\n\n [19] 使用者問題/回覆10: 我最近在使用電腦和手機的時候，會感到眼睛特別疲勞，這也會影響到我的視力嗎？\n\n\n [20] 系統回覆10: 使用電腦和手機時感到眼睛疲勞，這是一種常見的現象，尤其是現代人長時間面對數位螢幕。這種情況通常被稱為「數位眼疲勞」或「電腦視覺症候群」，它可能會影響到您的視力，主要表現為以下幾種症狀：\n\n### 眼睛疲勞的常見症狀\n1. **視力模糊**：長時間注視屏幕可能導致眼睛的聚焦能力下降，造成短暫的模糊。\n2. **乾眼症**：長時間盯著螢幕會導致眨眼次數減少，眼淚迅速蒸發，導致眼睛乾燥不適。\n3. **眼睛不適或刺痛感**：新的光源或不當的屏幕亮度都可能刺激眼睛。\n4. **頭痛和頸部不適**：由於以不良姿勢使用電腦，涉及的肌肉可能會緊繃，進而導致疼痛。\n\n### 如何緩解眼睛疲勞\n1. **遵循20-20-20法則**：每20分鐘，休息眼睛，看看20英尺（約6米）以外的物體20秒鐘，這有助於讓眼睛放鬆。\n2. **調整環境光線**：避免強光直射屏幕，也要注意屏幕的亮度設置，適當調整至舒適的程度。\n3. **適當使用眼藥水**：人工淚液可以幫助緩解乾眼症狀。\n4. **改善姿勢**：確保坐姿正確，顯示器的高度應與眼睛平行，維持良好的視角。\n\n長時間使用電腦和手機而不充分休息眼睛，確實可能影響到您的視力和眼睛健康。如果症狀持續或惡化，建議您儘快尋求眼科醫生的專業建議與檢查。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1)  老眼不昏花_page34, 文件(Document2)  老眼不昏花_page56。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in right eye [3],\n- Eye pain and discomfort, especially when looking at near objects [3],\n- History of cataract surgery and posterior capsule opacification treatment [1][10],\n- Family history of cataract (uncle) [9]\n\n#### **2. Diagnosis**\n\n- Possible Hyperopia (far-sightedness) [16],\n- Possible Presbyopia (age-related decline in near vision) [16],\n- Possible Dry Eye Syndrome [16]\n\n#### **3. Recommended Medical Unit**\n\n- Eye specialty hospital or clinic [16]\n\n#### **4. Recommended Treatment**\n\n- Consider eye examination to determine need for corrective glasses [16],\n- Possible use of artificial tears for dry eye symptoms [16][18],\n- Follow the 20-20-20 rule to reduce eye strain from computer and phone use [20],\n- Adjust environmental lighting and screen brightness for comfort [20],\n- Maintain good posture to reduce eye and neck strain [20]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in right eye [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Eye pain and discomfort, especially when looking at near objects [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of cataract surgery and posterior capsule opacification treatment [1][10],",
+      "citations": [
+        1,
+        10
+      ],
+      "provenance": [
+        1,
+        10
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Family history of cataract (uncle) [9]",
+      "citations": [
+        9
+      ],
+      "provenance": [
+        9
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Hyperopia (far-sightedness) [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Presbyopia (age-related decline in near vision) [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible Dry Eye Syndrome [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye specialty hospital or clinic [16]",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider eye examination to determine need for corrective glasses [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Possible use of artificial tears for dry eye symptoms [16][18],",
+      "citations": [
+        16,
+        18
+      ],
+      "provenance": [
+        16,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow the 20-20-20 rule to reduce eye strain from computer and phone use [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Adjust environmental lighting and screen brightness for comfort [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Maintain good posture to reduce eye and neck strain [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.9231,
+    "total_entailed": 12,
+    "total_of_sent": 13,
+    "citation_precision": 0.9231,
+    "total_matched_citations": 14,
+    "total_citations": 15
+  }
+}

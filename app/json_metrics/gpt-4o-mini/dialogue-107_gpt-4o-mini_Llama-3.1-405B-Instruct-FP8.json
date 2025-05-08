@@ -1,0 +1,85 @@
+{
+  "idx": "20250507120205-bl4xznoq",
+  "upload_time": "2025-05-07 12:02:05",
+  "object_idx": "dialogue-107",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "gpt-4o-mini",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經預約醫生的門診，但這兩天感覺眼皮有些腫脹，去看診前需要做什麼準備嗎？\n\n\n [2] 系統回覆1: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [3] 使用者問題/回覆2: 單眼(右眼)\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 否\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過白內障，當時視力變得模糊，畏光的情況也有。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我知道我的姐姐有視網膜色素變性，最近她也提到在暗的地方看東西很困難。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前有做過虹膜穿孔術，因為我有隱性青光眼的問題。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 這次我想諮詢的問題和我之前做的虹膜穿孔術沒有關係，我主要是想了解最近眼皮腫脹的情況。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用風濕免疫科的藥物，醫生有提醒這可能會影響我的視網膜。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是27歲。\n\n\n [18] 系統回覆9: 根據您提供的資訊，您有以下的眼睛狀況與相關背景：\n\n1. 您在過去兩天內出現“眼皮有些腫脹”的症狀，這在眼科中可能與以下疾病相關：\n    **結膜炎（Conjunctivitis）**：可能因為感染（細菌性或病毒性）、過敏等原因引起的情況，通常伴隨眼睛發紅、流淚或分泌物。\n    **瞼緣炎（Blepharitis）**：眼皮的邊緣發炎，可能因油脂腺堵塞或感染所導致，常見症狀有眼皮腫脹、紅腫和分泌物。\n\n2. 儘管您的症狀持續時間短，但腫脹的現象仍需被重視，原因在於：\n    腫脹若伴隨眼瞼發紅、流淚、影響視力，則可能指向更嚴重的眼病，如結膜炎或瞼緣炎等。\n    您的既往病史中提到有白內障，雖然此次症狀並非直接與白內障相關，但需謹慎處理，以免影響視力，特別是您年輕時曾經經歷虹膜穿孔術和隱性青光眼。此外，家裡有視網膜色素變性患者的背景也應引起關注。\n\n### 建議的解決方案\n **就醫檢查**：由於症狀持續兩天，建議您盡快到眼科進行檢查，特別是醫學中心，如果腫脹持續不退或有惡化情況（如視力減退），需尋求專業意見。\n **初步處理**：在就醫前，若症狀輕微且無視力影響，您可以嘗試用生理食鹽水清洗眼睛，以減少異物感及腫脹。\n\n### 医疗单位推荐\n根據您的狀況與症狀特點，建議您前往**一般診所**，如果情況惡化或有持續的視力問題，再考慮轉診至**醫學中心**進行更深入的檢查與治療。\n\n請務必在就診時告訴醫生您的症狀、過去的病史以及目前的用藥狀況，以便充分評估與治療。\n\n### 參考\n本回覆僅供參考，仍需向專業醫生諮詢以取得更適合的醫療建議。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Swelling of the eyelid in the right eye for the past two days [1][3]\n- History of cataract with blurred vision and photophobia [7][18]\n- Currently using rheumatology medication that may affect the retina [15]\n\n#### **2. Diagnosis**\n\n- Not mentioned in the dialogue\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended to visit an ophthalmologist for examination due to eyelid swelling [18]\n- Initial management: rinse eyes with saline solution if symptoms are mild and do not affect vision [18]",
+  "citation_result": [
+    {
+      "output": "- Swelling of the eyelid in the right eye for the past two days [1][3]",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of cataract with blurred vision and photophobia [7][18]",
+      "citations": [
+        18,
+        7
+      ],
+      "provenance": [
+        7,
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Currently using rheumatology medication that may affect the retina [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended to visit an ophthalmologist for examination due to eyelid swelling [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Initial management: rinse eyes with saline solution if symptoms are mild and do not affect vision [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 1.0,
+    "total_entailed": 6,
+    "total_of_sent": 6,
+    "citation_precision": 1.0,
+    "total_matched_citations": 8,
+    "total_citations": 8
+  }
+}

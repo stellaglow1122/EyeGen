@@ -1,0 +1,308 @@
+{
+  "idx": "20250508133654-1pgyow0v",
+  "upload_time": "2025-05-08 13:36:54",
+  "object_idx": "dialogue-35",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama3-TAIDE-LX-70B-Chat",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我最近有預約醫生的門診，最近總覺得偶爾會看到飛蚊，還有時候看東西有光圈，去看診的時候需要特別準備什麼嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我有大約一個星期感覺到眼睛不舒服，會有點模糊和跳動的感覺。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(左眼)\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我曾經診斷過角膜炎，當時還需要用藥物治療。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我有一位外公，他曾經有過視網膜色素變性，聽說這種疾病是遺傳性的。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我曾經做過虹膜穿孔術，是因為診斷出有隅角閉鎖型的情況。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 我不太確定這次想問的問題是否和之前的手術有關，最近眼睛有些不舒服，不知道是不是影響到了。\n\n\n [14] 系統回覆7: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [15] 使用者問題/回覆8: 我今年33歲。\n\n\n [16] 系統回覆8: 根據您的描述，您提到有『偶爾會看到飛蚊』以及『看東西有光圈』，這些都是需要引起注意的症狀。這些症狀可能指向以下幾種眼科疾病：\n\n1. **玻璃體後剝離 (Posterior Vitreous Detachment)**：\n    特性：這是一種隨著年齡增長或眼睛受到創傷，眼球內的玻璃體從視網膜分離的現象。會出現漂浮物（飛蚊）的情況。\n    建議：若症狀持續，並且伴隨視力變化，建議進行醫學檢查，以確保沒有視網膜裂孔或剝離的風險。\n\n2. **視網膜裂孔或視網膜剝離 (Retinal Tear or Retinal Detachment)**：\n    特性：當視網膜出現裂縫或整個視網膜與眼球壁脫離，可能會造成視力急速下降，伴隨著閃光或漂浮物。\n    建議：若有相關的感覺（如閃光、視野缺損），應立即就醫，以避免視力的永久損害。\n\n3. **白內障 (Cataract)**：\n    特性：白內障會導致水晶體混濁，造成視力模糊和看東西的光圈感，特別是在強光下。\n    建議：評估視力是否受損，若確診，可能需要手術移除混濁的水晶體並植入新的人工水晶體。\n\n4. **青光眼 (Glaucoma)**：\n    特性：青光眼的症狀通常不明顯，包括了視野縮小或視覺的光暈，尤其在強光環境下。\n    建議：由於家族病史（外公患有視網膜色素變性），建議定期檢查眼壓及眼神經狀況。\n\n5. **角膜炎 (Keratitis)**：\n    特性：由於以往的診斷，角膜炎可能影響您的視力，導致視力變差的感覺。\n    建議：若症狀與之前的角膜炎相似，應及時就醫評估目前的狀態。\n\n根據您提到的過去病史如角膜炎、虹膜穿孔術，以及家族視網膜疾病的情況，這些都可能使您面臨更高的疾病風險。\n\n**建議就診**：\n由於您有出現視力變化的症狀，且伴隨著視覺的異常感覺，最好的做法是在醫學中心或眼科專科醫師處進行全面檢查。醫師可能會使用高級設備進行視網膜檢查，必要時進行視野測試，以確定您的眼睛狀況並制定相應的處理計劃。\n\n即使症狀目前尚輕微，也不建議延後就診，因為某些眼病若未及時檢查和診治，可能進展迅速並造成視力不可逆的損害。\n\n這些建議僅供參考，最終的診斷與治療計劃仍需依賴專業醫師的評估。\n有鑒於您的症狀鑑別診斷包含白內障，您是否需要有關於白內障與人工水晶體選擇的相關諮詢？\n系統詢問: 需要提供\"請問您想要了解適合您的人工水晶體種類？\"資訊:\n 請注意: 若您選擇是，會進入推薦水晶體流程，您接下來需要連續回答4-12個問題，過程中將無法詢問其他問題\n可能回覆選項: ['是的，我想了解', '否，我不需要']\n\n\n\n\n [17] 使用者問題/回覆9: 是的，我想了解\n\n\n [18] 系統回覆9: 系統詢問: 需要提供\"哪個是你優先考量的需求\"資訊:\n \n 請注意: 選擇視力便利性通常價格較高，且可能伴隨夜間眩光，不適合夜間開車者\n可能回覆選項: ['價位', '視力品質(看特定距離清楚細節明顯)', '視力便利性(少戴眼鏡，看東西更方便)']\n\n\n\n\n [19] 使用者問題/回覆10: 視力品質(看特定距離清楚細節明顯)\n\n\n [20] 系統回覆10: 系統詢問: 需要提供\"您從以下選項中，挑選您可以接受的視力品質:\"資訊:\n 請注意: 1.單焦點近/中/遠擇一\n2.短延焦可選近+中/中+遠\n3.選擇以外的距離皆須配戴眼鏡\n可能回覆選項: ['單焦點：單一距離看得清楚', '短延焦：近中或中遠距離清楚可見', '皆非：皆不符合，我不想戴眼鏡']\n\n\n\n\n [21] 使用者問題/回覆11: 短延焦：近中或中遠距離清楚可見\n\n\n [22] 系統回覆11: 系統詢問: 需要提供\"是否需要抗藍光功能\"資訊:\n 請注意: 抗藍光不需加價，色調偏暖但夜間對比度稍低\n可能回覆選項: ['抗藍光', '不用抗藍光']\n\n\n\n\n [23] 使用者問題/回覆12: 抗藍光\n\n\n [24] 系統回覆12: 根據您提供的情況和要求，您目前的視力問題主要體現在以下幾個方面：\n\n1. **視力變差**：您有提到視力變差的情況，這可能與眼睛的健康狀況有關，例如白內障。\n2. **單眼症狀**：您提到症狀僅發生在左眼，這一點可以提供更加針對性的診斷方向。\n3. **眼疾病史**：您過去有已知的眼病，這需要謹慎處理。\n4. **家族病史**：了解家族中有眼病的歷史，可能影響到您未來的眼健康問題。\n\n根據您的需求，您希望選擇一種人工水晶體，並且想要提升視力品質，考慮到您提到的抗藍光要求，以及需要短延焦（近中或中遠距離清楚可見）的特性，因此我推薦您選擇以下的人工水晶體：\n\n**推薦水晶體種類：** 「短延焦」「非球面」「抗藍光黃片」  \n**理由**：這種水晶體能夠滿足您對視力品質的要求，尤其是在近中距離和中遠距離的清晰度上表現良好，並提供抗藍光的功能，更能良好保護您的眼睛。\n\n接下來，我將為您列出符合上述要求的人工水晶體的詳細信息：\n\n注意:下列品牌順序與優劣無關。\n1. Physiol (抗藍光) 博恩\n  * 品牌: 比利時\n  * 特材品名: PHYSIOL ISOPURE (Yellow) 法西歐愛視博延長焦段人工水晶體\n  * 種類: 短延焦 抗藍光 非球面\n  * 醫院單價: 42744\n  * 健保支付: 2744\n  * 自負差價額: 40000\n\n\n\n以上表格選擇的水晶體都同時符合「抗藍光」及「短延焦」的要求，這些水晶體提供良好的視力品質並在使用時能夠減少對藍光的照射影響。\n\n請您根據自己的需求，考慮這些選項，並在看醫生時進行進一步的溝通，確定最適合的選擇。\n\n以上內容僅供參考，還是需要向專業的醫生諮詢以獲得正確的診斷和治療意見。\n系統詢問: 需要提供\"請問您是否想要了解飛秒雷射(需要自費)？\"資訊:\n 請注意: 飛秒雷射（Lensx）可輔助白內障手術\n適應症：水晶體過硬、過熟、韌帶鬆弛、膜內皮細胞不足\n可能回覆選項: ['是的我想了解', '否我不需要']\n\n\n\n\n [25] 使用者問題/回覆13: 否我不需要\n\n\n [26] 系統回覆13: 好的，若您有其他眼睛疾病或人工水晶體相關的問題，歡迎再次詢問我\n\n\n\n\n [27] 使用者問題/回覆14: 最近眼睛不舒服的症狀會不會讓你在日常生活中感到困擾，比如看書或使用電腦時特別不方便呢？\n\n\n [28] 系統回覆14: 最近眼睛不舒服的症狀可能會顯著影響日常生活，特別是在看書或使用電腦時。這類眼睛不適通常與以下幾種常見病因有關：\n\n1. **眼睛疲勞（Asthenopia）**：\n    **特徵**：長時間專注於近距離物體（如電腦螢幕或書本）會導致眼睛疲勞，造成眼睛乾澀、灼痛、視力模糊或重影。\n    **解決方法**：遵循「20-20-20」規則，保持良好的用眼習慣，定期休息眼睛，並使用人工淚液來滋潤眼睛。\n\n2. **乾眼症（Dry Eye Syndrome）**：\n    **特徵**：眼睛乾燥，常覺得有異物感，這在長時間使用電腦或在乾燥環境下更為明顯。\n    **解決方法**：改善環境濕度，適當使用加濕器，並使用不含防腐劑的人工淚液以減輕乾澀感。\n\n3. **過敏性結膜炎（Allergic Conjunctivitis）**：\n    **特徵**：伴隨眼部瘙癢、紅腫或流淚。此情況通常得自對空氣中的過敏物質（如花粉、塵蟎等）的反應。\n    **解決方法**：避免接觸過敏源，必要時可使用抗過敏的眼藥水。\n\n4. **老花眼（Presbyopia）**：\n    **特徵**：隨著年齡增長，無法輕鬆對焦近距離物體，常伴有視力模糊和頭痛。\n    **解決方法**：配戴合適的老花眼鏡來矯正近距離視力。\n\n5. **白內障（Cataract）**：\n    **特徵**：如果視力變得漸漸模糊、對光的敏感度增加、夜間視力變差等，可能是白內障的跡象。這通常隨著年齡增長而加重。\n    **解決方法**：隨著病情的發展，最終可能需要進行手術以去除混濁的水晶體，並植入人工水晶體。如果出現這類症狀，建議儘快就醫，進行專業檢查。\n\n總的來說，當眼睛不舒服的症狀影響到日常生活時，尋求眼科醫師的評估和建議非常重要。專業的檢查和隨後的治療可以幫助確保眼睛健康，防止潛在視力問題的惡化。\n\n以上回答僅供參考，還是需要向專業的醫生諮詢。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in left eye [1][2],\n- History of cataract surgery [3],\n- Floaters [4],\n- Glare when looking at things [5],\n- Uncomfortable feeling in left eye [6],\n- History of keratitis [7],\n- Family history of retinitis pigmentosa [8],\n- History of iridotomy [9],\n- Concerns about cataract and glaucoma [10],\n- Uses artificial tears 4–6 times daily [11],\n- Considers multifocal lenses [12]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [13],\n- Cataract [14],\n- Glaucoma [15],\n- Retinal tear or retinal detachment [16],\n- Keratitis [17],\n- Retinitis pigmentosa [18],\n- Iridotomy [19],\n- Cataract surgery follow-up [20]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [21]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [22],\n- The patient declined Capsulotomy [23],\n- Follow-up appointment in 6 weeks for reevaluation [24],\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [25],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [26],\n- Typical pricing: NTD 42744 (hospital), NTD 2744 (insurance), NTD 40000 (out-of-pocket) [27],\n- The patient declined intraocular lens implantation [28],\n- Recommended laser surgery: Iridotomy [29],\n- The patient declined Iridotomy [30],\n- Recommended laser surgery: Trabeculoplasty [31],\n- The patient declined Trabeculoplasty [32],\n- Recommended laser surgery: Retina photocoagulation [33],\n- The patient declined Retina photocoagulation [34],\n- Not mentioned in the dialogue [35]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in left eye [1][2],",
+      "citations": [
+        1,
+        2
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of cataract surgery [3],",
+      "citations": [
+        3
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Floaters [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Glare when looking at things [5],",
+      "citations": [
+        5
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Uncomfortable feeling in left eye [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of keratitis [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [
+        7
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Family history of retinitis pigmentosa [8],",
+      "citations": [
+        8
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of iridotomy [9],",
+      "citations": [
+        9
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Concerns about cataract and glaucoma [10],",
+      "citations": [
+        10
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Uses artificial tears 4–6 times daily [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Considers multifocal lenses [12]",
+      "citations": [
+        12
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Posterior capsule opacification [13],",
+      "citations": [
+        13
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Cataract [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Glaucoma [15],",
+      "citations": [
+        15
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Retinal tear or retinal detachment [16],",
+      "citations": [
+        16
+      ],
+      "provenance": [
+        16
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Keratitis [17],",
+      "citations": [
+        17
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Retinitis pigmentosa [18],",
+      "citations": [
+        18
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Iridotomy [19],",
+      "citations": [
+        19
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Cataract surgery follow-up [20]",
+      "citations": [
+        20
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Outpatient department of a medical center [21]",
+      "citations": [
+        21
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [22],",
+      "citations": [
+        22
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [23],",
+      "citations": [
+        23
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [24],",
+      "citations": [
+        24
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [25],",
+      "citations": [
+        25
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [26],",
+      "citations": [
+        26
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 42744 (hospital), NTD 2744 (insurance), NTD 40000 (out-of-pocket) [27],",
+      "citations": [
+        27
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined intraocular lens implantation [28],",
+      "citations": [
+        28
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Recommended laser surgery: Iridotomy [29],",
+      "citations": [
+        29
+      ],
+      "provenance": [
+        29
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- The patient declined Iridotomy [30],",
+      "citations": [
+        30
+      ],
+      "provenance": [
+        30
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended laser surgery: Trabeculoplasty [31],",
+      "citations": [
+        31
+      ],
+      "provenance": [
+        31
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- The patient declined Trabeculoplasty [32],",
+      "citations": [
+        32
+      ],
+      "provenance": [
+        32
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended laser surgery: Retina photocoagulation [33],",
+      "citations": [
+        33
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Retina photocoagulation [34],",
+      "citations": [
+        34
+      ],
+      "provenance": [
+        34
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Not mentioned in the dialogue [35]",
+      "citations": [
+        35
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.2059,
+    "total_entailed": 7,
+    "total_of_sent": 34,
+    "citation_precision": 0.2059,
+    "total_matched_citations": 7,
+    "total_citations": 35
+  }
+}

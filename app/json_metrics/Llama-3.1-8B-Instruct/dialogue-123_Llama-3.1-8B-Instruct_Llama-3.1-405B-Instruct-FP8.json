@@ -1,0 +1,184 @@
+{
+  "idx": "20250508140118-sjby3n4u",
+  "upload_time": "2025-05-08 14:01:18",
+  "object_idx": "dialogue-123",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.1-8B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 眼睛最近好像看到的顏色有點怪怪的，還常常覺得眼睛有被風吹到的感覺，我已經預約了醫生的門診，看診之前有什麼需要注意或特別準備的嗎？\n\n\n [2] 系統回覆1: 您剛剛提到的眼睛不適的症狀，大約持續多久了呢？請您回想看看，大約是最近才發生，還是已經持續一陣子呢？\n\n\n\n [3] 使用者問題/回覆2: 我大約有一個星期的時間，眼睛會覺得有些模糊，有時候還伴隨著頭痛的情況。\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [5] 使用者問題/回覆3: 單眼(右眼)\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去沒有診斷過任何眼睛的問題或疾病。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我不確定家裡是否有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前做過虹膜穿孔術，因為我有一些眼壓的問題。\n\n\n [12] 系統回覆6: 您此次想諮詢醫生的問題是否與您之前做過的眼睛手術有關呢？\n\n\n\n [13] 使用者問題/回覆7: 我這次想諮詢的問題不太確定和我之前做的虹膜穿孔術有關，但最近眼睛有流淚和發癢的情況，讓我有點擔心。\n\n\n [14] 系統回覆7: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [15] 使用者問題/回覆8: 我最近有在使用類固醇眼藥水，因為我有發炎的問題。\n\n\n [16] 系統回覆8: 為了幫您更準確評估健康風險，請問您的年齡是？\n\n\n\n [17] 使用者問題/回覆9: 我今年是27歲。\n\n\n [18] 系統回覆9: 根據您的描述，您提到最近「看到的顏色有點怪怪的」並且「眼睛有被風吹到的感覺」，這些症狀可能意味著以下幾個眼科相關疾病：\n\n1. **乾眼症（Dry Eye Syndrome）**：\n    特徵：眼睛感到刺痛、灼熱感，可能伴隨視力模糊和顏色感知異常。\n    解決方式：可使用人工淚液潤滑眼睛，並避免長時間用眼，適度休息，並適當增加環境濕度。\n\n2. **色覺異常（Color Vision Deficiency）**：\n    特徵：對顏色的識別能力下降，可能由於視網膜的感光細胞（錐狀細胞）受損或其他眼部疾病引起。\n    解決方式：這需要眼科醫生進行專業檢查以確定是否為色覺異常或其他相關病症。\n\n3. **視網膜問題（Retinal Issues）**：\n    特徵：眼睛顏色變化，視力模糊，可能與視網膜病變如視網膜剝離、黃斑變性等有關。\n    解決方式：必要時應進行視網膜檢查，了解視網膜健康狀況。\n\n4. **眼部炎症（Inflammation）**：\n    特徵：可能伴隨紅腫、異物感，您提到正在使用類固醇眼藥水，這可能表明眼部有發炎問題。\n    解決方式：建議在使用類固醇藥物時，遵循醫生指示，以避免對眼睛造成潛在影響。\n\n您提到的情況已持續約一週，這樣的眼睛症狀需儘早就醫，特別是在您已經有虹膜穿孔手術的歷史和目前使用類固醇藥水的情況下。建議您到**眼科醫學中心門診**進行詳細檢查，因為這樣可以提供更進階的設備檢查，例如視網膜檢查和視神經評估，協助醫生找出問題並進行適當的治療。\n\n如果症狀影響到您的生活品質或視力問題加重，請務必及早尋求醫療幫助，這樣可以儘早確定病因並處理，避免延誤病情的風險。\n\n這些建議僅供參考，最終仍需由專業醫師根據實際檢查結果進行評估與診斷。\n\n\n\n [19] 使用者問題/回覆10: 我在使用類固醇眼藥水的過程中，有沒有什麼特別需要注意的事情？這些藥水會不會對我的視力造成長期影響呢？\n\n\n [20] 系統回覆10: 使用類固醇眼藥水時，確實有一些特別需要注意的事項，以及對視力的潛在影響。以下是詳細說明：\n\n### 使用類固醇眼藥水的注意事項\n\n1. **遵從醫生指示**：使用類固醇眼藥水時，必須按照醫生的建議劑量和使用頻率。過量使用可能導致副作用，因此遵循醫囑非常重要。\n\n2. **定期檢查**：在使用類固醇眼藥水的過程中，建議定期回診，以便醫生評估眼睛的狀況和檢查是否出現不良反應，如眼壓過高或白內障。\n\n3. **避免長期使用**：儘管類固醇眼藥水能有效減少炎症，但長期使用可能增加眼壓，導致青光眼（Glaucoma）或白內障（Cataracts）等眼睛問題的風險。\n\n4. **監控眼壓**：使用期間應定期檢查眼壓，因為類固醇眼藥水可能提高眼壓，需及時處理。\n\n5. **注意感染症狀**：若出現紅腫、疼痛或視力變化等症狀，應立即就醫，這可能是感染或其他眼睛問題的徵兆。\n\n### 長期影響\n\n長期使用類固醇眼藥水可能對視力造成一些影響，尤其是以下方面：\n\n1. **白內障形成**：長期使用與白內障形成有關，會影響視力的清晰度。\n\n2. **青光眼風險升高**：類固醇眼藥水可能導致眼壓上升，增加青光眼（Glaucoma）的風險，進而對視神經造成損害。\n\n3. **視力模糊和變干**：若伴隨其他問題，可能在使用過程中感到視力模糊或視覺變化，這可能是由於藥物對眼內壓的影響。\n\n### 建議\n\n因此，在使用類固醇眼藥水期間，請隨時與醫生保持聯繫，並進行必要的眼科檢查，以確保眼睛健康，盡早發現任何潛在的問題。這樣不僅能有效控制眼部炎症，還能降低對視力的長期影響。\n\n以上回答基於目前的知識和研究，依然需要專業醫生的評估和建議。參考僅供參考，還是需要向專業的醫生諮詢。\n\n### Reference Website\n1. [Steroids_and_Cataracts:_What_You_Should_Know_-_North_Florida_Cataract_and_Vision](https://www.northfloridavision.com/blog/post/2015/01/13/Steroids-and-Cataracts-What-You-Should-Know.aspx)\n2. [Ocular_Manifestations_of_Corticosteroids_-_EyeWiki](https://eyewiki.org/Ocular_Manifestations_of_Corticosteroids#Cataracts)\n\n\n\n\n [21] 使用者問題/回覆11: 使用類固醇眼藥水後，是否有可能會出現其他不適的症狀，或者我應該特別留意哪些新的症狀呢？\n\n\n [22] 系統回覆11: 使用類固醇眼藥水後，確實可能出現一些不適的症狀，並且您需要特別留意以下幾種問題：\n\n1. **眼壓升高**：長期使用類固醇藥物可能導致眼壓升高，這是因為類固醇會影響眼內液體的排出，增加青光眼的風險。建議定期檢查眼壓，以確保其在正常範圍內。\n\n2. **白內障形成**：類固醇是導致白內障的重要因素，尤其是長期或高劑量使用。白內障會導致視力模糊、畏光等症狀，建議若出現視力變化應儘早就醫檢查。\n\n3. **角膜水腫**：類固醇可能影響角膜的健康，導致水腫，進而引起視力模糊和眼部不適。需留意是否有突然的視力變化或異常的眼部感受。\n\n4. **感染風險**：長期使用類固醇可能降低對眼部感染的抵抗力，特別是在存在其他眼疾時。注意是否有紅腫、疼痛或異常分泌物等感染的症狀。\n\n如果在使用過程中出現上述任何症狀，特別是視力的變化，建議立即告知您的眼科醫師，以便進行必要的檢查和處置。良好的眼部監測和管理可以有效降低這些潛在風險，保持眼睛的健康狀態。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document1) 老眼不昏花_page161, 文件(Document4) 老眼不昏花_page70, 文件(Document11) 老眼不昏花_page10。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Blurred vision in right eye [1][3][5],\n- Eye pain and feeling of wind blowing in the eyes [1][3][5],\n- History of cataract surgery [11],\n- Using corticosteroid eye drops for inflammation [15]\n\n#### **2. Diagnosis**\n\n- Posterior capsule opacification [4],\n- Angle-closure glaucoma [11],\n- Inflammation [15]\n\n#### **3. Recommended Medical Unit**\n\n- Outpatient department of a medical center [18]\n\n#### **4. Recommended Treatment**\n\n- Recommended laser surgery: Capsulotomy [4],\n- The patient declined Capsulotomy [6],\n- Follow-up appointment in 6 weeks for reevaluation [7],\n- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [4],\n- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [4],\n- Typical pricing: NTD 100,000 (hospital), NTD 80,000 (insurance), NTD 120,000 (out-of-pocket) [4],\n- The patient declined intraocular lens implantation [4],\n- Monitor eye pressure regularly [20],\n- Regular eye check-ups to prevent cataract formation [20],\n- Be aware of infection symptoms such as redness, pain, or discharge [22]",
+  "citation_result": [
+    {
+      "output": "- Blurred vision in right eye [1][3][5],",
+      "citations": [
+        1,
+        3,
+        5
+      ],
+      "provenance": [
+        3,
+        5
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Eye pain and feeling of wind blowing in the eyes [1][3][5],",
+      "citations": [
+        1,
+        3,
+        5
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- History of cataract surgery [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Using corticosteroid eye drops for inflammation [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Posterior capsule opacification [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Angle-closure glaucoma [11],",
+      "citations": [
+        11
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Inflammation [15]",
+      "citations": [
+        15
+      ],
+      "provenance": [
+        15
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Outpatient department of a medical center [18]",
+      "citations": [
+        18
+      ],
+      "provenance": [
+        18
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Recommended laser surgery: Capsulotomy [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined Capsulotomy [6],",
+      "citations": [
+        6
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Follow-up appointment in 6 weeks for reevaluation [7],",
+      "citations": [
+        7
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Consider IOL implantation (anti-blue light, yellow tint, non-spherical) [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- IOL brands discussed: Alcon, HOYA, Bausch&Lomb, etc. [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Typical pricing: NTD 100,000 (hospital), NTD 80,000 (insurance), NTD 120,000 (out-of-pocket) [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- The patient declined intraocular lens implantation [4],",
+      "citations": [
+        4
+      ],
+      "provenance": [],
+      "entailment_prediction": 0
+    },
+    {
+      "output": "- Monitor eye pressure regularly [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Regular eye check-ups to prevent cataract formation [20],",
+      "citations": [
+        20
+      ],
+      "provenance": [
+        20
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Be aware of infection symptoms such as redness, pain, or discharge [22]",
+      "citations": [
+        22
+      ],
+      "provenance": [
+        22
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 0.3889,
+    "total_entailed": 7,
+    "total_of_sent": 18,
+    "citation_precision": 0.3704,
+    "total_matched_citations": 8,
+    "total_citations": 22
+  }
+}

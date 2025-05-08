@@ -1,0 +1,93 @@
+{
+  "idx": "20250508140358-c13px28e",
+  "upload_time": "2025-05-08 14:03:58",
+  "object_idx": "dialogue-134",
+  "object_name": "test",
+  "object_type": "Doctor",
+  "gen_model": "Llama-3.3-70B-Instruct",
+  "eval_model": "Llama-3.1-405B-Instruct-FP8",
+  "dialogue_content": "\n\n [1] 使用者問題/回覆1: 我已經安排好這週的門診，我今年35歲，發現這幾周來，每次用眼時間稍長就會有酸痛感發生，想問看診前有什麼需要準備的呢？\n\n\n [2] 系統回覆1: 系統詢問: 需要提供\"您的眼睛不適症狀，是發生在一隻眼睛，還是兩隻眼睛都有呢？\"資訊:\n \n可能回覆選項: ['單眼(左眼)', '單眼(右眼)', '雙眼']\n\n\n\n\n [3] 使用者問題/回覆2: 雙眼\n\n\n [4] 系統回覆2: 系統詢問: 需要提供\"您最近有覺得視力變差嗎？您可以參考以下常見情況\"資訊:\n 請注意: 1.看東西變得模糊\n2.戴眼鏡後還是看不清楚\n3.視力時好時壞\n4.眼睛易疲勞，看久更模糊\n可能回覆選項: ['是', '否']\n\n\n\n\n [5] 使用者問題/回覆3: 否\n\n\n [6] 系統回覆3: 您過去有診斷過任何眼睛的問題或疾病嗎？\n如曾經得過白內障、青光眼或視網膜疾病等等。\n\n\n\n [7] 使用者問題/回覆4: 我過去有被診斷過視神經炎，當時有視力減退的情況。\n\n\n [8] 系統回覆4: 請問您的家人當中，有人曾經被診斷過眼睛相關的疾病嗎？\n有些眼睛疾病可能與遺傳有關，如果家族中有人曾經有眼疾(如青光眼、白內障、高度近等等)或視遺傳性眼疾(如色盲)，您的風險可能會比較高，我們可以提早注意。\n\n\n\n [9] 使用者問題/回覆5: 我不太清楚家裡是否有人有眼睛相關的疾病，感覺大家都還好，沒有特別的問題。\n\n\n [10] 系統回覆5: 您之前有做過眼睛手術嗎？\n以下為一些常見的眼睛手術，如白內障手術、近視矯正手術、視網膜剝離/病變手術、青光眼相關手術、角膜移植手術等等。\n請您盡可能詳細描述，由於有些眼睛手術會影響視力或後續治療，了解您的手術紀錄，可以幫助我們提供更好的照護\n\n\n\n [11] 使用者問題/回覆6: 我之前沒有做過任何眼睛手術。\n\n\n [12] 系統回覆6: 您最近有在使用任何眼藥水或其他可能影響眼睛的藥物嗎？？\n## 以下是常見眼藥水與影響視力的藥物種類:\n1️⃣ 人工淚液與潤滑劑：保濕眼睛、緩解乾澀不適，常用於乾眼症或長時間用眼者。\n2️⃣ 降眼壓藥（青光眼治療）：降低眼壓，預防視神經受損，用於青光眼控制。\n3️⃣ 類固醇眼藥水：用來消炎，但長期使用可能導致白內障或青光眼，需注意眼壓。\n4️⃣ 抗過敏與抗發炎藥：用於眼睛癢、紅腫、過敏或結膜炎，緩解發炎與不適。\n5️⃣ 抗憂鬱藥：可能會讓眼睛變乾、視力模糊或提高眼壓，影響淚液分泌。\n6️⃣ 抗凝血藥物（如保栓通）：可能造成結膜或視網膜出血，部分會影響視力。\n7️⃣ 風濕免疫科藥物（如奎寧）：需注意長期使用會有視網膜傷害的風險。\n8️⃣ 癌症治療（化療、標靶、放療）：可能導致乾眼與眼表不適。\n9️⃣ 甲狀腺亢進相關藥物：注意是否有眼球突出或視力變化（甲狀腺眼病變）。\n1️⃣0️⃣ 高血壓藥物：需注意是否出現視網膜病變，可能影響視力。\n1️⃣1️⃣ 高血脂藥物：與視網膜血管阻塞相關，可能造成突發性視力問題。\n1️⃣2️⃣ 高血糖（糖尿病）藥物：長期血糖控制不好，可能引起糖尿病視網膜病變。\n\n如果您有在使用，請讓我知道，這樣可以幫助我們提供更好的建議！\n\n\n\n [13] 使用者問題/回覆7: 我最近沒有在使用任何眼藥水或其他可能影響眼睛的藥物。\n\n\n [14] 系統回覆7: 根據您提供的資料，您最近出現的雙眼酸痛感已持續數週，這種症狀可能與以下情況有關：\n\n1. **乾眼症（Dry Eye Syndrome）**：\n     **特徵**：長時間用眼之後，眼睛可能感覺乾燥、刺痛或酸痛，這在長時間觀看電腦或閱讀時特別明顯。\n     **解決方式**：建議使用人工淚液來增加眼睛的潤滑度，並定期休息眼睛，使用20-20-20規則，即每20分鐘，向20英尺（約6公尺）以外的地方看20秒鐘。\n\n2. **眼睛疲勞（Asthenopia）**：\n     **特徵**：隨著用眼時間增加，眼睛會感到疲勞與酸痛，通常伴隨視力模糊。\n     **解決方式**：確保用眼環境光線適中，避免過度使用電子設備，並考慮配戴適合的眼鏡或隱形眼鏡來矯正視力，有效減輕眼部壓力。\n\n3. **視神經炎（Optic Neuritis）**：\n     **特徵**：您有過視神經炎的病史，這可能造成視力的波動和眼睛不適的感覺。視神經炎通常伴隨視力下降，但有時初期可能不顯著。\n     **解決方式**：這種情況需要專業的眼科醫生進行檢查，以確定病症是否有復發的跡象，並視情況可能需要進一步的治療如皮質類固醇。\n\n4. **過敏性結膜炎（Allergic Conjunctivitis）**：\n     **特徵**：眼睛可能會有紅腫、癢的感覺，並感到酸痛。如果有過敏史，這也可能是潛在因素。\n     **解決方式**：可以使用抗過敏眼藥水來緩解症狀，並避免與過敏原的接觸。\n\n建議您儘早就診於眼科醫師，因為您過去有視神經炎的病史，醫生可以進行詳細的檢查（例如視神經功能檢查和眼底檢查），以確保眼睛的健康狀態。您不需要到醫學中心進行檢查，較為普通的診所即可滿足檢查需求。\n\n希望這些建議對您有所幫助，並期待您的眼科醫生提供進一步的診斷和治療方案。\n\n\n\n [15] 使用者問題/回覆8: 如果以後我有眼睛不適的情況，應該如何判斷是否需要再次就醫呢？\n\n\n [16] 系統回覆8: 當您出現眼睛不適的情況時，有幾個關鍵指標可以幫助您決定是否需要再次就醫。以下是一些常見的症狀和相應的建議：\n\n1. **視力變化**：\n    **判斷標準**：如果您發現視力突然模糊（Blurred Vision）、檔案視力變得時好時壞，或者視野缺損（Visual Field Loss），這些都是值得警惕的信號。\n    **建議**：應儘快就醫進行詳細檢查，因為這些可能是視網膜問題、白內障、青光眼等疾病的初期徵兆。\n\n2. **眼睛不適感**：\n    **判斷標準**：如眼睛感到乾澀（Dry Eye）、異物感（Foreign Body Sensation）、刺痛、灼熱感（Burning Sensation）或癢感（Itching）等。\n    **建議**：如果症狀持續且無法透過休息或使用人工淚液緩解，建議尋求醫療建議，以便排除潛在的眼疾。\n\n3. **閃光或飛蚊症**：\n    **判斷標準**：如您在視野中發現閃光（Flashes）或浮動的黑點（Floaters）。\n    **建議**：這可能是視網膜剝離或玻璃體後脫落的前兆，應立即就醫。\n\n4. **紅眼或腫脹**：\n    **判斷標準**：眼白部分發紅（Red Eye），伴隨腫脹（Swelling）或流膿（Discharge）。\n    **建議**：這可能表示感染，例如結膜炎或角膜炎，需儘快就醫。\n\n5. **眼睛痛或不適感**：\n    **判斷標準**：如果感到持續的眼痛（Eye Pain），尤其是伴隨視力變化，應特別注意。\n    **建議**：眼痛可能是急性青光眼或其他更嚴重疾病的信號，應立即就醫。\n\n6. **其他**：\n    **視覺扭曲（Distorted Vision）**：如果直線出現彎曲或物體的形狀改變，這可能是黃斑部病變等問題。\n\n在上述任一情況下，如果您無法排除或緩解症狀，建議儘早預約眼科醫生，以進行徹底檢查並獲得適當的治療。\n\n以上的建議基於常見的眼科疾病症狀和醫療指導，還是需要向專業的醫生諮詢進一步的評估和決策。\n\n參考僅供參考，還是需要向專業的醫生諮詢。參考(Reference): 文件(Document3) 老眼不昏花_page39, 文件(Document6) 老眼不昏花_page61, 文件(Document17) cataract_judge_rule.txt。\n\n",
+  "report_content": "#### **1. Patient Complaint**\n\n- Eye pain and acid sensation in both eyes [1][3],\n- History of optic neuritis with vision decrease [7]\n\n#### **2. Diagnosis**\n\n- Not mentioned in the dialogue\n\n#### **3. Recommended Medical Unit**\n\n- General clinic [14]\n\n#### **4. Recommended Treatment**\n\n- Use artificial tears to increase eye lubrication [14],\n- Follow the 20-20-20 rule for eye rest [14],\n- Consider wearing suitable glasses or contact lenses to correct vision [14],\n- Consult an eye doctor for further examination and treatment [14]",
+  "citation_result": [
+    {
+      "output": "- Eye pain and acid sensation in both eyes [1][3],",
+      "citations": [
+        1,
+        3
+      ],
+      "provenance": [
+        1,
+        3
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- History of optic neuritis with vision decrease [7]",
+      "citations": [
+        7
+      ],
+      "provenance": [
+        7
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- General clinic [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Use artificial tears to increase eye lubrication [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Follow the 20-20-20 rule for eye rest [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consider wearing suitable glasses or contact lenses to correct vision [14],",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    },
+    {
+      "output": "- Consult an eye doctor for further examination and treatment [14]",
+      "citations": [
+        14
+      ],
+      "provenance": [
+        14
+      ],
+      "entailment_prediction": 1
+    }
+  ],
+  "metrics": {
+    "citation_recall": 1.0,
+    "total_entailed": 7,
+    "total_of_sent": 7,
+    "citation_precision": 1.0,
+    "total_matched_citations": 8,
+    "total_citations": 8
+  }
+}
