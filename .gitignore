@@ -19,3 +19,4 @@ __pycache__/
 
 # Docker 相關
 *.log
+**/.env
